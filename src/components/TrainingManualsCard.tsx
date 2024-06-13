@@ -1,8 +1,16 @@
-const TrainingManualsCard = ({text}: {text: string}) => {
+import { ManualsIcon } from "../assets";
+
+const TrainingManualsCard = ({ text }: { text: string }) => {
   return (
     <div className="flex items-center justify-between py-2 px-4">
       <div className="flex items-center gap-4">
-        <div className="h-[60px] w-[60px] bg-black"></div>
+        <div className="h-[60px] w-[60px]">
+          <img
+            src={ManualsIcon}
+            className="w-full h-full object-cover"
+            alt=""
+          />
+        </div>
         <p className="font-manrope text-base text-[#4f4f4f]">{text}</p>
       </div>
       <svg
