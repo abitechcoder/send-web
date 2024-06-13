@@ -1,10 +1,12 @@
 import { Logo } from "../assets";
 import NavBarLinks from "./NavBarLinks";
 
-const NavBar = () => {
+const NavBar = ({ fill = true }: { fill?: boolean }) => {
   return (
     <nav
-      className={`px-4 md:px-[40px] lg:px-[80px] h-full bg-white flex justify-between lg:grid lg:grid-cols-[80px_1fr_150px] items-center gap-4`}
+      className={`px-4 md:px-[40px] lg:px-[80px] h-full ${
+        fill ? "bg-white" : "bg-transparent"
+      } flex justify-between lg:grid lg:grid-cols-[80px_1fr_150px] items-center gap-4`}
     >
       <img
         src={Logo}

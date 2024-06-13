@@ -1,17 +1,30 @@
-import { HeroSection, ProgramAreas, OurIdentity, OurPartner, LatestNews, TopStories, BuildBetterWork, TrainingManuals, ContactUs, Footer } from "../components";
+import {
+  HeroSection,
+  ProgramAreas,
+  OurIdentity,
+  OurPartner,
+  LatestNews,
+  TopStories,
+  BuildBetterWork,
+  TrainingManuals,
+  ContactUs,
+  Footer,
+  NavBar,
+} from "../components";
 const LandingPage = () => {
   return (
     <div>
-      <HeroSection/>
-      <ProgramAreas/>
-      <OurIdentity/>
-      <TopStories/>
-      <OurPartner/>
-      <BuildBetterWork/>
-      <TrainingManuals/>
-      <LatestNews/>
-      <ContactUs/>
-      <Footer/>
+      <NavBar />
+      <HeroSection />
+      <ProgramAreas />
+      <OurIdentity />
+      <TopStories />
+      <OurPartner />
+      <BuildBetterWork />
+      <TrainingManuals />
+      <LatestNews />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

@@ -29,3 +29,4 @@ export { default as TrainingManualsImg2 } from "./training-manual-img2.png";
 export { default as ContactUsArt } from "./ContactUsArt.png";
 export { default as FooterArt } from "./footer-art.png";
 export { default as ManualsIcon } from "./manuals.png";
+export { default as HeroBG } from "./hero-bg.png";
