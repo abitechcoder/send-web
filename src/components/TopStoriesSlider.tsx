@@ -5,7 +5,7 @@ import TopStoriesCard from "./TopStoriesCard";
 
 const TopStoriesSlider = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -20,29 +20,29 @@ const TopStoriesSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="slider-container">
       <Slider {...settings}>
         <div className="w-[350px]">
-          <TopStoriesCard/>
+          <TopStoriesCard />
         </div>
         <div className="w-[350px]">
-          <TopStoriesCard/>
+          <TopStoriesCard />
         </div>
         <div className="w-[350px]">
-          <TopStoriesCard/>
+          <TopStoriesCard />
         </div>
       </Slider>
     </div>

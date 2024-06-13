@@ -13,7 +13,7 @@ import {
 
 const LogoSlider = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -28,8 +28,8 @@ const LogoSlider = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
@@ -37,16 +37,16 @@ const LogoSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           // initialSlide: 2
-        }
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="slider-container">
