@@ -13,7 +13,7 @@ import {
 
 const LogoSlider = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,

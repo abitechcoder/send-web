@@ -19,15 +19,8 @@ const OurIdentity = () => {
           <Button text="See More" url="/" />
         </div>
       </div>
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-        <TopStoriesCard/>
-        <TopStoriesCard/>
-        <TopStoriesCard/>
-      </div> */}
-      <div className="max-h-[400px] lg:max-h-[300px]">
       <TopStoriesSlider/>
-      </div>
+      
     </section>
   );
 };

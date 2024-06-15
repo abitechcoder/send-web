@@ -1,13 +1,13 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TopStoriesCard from "./TopStoriesCard";
+import StrategyPlanCard from "./StrategyPlanCard";
 
-const TopStoriesSlider = () => {
+const StrategyPlanCardSlider = () => {
   var settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -17,7 +17,7 @@ const TopStoriesSlider = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -35,14 +35,16 @@ const TopStoriesSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
+        <StrategyPlanCard/>
       </Slider>
     </div>
   );
 };
 
-export default TopStoriesSlider;
+export default StrategyPlanCardSlider;

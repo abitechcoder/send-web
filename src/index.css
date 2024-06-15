@@ -8,6 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.slider-container div {
+
+.slider-slide > div {
   margin: 0 10px;
 }

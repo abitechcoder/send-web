@@ -3,7 +3,7 @@ import { StarGroup, Avatar } from "../assets";
 
 const TopStoriesCard = () => {
   return (
-    <div className="relative bg-white w-full rounded-xl py-4 px-6 flex flex-col gap-4">
+    <div className="relative bg-white w-[320px] lg:w-[350px] rounded-xl py-4 px-6 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <div className="bg-black h-[60px] w-[60px] rounded-full">
           <img src={Avatar} className="object-cover w-full h-full" alt="" />

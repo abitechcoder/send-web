@@ -11,7 +11,7 @@ export const links: Link[] = [
   {
     id: 2,
     text: "Who We Are",
-    url: "/dashboard",
+    url: "/whoweare",
   },
   {
     id: 3,
