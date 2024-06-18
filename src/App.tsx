@@ -15,6 +15,11 @@ import {
   Dashboard,
   ErrorPage,
   CorporateIdentity,
+  EvolutionOfSend,
+  SierraLeone,
+  OrganizationStructure,
+  ManagementTeam,
+  BoardOfDirectors
 } from "./pages";
 
 function App() {
@@ -27,7 +32,12 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="whoweare">
             <Route index element={<CorporateIdentity />} />
-            <Route path="identity" element={<CorporateIdentity />} />
+            <Route path="corporate-identity" element={<CorporateIdentity />} />
+            <Route path="evolution-of-send" element={<EvolutionOfSend />} />
+            <Route path="sierra-leone" element={<SierraLeone />} />
+            <Route path="org-structure" element={<OrganizationStructure />} />
+            <Route path="mgt-team" element={<ManagementTeam />} />
+            <Route path="board-of-directors" element={<BoardOfDirectors />} />
           </Route>
         </Route>
         <Route path="dashboard" element={<DashboardRoot />}>

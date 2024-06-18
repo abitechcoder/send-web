@@ -2,6 +2,7 @@ export interface Link {
   id: number;
   text: string;
   url: string;
+  child?: null | Link[];
 }
 
 export interface ProgramCardProps {

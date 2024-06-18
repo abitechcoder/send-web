@@ -24,7 +24,8 @@ module.exports = {
         dark: "#141414",
         lightgrey: "#D8DDE4",
         darkgrey: "#849299",
-        activelink: "#FF9901"
+        activelink: "#FF9901",
+        graybg: "#F9FAFC",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],

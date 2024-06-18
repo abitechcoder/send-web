@@ -9,6 +9,8 @@ export const styles = {
 
   heading3: "font-barlow text-xl font-bold",
 
+  heading4: "font-barlow text-lg font-bold",
+
   paragraph: "font-manrope text-lg",
 
   paragraph2: "font-manrope text-base",

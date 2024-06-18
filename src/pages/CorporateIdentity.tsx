@@ -4,7 +4,7 @@ import { Header, StrategicPlan, CorporateSection, VisionAndMission, CoreValue, P
 const CorporateIdentity = () => {
   return (
     <main>
-      <Header />
+      <Header parent_link="Who We Are" child_link="Corporate Identity" title="Corporate Identity" />
       <StrategicPlan/>
       <CorporateSection/>
       <VisionAndMission/>

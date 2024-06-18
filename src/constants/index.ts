@@ -7,36 +7,50 @@ export const links: Link[] = [
     id: 1,
     text: "Homepage",
     url: "/",
+    child: null,
   },
   {
     id: 2,
     text: "Who We Are",
     url: "/whoweare",
+    child: [
+      { id: 1, text: "Corporate Identity", url: "/whoweare/corporate-identity" },
+      { id: 2, text: "Evolution Of Send", url: "/whoweare/evolution-of-send" },
+      { id: 3, text: "Organization Structure", url: "/whoweare/org-structure" },
+      { id: 4, text: "Management Team", url: "/whoweare/mgt-team" },
+      { id: 5, text: "Board of Directors", url: "/whoweare/board-of-directors" },
+      { id: 6, text: "Sierra Leone", url: "/whoweare/sierra-leone" },
+    ],
   },
   {
     id: 3,
     text: "Strategic Direction",
     url: "/dashboard",
+    child: null,
   },
   {
     id: 4,
     text: "Gallery",
     url: "/dashboard",
+    child: null,
   },
   {
     id: 5,
     text: "Work With Us",
     url: "/dashboard",
+    child: null,
   },
   {
     id: 6,
     text: "Publications",
     url: "/dashboard",
+    child: null,
   },
   {
     id: 7,
     text: "Contact Us",
     url: "/dashboard",
+    child: null,
   },
 ];
 
