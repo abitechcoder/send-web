@@ -1,31 +1,29 @@
 import styles from "../styles";
 
-const DirectorCard = ({
+const GalleryCard = ({
   title,
-  name,
   image,
 }: {
   title: string;
-  name: string;
   image?: string;
 }) => {
   return (
-    <div className={`h-[450px] w-full relative`}>
+    <div className={`h-[350px] w-full relative`}>
       <img
         src={`/src/assets/${image}`}
         className="absolute top-0 left-0 object-cover object-center h-full w-full"
         alt=""
       />
-      <div className="absolute -bottom-[40px] left-[5%] w-[90%] h-[120px] z-10 bg-white">
-        <div className="grid grid-cols-[1fr_45px] place-content-center px-4 h-full relative">
-          <div className="absolute top-0 right-0 h-full w-[80px]">
-            <img src="/src/assets/director-card-triangle-art.png" className="h-full w-full" alt="" />
+      <div className="absolute -bottom-[60px] left-0 w-[90%] h-[120px] z-10 bg-white">
+        <div className="grid grid-cols-1 place-content-center px-4 h-full relative">
+          <div className="absolute top-0 right-0 h-full w-[50%]">
+            <img src="/src/assets/program-card-art.png" className="h-full w-full" alt="" />
           </div>
-        <div>
-          <h3 className={`${styles.paragraph3} text-secondary`}>{title}</h3>
-          <h2 className={`${styles.paragraph} text-black font-bold`}>{name}</h2>
+        <div className="z-30">
+          <h3 className={`${styles.paragraph3} text-secondary`}>Gallery</h3>
+          <h2 className={`${styles.paragraph} text-black font-bold`}>{title}</h2>
         </div>
-        <div className="bg-secondary w-[40px] h-[40px] grid place-items-center z-20">
+        <div className="bg-secondary w-[50px] h-[50px] grid place-items-center z-20 absolute -top-[25px] right-8">
           <svg
             width="28"
             height="18"
@@ -47,4 +45,4 @@ const DirectorCard = ({
   );
 };
 
-export default DirectorCard;
+export default GalleryCard;

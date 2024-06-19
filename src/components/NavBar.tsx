@@ -1,7 +1,9 @@
 import { Logo } from "../assets";
 import NavBarLinks from "./NavBarLinks";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ fill = true }: { fill?: boolean }) => {
+  const navigate = useNavigate()
   return (
     <nav
       className={`${
@@ -16,7 +18,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
       <NavBarLinks fill={fill} />
 
       <div className="flex lg:items-center lg:justify-between">
-        <button className="py-[10px] px-[20px] bg-secondary text-white">
+        <button className="py-[10px] px-[20px] bg-secondary text-white" onClick={() => navigate("/donate")}>
           Donate
         </button>
         <svg

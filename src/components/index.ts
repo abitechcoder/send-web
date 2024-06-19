@@ -39,3 +39,8 @@ export { default as SeniorMgtTeam } from "./SeniorMgtTeam";
 export { default as TeamCard } from "./TeamCard";
 export { default as Directors } from "./Directors";
 export { default as DirectorCard } from "./DirectorCard";
+export { default as EventGallery } from "./EventGallery";
+export { default as GalleryCard } from "./GalleryCard";
+export { default as TalkToUs } from "./TalkToUs";
+export { default as DonateListing } from "./DonateListing";
+export { default as DonateListingCard } from "./DonateListingCard";

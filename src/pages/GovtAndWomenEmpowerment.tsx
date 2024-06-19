@@ -1,4 +1,4 @@
-import { Header, ContactUs, Footer, SierraLeoneHistory } from "../components";
+import { Header, ContactUs, Footer } from "../components";
 
 const GovtAndWomenEmpowerment = () => {
   return (

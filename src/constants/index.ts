@@ -14,11 +14,19 @@ export const links: Link[] = [
     text: "Who We Are",
     url: "/whoweare",
     child: [
-      { id: 1, text: "Corporate Identity", url: "/whoweare/corporate-identity" },
+      {
+        id: 1,
+        text: "Corporate Identity",
+        url: "/whoweare/corporate-identity",
+      },
       { id: 2, text: "Evolution Of Send", url: "/whoweare/evolution-of-send" },
       { id: 3, text: "Organization Structure", url: "/whoweare/org-structure" },
       { id: 4, text: "Management Team", url: "/whoweare/mgt-team" },
-      { id: 5, text: "Board of Directors", url: "/whoweare/board-of-directors" },
+      {
+        id: 5,
+        text: "Board of Directors",
+        url: "/whoweare/board-of-directors",
+      },
       { id: 6, text: "Sierra Leone", url: "/whoweare/sierra-leone" },
     ],
   },
@@ -26,30 +34,57 @@ export const links: Link[] = [
     id: 3,
     text: "Strategic Direction",
     url: "/dashboard",
-    child: null,
+    child: [
+      {
+        id: 1,
+        text: "Governance & Women Empowerment",
+        url: "/strategic-direction",
+      },
+    ],
   },
   {
     id: 4,
     text: "Gallery",
-    url: "/dashboard",
+    url: "/gallery",
     child: null,
   },
   {
     id: 5,
     text: "Work With Us",
-    url: "/dashboard",
+    url: "/work-with-us",
     child: null,
   },
   {
     id: 6,
     text: "Publications",
     url: "/dashboard",
-    child: null,
+    child: [
+      {
+        id: 1,
+        text: "Reports On Project",
+        url: "/publications/project-reports",
+      },
+      {
+        id: 2,
+        text: "Newsletter",
+        url: "/publications/newsletter",
+      },
+      {
+        id: 3,
+        text: "Manual & Profiles",
+        url: "/publications/manual-and-profiles",
+      },
+      {
+        id: 4,
+        text: "Case Stories",
+        url: "/publications/case-stories",
+      },
+    ],
   },
   {
     id: 7,
     text: "Contact Us",
-    url: "/dashboard",
+    url: "/contact-us",
     child: null,
   },
 ];
