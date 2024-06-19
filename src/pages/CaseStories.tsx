@@ -1,11 +1,16 @@
-import { Header, ContactUs, Footer} from "../components";
+import { Header, ContactUs, Footer, ProjectCaseStories } from "../components";
 
 const CaseStories = () => {
   return (
     <main>
-      <Header parent_link="Publications" child_link="Case Stories" title="Case Stories" />
+      <Header
+        parent_link="Publications"
+        child_link="Case Stories"
+        title="Case Stories"
+      />
+      <ProjectCaseStories />
       <ContactUs />
-      <Footer/>
+      <Footer />
     </main>
   );
 };

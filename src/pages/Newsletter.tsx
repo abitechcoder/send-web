@@ -1,11 +1,16 @@
-import { Header, ContactUs, Footer} from "../components";
+import { Header, ContactUs, Footer, InTheNews } from "../components";
 
 const Newsletter = () => {
   return (
     <main>
-      <Header parent_link="Publications" child_link="Newsletter" title="Newsletter" />
+      <Header
+        parent_link="Publications"
+        child_link="Newsletter"
+        title="Newsletter"
+      />
+      <InTheNews />
       <ContactUs />
-      <Footer/>
+      <Footer />
     </main>
   );
 };
