@@ -50,3 +50,6 @@ export { default as ManualProfiles } from "./ManualProfiles";
 export { default as ManualProfileCard } from "./ManualProfileCard";
 export { default as ProjectCaseStories } from "./ProjectCaseStories";
 export { default as CaseStoryCard } from "./CaseStoryCard";
+export { default as ReportsOnProject } from "./ReportsOnProject";
+export { default as ReportCard } from "./ReportCard";
+export { default as OurPrograms } from "./OurPrograms";
