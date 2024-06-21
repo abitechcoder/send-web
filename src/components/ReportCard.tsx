@@ -11,7 +11,7 @@ const ReportCard = ({
   year: string;
 }) => {
   return (
-    <div className="bg-white p-6 lg:p-8 flex flex-col gap-8 items-start">
+    <div className="bg-white p-6 lg:p-8 flex flex-col gap-8 items-start shadow-lg">
       <div className="flex justify-end w-full">
         <div className="bg-lightgrey px-4 py-2">
           <p className={`uppercase ${styles.paragraph3} font-bold`}>on going</p>

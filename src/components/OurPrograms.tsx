@@ -1,10 +1,10 @@
-import ProgramCard from "./ProgramCard";
-import styles from "../styles";
+import OurProgramCard from "./OurProgramCard";
+import {styles, layout} from "../styles";
 import { CardImage1, CardImage2, CardImage3 } from "../assets";
 
 const OurPrograms = () => {
   return (
-    <section className="bg-[#F9FAFC] py-[40px] px-4 lg:px-0 lg:py-[80px]">
+    <section className={`bg-graybg bg-[url(/src/assets/team-bg.png)] py-[40px] ${layout.section}`}>
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
         OUR PROJECT
       </h2>
@@ -12,13 +12,13 @@ const OurPrograms = () => {
         The ethos and commitment of SEND sierra Leone is to improve the quality
         of lives throughout the country.
       </p>
-      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-4 place-items-center">
-        <ProgramCard title={"Health & Education"} image={CardImage1} />
-        <ProgramCard
-          title={"Governance & woman empowerment"}
+      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-4 place-items-center">
+        <OurProgramCard title={"Health & Education"} image={CardImage1} />
+        <OurProgramCard
+          title={"Governance & women empowerment"}
           image={CardImage2}
         />
-        <ProgramCard
+        <OurProgramCard
           title={"Livelihood, Food & Nutrition Security"}
           image={CardImage3}
         />

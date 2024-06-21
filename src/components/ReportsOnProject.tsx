@@ -4,7 +4,7 @@ import ReportCard from "./ReportCard";
 const ReportsOnProject = () => {
   return (
     <section
-      className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
+      className={`${layout.section} bg-white bg-center`}
     >
       <div className="grid gap-4">
         <div>

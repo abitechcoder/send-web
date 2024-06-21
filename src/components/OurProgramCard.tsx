@@ -4,9 +4,9 @@ import { ProgramCardProps } from "../types";
 
 const OurProgramCard = ({ image, title }: ProgramCardProps) => {
   return (
-    <div className="lg:w-[250px] w-full relative">
-      <div className="bg-primary w-full h-[300px] lg:h-[200px]">
-        <img src={image} alt="" className="h-full w-full object-cover" />
+    <div className=" w-full relative">
+      <div className="bg-primary w-full h-[300px] lg:h-[350px]">
+        <img src={image} alt="" className="h-full w-full object-cover object-center" />
       </div>
       <div className="h-[100px] bg-white p-4 relative">
         <div className="flex flex-col gap-1">
@@ -20,7 +20,7 @@ const OurProgramCard = ({ image, title }: ProgramCardProps) => {
         </div>
       </div>
       <div
-        className={`absolute w-[50px] h-[50px] bg-secondary ${styles.flexCenter} top-[275px] lg:top-[175px] right-[30px] z-10`}
+        className={`absolute w-[50px] h-[50px] bg-secondary ${styles.flexCenter} top-[275px] lg:top-[325px] right-[30px] z-10`}
       >
         <svg
           width="24"
