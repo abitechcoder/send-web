@@ -1,21 +1,22 @@
+import { VisionIcon } from "../assets";
 import { styles, layout } from "../styles";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const GWEContent = () => {
   return (
-    <section className={`bg-white ${layout.section} grid grid-cols-2 gap-4`}>
-      <section className="grid gap-4">
-        <div className="flex items-end gap-1">
+    <section className={`bg-white ${layout.section} grid grid-cols-1 md:grid-cols-2 gap-8`}>
+      <section>
+        <div className="flex items-end gap-1 mb-4">
           <div className="w-4 h-full border-b-2 border-b-secondary"></div>
           <p className={`text-secondary ${styles.paragraph3Barlow}`}>
             Project Report
           </p>
         </div>
-        <h2 className={`font-barlow lg:text-3xl text-xl font-bold`}>
+        <h2 className={`font-barlow lg:text-3xl text-xl font-bold mb-8`}>
           Strengthening Community Led Accountability to Improve Service Delivery
           (SABI)
         </h2>
-        <div className="relative">
+        <div className="relative mb-8">
           <div className="bg-[url('/src/assets/happy-community.png')] w-full h-[350px] bg-cover bg-center"></div>
           <div className="absolute bottom-0 -translate-y-[30%] -translate-x-[12px]">
             <div className="relative">
@@ -38,22 +39,134 @@ const GWEContent = () => {
           </div>
         </div>
         <div>
-          <Tabs defaultValue="account" className="w-[400px]">
+          <Tabs defaultValue="account" className="w-full">
             <TabsList>
-              <TabsTrigger value="account">Account</TabsTrigger>
-              <TabsTrigger value="password">Password</TabsTrigger>
+              <TabsTrigger value="problem">Project Problem</TabsTrigger>
+              <TabsTrigger value="solution">Project Solution</TabsTrigger>
+              <TabsTrigger value="beneficiaries">
+                Target Beneficiaries
+              </TabsTrigger>
             </TabsList>
-            <TabsContent value="account">
-              Make changes to your account here.
+            <TabsContent value="problem">
+              <div className="grid gap-4 py-4">
+                <h2 className={`${styles.heading3} uppercase`}>
+                  Project Problem
+                </h2>
+                <div className="bg-[url('/src/assets/hanging-drip.png')] bg-cover bg-center h-[350px] w-full"></div>
+                <div>
+                  <p className={`text-darkgrey ${styles.paragraph3}`}>
+                    - Lack of accountability in health service delivery
+                    healthcare providers.
+                    <br />
+                    - Poor quality of healthcare service by healthcare
+                    providers.
+                    <br />
+                    - Lack of public awareness on safe healthcare practices.
+                    <br />- Lack of adequate healthcare structures and the lack
+                    of trust between communities and institutions.
+                  </p>
+                </div>
+              </div>
             </TabsContent>
-            <TabsContent value="password">
-              Change your password here.
+            <TabsContent value="solution">
+              <div className="grid gap-8 py-4">
+                <h2 className={`${styles.heading3} uppercase`}>
+                  Project Solution
+                </h2>
+                <div className="grid gap-8">
+                  <div className="flex gap-6">
+                    <img
+                      src={VisionIcon}
+                      className="w-[50px] h-[50px]"
+                      alt="Vision Icon"
+                    />
+                    <div>
+                      <h3 className={`${styles.heading3Manrope}`}>
+                        Creating & Facilitating Citizen Feedback
+                      </h3>
+                      <p className={`text-darkgrey ${styles.paragraph3}`}>
+                        Strengthening the citizens’ voice and interaction by
+                        creating and facilitating citizen feedback forums and
+                        platforms with service providers to discuss and share
+                        ideas.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <img
+                      src={VisionIcon}
+                      className="w-[50px] h-[50px]"
+                      alt="Vision Icon"
+                    />
+                    <div>
+                      <h3 className={`${styles.heading3Manrope}`}>
+                        Healthcare Services
+                      </h3>
+                      <p className={`text-darkgrey ${styles.paragraph3}`}>
+                        Educating citizens on the healthcare services available
+                        and their right to access healthcare services.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <img
+                      src={VisionIcon}
+                      className="w-[50px] h-[50px]"
+                      alt="Vision Icon"
+                    />
+                    <div>
+                      <h3 className={`${styles.heading3Manrope}`}>
+                        Improvement Of Healthcare Services
+                      </h3>
+                      <p className={`text-darkgrey ${styles.paragraph3}`}>
+                        Encourage the formulation of indigenous solutions to
+                        improve accountability in the provision of healthcare
+                        services
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    <img
+                      src={VisionIcon}
+                      className="w-[50px] h-[50px]"
+                      alt="Vision Icon"
+                    />
+                    <div>
+                      <h3 className={`${styles.heading3Manrope}`}>
+                        Focus On Gender & Minority
+                      </h3>
+                      <p className={`text-darkgrey ${styles.paragraph3}`}>
+                        Focus on gender and minority inclusion to help increase
+                        their access to healthcare services.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+            <TabsContent value="beneficiaries">
+              <div className="grid gap-4 py-4">
+                <h2 className={`${styles.heading3} uppercase`}>
+                  Project Beneficiaries
+                </h2>
+                <div className="bg-[url('/src/assets/bunch-of-women.png')] bg-cover bg-center h-[350px] w-full"></div>
+                <div>
+                  <p className={`text-darkgrey ${styles.paragraph3}`}>
+                    - Citizens in the western area and eastern provinces of
+                    Sierra Leone <br />- Women, children and other minority
+                    groups such as PWDs
+                  </p>
+                </div>
+              </div>
             </TabsContent>
           </Tabs>
         </div>
       </section>
       <section>
-        <p className={`${styles.paragraph3}`}>
+        <p className={`${styles.paragraph3} leading-relaxed`}>
           The Western Area Rural District in Sierra Leone is a prime example of
           the discrimination and unfair low representation of women in
           governance despite representing over 50% of the population. Out of the
@@ -65,6 +178,45 @@ const GWEContent = () => {
           to diversify from subsistence farming as that is the only way to
           provide for their families. <a href="#">more...</a>
         </p>
+
+        <div className="bg-dark p-8 border-t-2 border-t-primary mt-8">
+          <h3 className={`${styles.heading2Barlow} text-white`}>Project Fact Sheet</h3>
+          <div className="py-8 grid gap-8">
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>DONOR</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>Christian Aid</p>
+            </div>
+
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT IMPLEMENTING PARTNER</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>SEND Sierra Leone</p>
+            </div>
+
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT LOCATION</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>Western Area Rural District and the Eastern Province of Sierra Leone</p>
+            </div>
+
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>DURATION</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
+            </div>
+
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT BUDGET</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
+            </div>
+
+            <div>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT THEMATIC AREAS</h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>Governance</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <button className="bg-secondary text-white py-4 w-full">View Project Report</button>
+            <button className="bg-primary text-white py-4 w-full">View Gallery Project</button>
+          </div>
+        </div>
       </section>
     </section>
   );
