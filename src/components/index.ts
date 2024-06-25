@@ -57,3 +57,4 @@ export { default as SearchJobs } from "./SearchJobs";
 export { default as SelectInput } from "./SelectInput";
 export { default as JobCard } from "./JobCard";
 export { default as GWEContent } from "./GWEContent";
+export { default as CustomerSupport } from "./CustomerSupport";

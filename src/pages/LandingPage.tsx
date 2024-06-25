@@ -10,10 +10,11 @@ import {
   ContactUs,
   Footer,
   NavBar,
+  CustomerSupport,
 } from "../components";
 const LandingPage = () => {
   return (
-    <div>
+    <div className="h-full relative">
       <div className="px-4 md:px-[40px] lg:px-[80px] bg-white">
         <NavBar />
       </div>
@@ -27,6 +28,7 @@ const LandingPage = () => {
       <LatestNews />
       <ContactUs />
       <Footer />
+      <CustomerSupport />
     </div>
   );
 };

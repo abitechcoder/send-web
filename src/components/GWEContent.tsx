@@ -4,8 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const GWEContent = () => {
   return (
-    <section className={`bg-white ${layout.section} grid grid-cols-1 md:grid-cols-2 gap-8`}>
-      <section>
+    <section
+      className={`${layout.section} bg-white grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2 lg:gap-8 relative`}
+    >
+      <div className="bg-[url('/src/assets/project-fact-sheet-art.png')] bg-[#EFEEF3] bg-cover bg-center w-full absolute top-0 left-0 h-[420px] md:h-[520px] lg:h-[650px] z-10"></div>
+      <section className="z-20">
         <div className="flex items-end gap-1 mb-4">
           <div className="w-4 h-full border-b-2 border-b-secondary"></div>
           <p className={`text-secondary ${styles.paragraph3Barlow}`}>
@@ -17,7 +20,7 @@ const GWEContent = () => {
           (SABI)
         </h2>
         <div className="relative mb-8">
-          <div className="bg-[url('/src/assets/happy-community.png')] w-full h-[350px] bg-cover bg-center"></div>
+          <div className="bg-[url('/src/assets/happy-community.png')] w-full h-[250px] md:h-[300px] lg:h-[350px] bg-cover bg-center"></div>
           <div className="absolute bottom-0 -translate-y-[30%] -translate-x-[12px]">
             <div className="relative">
               <svg
@@ -39,11 +42,24 @@ const GWEContent = () => {
           </div>
         </div>
         <div>
-          <Tabs defaultValue="account" className="w-full">
-            <TabsList>
-              <TabsTrigger value="problem">Project Problem</TabsTrigger>
-              <TabsTrigger value="solution">Project Solution</TabsTrigger>
-              <TabsTrigger value="beneficiaries">
+          <Tabs defaultValue="problem" className="w-full mb-4 lg:mb-0">
+            <TabsList className="bg-transparent gap-4 grid grid-cols-2 md:flex lg:justify-start mb-12 md:mb-0">
+              <TabsTrigger
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:text-primary"
+                value="problem"
+              >
+                Project Problem
+              </TabsTrigger>
+              <TabsTrigger
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:text-primary"
+                value="solution"
+              >
+                Project Solution
+              </TabsTrigger>
+              <TabsTrigger
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:text-primary"
+                value="beneficiaries"
+              >
                 Target Beneficiaries
               </TabsTrigger>
             </TabsList>
@@ -52,7 +68,7 @@ const GWEContent = () => {
                 <h2 className={`${styles.heading3} uppercase`}>
                   Project Problem
                 </h2>
-                <div className="bg-[url('/src/assets/hanging-drip.png')] bg-cover bg-center h-[350px] w-full"></div>
+                <div className="bg-[url('/src/assets/hanging-drip.png')] bg-cover bg-center h-[250px] md:h-[350px] w-full"></div>
                 <div>
                   <p className={`text-darkgrey ${styles.paragraph3}`}>
                     - Lack of accountability in health service delivery
@@ -74,10 +90,10 @@ const GWEContent = () => {
                   Project Solution
                 </h2>
                 <div className="grid gap-8">
-                  <div className="flex gap-6">
+                  <div className="flex gap-4 md:gap-6">
                     <img
                       src={VisionIcon}
-                      className="w-[50px] h-[50px]"
+                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
                       alt="Vision Icon"
                     />
                     <div>
@@ -93,10 +109,10 @@ const GWEContent = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-6">
+                  <div className="flex gap-4 md:gap-6">
                     <img
                       src={VisionIcon}
-                      className="w-[50px] h-[50px]"
+                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
                       alt="Vision Icon"
                     />
                     <div>
@@ -110,10 +126,10 @@ const GWEContent = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-6">
+                  <div className="flex gap-4 md:gap-6">
                     <img
                       src={VisionIcon}
-                      className="w-[50px] h-[50px]"
+                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
                       alt="Vision Icon"
                     />
                     <div>
@@ -128,10 +144,10 @@ const GWEContent = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-6">
+                  <div className="flex gap-4 md:gap-6">
                     <img
                       src={VisionIcon}
-                      className="w-[50px] h-[50px]"
+                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
                       alt="Vision Icon"
                     />
                     <div>
@@ -152,7 +168,7 @@ const GWEContent = () => {
                 <h2 className={`${styles.heading3} uppercase`}>
                   Project Beneficiaries
                 </h2>
-                <div className="bg-[url('/src/assets/bunch-of-women.png')] bg-cover bg-center h-[350px] w-full"></div>
+                <div className="bg-[url('/src/assets/bunch-of-women.png')] bg-cover bg-center h-[250px] md:h-[350px] w-full"></div>
                 <div>
                   <p className={`text-darkgrey ${styles.paragraph3}`}>
                     - Citizens in the western area and eastern provinces of
@@ -165,7 +181,7 @@ const GWEContent = () => {
           </Tabs>
         </div>
       </section>
-      <section>
+      <section className="z-20">
         <p className={`${styles.paragraph3} leading-relaxed`}>
           The Western Area Rural District in Sierra Leone is a prime example of
           the discrimination and unfair low representation of women in
@@ -179,42 +195,67 @@ const GWEContent = () => {
           provide for their families. <a href="#">more...</a>
         </p>
 
-        <div className="bg-dark p-8 border-t-2 border-t-primary mt-8">
-          <h3 className={`${styles.heading2Barlow} text-white`}>Project Fact Sheet</h3>
+        <div className="bg-dark bg-[url('/src/assets/project-fact-sheet-art.png')] bg-no-repeat bg-contain bg-right-top p-8 border-t-2 border-t-primary mt-8">
+          <h3 className={`${styles.heading2Barlow} text-white`}>
+            Project Fact Sheet
+          </h3>
           <div className="py-8 grid gap-8">
             <div>
               <h5 className={`${styles.paragraph3} text-lightgrey`}>DONOR</h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>Christian Aid</p>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                Christian Aid
+              </p>
             </div>
 
             <div>
-              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT IMPLEMENTING PARTNER</h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>SEND Sierra Leone</p>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>
+                PROJECT IMPLEMENTING PARTNER
+              </h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                SEND Sierra Leone
+              </p>
             </div>
 
             <div>
-              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT LOCATION</h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>Western Area Rural District and the Eastern Province of Sierra Leone</p>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>
+                PROJECT LOCATION
+              </h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                Western Area Rural District and the Eastern Province of Sierra
+                Leone
+              </p>
             </div>
 
             <div>
-              <h5 className={`${styles.paragraph3} text-lightgrey`}>DURATION</h5>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>
+                DURATION
+              </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
             </div>
 
             <div>
-              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT BUDGET</h5>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>
+                PROJECT BUDGET
+              </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
             </div>
 
             <div>
-              <h5 className={`${styles.paragraph3} text-lightgrey`}>PROJECT THEMATIC AREAS</h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>Governance</p>
+              <h5 className={`${styles.paragraph3} text-lightgrey`}>
+                PROJECT THEMATIC AREAS
+              </h5>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                Governance
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <button className="bg-secondary text-white py-4 w-full">View Project Report</button>
-            <button className="bg-primary text-white py-4 w-full">View Gallery Project</button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <button className="bg-secondary text-white py-4 w-full">
+              View Project Report
+            </button>
+            <button className="bg-primary text-white py-4 w-full">
+              View Gallery Project
+            </button>
           </div>
         </div>
       </section>

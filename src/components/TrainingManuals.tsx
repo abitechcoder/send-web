@@ -33,15 +33,15 @@ const TrainingManuals = () => {
           </div>
           <h2 className={`${styles.heading1} mt-2`}>TRAINING MANUALS</h2>
           <div className="w-full md:w-[450px] mx-auto mt-8">
-            <TrainingManualsCard text="VSLA Manual"/>
+            <TrainingManualsCard text="VSLA Manual" />
             <hr />
-            <TrainingManualsCard text="Woman Leaders Manual"/>
+            <TrainingManualsCard text="Woman Leaders Manual" />
             <hr />
-            <TrainingManualsCard text="Health & Hygiene Manual"/>
+            <TrainingManualsCard text="Health & Hygiene Manual" />
             <hr />
-            <TrainingManualsCard text="Food & Nutrition Manual"/>
+            <TrainingManualsCard text="Food & Nutrition Manual" />
             <hr />
-            <TrainingManualsCard text="Gender Model Family Manual"/>
+            <TrainingManualsCard text="Gender Model Family Manual" />
           </div>
         </div>
       </div>
