@@ -1,12 +1,13 @@
-import { Header, ContactUs, Footer, SierraLeoneHistory } from "../components";
+import { Header, ContactUs, Footer, SierraLeoneHistory, CustomerSupport } from "../components";
 
 const SierraLeone = () => {
   return (
-    <main>
+    <main className="h-full relative">
       <Header parent_link="Who We Are" child_link="Sierra Leone" title="Sierra Leone" />
       <SierraLeoneHistory />
       <ContactUs />
       <Footer/>
+      <CustomerSupport/>
     </main>
   );
 };

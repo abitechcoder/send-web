@@ -1,12 +1,13 @@
-import { Header, ContactUs, Footer, OrganogramChart } from "../components";
+import { Header, ContactUs, Footer, OrganogramChart, CustomerSupport } from "../components";
 
 const OrganizationStructure = () => {
   return (
-    <main>
+    <main className="h-full relative">
       <Header parent_link="Who We Are" child_link="Organization Structure" title="Organization Structure" />
       <OrganogramChart/>
       <ContactUs />
       <Footer/>
+      <CustomerSupport/>
     </main>
   );
 };
