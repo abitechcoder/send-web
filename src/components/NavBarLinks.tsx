@@ -41,14 +41,18 @@ const NavBarLinks = ({
         </svg>
       </div>
       {links?.map((link) => (
-        <>
+        <div key={link?.id}>
           {link.child ? (
             <DropdownMenu>
               <DropdownMenuTrigger>
                 <div className={"group flex gap-2 items-center"}>
                   <span
                     className={`${
-                      isOpen ? "text-darkgrey" : fill ? "text-darkgrey" : "text-white"
+                      isOpen
+                        ? "text-darkgrey"
+                        : fill
+                        ? "text-darkgrey"
+                        : "text-white"
                     } group-hover:text-primary`}
                   >
                     {link?.text}
@@ -100,7 +104,7 @@ const NavBarLinks = ({
                     className={
                       isActive
                         ? "text-primary"
-                        : isOpen 
+                        : isOpen
                         ? "text-darkgrey"
                         : fill
                         ? "text-darkgrey"
@@ -113,7 +117,7 @@ const NavBarLinks = ({
               )}
             </NavLink>
           )}
-        </>
+        </div>
       ))}
     </ul>
   );

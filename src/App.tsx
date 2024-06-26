@@ -29,6 +29,7 @@ import {
   Newsletter,
   ManualAndProfiles,
   CaseStories,
+  DirectorDetails,
 } from "./pages";
 
 function App() {
@@ -46,7 +47,10 @@ function App() {
             <Route path="sierra-leone" element={<SierraLeone />} />
             <Route path="org-structure" element={<OrganizationStructure />} />
             <Route path="mgt-team" element={<ManagementTeam />} />
-            <Route path="board-of-directors" element={<BoardOfDirectors />} />
+            <Route path="board-of-directors">
+              <Route index element={<BoardOfDirectors />} />
+              <Route path=":directorId" element={<DirectorDetails />} />
+            </Route>
           </Route>
           <Route path="strategic-direction">
             <Route index element={<GovtAndWomenEmpowerment />} />

@@ -58,3 +58,4 @@ export { default as SelectInput } from "./SelectInput";
 export { default as JobCard } from "./JobCard";
 export { default as GWEContent } from "./GWEContent";
 export { default as CustomerSupport } from "./CustomerSupport";
+export { default as DirectorInfo } from "./DirectorInfo";
