@@ -1,16 +1,19 @@
+import { Link } from "react-router-dom";
 import styles from "../styles";
 
 const DirectorCard = ({
+  id,
   title,
   name,
   image,
 }: {
+  id: number;
   title: string;
   name: string;
   image?: string;
 }) => {
   return (
-    <div className={`h-[450px] w-full relative`}>
+    <Link to={`/whoweare/board-of-directors/${id}`} className={`h-[450px] w-full relative`}>
       <img
         src={`/src/assets/${image}`}
         className="absolute top-0 left-0 object-cover object-center h-full w-full"
@@ -49,7 +52,7 @@ const DirectorCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
