@@ -5,11 +5,16 @@ import {
   CustomerSupport,
   DirectorInfo,
 } from "../components";
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import { getDirector } from "../data";
+
+export async function loader({ params }: any) {
+  const director = await getDirector(Number(params.directorId));
+  return { director };
+}
 
 const DirectorDetails = () => {
-  let { directorId } = useParams();
-  console.log("Director Id:", directorId);
+  let { director }: any = useLoaderData();
   return (
     <main className="h-full relative">
       <Header
@@ -17,7 +22,7 @@ const DirectorDetails = () => {
         child_link="Board of Directors"
         title="Board of Directors"
       />
-      <DirectorInfo directorId={Number(directorId)} />
+      <DirectorInfo director={director} />
       <ContactUs />
       <Footer />
       <CustomerSupport />

@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import RootLayout from "./layouts/Root";
 import DashboardRoot from "./layouts/DashboardRoot";
+import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
+import { loader as DirectorLoader } from "./pages/DirectorDetails";
 
 //pages
 import {
@@ -48,8 +50,16 @@ function App() {
             <Route path="org-structure" element={<OrganizationStructure />} />
             <Route path="mgt-team" element={<ManagementTeam />} />
             <Route path="board-of-directors">
-              <Route index element={<BoardOfDirectors />} />
-              <Route path=":directorId" element={<DirectorDetails />} />
+              <Route
+                index
+                element={<BoardOfDirectors />}
+                loader={DirectorsLoader}
+              />
+              <Route
+                path=":directorId"
+                element={<DirectorDetails />}
+                loader={DirectorLoader}
+              />
             </Route>
           </Route>
           <Route path="strategic-direction">

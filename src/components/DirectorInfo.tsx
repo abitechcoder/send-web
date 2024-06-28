@@ -2,10 +2,10 @@ import DirectorCard from "./DirectorCard";
 import { layout } from "../styles";
 import { directors } from "../constants";
 import { useEffect, useState } from "react";
+import { Director } from "../types";
 
-const DirectorInfo = ({ directorId }: { directorId: number }) => {
-  const directorInfo = directors.find((director) => director.id === directorId)
-
+const DirectorInfo = ({ director }: { director: Director | null }) => {
+  console.log("Director Selected:", director);
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -14,13 +14,25 @@ const DirectorInfo = ({ directorId }: { directorId: number }) => {
         <div
           className={`col-span-5 md:col-span-2 w-full h-[350px] lg:h-[400px]`}
         >
-          <img src={`/src/assets/${directorInfo?.image}`} className="object-cover object-center w-full h-full" alt="" />
+          <img
+            src={`/src/assets/${director?.image}`}
+            className="object-cover object-center w-full h-full"
+            alt=""
+          />
         </div>
         <div className="hidden md:block w-full h-[350px] lg:h-[400px]">
-        <img src={`/src/assets/${directorInfo?.image}`} className="object-cover object-center w-full h-full" alt="" />
+          <img
+            src={`/src/assets/${director?.image}`}
+            className="object-cover object-center w-full h-full"
+            alt=""
+          />
         </div>
         <div className="hidden md:block col-span-2 w-full h-[350px] lg:h-[400px]">
-        <img src={`/src/assets/${directorInfo?.image}`} className="object-cover object-center w-full h-full" alt="" />
+          <img
+            src={`/src/assets/${director?.image}`}
+            className="object-cover object-center w-full h-full"
+            alt=""
+          />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-10 mt-8 pb-8">
