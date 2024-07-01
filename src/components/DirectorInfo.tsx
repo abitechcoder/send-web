@@ -1,5 +1,5 @@
 import DirectorCard from "./DirectorCard";
-import { layout } from "../styles";
+import { layout, styles } from "../styles";
 import { directors } from "../constants";
 import { useEffect, useState } from "react";
 import { Director } from "../types";
@@ -35,16 +35,41 @@ const DirectorInfo = ({ director }: { director: Director | null }) => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-10 mt-8 pb-8">
-        {directors.map((director) => (
-          <DirectorCard
-            key={director.id}
-            id={director.id}
-            name={director?.name}
-            title={director.title}
-            image={director.image}
-          />
-        ))}
+      <div className="py-8">
+        <div>
+          <h2 className={`${styles.heading3} text-secondary text-left`}>
+            Who We Are
+          </h2>
+          <h2
+            className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-left text-black uppercase`}
+          >
+            {director?.name}
+          </h2>
+        </div>
+        <p className="w-full text-left leading-relaxed">{director?.text}</p>
+      </div>
+      <div className="pt-10">
+        <div>
+          <h2 className={`${styles.heading3} text-secondary text-left`}>
+            Who We Are
+          </h2>
+          <h2
+            className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-left text-black uppercase`}
+          >
+            BOARD OF DIRECTORS
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-10 mt-8 pb-8">
+          {directors.map((director) => (
+            <DirectorCard
+              key={director.id}
+              id={director.id}
+              name={director?.name}
+              title={director.title}
+              image={director.image}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
