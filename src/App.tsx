@@ -32,6 +32,7 @@ import {
   ManualAndProfiles,
   CaseStories,
   DirectorDetails,
+  DonationDetails,
 } from "./pages";
 
 function App() {
@@ -68,7 +69,10 @@ function App() {
           <Route path="work-with-us" element={<WorkWithUs />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
-          <Route path="donate" element={<Donate />} />
+          <Route path="donate">
+          <Route index element={<Donate />} />
+          <Route path=":donationId" element={<DonationDetails />} />
+          </Route>
           <Route path="publications">
             <Route index element={<ProjectReports />} />
             <Route path="project-reports" element={<ProjectReports />} />
