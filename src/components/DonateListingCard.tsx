@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles";
 import { BlueProgress } from "@/components/ui/blue-progress";
+import { Link } from "react-router-dom";
 
 const DonateListingCard = ({
   title,
@@ -16,7 +17,7 @@ const DonateListingCard = ({
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className={`h-[520px] md:h-[550px] w-full relative`}>
+    <Link to={"/donate/1"} className={`h-[520px] md:h-[550px] w-full relative`}>
       <img
         src={`/src/assets/${image}`}
         className="absolute top-0 left-0 object-cover object-center h-[250px] w-full"
@@ -84,7 +85,7 @@ const DonateListingCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

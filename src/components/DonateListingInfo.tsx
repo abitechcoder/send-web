@@ -14,7 +14,7 @@ const DonateListingInfo = () => {
   }, []);
   return (
     <section>
-      <div className={`${layout.section} bg-graybg grid gap-8`}>
+      <div className={`${layout.section} bg-graybg grid gap-4 md:gap-8`}>
         <div>
           <h2 className={`${styles.heading3} text-secondary`}>Donate</h2>
           <h2
@@ -25,26 +25,41 @@ const DonateListingInfo = () => {
         </div>
         <div className="flex justify-between">
           <div className="z-30">
-            <h3 className={`font-barlow text-2xl text-secondary`}>Our Goal</h3>
-            <h2 className={`font-barlow text-3xl font-bold text-black`}>
+            <h3 className={`font-barlow text-xl md:text-2xl text-secondary`}>
+              Our Goal
+            </h3>
+            <h2
+              className={`font-barlow text-2xl md:text-3xl font-bold text-black`}
+            >
               $30,000
             </h2>
           </div>
           <div className="z-30">
-            <h3 className={`font-barlow text-2xl text-secondary`}>Raised</h3>
-            <h2 className={`font-barlow text-3xl text-black font-bold`}>
+            <h3 className={`font-barlow text-xl md:text-2xl text-secondary`}>
+              Raised
+            </h3>
+            <h2
+              className={`font-barlow text-2xl md:text-3xl text-black font-bold`}
+            >
               $25,000
             </h2>
           </div>
           <div className="z-30">
-            <h3 className={`font-barlow text-2xl text-secondary`}>To Go</h3>
-            <h2 className={`font-barlow text-3xl font-bold text-black`}>
+            <h3 className={`font-barlow text-xl md:text-2xl text-secondary`}>
+              To Go
+            </h3>
+            <h2
+              className={`font-barlow text-2xl md:text-3xl font-bold text-black`}
+            >
               $5,000
             </h2>
           </div>
         </div>
 
-        <BlueProgress value={progress} className="w-full bg-darkgrey h-2 my-8" />
+        <BlueProgress
+          value={progress}
+          className="w-full bg-darkgrey h-2 my-4 lg:my-8"
+        />
 
         <p className={`w-full text-black ${styles.paragraph2}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -56,7 +71,7 @@ const DonateListingInfo = () => {
           consectetur tristique tortor
         </p>
 
-        <div className="grid gap-4">
+        <div className="grid gap-4 mt-4">
           <h3 className={`${styles.heading2Barlow}`}>OUR CHALLENGE & GOAL</h3>
           <p className={`w-full text-black ${styles.paragraph2}`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -84,28 +99,28 @@ const DonateListingInfo = () => {
         </div>
       </div>
       <div className={`${layout.section} bg-white`}>
-        <div className="bg-graybg p-10 grid gap-8">
+        <div className="bg-graybg p-6 lg:p-10 grid gap-8">
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Your Donate</h3>
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
               <FormInput placeholder="$20" />
               <FormInput placeholder="$40" />
               <FormInput placeholder="$60" />
               <FormInput placeholder="$80" />
               <FormInput placeholder="$100" />
             </div>
-            <div className="grid grid-cols-7 gap-8">
-              <div className="col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 md:gap-8">
+              <div className="lg:col-span-2">
                 <FormInput placeholder="Custom Amount" />
               </div>
-              <div className="col-span-5">
+              <div className="lg:col-span-5">
                 <FormInput placeholder="Enter Custom Amount" />
               </div>
             </div>
           </div>
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Details</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormInput placeholder="First Name" />
               <FormInput placeholder="Last Name" />
               <FormInput placeholder="Your Email" />
@@ -126,29 +141,29 @@ const DonateListingInfo = () => {
             </RadioGroup>
           </div>
           <button
-              className={`${styles.flexCenter} gap-2 bg-black py-3 px-6 justify-self-start`}
+            className={`${styles.flexCenter} gap-2 bg-black py-3 px-6 justify-self-start`}
+          >
+            <span className="text-white">Donate</span>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span className="text-white">Donate</span>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M4.1735 12.5H20.8691" stroke="white" strokeWidth="2" />
-                <path
-                  d="M20.8691 12.5C16.2588 12.5 12.5213 16.4073 12.5213 21.2273"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M20.8691 12.4997C16.2588 12.4997 12.5213 8.5924 12.5213 3.77246"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-              </svg>
-            </button>
+              <path d="M4.1735 12.5H20.8691" stroke="white" strokeWidth="2" />
+              <path
+                d="M20.8691 12.5C16.2588 12.5 12.5213 16.4073 12.5213 21.2273"
+                stroke="white"
+                strokeWidth="2"
+              />
+              <path
+                d="M20.8691 12.4997C16.2588 12.4997 12.5213 8.5924 12.5213 3.77246"
+                stroke="white"
+                strokeWidth="2"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
