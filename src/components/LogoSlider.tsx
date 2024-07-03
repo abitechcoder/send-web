@@ -53,7 +53,7 @@ const LogoSlider = () => {
       <Slider {...settings}>
         <div className="h-[50px]">
           <img
-            src={IrishAidLogo}
+            src={"@logos/cisu-logo.png"}
             className="h-full object-contain"
             alt="Partner Logo"
           />
