@@ -1,11 +1,11 @@
 import styles from "../styles";
-import { ProgramCardArt} from "../assets";
+import { ProgramCardArt } from "../assets";
 import { ProgramCardProps } from "../types";
 
 const ProgramCard = ({ image, title }: ProgramCardProps) => {
   return (
-    <div className="lg:w-[250px] w-full relative">
-      <div className="bg-primary w-full h-[300px] lg:h-[200px]">
+    <div className="lg:w-[350px] w-full relative shadow-md">
+      <div className="bg-primary w-full h-[300px] lg:h-[300px]">
         <img src={image} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="h-[100px] bg-white p-4 relative">
@@ -20,7 +20,7 @@ const ProgramCard = ({ image, title }: ProgramCardProps) => {
         </div>
       </div>
       <div
-        className={`absolute w-[50px] h-[50px] bg-secondary ${styles.flexCenter} top-[275px] lg:top-[175px] right-[30px] z-10`}
+        className={`absolute w-[50px] h-[50px] bg-secondary ${styles.flexCenter} top-[275px] lg:top-[275px] right-[30px] z-10`}
       >
         <svg
           width="24"

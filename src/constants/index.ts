@@ -90,10 +90,10 @@ export const links: Link[] = [
 ];
 
 export const ProgramCards: ProgramCardProps[] = [
-  { id: 1, title: "Education", image: CardImage1 },
-  { id: 2, title: "Health and Wash", image: CardImage1 },
-  { id: 3, title: "Governance and Women Empowerment", image: CardImage2 },
-  { id: 4, title: "Climate Change and Livelihood", image: CardImage3 },
+  // { id: 1, title: "Education", image: CardImage1 },
+  { id: 1, title: "Health and Wash", image: CardImage1 },
+  { id: 2, title: "Governance and Women Empowerment", image: CardImage2 },
+  { id: 3, title: "Climate Change and Livelihood", image: CardImage3 },
 ];
 
 export const IdentityCards: IdentityCardProps[] = [

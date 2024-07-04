@@ -22,4 +22,4 @@ export { default as TrustAfricaLogo } from "./trust-africa.png";
 export { default as UKLogo } from "./uk.png";
 export { default as USAIDLogo } from "./usaid.jpg";
 export { default as WHILogo } from "./whi-logo.webp";
-// export {default as } from ""
+export { default as GOILogo } from "./govt_of_ireland.png";
