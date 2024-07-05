@@ -91,9 +91,24 @@ export const links: Link[] = [
 
 export const ProgramCards: ProgramCardProps[] = [
   // { id: 1, title: "Education", image: CardImage1 },
-  { id: 1, title: "Health and Wash", image: CardImage1 },
-  { id: 2, title: "Governance and Women Empowerment", image: CardImage2 },
-  { id: 3, title: "Climate Change and Livelihood", image: CardImage3 },
+  {
+    id: 1,
+    title: "Health and Wash",
+    image: CardImage1,
+    link_url: "/strategic-direction",
+  },
+  {
+    id: 2,
+    title: "Governance and Women Empowerment",
+    image: CardImage2,
+    link_url: "/strategic-direction",
+  },
+  {
+    id: 3,
+    title: "Climate Change and Livelihood",
+    image: CardImage3,
+    link_url: "/strategic-direction",
+  },
 ];
 
 export const IdentityCards: IdentityCardProps[] = [
@@ -105,17 +120,17 @@ export const IdentityCards: IdentityCardProps[] = [
   {
     id: 2,
     title: "Our Mission",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "Promotion of good governance, voice, accountably basic services and equality for women and men in Sierra Leone.",
   },
   {
     id: 3,
     title: "Core Values",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "We believe in the potential of PEOPLE to champion their own development, characterized by equality of women and men, openness and accountability.",
   },
   {
     id: 4,
     title: "Our Principle",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "Development is a human right that provides men and women with equal opportunity to actively participate in and contribute to the political, economic and social transformation of their communities.",
   },
 ];
 

@@ -9,6 +9,7 @@ export interface ProgramCardProps {
   id?: number;
   image: string;
   title: string;
+  link_url: string;
 }
 
 export interface IdentityCardProps {
