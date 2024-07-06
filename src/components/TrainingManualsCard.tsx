@@ -8,7 +8,7 @@ const TrainingManualsCard = ({
   pdf_url: string;
 }) => {
   return (
-    <a href={pdf_url}>
+    <a href={pdf_url} target="_blank">
       <div className="flex items-center justify-between py-2 px-4">
         <div className="flex items-center gap-4">
           <div className="h-[60px] w-[60px]">

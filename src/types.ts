@@ -25,3 +25,9 @@ export interface Director {
   image: string;
   text: string;
 }
+
+export interface StrategicPlan {
+  id: number;
+  title: string;
+  document_url: string;
+}
