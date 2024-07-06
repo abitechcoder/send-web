@@ -30,3 +30,9 @@ export interface StrategicPlan {
   title: string;
   document_url: string;
 }
+
+export interface StrategicPlan {
+  id: number;
+  title: string;
+  document_url: string;
+}
