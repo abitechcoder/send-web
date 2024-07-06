@@ -1,14 +1,19 @@
-import { Director, Link } from "../types";
 import { CardImage1, CardImage2, CardImage3 } from "../assets";
-import { ProgramCardProps, IdentityCardProps } from "../types";
+import {
+  Director,
+  Link,
+  ProgramCardProps,
+  IdentityCardProps,
+  StrategicPlan,
+} from "../types";
 
 export const links: Link[] = [
-  {
-    id: 1,
-    text: "Homepage",
-    url: "/",
-    child: null,
-  },
+  // {
+  //   id: 1,
+  //   text: "Homepage",
+  //   url: "/",
+  //   child: null,
+  // },
   {
     id: 2,
     text: "Who We Are",
@@ -91,9 +96,24 @@ export const links: Link[] = [
 
 export const ProgramCards: ProgramCardProps[] = [
   // { id: 1, title: "Education", image: CardImage1 },
-  { id: 1, title: "Health and Wash", image: CardImage1 },
-  { id: 2, title: "Governance and Women Empowerment", image: CardImage2 },
-  { id: 3, title: "Climate Change and Livelihood", image: CardImage3 },
+  {
+    id: 1,
+    title: "Health and Wash",
+    image: CardImage1,
+    link_url: "/strategic-direction",
+  },
+  {
+    id: 2,
+    title: "Governance and Women Empowerment",
+    image: CardImage2,
+    link_url: "/strategic-direction",
+  },
+  {
+    id: 3,
+    title: "Climate Change and Livelihood",
+    image: CardImage3,
+    link_url: "/strategic-direction",
+  },
 ];
 
 export const IdentityCards: IdentityCardProps[] = [
@@ -105,17 +125,17 @@ export const IdentityCards: IdentityCardProps[] = [
   {
     id: 2,
     title: "Our Mission",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "Promotion of good governance, voice, accountably basic services and equality for women and men in Sierra Leone.",
   },
   {
     id: 3,
     title: "Core Values",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "We believe in the potential of PEOPLE to champion their own development, characterized by equality of women and men, openness and accountability.",
   },
   {
     id: 4,
     title: "Our Principle",
-    text: "A Sierra Leone where people’s rights and well-being are guaranteed.",
+    text: "Development is a human right that provides men and women with equal opportunity to actively participate in and contribute to the political, economic and social transformation of their communities.",
   },
 ];
 
@@ -125,20 +145,73 @@ export const directors: Director[] = [
     name: "Lucy Cecilia",
     title: "Board Chairperson",
     image: "lucy-cecelia.png",
-    text: "Lucy Cecilia Foray Gondor is an Educationist, a Women’s Empowerment Advocate and currently serves as the President of Kailahun Women in Governance Network; a leading grassroots women’s advocacy CBO that champions women empowerment and participation in local governance. Under her leadership, Kailahun District became the first district to have the highest number of women elected as local councillors in Sierra Leone. She has also been a doyen of women’s empowerment in Eastern Province of Sierra Leone and double as the President for the Eastern Women’s Network that serves three districts that is Kailahun, Kenema and Kono. \n She is the Board Chairperson of the National Executive Council-SEND Sierra Leone, Board Member of Pendembu Community Bank in Upper Bambara Chiefdom in Kailahun District, Board Member of Pendembu Vocational Secondary School. She is an aspirant to become the next Member of Parliament for Upper Bambara Chiefdom in Kailahun District. \n Gondor received an Award from SEND West Africa for her leadership and commitment to SEND Sierra Leone during the Ebola outbreak in Sierra Leone that dismantled and re-ordered people’s lives in Sierra Leone.",
   },
   {
     id: 2,
     name: "Siapha Kamara",
     title: "Board Member",
     image: "siapha-kamara.png",
-    text: "Lucy Cecilia Foray Gondor is an Educationist, a Women’s Empowerment Advocate and currently serves as the President of Kailahun Women in Governance Network; a leading grassroots women’s advocacy CBO that champions women empowerment and participation in local governance. Under her leadership, Kailahun District became the first district to have the highest number of women elected as local councillors in Sierra Leone. She has also been a doyen of women’s empowerment in Eastern Province of Sierra Leone and double as the President for the Eastern Women’s Network that serves three districts that is Kailahun, Kenema and Kono. \n She is the Board Chairperson of the National Executive Council-SEND Sierra Leone, Board Member of Pendembu Community Bank in Upper Bambara Chiefdom in Kailahun District, Board Member of Pendembu Vocational Secondary School. She is an aspirant to become the next Member of Parliament for Upper Bambara Chiefdom in Kailahun District. \n Gondor received an Award from SEND West Africa for her leadership and commitment to SEND Sierra Leone during the Ebola outbreak in Sierra Leone that dismantled and re-ordered people’s lives in Sierra Leone.",
   },
   {
     id: 3,
     name: "Marion Joy Minah",
     title: "Board Member",
     image: "marion-joy.png",
-    text: "Lucy Cecilia Foray Gondor is an Educationist, a Women’s Empowerment Advocate and currently serves as the President of Kailahun Women in Governance Network; a leading grassroots women’s advocacy CBO that champions women empowerment and participation in local governance. Under her leadership, Kailahun District became the first district to have the highest number of women elected as local councillors in Sierra Leone. She has also been a doyen of women’s empowerment in Eastern Province of Sierra Leone and double as the President for the Eastern Women’s Network that serves three districts that is Kailahun, Kenema and Kono. \n She is the Board Chairperson of the National Executive Council-SEND Sierra Leone, Board Member of Pendembu Community Bank in Upper Bambara Chiefdom in Kailahun District, Board Member of Pendembu Vocational Secondary School. She is an aspirant to become the next Member of Parliament for Upper Bambara Chiefdom in Kailahun District. \n Gondor received an Award from SEND West Africa for her leadership and commitment to SEND Sierra Leone during the Ebola outbreak in Sierra Leone that dismantled and re-ordered people’s lives in Sierra Leone.",
+  },
+  {
+    id: 4,
+    name: "JOSEPH AYAMGA",
+    title: "Board Member",
+    image: "country-director.png",
+  },
+  {
+    id: 5,
+    name: "JEANNE KAMARA",
+    title: "Board Member",
+    image: "jean-kamara.jpg",
+  },
+  {
+    id: 6,
+    name: "SHEKU JAMES",
+    title: "Board Member",
+    image: "sheku-james.jpg",
+  },
+  {
+    id: 7,
+    name: "FATMATA DASSAMA",
+    title: "Board Member",
+    image: "fatmata-dassama.jpg",
+  },
+];
+
+export const strategicPlans: StrategicPlan[] = [
+  {
+    id: 1,
+    title: "2019 - 2023 Strategic Plan PDF",
+    document_url:
+      "https://www.sendsierraleone.com/Assets/documents/SEND-Strategic-Plan-2019-2023.pdf",
+  },
+  {
+    id: 2,
+    title: "2024 - 2029 Strategic Plan PDF",
+    document_url:
+      "https://www.sendsierraleone.com/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
+  },
+  {
+    id: 3,
+    title: "Resource Mobilisation Strategy",
+    document_url:
+      "https://www.sendsierraleone.com/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
+  },
+  {
+    id: 4,
+    title: "2019 - 2023 Strategy Evaluation Report",
+    document_url:
+      "https://www.sendsierraleone.com/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
+  },
+  {
+    id: 5,
+    title: "Organisation Profile",
+    document_url: "https://www.sendsierraleone.com/sendcompanyprofile.pdf",
   },
 ];

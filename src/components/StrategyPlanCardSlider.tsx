@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StrategyPlanCard from "./StrategyPlanCard";
+import { strategicPlans } from "../constants";
 
 const StrategyPlanCardSlider = () => {
   var settings = {
@@ -35,13 +36,13 @@ const StrategyPlanCardSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
-        <StrategyPlanCard/>
+        {strategicPlans.map((plan) => (
+          <StrategyPlanCard
+            key={plan.id}
+            title={plan.title}
+            document_url={plan.document_url}
+          />
+        ))}
       </Slider>
     </div>
   );

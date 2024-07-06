@@ -1,6 +1,6 @@
 import { Logo } from "../assets";
 import NavBarLinks from "./NavBarLinks";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const NavBar = ({ fill = true }: { fill?: boolean }) => {
@@ -10,13 +10,15 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
     <nav
       className={`${
         fill ? "bg-white" : "bg-transparent"
-      } flex justify-between lg:grid lg:grid-cols-[80px_1fr_150px] items-center gap-4 py-4`}
+      } flex justify-between lg:grid lg:grid-cols-[100px_1fr_150px] items-center gap-10 py-4`}
     >
+      <NavLink to={"/"}>
       <img
         src={Logo}
         alt="Logo Image"
         className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
       />
+      </NavLink>
       <NavBarLinks fill={fill} isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex items-center justify-between gap-8 lg:gap-0">

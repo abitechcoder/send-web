@@ -9,6 +9,7 @@ export interface ProgramCardProps {
   id?: number;
   image: string;
   title: string;
+  link_url: string;
 }
 
 export interface IdentityCardProps {
@@ -22,5 +23,10 @@ export interface Director {
   name: string;
   title: string;
   image: string;
-  text: string;
+}
+
+export interface StrategicPlan {
+  id: number;
+  title: string;
+  document_url: string;
 }

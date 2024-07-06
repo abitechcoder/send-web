@@ -18,6 +18,7 @@ const ProgramAreas = () => {
             key={program.id}
             title={program.title}
             image={program.image}
+            link_url={program.link_url}
           />
         ))}
       </div>

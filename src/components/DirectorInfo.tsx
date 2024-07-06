@@ -1,11 +1,18 @@
-import DirectorCard from "./DirectorCard";
+import {
+  LucyInfo,
+  DirectorCard,
+  SiaphaInfo,
+  JosephInfo,
+  MarionInfo,
+  JeaneInfo,
+  JamesInfo,
+  FatmataInfo,
+} from ".";
 import { layout, styles } from "../styles";
 import { directors } from "../constants";
-import { useEffect, useState } from "react";
 import { Director } from "../types";
 
 const DirectorInfo = ({ director }: { director: Director | null }) => {
-  console.log("Director Selected:", director);
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -46,7 +53,21 @@ const DirectorInfo = ({ director }: { director: Director | null }) => {
             {director?.name}
           </h2>
         </div>
-        <p className="w-full text-left leading-relaxed">{director?.text}</p>
+        {director?.id === 1 ? (
+          <LucyInfo />
+        ) : director?.id === 2 ? (
+          <SiaphaInfo />
+        ) : director?.id === 3 ? (
+          <MarionInfo />
+        ) : director?.id === 4 ? (
+          <JosephInfo />
+        ) : director?.id === 5 ? (
+          <JeaneInfo />
+        ) : director?.id === 6 ? (
+          <JamesInfo />
+        ) : (
+          <FatmataInfo />
+        )}
       </div>
       <div className="pt-10">
         <div>
@@ -59,7 +80,7 @@ const DirectorInfo = ({ director }: { director: Director | null }) => {
             BOARD OF DIRECTORS
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-10 mt-8 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-16 mt-8 pb-8">
           {directors.map((director) => (
             <DirectorCard
               key={director.id}
