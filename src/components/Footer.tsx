@@ -120,7 +120,10 @@ const Footer = () => {
               <div className="grid gap-3 place-content-start md:justify-center  md:hidden lg:block">
                 <h3 className="font-bold">Strategic Direction</h3>
                 <p className="text-lightgrey lg:text-sm text-xs">
-                  Health & Education
+                  Health
+                </p>
+                <p className="text-lightgrey lg:text-sm text-xs">
+                  Education
                 </p>
                 <p className="text-lightgrey lg:text-sm text-xs">
                   Governance & Woman Empowerment
