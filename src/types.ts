@@ -36,3 +36,17 @@ export interface StrategicPlan {
   title: string;
   document_url: string;
 }
+
+export interface AnnualReport {
+  title: string;
+  text: string;
+  year: string;
+  report_url: string;
+}
+
+export interface Newsletter {
+  id?: number;
+  title: string;
+  image: string;
+  url: string;
+}

@@ -1,3 +1,4 @@
+import { Newsletters } from "../constants";
 import { styles, layout } from "../styles";
 import NewsletterCard from "./NewsLetterCard";
 
@@ -28,18 +29,14 @@ const InTheNews = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        <NewsletterCard
-          title="NEWSLETTER 2022-IMPACTING TODAY FOR A..."
-          image="news-image-1.png"
-        />
-        <NewsletterCard
-          title="Nyapui Senior Secondary School of..."
-          image="news-image-2.png"
-        />
-        <NewsletterCard
-          title="Second Quarter Newsletter 2021..."
-          image="news-image-3.png"
-        />
+        {Newsletters.map((newsletter) => (
+          <NewsletterCard
+            key={newsletter.id}
+            title={newsletter.title}
+            image={newsletter.image}
+            url={newsletter.url}
+          />
+        ))}
       </div>
     </section>
   );

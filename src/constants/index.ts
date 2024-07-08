@@ -1,3 +1,4 @@
+import { title } from "process";
 import { CardImage1, CardImage2, CardImage3 } from "../assets";
 import {
   Director,
@@ -5,6 +6,8 @@ import {
   ProgramCardProps,
   IdentityCardProps,
   StrategicPlan,
+  AnnualReport,
+  Newsletter,
 } from "../types";
 
 export const links: Link[] = [
@@ -213,5 +216,177 @@ export const strategicPlans: StrategicPlan[] = [
     id: 5,
     title: "Organisation Profile",
     document_url: "https://www.sendsierraleone.com/sendcompanyprofile.pdf",
+  },
+];
+
+export const AnnualReports: AnnualReport[] = [
+  {
+    title: "Report 01",
+    text: "SEND SL Annual",
+    year: "Report 2017",
+    report_url:
+      "https://sendsierraleone.com/Assets/documents/SEND%20SIERRA%20LEONE%20ANNUAL%20REPORT%20(1)_2.pdf",
+  },
+  {
+    title: "Report 02",
+    text: "SEND SL Annual",
+    year: "Report 2018",
+    report_url:
+      "https://sendsierraleone.com/Assets/documents/SEND-Annual-Report-WEB%20(2).pdf",
+  },
+  {
+    title: "Report 03",
+    text: "SEND SL Annual",
+    year: "Report 2019",
+    report_url:
+      "https://sendsierraleone.com/Assets/documents/2019%20annual%20report2.pdf",
+  },
+  {
+    title: "Report 04",
+    text: "SEND SL Annual",
+    year: "Report 2020",
+    report_url:
+      "https://sendsierraleone.com/Assets/documents/Anual%20Repport%202020.pdf",
+  },
+  {
+    title: "Report 05",
+    text: "SEND SL Annual",
+    year: "Report 2021",
+    report_url: "https://sendsierraleone.com/reports.html",
+  },
+  {
+    title: "Report 06",
+    text: "SEND SL Annual",
+    year: "Report 2022",
+    report_url: "https://sendsierraleone.com/Annual%20Report%202022.pdf",
+  },
+  {
+    title: "Report 07",
+    text: "SEND SL Annual",
+    year: "Report 2023",
+    report_url: "https://sendsierraleone.com/Annual%20Report%202023%20web.pdf",
+  },
+];
+
+export const Newsletters: Newsletter[] = [
+  {
+    id: 1,
+    title: "NEWSLETTER 2022-IMPACTING TODAY FOR A BETTER TOMORROW",
+    image: "news-image-1.png",
+    url: "https://sendsierraleone.com/2022NEWSLETTER.pdf",
+  },
+  {
+    id: 2,
+    title: "Nyapui Senior Secondary School of Excellence Brochure",
+    image: "news-image-2.png",
+    url: "https://sendsierraleone.com/Nyapuischoolbrochure.pdf",
+  },
+  {
+    id: 3,
+    title: "Second Quarter Newsletter 2021. RESILIENCE THROUGH EMPOWERMENT",
+    image: "news-image-3.png",
+    url: "https://sendsierraleone.com/Assets/documents/Resiliance%20through%20Empowerment%20(Online).pdf",
+  },
+  {
+    id: 4,
+    title: "Second Quarter Newsletter 2020. SURVIVING THROUGH COVID-19",
+    image: "news-image-4.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/newsletter%202nd%20qta%20(update).pdf",
+  },
+  {
+    id: 5,
+    title: "First Quarter Newsletter 2020, MAKING A CHANGE IN DIFFICULT TIMES.",
+    image: "news-image-5.png",
+    url: "https://sendsierraleone.com/Assets/documents/SEND%20Sierra%20Leone%201st%20Newsletter%202020.pdf",
+  },
+  {
+    id: 6,
+    title:
+      "April 2020 Newsletter, Debunking Things Believed to be True about the Corona Virus.",
+    image: "news-image-6.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/myths.pdf",
+  },
+  {
+    id: 7,
+    title: "April 2020 Newsletter, Sensitization Manual on COVID-19 Pandemic",
+    image: "news-image-7.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/corona.pdf",
+  },
+  {
+    id: 8,
+    title:
+      "April 2020 Newsletter, NURTURING CHILDREN DURING THE COVID-19 PANDEMIC",
+    image: "news-image-8.jpg",
+    url: "https://sendsierraleone.com/Nyapuischoolbrochure.pdf",
+  },
+  {
+    id: 9,
+    title:
+      "March 2020 Newsletter, Statement by HIS EXCELLENCY, DR. JULIUS MAADA BIO",
+    image: "news-image-9.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/Statement%20by%20His%20Excellency,%20Dr%20Julius%20Maada%20Bio,%20President%20of%20the%20Republic%20of%20Sierra%20Leone%20at%20the%20Second%20Press%20Conference%20on%20COVID-19.%20State%20House,%20Freetown%20-%2031%20March%202020.pdf",
+  },
+  {
+    id: 10,
+    title:
+      "September 2018 Newsletter, Overcoming Social & Cultural Barriers to Political & Economic Empowerment!",
+    image: "news-image-10.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/SEND%20Women%20Empowerment%20Newsletter%202018-2.pdf",
+  },
+  {
+    id: 11,
+    title: "2019 Newsletters, Strengthening SEND and safeguarding staff",
+    image: "news-image-11.jpg",
+    url: "https://sendsierraleone.com/Assets/documents/news%20letter%202019.pdf",
+  },
+];
+
+
+// Health & Education Page data
+const HealthProjects = [
+  {
+    id: 1,
+    title:
+      "Implementation Of The New Educational Initiative Project (Nyapui School and Computer Training Center in Kenema)",
+    link_url: "https://sendsierraleone.com/educational-initiative.html",
+  },
+  {
+    id: 2,
+    title:
+      "Promotion of Nutrition Sensitive Wash Self-Supply In the Sherbro Island in Bonthe District Project",
+    link_url: "https://sendsierraleone.com/promotion.html",
+  },
+];
+
+
+// Governance & Women Empowerment Page data
+const GovtProjects = [
+  {
+    id: 1,
+    title:
+      "Strengthening Community Led Accountability to Improve Service Delivery(SABI)",
+    link_url: "https://sendsierraleone.com/SABI.html",
+  },
+  {
+    id: 2,
+    title:
+      "Supporting Gender Equality and Social Accountability through a strengthened Civil Society",
+    link_url: "https://sendsierraleone.com/Brouchure_Supporting%20Gender%20Equality.pdf",
+  },
+];
+
+// Livelihood, Food & Nutrition Security Page data
+const LivelihoodProjects = [
+  {
+    id: 1,
+    title:
+      "SOLAR POWER HUB PROJECT MENDEKELEMA-PHASE I",
+    link_url: "https://sendsierraleone.com/SOLAR%20project%20fact%20sheet.pdf",
+  },
+  {
+    id: 2,
+    title:
+      "PROMOTING EMPLOYMENT OPPORTUNITIES FOR WOMEN AND YOUTH IN BONTHE AND FALABA DISTRICTS",
+    link_url: "https://sendsierraleone.com/UNDP%20Human%20Security%20Factsheet.pdf",
   },
 ];

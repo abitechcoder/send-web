@@ -1,12 +1,11 @@
 import styles from "../styles";
+import { Newsletter } from "../types";
 
 const NewsletterCard = ({
   title,
   image,
-}: {
-  title: string;
-  image?: string;
-}) => {
+  url,
+}: Newsletter) => {
   return (
     <div className={`w-full relative bg-white`}>
       <img
@@ -18,7 +17,7 @@ const NewsletterCard = ({
         <h2 className={`${styles.paragraph} text-black font-bold uppercase`}>
           {title}
         </h2>
-        <div className="bg-lightgrey px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
+        <a href={url} className="bg-lightgrey px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
           <p className={`${styles.paragraph3}`}>Read More</p>
           <svg
             width="8"
@@ -35,7 +34,7 @@ const NewsletterCard = ({
               stroke-linejoin="round"
             />
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   );

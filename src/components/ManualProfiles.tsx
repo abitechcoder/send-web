@@ -28,9 +28,9 @@ const ManualProfiles = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        <ManualProfileCard image="manual-image-1.png" />
-        <ManualProfileCard image="manual-image-2.png" />
-        <ManualProfileCard image="manual-image-3.png" />
+        <ManualProfileCard image="manual-image-1.png" link_url="https://sendsierraleone.com/Women%20Manifesto%20Final.pdf" />
+        <ManualProfileCard image="manual-image-2.png" link_url="https://sendsierraleone.com/Advocacy%20Strategy%20Document.pdf" />
+        <ManualProfileCard image="manual-image-3.png" link_url="https://sendsierraleone.com/womencandidatestrainingmanual.pdf" />
       </div>
     </section>
   );
