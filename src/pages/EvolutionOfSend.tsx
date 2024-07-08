@@ -1,12 +1,13 @@
-import { Header, ContactUs, Footer, SendEvolution } from "../components";
+import { Header, ContactUs, Footer, SendEvolution, CustomerSupport } from "../components";
 
 const EvolutionOfSend = () => {
   return (
-    <main>
+    <main className="h-full relative">
       <Header parent_link="Who We Are" child_link="Evolution Of Send" title="Evolution Of Send" />
       <SendEvolution />
       <ContactUs />
       <Footer/>
+      <CustomerSupport/>
     </main>
   );
 };

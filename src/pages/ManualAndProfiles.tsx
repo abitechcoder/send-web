@@ -1,8 +1,8 @@
-import { Header, ContactUs, Footer, ManualProfiles } from "../components";
+import { Header, ContactUs, Footer, ManualProfiles, CustomerSupport } from "../components";
 
 const ManualAndProfiles = () => {
   return (
-    <main>
+    <main className="h-full relative">
       <Header
         parent_link="Publications"
         child_link="Manual & Profiles"
@@ -11,6 +11,7 @@ const ManualAndProfiles = () => {
       <ManualProfiles />
       <ContactUs />
       <Footer />
+      <CustomerSupport/>
     </main>
   );
 };

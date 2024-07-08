@@ -1,11 +1,12 @@
-import { Header, Footer, TalkToUs } from "../components";
+import { Header, Footer, TalkToUs, CustomerSupport } from "../components";
 
 const Contact = () => {
   return (
-    <main>
+    <main className="h-full relative">
       <Header parent_link="Home" child_link="Contact Us" title="Contact Us" />
       <TalkToUs/>
       <Footer/>
+      <CustomerSupport/>
     </main>
   );
 };

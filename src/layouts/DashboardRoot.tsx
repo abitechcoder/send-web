@@ -7,8 +7,7 @@ const DashboardRoot = () => {
       <aside>
         <SideNav />
       </aside>
-      <section className="h-full grid grid-cols-1 grid-rows-[100px_1fr]">
-        <NavBar />
+      <section className="h-full">
         <Outlet />
       </section>
     </main>

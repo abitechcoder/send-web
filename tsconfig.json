@@ -3,9 +3,10 @@
     /* To support @ alias */
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@logos": ["./src/assets/logos"]
     },
-    
+
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],

@@ -3,7 +3,7 @@ import { layout, styles } from "../styles";
 const SierraLeoneHistory = () => {
   return (
     <section className={`bg-white ${layout.section} relative`}>
-      <div className="hidden fixed md:top-[400px] lg:top-[600px] md:right-[30px] lg:right-[70px] md:grid gap-4 z-30">
+      <div className="hidden fixed md:top-[400px] lg:top-[300px] md:right-[30px] lg:right-[100px] md:grid gap-4 z-30">
         <div className="w-[50px] h-[50px] rounded-full bg-darkgrey grid place-items-center">
           <svg
             width="24"

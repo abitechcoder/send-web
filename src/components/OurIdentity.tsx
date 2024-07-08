@@ -13,9 +13,13 @@ const OurIdentity = () => {
         The ethos and commitment of SEND sierra Leone is to improve the quality
         of lives throughout the country.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[50px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[50px]">
         <div>
-          <img src={OurIdentityImage} className="h-[300px] w-full md:h-[500px]" alt="" />
+          <img
+            src={OurIdentityImage}
+            className="h-[300px] bg-cover bg-center w-full md:h-[500px]"
+            alt=""
+          />
         </div>
         <div className="grid gap-4">
           {IdentityCards?.map((card) => (

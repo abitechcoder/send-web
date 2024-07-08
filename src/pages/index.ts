@@ -18,3 +18,5 @@ export { default as ProjectReports } from "./ProjectReports";
 export { default as Newsletter } from "./Newsletter";
 export { default as ManualAndProfiles } from "./ManualAndProfiles";
 export { default as CaseStories } from "./CaseStories";
+export { default as DirectorDetails } from "./DirectorDetails";
+export { default as DonationDetails } from "./DonationDetails";

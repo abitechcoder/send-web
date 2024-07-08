@@ -7,7 +7,11 @@ export const styles = {
 
   heading2: "font-manrope text-2xl font-bold",
 
+  heading2Barlow: "font-barlow text-2xl font-bold",
+
   heading3: "font-barlow text-xl font-bold",
+
+  heading3Manrope: "font-manrope text-lg lg:text-xl font-bold",
 
   heading4: "font-barlow text-lg font-bold",
 
@@ -16,6 +20,8 @@ export const styles = {
   paragraph2: "font-manrope text-base",
 
   paragraph3: "font-manrope text-sm",
+
+  paragraph3Barlow: "font-barlow text-sm",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",

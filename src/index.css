@@ -8,7 +8,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .slider-slide > div {
   margin: 0 10px;
+}
+
+@layer components {
+  .rotated-date {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
 }

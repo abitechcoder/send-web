@@ -36,3 +36,4 @@ export { default as ChevronLeft } from "./chevron-left.png";
 export { default as CorporateImage } from "./corporate-identity-image.png";
 export { default as AManDrawing } from "./a-man-draw.png";
 export { default as Organogram } from "./organogram.png";
+export { default as CustomerSupportIcon } from "./customer-support.png";

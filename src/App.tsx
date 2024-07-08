@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import RootLayout from "./layouts/Root";
 import DashboardRoot from "./layouts/DashboardRoot";
+import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
+import { loader as DirectorLoader } from "./pages/DirectorDetails";
 
 //pages
 import {
@@ -29,6 +31,8 @@ import {
   Newsletter,
   ManualAndProfiles,
   CaseStories,
+  DirectorDetails,
+  DonationDetails,
 } from "./pages";
 
 function App() {
@@ -46,7 +50,18 @@ function App() {
             <Route path="sierra-leone" element={<SierraLeone />} />
             <Route path="org-structure" element={<OrganizationStructure />} />
             <Route path="mgt-team" element={<ManagementTeam />} />
-            <Route path="board-of-directors" element={<BoardOfDirectors />} />
+            <Route path="board-of-directors">
+              <Route
+                index
+                element={<BoardOfDirectors />}
+                loader={DirectorsLoader}
+              />
+              <Route
+                path=":directorId"
+                element={<DirectorDetails />}
+                loader={DirectorLoader}
+              />
+            </Route>
           </Route>
           <Route path="strategic-direction">
             <Route index element={<GovtAndWomenEmpowerment />} />
@@ -54,7 +69,10 @@ function App() {
           <Route path="work-with-us" element={<WorkWithUs />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
-          <Route path="donate" element={<Donate />} />
+          <Route path="donate">
+          <Route index element={<Donate />} />
+          <Route path=":donationId" element={<DonationDetails />} />
+          </Route>
           <Route path="publications">
             <Route index element={<ProjectReports />} />
             <Route path="project-reports" element={<ProjectReports />} />

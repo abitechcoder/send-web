@@ -33,15 +33,30 @@ const TrainingManuals = () => {
           </div>
           <h2 className={`${styles.heading1} mt-2`}>TRAINING MANUALS</h2>
           <div className="w-full md:w-[450px] mx-auto mt-8">
-            <TrainingManualsCard text="VSLA Manual"/>
+            <TrainingManualsCard
+              text="VSLA Manual"
+              pdf_url="https://www.sendsierraleone.com/Assets/documents/vsla%20manual.pdf"
+            />
             <hr />
-            <TrainingManualsCard text="Woman Leaders Manual"/>
+            <TrainingManualsCard
+              text="Women Leaders Manual"
+              pdf_url="https://www.sendsierraleone.com/Assets/documents/manual.pdf"
+            />
             <hr />
-            <TrainingManualsCard text="Health & Hygiene Manual"/>
+            <TrainingManualsCard
+              text="Health & Hygiene Manual"
+              pdf_url="https://www.sendsierraleone.com/Assets/documents/Health%20and%20Hygiene%20Manual%20Final%20Design.pdf"
+            />
             <hr />
-            <TrainingManualsCard text="Food & Nutrition Manual"/>
+            <TrainingManualsCard
+              text="Food & Nutrition Manual"
+              pdf_url="https://www.sendsierraleone.com/Assets/documents/food%20and%20nutrision%20manual.pdf"
+            />
             <hr />
-            <TrainingManualsCard text="Gender Model Family Manual"/>
+            <TrainingManualsCard
+              text="Gender Model Family Manual"
+              pdf_url="https://www.sendsierraleone.com/Assets/documents/GMF%20MANUAL%20for%20SEND%20final.pdf"
+            />
           </div>
         </div>
       </div>
