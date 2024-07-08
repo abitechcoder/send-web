@@ -50,3 +50,9 @@ export interface Newsletter {
   image: string;
   url: string;
 }
+
+export interface ProfileManual {
+  id?: number;
+  image: string;
+  link_url: string;
+}

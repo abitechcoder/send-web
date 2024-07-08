@@ -8,6 +8,7 @@ import {
   StrategicPlan,
   AnnualReport,
   Newsletter,
+  ProfileManual,
 } from "../types";
 
 export const links: Link[] = [
@@ -341,9 +342,8 @@ export const Newsletters: Newsletter[] = [
   },
 ];
 
-
 // Health & Education Page data
-const HealthProjects = [
+export const HealthProjects = [
   {
     id: 1,
     title:
@@ -364,21 +364,19 @@ const HealthProjects = [
   },
   {
     id: 4,
-    title:
-      "Promoting Equality and Women's Leadership (PEWLESS) Project",
-    link_url: "https://sendsierraleone.com/Promoting%20Equality%20and%20Women's%20Leadership.pdfl",
+    title: "Promoting Equality and Women's Leadership (PEWLESS) Project",
+    link_url:
+      "https://sendsierraleone.com/Promoting%20Equality%20and%20Women's%20Leadership.pdfl",
   },
   {
     id: 5,
-    title:
-      "Enhanced Community Health Resilience Project",
+    title: "Enhanced Community Health Resilience Project",
     link_url: "https://sendsierraleone.com/baomaproject.html",
   },
 ];
 
-
 // Governance & Women Empowerment Page data
-const GovtProjects = [
+export const GovtProjects = [
   {
     id: 1,
     title:
@@ -389,24 +387,22 @@ const GovtProjects = [
     id: 2,
     title:
       "Supporting Gender Equality and Social Accountability through a strengthened Civil Society",
-    link_url: "https://sendsierraleone.com/Brouchure_Supporting%20Gender%20Equality.pdf",
+    link_url:
+      "https://sendsierraleone.com/Brouchure_Supporting%20Gender%20Equality.pdf",
   },
   {
     id: 3,
-    title:
-      "Strengthening Women’s Participation in Politics and Governance",
+    title: "Strengthening Women’s Participation in Politics and Governance",
     link_url: "https://sendsierraleone.com/politics.html",
   },
   {
     id: 4,
-    title:
-      "KAILAHUN WOMEN IN GOVERNANCE",
+    title: "KAILAHUN WOMEN IN GOVERNANCE",
     link_url: "https://sendsierraleone.com/kailahun.html",
   },
   {
     id: 5,
-    title:
-      "WOMEN IGNITING THE SPIRIT OF ENTERPRENEURSHIP",
+    title: "WOMEN IGNITING THE SPIRIT OF ENTERPRENEURSHIP",
     link_url: "https://sendsierraleone.com/enterpreneurship.html",
   },
   {
@@ -427,27 +423,25 @@ const GovtProjects = [
       "Fostering Peaceful, Credible and Inclusive Elections in Sierra Leone 2022-2023 Project",
     link_url: "https://sendsierraleone.com/UNDP%20Elections%20Factsheet.pdfl",
   },
-
 ];
 
 // Livelihood, Food & Nutrition Security Page data
-const LivelihoodProjects = [
+export const LivelihoodProjects = [
   {
     id: 1,
-    title:
-      "SOLAR POWER HUB PROJECT MENDEKELEMA-PHASE I",
+    title: "SOLAR POWER HUB PROJECT MENDEKELEMA-PHASE I",
     link_url: "https://sendsierraleone.com/SOLAR%20project%20fact%20sheet.pdf",
   },
   {
     id: 2,
     title:
       "PROMOTING EMPLOYMENT OPPORTUNITIES FOR WOMEN AND YOUTH IN BONTHE AND FALABA DISTRICTS",
-    link_url: "https://sendsierraleone.com/UNDP%20Human%20Security%20Factsheet.pdf",
+    link_url:
+      "https://sendsierraleone.com/UNDP%20Human%20Security%20Factsheet.pdf",
   },
   {
     id: 3,
-    title:
-      "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
+    title: "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
     link_url: "https://sendsierraleone.com/citizenwashclimateproject.html",
   },
   {
@@ -458,8 +452,7 @@ const LivelihoodProjects = [
   },
   {
     id: 5,
-    title:
-      "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
+    title: "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
     link_url: "https://sendsierraleone.com/climatechangeproject.html",
   },
   {
@@ -476,8 +469,7 @@ const LivelihoodProjects = [
   },
   {
     id: 8,
-    title:
-      "Bonthe Island Fish Trading (BIFT) Project",
+    title: "Bonthe Island Fish Trading (BIFT) Project",
     link_url: "https://sendsierraleone.com/bift.html",
   },
   {
@@ -492,5 +484,79 @@ const LivelihoodProjects = [
       "Linking Agriculture Natural Resources Management and WASH towards Nutrition Security in Kenema and Pujehun Districts.",
     link_url: "https://sendsierraleone.com/pujehun.html",
   },
+];
 
+export const ProfileManuals: ProfileManual[] = [
+  {
+    id: 1,
+    image: "manual-image-1.png",
+    link_url: "https://sendsierraleone.com/Women%20Manifesto%20Final.pdf",
+  },
+  {
+    id: 2,
+    image: "manual-image-2.png",
+    link_url: "https://sendsierraleone.com/Advocacy%20Strategy%20Document.pdf",
+  },
+  {
+    id: 3,
+    image: "manual-image-3.png",
+    link_url: "https://sendsierraleone.com/womencandidatestrainingmanual.pdf",
+  },
+  {
+    id: 4,
+    image: "manual-image-4.jpg",
+    link_url: "https://www.sendsierraleone.com/handbook.pdf",
+  },
+  {
+    id: 5,
+    image: "manual-image-5.png",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/GTA%20Final%20Report.pdf",
+  },
+  {
+    id: 6,
+    image: "manual-image-6.png",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/GTA%20Final.pdf",
+  },
+  {
+    id: 7,
+    image: "manual-image-7.jpg",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/vsla%20manual.pdf",
+  },
+  {
+    id: 8,
+    image: "manual-image-8.jpg",
+    link_url: "https://www.sendsierraleone.com/Assets/documents/manual.pdf",
+  },
+  {
+    id: 9,
+    image: "manual-image-9.jpg",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/health&hygiene%20manual.pdf",
+  },
+  {
+    id: 10,
+    image: "manual-image-10.jpg",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/food%20and%20nutrision%20manual.pdf",
+  },
+  {
+    id: 11,
+    image: "manual-image-11.jpg",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/GMF%20MANUAL%20for%20SEND%20final.pdf",
+  },
+  {
+    id: 12,
+    image: "profile-image-1.jpg",
+    link_url: "https://www.sendsierraleone.com/Climate%20Profile%20.pdf",
+  },
+  {
+    id: 13,
+    image: "profile-image-2.jpg",
+    link_url:
+      "https://www.sendsierraleone.com/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
+  },
 ];

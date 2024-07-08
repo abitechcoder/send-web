@@ -13,10 +13,13 @@ const DirectorCard = ({
   image?: string;
 }) => {
   return (
-    <Link to={`/whoweare/board-of-directors/${id}`} className={`h-[450px] w-full relative`}>
+    <Link
+      to={`/whoweare/board-of-directors/${id}`}
+      className={`h-[450px] w-full relative`}
+    >
       <img
         src={`/src/assets/${image}`}
-        className="absolute top-0 left-0 object-cover object-center h-full w-full"
+        className="absolute top-0 left-0 object-cover object-center h-full w-full hover:opacity-80"
         alt=""
       />
       <div className="absolute -bottom-[40px] left-[5%] w-[90%] h-[120px] z-10 bg-white">
