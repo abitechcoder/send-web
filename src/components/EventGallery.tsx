@@ -26,29 +26,29 @@ const EventGallery = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[80px] md:gap-x-10 mt-8 pb-12">
         <GalleryCard
-          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
+          title="Climate Action Conference 2024 Day 2"
           image="gallery-image-1.jpg"
-          link_url=""
+          link_url="https://myalbum.com/album/NKsAP4mLp9ZnrY/"
         />
         <GalleryCard
-          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image-1.jpg"
-          link_url=""
+          title="Climate Action Conference 2024 Day 2"
+          image="gallery-image-2.jpg"
+          link_url="hhttps://myalbum.com/album/U96CXxowg9TeGm/"
         />
         <GalleryCard
-          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image-1.jpg"
-          link_url=""
+          title="SEND Sierra Leon 2023 Annual Report Exhibito"
+          image="gallery-image-3.jpg"
+          link_url="https://myalbum.com/album/Cv4U5GtTzQ4bjN/?invite=6f7af200-a0a5-407a-826f-eb5446bc329c"
         />
         <GalleryCard
-          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image-1.jpg"
-          link_url=""
+          title="SEND Sierra Leone 2023 Annual Staff Meeting"
+          image="gallery-image-3.jpg"
+          link_url="https://myalbum.com/album/Cv4U5GtTzQ4bjN/?invite=6f7af200-a0a5-407a-826f-eb5446bc329c"
         />
         <GalleryCard
-          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image-1.jpg"
-          link_url=""
+          title="SEND Sierra Leone 2023 Staff Awards Night And Dinner"
+          image="gallery-image-3.jpg"
+          link_url="https://myalbum.com/album/XmC7fmahHjSrnN/?invite=06b48367-f615-49b2-bb90-76784e074615"
         />
       </div>
     </section>

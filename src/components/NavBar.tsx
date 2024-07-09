@@ -12,12 +12,12 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
         fill ? "bg-white" : "bg-transparent"
       } flex justify-between lg:grid lg:grid-cols-[100px_1fr_150px] items-center gap-10 py-4`}
     >
-      <NavLink to={"/"}>
-      <img
-        src={Logo}
-        alt="Logo Image"
-        className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
-      />
+      <NavLink to={"/"} className="hover:cursor-pointer">
+        <img
+          src={Logo}
+          alt="Logo Image"
+          className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
+        />
       </NavLink>
       <NavBarLinks fill={fill} isOpen={isOpen} setIsOpen={setIsOpen} />
 
@@ -28,7 +28,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
         >
           Donate
         </button>
-        <svg
+        {/* <svg
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -50,18 +50,19 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-        </svg>
+        </svg> */}
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            className={`w-8 h-8 lg:hidden hover:cursor-pointer ${
-            fill ? "fill-black" : "fill-white"}`}
-            onClick={() => setIsOpen(true)}
-            fill=""
-          >
-            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-          </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          className={`w-8 h-8 lg:hidden hover:cursor-pointer ${
+            fill ? "fill-black" : "fill-white"
+          }`}
+          onClick={() => setIsOpen(true)}
+          fill=""
+        >
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
       </div>
     </nav>
   );

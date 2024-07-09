@@ -1,5 +1,6 @@
 import { Header, ContactUs, Footer, InTheNews, CustomerSupport } from "../components";
 
+
 const Newsletter = () => {
   return (
     <main className="h-full relative">

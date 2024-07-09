@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const ProgramCard = ({ image, title, link_url }: ProgramCardProps) => {
   return (
     <Link to={link_url}>
-      <div className="lg:w-[350px] w-full relative shadow-md">
-        <div className="bg-primary w-full h-[300px] lg:h-[300px]">
+      <div className="lg:w-[300px] w-full relative shadow-md">
+        <div className="bg-primary w-full h-[300px] lg:h-[250px]">
           <img src={image} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-[100px] bg-white p-4 relative">

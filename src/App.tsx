@@ -8,8 +8,11 @@ import RootLayout from "./layouts/Root";
 import DashboardRoot from "./layouts/DashboardRoot";
 import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
 import { loader as DirectorLoader } from "./pages/DirectorDetails";
+import { HealthProjectsLoader } from "./pages/HealthDetails";
+import GovernanceDetails, {
+  GovernanceProjectsLoader,
+} from "./pages/GovernanceDetails";
 import { loader as ClassificationLoader } from "./pages/WorkWithUs";
-
 
 //pages
 import {
@@ -24,7 +27,6 @@ import {
   OrganizationStructure,
   ManagementTeam,
   BoardOfDirectors,
-  GovtAndWomenEmpowerment,
   WorkWithUs,
   Gallery,
   Donate,
@@ -35,7 +37,14 @@ import {
   CaseStories,
   DirectorDetails,
   DonationDetails,
+  HealthAndEducation,
+  Governance,
+  Livelihood,
+  HealthDetails,
 } from "./pages";
+import LivelihoodDetails, {
+  LivelihoodProjectsLoader,
+} from "./pages/LivelihoodDetails";
 
 function App() {
   const router = createBrowserRouter(
@@ -66,17 +75,43 @@ function App() {
             </Route>
           </Route>
           <Route path="strategic-direction">
-            <Route index element={<GovtAndWomenEmpowerment />} />
+            <Route index element={<HealthAndEducation />} />
+            <Route path="edu-health">
+              <Route index element={<HealthAndEducation />} />
+              <Route
+                path=":projectId"
+                element={<HealthDetails />}
+                loader={HealthProjectsLoader}
+              />
+            </Route>
+
+            <Route path="governance">
+              <Route index element={<Governance />} />
+              <Route
+                path=":projectId"
+                element={<GovernanceDetails />}
+                loader={GovernanceProjectsLoader}
+              />
+            </Route>
+            <Route path="livelihood">
+              <Route index element={<Livelihood />} />
+              <Route
+                path=":projectId"
+                element={<LivelihoodDetails />}
+                loader={LivelihoodProjectsLoader}
+              />
+            </Route>
           </Route>
-          <Route path="work-with-us" 
-                loader={ClassificationLoader}
-        
-          element={<WorkWithUs />} />
+          <Route
+            path="work-with-us"
+            loader={ClassificationLoader}
+            element={<WorkWithUs />}
+          />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="donate">
-          <Route index element={<Donate />} />
-          <Route path=":donationId" element={<DonationDetails />} />
+            <Route index element={<Donate />} />
+            <Route path=":donationId" element={<DonationDetails />} />
           </Route>
           <Route path="publications">
             <Route index element={<ProjectReports />} />

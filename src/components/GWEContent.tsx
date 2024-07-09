@@ -1,8 +1,9 @@
 import { VisionIcon } from "../assets";
 import { styles, layout } from "../styles";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StrategicProjectType } from "../types";
 
-const GWEContent = () => {
+const GWEContent = ({ project }: { project: StrategicProjectType }) => {
   return (
     <section
       className={`${layout.section} bg-white grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2 lg:gap-8 relative`}
@@ -16,8 +17,7 @@ const GWEContent = () => {
           </p>
         </div>
         <h2 className={`font-barlow lg:text-3xl text-xl font-bold mb-8`}>
-          Strengthening Community Led Accountability to Improve Service Delivery
-          (SABI)
+          {project.text}
         </h2>
         <div className="relative mb-8">
           <div className="bg-[url('/src/assets/happy-community.png')] w-full h-[250px] md:h-[300px] lg:h-[350px] bg-cover bg-center"></div>
@@ -34,8 +34,8 @@ const GWEContent = () => {
               </svg>
 
               <div className="w-[100px] h-[50px] bg-black grid place-items-center">
-                <p className="font-barlow text-xl text-primary font-bold">
-                  ONGOING
+                <p className="font-barlow text-xl text-primary font-bold uppercase">
+                  {project.status}
                 </p>
               </div>
             </div>
@@ -68,19 +68,19 @@ const GWEContent = () => {
                 <h2 className={`${styles.heading3} uppercase`}>
                   Project Problem
                 </h2>
-                <div className="bg-[url('/src/assets/hanging-drip.png')] bg-cover bg-center h-[250px] md:h-[350px] w-full"></div>
-                <div>
-                  <p className={`text-darkgrey ${styles.paragraph3}`}>
-                    - Lack of accountability in health service delivery
-                    healthcare providers.
-                    <br />
-                    - Poor quality of healthcare service by healthcare
-                    providers.
-                    <br />
-                    - Lack of public awareness on safe healthcare practices.
-                    <br />- Lack of adequate healthcare structures and the lack
-                    of trust between communities and institutions.
-                  </p>
+                <img
+                  src={`/src/assets/${project.problem_image}`}
+                  className="object-cover object-center h-[250px] md:h-[350px] w-full"
+                />
+                <div className="grid gap-2">
+                  {project.problem.map((data: { id: number; text: string }) => (
+                    <p
+                      key={data.id}
+                      className={`text-darkgrey ${styles.paragraph3}`}
+                    >
+                      {data.text}
+                    </p>
+                  ))}
                 </div>
               </div>
             </TabsContent>
@@ -183,16 +183,7 @@ const GWEContent = () => {
       </section>
       <section className="z-20">
         <p className={`${styles.paragraph3} leading-relaxed`}>
-          The Western Area Rural District in Sierra Leone is a prime example of
-          the discrimination and unfair low representation of women in
-          governance despite representing over 50% of the population. Out of the
-          27 district councillors, only three are women. Of the 8 MPs, only 2
-          are women, and only 5 women are among the 121 tribal heads who
-          constitute the traditional governance structure in the District. Poor
-          road networks coupled with unstable and inexistent electricity supply
-          in some areas makes it difficult or impossible in some areas for women
-          to diversify from subsistence farming as that is the only way to
-          provide for their families. <a href="#">more...</a>
+          {project.description}
         </p>
 
         <div className="bg-dark bg-[url('/src/assets/project-fact-sheet-art.png')] bg-no-repeat bg-contain bg-right-top p-8 border-t-2 border-t-primary mt-8">
@@ -203,7 +194,7 @@ const GWEContent = () => {
             <div>
               <h5 className={`${styles.paragraph3} text-lightgrey`}>DONOR</h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                Christian Aid
+                {project.donor}
               </p>
             </div>
 
@@ -212,7 +203,7 @@ const GWEContent = () => {
                 PROJECT IMPLEMENTING PARTNER
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                SEND Sierra Leone
+                {project.partner}
               </p>
             </div>
 
@@ -221,8 +212,7 @@ const GWEContent = () => {
                 PROJECT LOCATION
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                Western Area Rural District and the Eastern Province of Sierra
-                Leone
+                {project.location}
               </p>
             </div>
 
@@ -230,14 +220,18 @@ const GWEContent = () => {
               <h5 className={`${styles.paragraph3} text-lightgrey`}>
                 DURATION
               </h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                {project.duration === "" ? "-" : project.duration}
+              </p>
             </div>
 
             <div>
               <h5 className={`${styles.paragraph3} text-lightgrey`}>
                 PROJECT BUDGET
               </h5>
-              <p className={`${styles.paragraph3} font-bold text-white`}>-</p>
+              <p className={`${styles.paragraph3} font-bold text-white`}>
+                {project.budget === "" ? "-" : project.budget}
+              </p>
             </div>
 
             <div>
@@ -245,7 +239,7 @@ const GWEContent = () => {
                 PROJECT THEMATIC AREAS
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                Governance
+                {project.areas === "" ? "-" : project.areas}
               </p>
             </div>
           </div>
