@@ -482,6 +482,24 @@ export const HealthProjects: StrategicProjectType[] = [
       },
     ],
   },
+  {
+    id: 3,
+    title:
+      "Community Empowerment To Participate In Health Service Deliver Appreciate, Learn And Transfer(SALT) Approach Project",
+    link_url: "https://sendsierraleone.com/community.html",
+  },
+  {
+    id: 4,
+    title:
+      "Promoting Equality and Women's Leadership (PEWLESS) Project",
+    link_url: "https://sendsierraleone.com/Promoting%20Equality%20and%20Women's%20Leadership.pdfl",
+  },
+  {
+    id: 5,
+    title:
+      "Enhanced Community Health Resilience Project",
+    link_url: "https://sendsierraleone.com/baomaproject.html",
+  },
 ];
 
 // Governance & Women Empowerment Page data
@@ -612,6 +630,43 @@ export const GovtProjects: StrategicProjectType[] = [
       },
     ],
   },
+  {
+    id: 3,
+    title:
+      "Strengthening Women’s Participation in Politics and Governance",
+    link_url: "https://sendsierraleone.com/politics.html",
+  },
+  {
+    id: 4,
+    title:
+      "KAILAHUN WOMEN IN GOVERNANCE",
+    link_url: "https://sendsierraleone.com/kailahun.html",
+  },
+  {
+    id: 5,
+    title:
+      "WOMEN IGNITING THE SPIRIT OF ENTERPRENEURSHIP",
+    link_url: "https://sendsierraleone.com/enterpreneurship.html",
+  },
+  {
+    id: 6,
+    title:
+      "Promoting Young Women Participation in Decision Making, Governance and Politics in Sierra Leone",
+    link_url: "https://sendsierraleone.com/leadership.html",
+  },
+  {
+    id: 7,
+    title:
+      "Integrated Project For the Education & Empowerment Of Women and Civil Society Groups",
+    link_url: "https://sendsierraleone.com/IntegratedProject.html",
+  },
+  {
+    id: 8,
+    title:
+      "Fostering Peaceful, Credible and Inclusive Elections in Sierra Leone 2022-2023 Project",
+    link_url: "https://sendsierraleone.com/UNDP%20Elections%20Factsheet.pdfl",
+  },
+
 ];
 
 // Livelihood, Food & Nutrition Security Page data
@@ -748,4 +803,53 @@ export const ProfileManuals: ProfileManual[] = [
     link_url:
       "https://www.sendsierraleone.com/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
   },
+  {
+    id: 3,
+    title:
+      "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
+    link_url: "https://sendsierraleone.com/citizenwashclimateproject.html",
+  },
+  {
+    id: 4,
+    title:
+      "Strengthening of the Civil Society Participation for Climate Change Adaptation of the WASH Sector in two rural districts of Sierra Leone",
+    link_url: "https://sendsierraleone.com/cdcc.pdf",
+  },
+  {
+    id: 5,
+    title:
+      "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
+    link_url: "https://sendsierraleone.com/climatechangeproject.html",
+  },
+  {
+    id: 6,
+    title:
+      "STRENGTHENING WOMEN AND YOUTH-LED BUSINESS FOR LOCAL ECONOMIC DEVELOPMENT",
+    link_url: "https://sendsierraleone.com/promotingresilienceundp.html",
+  },
+  {
+    id: 7,
+    title:
+      "IMPROVED ACCESS TO SUSTAINABLY MANAGED MICRO-FINANCE AND WaSH SYSTEMS – WaSH SELF SUPPLY PROJECT",
+    link_url: "https://sendsierraleone.com/improved-factsheet.html",
+  },
+  {
+    id: 8,
+    title:
+      "Bonthe Island Fish Trading (BIFT) Project",
+    link_url: "https://sendsierraleone.com/bift.html",
+  },
+  {
+    id: 9,
+    title:
+      "PROMOTING INCOME GENERATION FOR CASH CROP FARMERS THROUGH GENDER TRANSFORMATICE PRACTICES, SELF INITIATIVES AND BUSINESS DEVELOPMENT",
+    link_url: "https://sendsierraleone.com/development.html",
+  },
+  {
+    id: 10,
+    title:
+      "Linking Agriculture Natural Resources Management and WASH towards Nutrition Security in Kenema and Pujehun Districts.",
+    link_url: "https://sendsierraleone.com/pujehun.html",
+  },
+
 ];
