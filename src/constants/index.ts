@@ -252,6 +252,47 @@ export const jobClassification: GeneralList[] = [
     id: 2,
     title: "Advocacy / Communications",
   },
+  {
+    id: 3,
+    title: "Techinal / Information Technology",
+  },
+  {
+    id: 4,
+    title: "Consultation",
+  },
+  {
+    id: 5,
+    title: "Intership / SIWES ",
+  },
+  {
+    id: 6,
+    title: "Healthcare / Medical Assitance  ",
+  },
+  {
+    id: 7,
+    title: "Teaching / Administrative",
+  },
+  {
+    id: 8,
+    title: "Construction / Skilled Trade",
+  },
+  {
+    id: 9,
+    title: "Office",
+  },
+  {
+    id: 10,
+    title: "Education /Empowerment",
+  },
+  {
+    id: 11,
+    title: "Security",
+  },
+  {
+    id: 12,
+    title: "Driver",
+  },
+
 ];
 
 export const regions: GeneralList[] = [
@@ -285,6 +326,522 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
   },
+  {
+    id: 3,
+    title: "Invitation for Bids",
+    description:
+      "SEND Sierra Leone invites bids from experienced WASH construction firms to provide services in the construction of WASH facilities in Sierra Leone.”",
+    deadline: "22 April 2024",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 4,
+    title: "End-Line Evaluation Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Evaluation Consultant or Consultancy Firm to conduct an for End-Term Evaluation for the “More than a Woman: Strengthening Women's Participation in Politics and Governance- Phase II”",
+    deadline: ":30 April 2024",
+    classification: "2",
+    region: "1",
+  },
+
+  {
+    id: 5,
+    title: "End-Line Evaluation Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Evaluation Consultant or Consultancy Firm to conduct an for End-Term Evaluation for the “Improving business conditions for fishing and fish trading in Bonthe, Sierra Leone (BIFT) in Bonthe district”",
+    deadline: "30 March 2024",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 6,
+    title: "Field Officer",
+    description:
+      "SEND Sierra Leone is actively seeking qualified individuals to fill the role of Field Officers responsible for the program's implementation in the Kono and Kenema districts. These Field Officers will be stationed within the respective communities in these districts. They should possess a high level of competence in community development work, specifically focusing on health-related initiatives.",
+    deadline: "14 December 2023",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 7,
+    title: "Finance Officer",
+    description:
+      "SEND Sierra Leone is actively seeking qualified individuals to fill the role of Finance Officer responsible for managing and overseeing the program's financial transactions.",
+    deadline: "14 December 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 8,
+    title: "Programme Office Intern",
+    description:
+      "SEND is looking for a qualified national from any of the Universities. The Intern will support the Accounts Officer in undertaking administrative, financial and accounting tasks of the organization. The right candidate will track, evaluate and process day to day activities. Responsibilities include accounts payable, accounts receivable, internal and external duties, such as vendors, clients including banks, NRA and NASSIT. The Intern may handle daily bookkeeping, preparing financial report, taxes, budgets, and assisting in ensuring proper financial policies, procedures and structures are maintained.",
+    deadline: "25 October 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 9,
+    title: "Accounts Office Intern",
+    description:
+      "SEND is looking for a qualified national from any of the Universities. The Intern will support the Accounts Officer in undertaking administrative, financial and accounting tasks of the organization. The right candidate will track, evaluate and process day to day activities. Responsibilities include accounts payable, accounts receivable, internal and external duties, such as vendors, clients including banks, NRA and NASSIT. The Intern may handle daily bookkeeping, preparing financial report, taxes, budgets, and assisting in ensuring proper financial policies, procedures and structures are maintained.",
+    deadline: "25 October 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 10,
+    title: "Feasibility Study Consultancy for The Women’s Access to Renewable Energy for Economic Development (WAREED)",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Consultant or Consultancy firm to conduct a feasibility study on the WAREED project which aims to provide SEND-SL and all stakeholders with a sound basis for developing the full project proposal by clarifying prerequisites, assumptions, opportunities, and risks. The study findings should provide an overview of key areas in consideration of relevance, effectiveness, efficiency, impact and sustainability (DAC OECD) scopes of the proposed intervention. The study will also be submitted to the TERRA TECH/BMZ for assessment of the overall feasibility of the project. The feasibility study will also outline the changes possible for the next three years with project support. It will critically examine the situation of the Kailahun district and the project outcomes and outputs formulated to reach the desired result. It will also help analyze target stakeholders identified as MDAs, mini-grid suppliers and operators, local authorities, etc.",
+    deadline: "10 November 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 11,
+    title: "Feasibility Study Consultancy for The FEED: Empowering Communities through Sustainable School Feeding in Kenema, Kailahun and Bo",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Consultant or Consultancy firm to conduct a feasibility study on the FEED project which aims to provide SEND-SL and all stakeholders with a sound basis for developing the full project proposal by clarifying prerequisites, assumptions, opportunities, and risks. The study findings should provide an overview of key areas in consideration of relevance, effectiveness, efficiency, impact and sustainability (DAC OECD) scopes of the proposed intervention. The study will also be submitted to the TERRA TECH/BMZ for assessment of the overall feasibility of the project. The feasibility study will also outline the changes possible for the next three years with project support. It will critically examine the situation of the Kailahun district and the project outcomes and outputs formulated to reach the desired result. It will also help analyze target stakeholders identified as MDAs, mini-grid suppliers and operators, local authorities, etc.",
+    deadline: "10 November 2023",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 12,
+    title: "ASSET AUCTION",
+    description:
+      "SEND Sierra Leone informs the public of an proposed auction of a number of its assets to the general public.",
+    deadline: "25 September 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 13,
+    title: "Strategic Plan Development Consultancy",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Strategy Development Consultant or Consultancy Firm to develop the organisational Strategic Plan for the organisation.",
+    deadline: "1 September 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 14,
+    title: "Data Protection Policy Consultant (Re-Advertised)",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Data Protection Policy Consultant to develop a comprehensive data protection policy document for the organisation.",
+    deadline: " 16 June 2023",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 15,
+    title: "Gender Policy Consultant (Re-Advertised)",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Gender Policy Consultant to develop a comprehensive gender policy document for the organisation.",
+    deadline: " 16 June 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 16,
+    title: "IT Officer",
+    description:
+      "SEND Sierra Leone seeks the services of an IT Office to support the country program office in ensuring the organisation technological assets and support systems are in good working order for all staff.",
+    deadline: "5 June 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 17,
+    title: "Communications Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of a Communications Consultant to support the country program office in delivering communication deliverables aligned with the organisations digital and communications strategy",
+    deadline: "5 June 2023",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 18,
+    title: "Office Assistant",
+    description:
+      "SEND Sierra Leone seeks the services of an Office Assistant to support the Freetown program office in ensuring the office is a conducive working environment for all staff",
+    deadline: "20 May 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 19,
+    title: "Solar Technician",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Solar Technician who will work with the organisation to design and install photo voltaic systems based on site conditions.",
+    deadline: "20 May 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 20,
+    title: "Data Protection Policy Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Data Protection Policy Consultant to develop a comprehensive data protection policy document for the organisation.",
+    deadline: "12 May 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 21,
+    title: "Gender Policy Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Gender Policy Consultant to develop a comprehensive gender policy document for the organisation.",
+    deadline: "12 May 2023",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 22,
+    title: "Gender Audit Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Gender Audit Consultant to conduct a gender audit of female education workers in Sierra Leone",
+    deadline: "15 March 2023",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 23,
+    title: "Evaluation Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Evaluation Consultant to conduct a mid-term evaluation for the Citizen Driven Climate Sensitive WASH Management project in the Kenema district.",
+    deadline: "27 February 2023",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 24,
+    title: "Project Manager",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced individual to serve in the capacity of Project Manager working under the ‘Supporting Gender Equality & Social Accountability through a Strengthened Civil Society project which aims to strengthen local Civil Society Organisations (CSOs) engagement as actors of good governance and development in Sierra Leone.",
+    deadline: "10 February 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 25,
+    title: "Project Manager",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced individual to serve in the capacity of Project Manager working under the ‘Supporting Gender Equality & Social Accountability through a Strengthened Civil Society project which aims to strengthen local Civil Society Organisations (CSOs) engagement as actors of good governance and development in Sierra Leone.",
+    deadline: "10 February 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 26,
+    title: "Project Officer",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced individual to serve in the capacity of Project Officer working under the ‘Supporting Gender Equality & Social Accountability through a Strengthened Civil Society project which aims to strengthen local Civil Society Organisations (CSOs) engagement as actors of good governance and development in Sierra Leone.",
+    deadline: "10 February 2023",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 27,
+    title: "IT Tutors",
+    description:
+      "SEND Sierra Leone seeks the services of experienced ICT Tutors to work under the PEWLESS project aimed at increasing the ICT literacy of teachers especially female teachers in the Kailahun, Kenema and Kono districts.",
+    deadline: "25 January 2023",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 28,
+    title: "Feasibility Study Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Consultant to conduct a feasibility study fo the proposed Citizen-Driven Climate Change project to guide the development of the project proposal and submission.",
+    deadline: "30 January 2023",
+    classification: "2",
+    region: "2",
+  },
+ {
+    id: 29,
+    title: "End-Line Evaluation Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced individual to serve in the capacity of Account Officer working under the ‘Supporting Gender Equality & Social Accountability through a Strengthened Civil Society project which aims to strengthen local Civil Society Organisations (CSOs) engagement as actors of good governance and development in Sierra Leone.",
+    deadline: " 28 December 2022",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 30,
+    title: "Finance Director",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Finance Professional to join our team as the Finance Director",
+    deadline: " 25 December 2022",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 31,
+    title: "End-Line Evaluation Consultant",
+    description:
+      "A consortium of local CSOs and International Development Partners request the services of a Consultant or a team of Consultants to aid in the development of the 2023 Sierra Leone Women's Manisfesto which wil address the needs of all Sierra Leone women.",
+    deadline: "18 July 2022",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 32,
+    title: "Principal and Teachers",
+    description:
+      "Nyapui Senior Secondary School of Excellence invites applications for a School Principal and School Teachers in Kenema.",
+    deadline: "21 July 2022",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 33,
+    title: "Office Assistant",
+    description:
+      "SEND Sierra Leone seeks the services of an Office Asssistant to support the management and maintenance of its Program Office in Port Loko District, Northern Region of Sierra Leone",
+    deadline: "25 April 2022",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 34,
+    title: "Project Manager",
+    description:
+      "SEND Sierra Leone seeks the services of a qualified candidate to act as a Project Manager for the In Their Lifetime project-A women's economic and leadership transformational project in Kailahun district",
+    deadline: "14 February 2022",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 35,
+    title: "Construction Firm needed for the construction of the Baoma Community Health Post",
+    description:
+      "SEND Sierra Leone seeks the services of a construction firm to construct and deliver a community health post facility in Baoma community located in Kenema district to improve the access and quality of health services acquired by the residents of Baoma and surrounding villages",
+    deadline: "21 January 2022",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 36,
+    title: "Advocacy Manager",
+    description:
+      "SEND Sierra Leone seeks the services of a Advocacy manager to support the Project manager of a Climate sensitve WASH management project to successfully plan, design, execute, coordinate and monitor the successful delivery of the project objectives and donor guidelines.",
+    deadline: "19 January 2022",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 37,
+    title: "Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of a Consultant to conduct a feasibility study of the proposed PEWLESS project.",
+    deadline: "17 January 2022",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 38,
+    title: "Gender Audit Consultant",
+    description:
+      "SEND Sierra Leone seeks the services of a Consultant to conduct a Gender Audit on Political Parties in Sierra Leone.",
+    deadline: "29 September 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 40,
+    title: "Principal & Teachers",
+    description:
+      'The Board of Governors of "NYAPUI SENIOR SECONDARY SCHOOL OF EXCELLENCE FOR GIRLS" invites applications for the positions of Principal & Teachers:',
+    deadline: "10 August 2021",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 41,
+    title: "Account Officer",
+    description:
+      "SEND Sierra Leone is looking for Account Officer for our Country Office in Kenema who will be reporting to the Finance Officer.",
+    deadline: "26 July, 2021",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 42,
+    title: "Driver",
+    description:
+      "The Driver will provide support to project and programme staff, official visitors, guests and project activities.",
+    deadline: "26 July, 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 43,
+    title: "Account Officer",
+    description:
+      "SEND Sierra Leone is looking for Account Officer for our Country Office in Kenema who will be reporting to the Finance Officer.",
+    deadline: "26 July, 2021",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 44,
+    title: "Terms of Reference",
+    description:
+      `SEND is implementing the "More than a Woman: Strengthening Women's Participation in Politics and Governance" project with funds from the Government of Ireland.`,
+    deadline: "23:59 (GMT) on 30 July 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 45,
+    title: "Request for Tender for SEND Sierra Leone 2020 External Audit",
+    description:
+      "Tenders are invited to provide external audit services for SEND Sierra Leone for the 2020 financial year. SEND’s financial year runs from 1st January to 31st December.",
+    deadline: "23:59 (GMT) on 30 June 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 46,
+    title: "Terms of Reference for the Development of a Training Manual for Female Aspirants and Candidates",
+    description:
+     "This ToR outlines the process to gather information and create a training manual for women aspirants and candidates to contest in local and national elections and participate in leadership successfully. It defines how the consultancy will be implemented in Sierra Leone within the objectives and scope of the Training Manual for Female Aspirants and Candidates.",
+    deadline: "23:59 (GMT) on 11 July, 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 47,
+    title: "Request for Tender for SEND Sierra Leone 2020 External Audit",
+    description:
+     "Tenders are invited to provide external audit services for SEND Sierra Leone for the 2020 financial year. SEND’s financial year runs from 1st January to 31st December.",
+    deadline: "23:59 (GMT) on 30 June 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 48,
+    title: "Auction Notice! Auction Notice! Auction Notice!",
+    description:
+     "Management of SEND Sierra Leone wishes to bring to the notice of all staff and the general Public that Vehicle AIJ-366 is available for Auction sale to the General Public.",
+    deadline: "19 April, 2021",
+    classification: "2",
+    region: "2",
+  },
+  {
+    id: 49,
+    title: "Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone",
+    description:
+     "SEND Sierra Leone, funded by German Federal Ministry for Economic Cooperation (BMZ AND TERRA TECH), are implementing the project ‘Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone’ to contribute to achieving the Sustainable Development Goals.",
+    deadline: " 1 March, 2021",
+    classification: "1",
+    region: "1",
+  },
+  {
+    id: 50,
+    title: "Consultant for the Evaluation of the More Than A Woman Project",
+    description:
+     `The "More than a Woman: Strengthening Women's Participation in Politics and Governance" project be evaluated and works to empower women in the Eastern Region of Sierra Leone to increase their participation in politics and governance.`,
+    deadline: "25 February, 2021",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 51,
+    title: "Credit Union Manager",
+    description:
+    "The Credit Union Manager is responsible for the day to day running of the Credit Union. He/she is responsible for the proper technical performance of all the Credit Union's accounting and financial activities in consultation with the Board of Directors.",
+    deadline: "15 January, 2021",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 52,
+    title: "Account Officer",
+    description:
+    "The Accounts Officer is responsible for loan disbursement, opening the account, and maintaining high proficient and comprehensive credit union knowledge.",
+    deadline: "15 January, 2021",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 53,
+    title: "Security Officer",
+    description:
+    "The Security Officer is responsible for the safety and security of all assets and property of the Credit Union. He/she ensures that the office premises are well tidy and the generator is in good order.",
+    deadline: "15 January, 2021",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 54,
+    title: "PURCHASE OF OFFICE EQUIPMENT",
+    description:
+    "SEND Sierra Leone is non-governmental organization registered with the Ministry of Finance and Economic Development of the Republic of Sierra Leone with a vision to contribute to a Sierra Leone where people’s rights and well-being are guaranteed.",
+    deadline: "10 December, 2020",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 55,
+    title: "Invitation for Bids",
+    description:
+    "The Social Enterprise Development (SEND) Sierra Leone has received funds from the BMZ through Terra Tech Germany for the procurement of works and now invites sealed bids from eligible bidders for the construction of Kenema Model Senior Secondary School for Girls.",
+    deadline: "20 November, 2020",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 56,
+    title: "Computer/IT Tutors(2)",
+    description:
+    "SEND Sierra Leone is looking for a Computer/IT Tutors who will assume the responsibility of training teachers in the Kenema District to ensure quality teaching service.",
+    deadline: "18th November, 2020",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 57,
+    title: "Engineers Without Borders(Terms of Reference)",
+    description:
+    "Applications must be sent to: ayamga@sendsierraleone.com and jattu@sendsierraleone.com",
+    deadline: "25 November, 2020",
+    classification: "2",
+    region: "1",
+  },
+  {
+    id: 58,
+    title: "FINANCE DIRECTOR ALERT",
+    description:
+    "SEND Sierra Leone is looking for Finance Director to Oversee the performance of accurate reporting procedures and timely submission of reports to relevant donors, the SEND National Executive Council and other stakeholders.",
+    deadline: "30 June, 2020",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 59,
+    title: "FINANCE OFFICER ALERT",
+    description:
+    "SEND Sierra Leone is looking for Finance Officer for Country Office in Kenema who will be reporting to the Finance Director.The Officer will be responsible for fixed assets transactions managements and preparing letters for cash transfers , new bank openings ,program area payroll payments etc among others.",
+    deadline: "10 March, 2020",
+    classification: "1",
+    region: "2",
+  },
+  {
+    id: 60,
+    title: "CONSULTANCY ALERT",
+    description:
+    "SEND Sierra Leone seeks the services of a consultant to handle all its digital communications across several digital platforms . The Consultant will have to develop a digital strategy as well as execute said strategy in line with all current and future SEND project.",
+    deadline: "20 December, 2019",
+    classification: "1",
+    region: "2",
+  },
+
+
 ];
 export const AnnualReports: AnnualReport[] = [
   {
