@@ -112,22 +112,16 @@ export const links: Link[] = [
 
 export const ProgramCards: ProgramCardProps[] = [
   {
-    id: 0,
-    title: "Education",
-    image: CardImage1,
-    link_url: "/strategic-direction/edu-health",
-  },
-  {
     id: 1,
-    title: "Health and Wash",
+    title: "Education",
     image: CardImage1,
     link_url: "/strategic-direction/edu-health",
   },
   {
     id: 2,
-    title: "Education",
+    title: "Health and Wash",
     image: CardImage1,
-    link_url: "/strategic-direction",
+    link_url: "/strategic-direction/edu-health",
   },
   {
     id: 3,
