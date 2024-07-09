@@ -1,4 +1,3 @@
-import { title } from "process";
 import { CardImage1, CardImage2, CardImage3 } from "../assets";
 import {
   Director,
@@ -6,6 +5,8 @@ import {
   ProgramCardProps,
   IdentityCardProps,
   StrategicPlan,
+  GeneralList,
+  Job,
   AnnualReport,
   Newsletter,
   ProfileManual,
@@ -124,12 +125,18 @@ export const ProgramCards: ProgramCardProps[] = [
   },
   {
     id: 2,
+    title: "Education",
+    image: CardImage1,
+    link_url: "/strategic-direction",
+  },
+  {
+    id: 3,
     title: "Governance and Women Empowerment",
     image: CardImage2,
     link_url: "/strategic-direction/governance",
   },
   {
-    id: 3,
+    id: 4,
     title: "Climate Change and Livelihood",
     image: CardImage3,
     link_url: "/strategic-direction/livelihood",
@@ -236,6 +243,49 @@ export const strategicPlans: StrategicPlan[] = [
   },
 ];
 
+export const jobClassification: GeneralList[] = [
+  {
+    id: 1,
+    title: "Administration / Finance",
+  },
+  {
+    id: 2,
+    title: "Advocacy / Communications",
+  },
+];
+
+export const regions: GeneralList[] = [
+  {
+    id: 1,
+    title: "Kenema",
+  },
+  {
+    id: 2,
+    title: "Kono",
+  },
+];
+
+export const jobs: Job[] = [
+  {
+    id: 1,
+    title: "Security Officer - Freetown",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Security Officer to join our organisation and be stationed at the Freetown Program Office located along Spur Road”",
+    deadline: " 10 May 2024",
+    classification: "1",
+    region: "1",
+  },
+
+  {
+    id: 2,
+    title: "Admin Officer",
+    description:
+      "SEND Sierra Leone seeks the services of an experienced Security Officer to join our organisation and be stationed at the Freetown Program Office located along Spur Road”",
+    deadline: "10 June 2024",
+    classification: "2",
+    region: "1",
+  },
+];
 export const AnnualReports: AnnualReport[] = [
   {
     title: "Report 01",

@@ -5,16 +5,30 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-const SelectInput = ({ title }: { title: string }) => {
+import { GeneralList } from "../types";
+
+type Props = {
+  title: string;
+  data: GeneralList[];
+  setSelectedValue: (val:string) => void;
+};
+
+const SelectInput = ({ title, data, setSelectedValue }:Props) => {
+
+  const handleValueChange = (value: string) => {
+    console.log(value); // Console the value of the selected item
+    setSelectedValue(value);
+  };
+
   return (
-    <Select>
+    <Select onValueChange={handleValueChange}>
       <SelectTrigger className="w-full h-full focus:ring-none">
         <SelectValue placeholder={title} className="text-lightgrey" />
       </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem>
-        <SelectItem value="system">System</SelectItem>
+      <SelectContent> 
+      {data.map((item: GeneralList) => (
+          <SelectItem value={item.id.toString()}>{item.title}</SelectItem>
+        ))}  
       </SelectContent>
     </Select>
   );

@@ -1,7 +1,8 @@
 import { styles } from "../styles";
 import { ManualsIcon } from "../assets";
-
-const JobCard = () => {
+import { Job } from "../types";
+type Props = { job: Job };
+const JobCard = ({ job }: Props) => {
   return (
     <div className="border border-lightgrey rounded-md">
       <div className="flex flex-col lg:flex-row gap-4 p-4">
@@ -9,16 +10,16 @@ const JobCard = () => {
           <img src={ManualsIcon} alt="" className={"w-[100px] lg:w-[150px]"} />
         </div>
         <div className="flex flex-col gap-2">
-          <h3 className={`${styles.heading3Manrope}`}>Security Officer - Freetown</h3>
+          <h3 className={`${styles.heading3Manrope}`}>{job.title}</h3>
           <p className={`${styles.paragraph3} text-darkgrey`}>
-            SEND Sierra Leone seeks the services of an experienced Security
-            Officer to join our organisation and be stationed at the Freetown
-            Program Office located along Spur Road”
+            {job.description}
           </p>
         </div>
       </div>
       <div className="grid grid-cols-[1fr_auto] items-center p-4 gap-2 border-t border-t-lightgrey">
-        <p className={styles.paragraph3}>Application Deadline: 10 May 2024</p>
+        <p className={styles.paragraph3}>
+          Application Deadline: {job.deadline}
+        </p>
         <button className="bg-secondary py-2 px-4 text-white flex items-center gap-2">
           <p className={styles.paragraph3}>Read More</p>
           <svg

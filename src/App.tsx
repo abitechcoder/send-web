@@ -9,7 +9,10 @@ import DashboardRoot from "./layouts/DashboardRoot";
 import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
 import { loader as DirectorLoader } from "./pages/DirectorDetails";
 import { HealthProjectsLoader } from "./pages/HealthDetails";
-import GovernanceDetails, { GovernanceProjectsLoader } from "./pages/GovernanceDetails";
+import GovernanceDetails, {
+  GovernanceProjectsLoader,
+} from "./pages/GovernanceDetails";
+import { loader as ClassificationLoader } from "./pages/WorkWithUs";
 
 //pages
 import {
@@ -72,16 +75,28 @@ function App() {
             <Route index element={<HealthAndEducation />} />
             <Route path="edu-health">
               <Route index element={<HealthAndEducation />} />
-              <Route path=":projectId" element={<HealthDetails />} loader={HealthProjectsLoader} />
+              <Route
+                path=":projectId"
+                element={<HealthDetails />}
+                loader={HealthProjectsLoader}
+              />
             </Route>
 
-            <Route path="governance" >
-            <Route index element={<Governance />} />
-            <Route path=":projectId" element={<GovernanceDetails />} loader={GovernanceProjectsLoader} />
+            <Route path="governance">
+              <Route index element={<Governance />} />
+              <Route
+                path=":projectId"
+                element={<GovernanceDetails />}
+                loader={GovernanceProjectsLoader}
+              />
             </Route>
             <Route path="livelihood" element={<Livelihood />} />
           </Route>
-          <Route path="work-with-us" element={<WorkWithUs />} />
+          <Route
+            path="work-with-us"
+            loader={ClassificationLoader}
+            element={<WorkWithUs />}
+          />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="donate">

@@ -1,4 +1,11 @@
-import { directors, GovtProjects, HealthProjects } from "../constants";
+import {
+  directors,
+  GovtProjects,
+  HealthProjects,
+  jobClassification,
+  jobs,
+  regions,
+} from "../constants";
 
 export async function getDirectors() {
   return directors;
@@ -17,4 +24,16 @@ export async function getHealthProject(id: number) {
 export async function getGovernanceProject(id: number) {
   let project = GovtProjects.find((project) => project.id === id);
   return project ?? null;
+}
+
+export async function getJobClassification() {
+  return jobClassification;
+}
+
+export async function getJobs() {
+  return jobs;
+}
+
+export async function getRegions() {
+  return regions;
 }
