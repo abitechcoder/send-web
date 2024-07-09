@@ -1,6 +1,5 @@
-import { Newsletters } from "../constants";
 import { styles, layout } from "../styles";
-import NewsletterCard from "./NewsLetterCard";
+import NewsLetterList from "../pages/NewsLetterList";
 
 const InTheNews = () => {
   return (
@@ -27,18 +26,9 @@ const InTheNews = () => {
           Sierra Leone are improved through SEND implemented projects.
         </p>
       </div>
+      <NewsLetterList />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        {Newsletters.map((newsletter) => (
-          <NewsletterCard
-            key={newsletter.id}
-            title={newsletter.title}
-            image={newsletter.image}
-            url={newsletter.url}
-          />
-        ))}
-      </div>
-    </section>
+         </section>
   );
 };
 
