@@ -1,4 +1,4 @@
-import { GovtProjects } from "../constants";
+import { GovtProjects, LivelihoodProjects } from "../constants";
 import { styles, layout } from "../styles";
 import StrategicDirectionProject from "./StrategicDirectionProject";
 
@@ -29,7 +29,7 @@ const StrategicLivelihoodProjects = () => {
       </div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
-        {GovtProjects.map((project) => (
+        {LivelihoodProjects.map((project) => (
           <StrategicDirectionProject
             key={project.title}
             title={project.title}

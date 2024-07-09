@@ -24,7 +24,7 @@ const StrategicDirectionProject = ({
       <div>
         <h2 className={`uppercase ${styles.heading3} mb-1`}>{title}</h2>
         <p>
-          {text.substring(0, 100)} {text.length > 100 ? "..." : ""}
+          {text.substring(0, 50)} {text.length > 50 ? "..." : ""}
         </p>
       </div>
       <Link className="w-full" to={project_url}>

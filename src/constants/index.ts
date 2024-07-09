@@ -665,63 +665,131 @@ export const GovtProjects: StrategicProjectType[] = [
 ];
 
 // Livelihood, Food & Nutrition Security Page data
-export const LivelihoodProjects = [
+export const LivelihoodProjects: StrategicProjectType[] = [
   {
     id: 1,
-    title: "SOLAR POWER HUB PROJECT MENDEKELEMA-PHASE I",
-    link_url: "https://sendsierraleone.com/SOLAR%20project%20fact%20sheet.pdf",
+    title: "Project 01",
+    text: "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
+    link_url: "/strategic-direction/livelihood/1",
+    status: "on going",
+    description:
+      "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK",
+    donor: "Engineers without Borders-Denmark",
+    partner: "SEND Sierra Leone & World Hope International",
+    location: "Kenema District",
+    duration: "December 2021 - May 2024",
+    budget: "Le 2,194,153,833,33",
+    areas: "GWASH and CLIMATE RESILIENCE",
+    problem_image: "citizen-wash-banner.jpg",
+    problem: [
+      {
+        id: 1,
+        text: "TWith 56.8% of the Sierra Leonean population living in poverty, 12.9% of the population living under extreme poverty and the food poverty rate standing at 54.5%, Sierra Leone faces considerable challenges in been able to achieve the Sustainable Development Goals (SDGs) 2030.The country ranks 182 out of 189 in the 2020 Global Human Development Index with a Human Development Index of 0.452 and life expectancy 54.7 years. The COVID-19 pandemic and its resultant lockdown effects has worsened the country’s economic recovery as it continues to suffer from the twin shocks of the 2014-2017 Ebola pandemic and the global commodity price slump.",
+      },
+      {
+        id: 2,
+        text: "TEven though water and sanitation are among the high priorities for the Government of Sierra Leone as stated in its National Development Plan 2019-2023, there has been very adoption of climate robust WASH. Changed weather patterns are recorded in 2017 to have resulted in an increasing number of wells being dry during parts of the year, a situation which has resulted in the increased incidence of outbreaks of cholera and water-borne diseases. Over a 17-year period access to water in rural communities has increased by 22% from 25% in 2000 to 47% in 2017, a statistic that needs to double in less than a decade to reach the SDG target of 100% in the year 2030.",
+      },
+      {
+        id: 3,
+        text: "Sierra Leone is ranked as the third most vulnerable country in relation to the adverse effects of climate change due to a high level of multi-dimensional fragility. In 2018, after a Country Policy and Institutional Assessment (CPIA), Sierra Leone recorded a low score of 3.1 which indicated a 0.1 decline from the previous year. This fragility represents a high infrastructure debt stock, weak governance institutions, low human capacity and high youth unemployment estimated to be 70% among other factors. The Government and decentralized governance structure are aware of the fragility pressures but lack the capacity to adequately address these challenges thereby exacerbating the effects over time.",
+      },
+      {
+        id: 4,
+        text: "In Kenema district, the incidence of extreme poverty affects 24.2% of the population, a statistic worsened by only 22% of the population having access to safe water mainly concentrated in the urban center of Kenema township. The district experiences excessive rainfall which destroys and/or leads to contamination of the scarce water sources, farmland and crops. The health risks induced by flooding, changed rain patterns, and insufficient WASH infrastructure puts additional pressures on the very fragile health system as water-borne disease and cholera outbreaks are annual recurrent incidents.",
+      },
+      {
+        id: 5,
+        text: "There also a exists a poor culture in the maintenance of WASH facilities. According to statistics, it takes over a year for 28.9% of water system to be repaired and over a month for 60.5% of the water systems to be repaired. In rural communities where user fees the main source of revenue used to maintain water facilities; it was recorded that 89.4% of the population who have access to these water points do not pay for water.",
+      },
+    ],
   },
   {
     id: 2,
-    title:
-      "PROMOTING EMPLOYMENT OPPORTUNITIES FOR WOMEN AND YOUTH IN BONTHE AND FALABA DISTRICTS",
-    link_url:
-      "https://sendsierraleone.com/UNDP%20Human%20Security%20Factsheet.pdf",
+    title: "Project 02",
+    text: "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
+    link_url: "/strategic-direction/livelihood/2",
+    status: "on going",
+    description:
+      "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK and Civil Soceity in Development",
+    donor: "Engineers without Borders-Denmark and Civil Society in Development",
+    partner: "SEND Sierra Leone",
+    location: "Kenema District",
+    duration: "",
+    budget: "$48,406",
+    areas: "WASH and CLIMATE ACTION",
+    problem_image: "climate-change-banner.jpg",
+    problem: [
+      {
+        id: 1,
+        text: "In Kenema district, the incidence of extreme poverty affects 24.2% of the population, a statistic which is worsened due to the economic effects of the COVID-19 pandemic, which caused widespread loss of livelihoods for rural communities heavily dependent on petty trading and agriculture. UNICEF estimates that only 22% of the population in Kenema district have access to potable water. With high poverty levels in the Kenema district, developing measures to adapt to climate change has been minimal, worsening access to potable water for most rural communities.",
+      },
+      {
+        id: 2,
+        text: "Ranked the third most vulnerable country globally only after Bangladesh and Guinea Bissau, Sierra Leone faces harsh adverse climate change effects due to its high level of multi-dimensional fragility. With only 47% of the rural population having access to water, achieving the United Nation’s Sustainable Development Goals in 2030 presents a challenge for the country to succeed. According to a national survey (2017), climate change is causing the drying of wells at critical times of the year due to weather patterns. This poses further challenges in achieving the SDG targets. With fragile health systems, the persistent occurrence of cholera outbreaks and water-borne diseases, rural communities are threatened with health risks related to flooding, insufficient WASH infrastructure, and changed rainfall patterns.",
+      },
+    ],
   },
   {
     id: 3,
-    title: "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
-    link_url: "https://sendsierraleone.com/citizenwashclimateproject.html",
+    title: "Project 03",
+    text: "STRENGTHENING WOMEN AND YOUTH-LED BUSINESS FOR LOCAL ECONOMIC DEVELOPMENT PROJECT",
+    link_url: "/strategic-direction/livelihood/3",
+    status: "on going",
+    description:
+      "This project aims to promote and improve access to finance and fishing equipment. This will enable those affected to generate more income in the long term and thus transform their livelihoods. This will be achieved through access to improved fishing equipment, appropriate fishing and processing machinery, access to finance and gender education; capacity building of women's groups and training for fishermen and fisherwomen in improved techniques, especially in the use of sustainable fishing and adaptation techniques and technologies, business and marketing practices and skills.",
+    donor: "UNDP",
+    partner: "SEND Sierra Leone",
+    location: "KAMBIA AND PUJEHUN DISTRICTS",
+    duration: "SEPTEMBER 2021-NOVEMBER 2021",
+    budget: "110,000 Dollars",
+    areas:
+      "Livelihood Security, Access to Finance and Market Opportunities,Improved Gender Relations, Women Empowerment",
+    problem_image: "promoting-resilience-banner.jpg",
+    problem: [
+      {
+        id: 1,
+        text: "Out of all the 16 districts, the border districts of Pujehun and Kambia are hit hard by these issues, as they form part of the poorest sections of Sierra Leone.These two border districts stand at 87.2% & 77% poverty rates, respectively. In these areas, men earn three times more than women in wage employment and 2.5 times more in self-employment and two times more in agriculture. These issues have been further heightened by climate-induced shocksand the COVID 19 pandemic.",
+      },
+      {
+        id: 2,
+        text: "As climate change affects weather patterns causing heavier than normal rainfall, droughts and general environmental instability, the fishing communities of Pujehun and farming communities of Kambia are adversely hit economically. This was worsened with the COVID-19 pandemic, which necessitated the closure of borders and limiting of movement in the country. Women bore the brunt of this as 65% of women in these areas engaged in border trade and rely on this to feed their families. The Quick Action Economic Response Programme of 2020 indicated a rise in household expenditure ranging from 58.5% to 60%. Additionally, weekly income generated by their businesses dropped significantly as surveys of the informal sector indicated a 68% drop in weekly income of the informal sector. This has contributed to a 30% increment in the number of households that have reduced their meals.",
+      },
+      {
+        id: 3,
+        text: "Sierra Leone is a West African coastal country with approximately 7.1 million people, divided into 16 districts. Despite the 10 years civil war, which lasted from 1991-2002, Sierra Leone has worked tirelessly to rebuild the nation, focusing on peace promotion and strengthening state institutions. These are particularly important as the nation struggles with issues concerning gender inequality in the form of Gender-Based Violence, higher unemployment coupled with lower wages and high instances of food insecurity. As a result, in 2018 the Gender Inequality Index score for the nation was 0.644, ranking very low at 153 out of 170 countries.",
+      },
+      {
+        id: 4,
+        text: "Coupled with this, the Kambia district is faced with many logging activities that expose the communities to drought, flooding in the rains and a loss of livelihood opportunities. Pujehun faces issues pertaining to mining. Mining activities by companies in the district exposes the communities to many environmental hazards that leave them vulnerable to climate-induced shocks. The Sulima beach in Pujehun district will be used as a harbour for transporting bauxites and rutile in the district. This reduces the economic livelihood of the communities that are reliant on fishing. Reports have indicated that extractive mining companies’ economic activities have resulted in reducing fish in the community.",
+      },
+    ],
   },
   {
     id: 4,
-    title:
-      "Strengthening of the Civil Society Participation for Climate Change Adaptation of the WASH Sector in two rural districts of Sierra Leone",
-    link_url: "https://sendsierraleone.com/cdcc.pdf",
-  },
-  {
-    id: 5,
-    title: "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
-    link_url: "https://sendsierraleone.com/climatechangeproject.html",
-  },
-  {
-    id: 6,
-    title:
-      "STRENGTHENING WOMEN AND YOUTH-LED BUSINESS FOR LOCAL ECONOMIC DEVELOPMENT",
-    link_url: "https://sendsierraleone.com/promotingresilienceundp.html",
-  },
-  {
-    id: 7,
-    title:
-      "IMPROVED ACCESS TO SUSTAINABLY MANAGED MICRO-FINANCE AND WaSH SYSTEMS – WaSH SELF SUPPLY PROJECT",
-    link_url: "https://sendsierraleone.com/improved-factsheet.html",
-  },
-  {
-    id: 8,
-    title: "Bonthe Island Fish Trading (BIFT) Project",
-    link_url: "https://sendsierraleone.com/bift.html",
-  },
-  {
-    id: 9,
-    title:
-      "PROMOTING INCOME GENERATION FOR CASH CROP FARMERS THROUGH GENDER TRANSFORMATICE PRACTICES, SELF INITIATIVES AND BUSINESS DEVELOPMENT",
-    link_url: "https://sendsierraleone.com/development.html",
-  },
-  {
-    id: 10,
-    title:
-      "Linking Agriculture Natural Resources Management and WASH towards Nutrition Security in Kenema and Pujehun Districts.",
-    link_url: "https://sendsierraleone.com/pujehun.html",
+    title: "Project 04",
+    text: "IMPROVED ACCESS TO SUSTAINABLY MANAGED MICRO-FINANCE AND WaSH SYSTEMS – WaSH SELF SUPPLY PROJECT",
+    link_url: "/strategic-direction/livelihood/4",
+    status: "on going",
+    description:
+      "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The publication has been produced with financial support from the European Union.",
+    donor: "EUROPEAN UNION",
+    partner: "SEND SIERRA LEONE, MOPADA, WELTHUNGERHILFE (WHH)",
+    location: "KENEMA",
+    duration: "34 MONTHS",
+    budget: "1,465,268.70 Euros",
+    areas: "WASH, ACCESS TO FINANCE, GENDER, HEALTH AND HYGIENE",
+    problem_image: "improved-img.png",
+    problem: [
+      {
+        id: 1,
+        text: "In Sierra Leone, malnutrition is characterised by both by widespread food insecurity and poor WASH situation. Between 59.7% and 49.8% in rural and urban areas are respectively food insecure due low educational opportunities, low agricultural productivity, absence of rural income diversification sources, low access to imported farm inputs, poor infrastructure and market access.",
+      },
+      {
+        id: 2,
+        text: "In Kenema District, 5 of the 17 chiefdoms are food insecurity above 70%. The Global Acute Malnutrition is 5.7% higher above the international average. In Sierra Leone, over 70% of women make up the agricultural workforce ranging from production, processing to marketing. Despite this, women are marginalized when it comes to decision making and governance.",
+      },
+    ],
   },
 ];
 

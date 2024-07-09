@@ -42,6 +42,9 @@ import {
   Livelihood,
   HealthDetails,
 } from "./pages";
+import LivelihoodDetails, {
+  LivelihoodProjectsLoader,
+} from "./pages/LivelihoodDetails";
 
 function App() {
   const router = createBrowserRouter(
@@ -90,7 +93,14 @@ function App() {
                 loader={GovernanceProjectsLoader}
               />
             </Route>
-            <Route path="livelihood" element={<Livelihood />} />
+            <Route path="livelihood">
+              <Route index element={<Livelihood />} />
+              <Route
+                path=":projectId"
+                element={<LivelihoodDetails />}
+                loader={LivelihoodProjectsLoader}
+              />
+            </Route>
           </Route>
           <Route
             path="work-with-us"

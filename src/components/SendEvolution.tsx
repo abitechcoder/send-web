@@ -4,7 +4,7 @@ const SendEvolution = () => {
   return (
     <section className={`bg-white ${layout.section} relative`}>
       <div className="hidden fixed md:top-[400px] lg:top-[300px] md:right-[30px] lg:right-[100px] md:grid gap-4 z-30">
-        <div className="w-[50px] h-[50px] rounded-full bg-darkgrey grid place-items-center">
+        {/* <div className="w-[50px] h-[50px] rounded-full bg-darkgrey grid place-items-center">
           <svg
             width="24"
             height="24"
@@ -28,8 +28,8 @@ const SendEvolution = () => {
               stroke-width="2"
             />
           </svg>
-        </div>
-        <div className="w-[50px] h-[50px] rounded-full bg-secondary grid place-items-center">
+        </div> */}
+        {/* <div className="w-[50px] h-[50px] rounded-full bg-secondary grid place-items-center">
           <svg
             width="24"
             height="24"
@@ -49,7 +49,7 @@ const SendEvolution = () => {
               stroke-width="2"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
       <div>
         <h2 className={`${styles.heading3} text-secondary text-left`}>

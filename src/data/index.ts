@@ -4,6 +4,7 @@ import {
   HealthProjects,
   jobClassification,
   jobs,
+  LivelihoodProjects,
   regions,
 } from "../constants";
 
@@ -36,4 +37,9 @@ export async function getJobs() {
 
 export async function getRegions() {
   return regions;
+}
+
+export async function getLivelihoodProject(id: number) {
+  let project = LivelihoodProjects.find((project) => project.id === id);
+  return project ?? null;
 }
