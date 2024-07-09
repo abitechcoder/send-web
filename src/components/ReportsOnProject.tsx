@@ -24,7 +24,7 @@ const ReportsOnProject = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
+      {/* <div className="w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
         <button className="bg-secondary text-white py-2 px-4">
           Annual Reports
         </button>
@@ -37,7 +37,7 @@ const ReportsOnProject = () => {
         <button className="bg-lightgrey text-darkgrey py-2 px-4">
           Project Reports
         </button>
-      </div>
+      </div> */}
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
         {AnnualReports.map((report) => (

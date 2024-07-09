@@ -1,4 +1,3 @@
-import { title } from "process";
 import { CardImage1, CardImage2, CardImage3 } from "../assets";
 import {
   Director,
