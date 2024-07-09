@@ -1,5 +1,5 @@
 import { styles, layout } from "../styles";
-import NewsLetterList from "../pages/NewsLetterList";
+import NewsLetterList from "./NewsLetterList";
 
 const InTheNews = () => {
   return (
@@ -27,8 +27,7 @@ const InTheNews = () => {
         </p>
       </div>
       <NewsLetterList />
-
-         </section>
+    </section>
   );
 };
 

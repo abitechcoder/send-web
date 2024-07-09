@@ -73,3 +73,4 @@ export { default as StrategicGovernanceProjects } from "./StrategicGovernancePro
 export { default as StrategicHealthProjects } from "./StrategicHealthProjects";
 export { default as ProjectOverview } from "./ProjectOverview";
 export { default as StrategicDirectionProject } from "./StrategicDirectionProject";
+export { default as NewsLetterList } from "./NewsLetterList";

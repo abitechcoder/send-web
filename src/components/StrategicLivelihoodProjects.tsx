@@ -1,4 +1,4 @@
-import { GovtProjects, LivelihoodProjects } from "../constants";
+import { LivelihoodProjects } from "../constants";
 import { styles, layout } from "../styles";
 import StrategicDirectionProject from "./StrategicDirectionProject";
 

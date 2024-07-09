@@ -1,6 +1,15 @@
-import { AnnualReports } from "../constants";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  AnnualReports,
+  GovtProjects,
+  HealthProjects,
+  LivelihoodProjects,
+} from "../constants";
 import { styles, layout } from "../styles";
 import ReportCard from "./ReportCard";
+import NewsLetterList from "./NewsLetterList";
+import ProfileManualsList from "./ProfileManualsList";
+import StrategicDirectionProject from "./StrategicDirectionProject";
 
 const ReportsOnProject = () => {
   return (
@@ -28,7 +37,86 @@ const ReportsOnProject = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
+      <Tabs defaultValue="annual_reports">
+        <TabsList className="bg-transparent w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
+          <TabsTrigger
+            className="data-[state=active]:bg-secondary bg-lightgrey data-[state=active]:text-white py-2 px-4"
+            value="annual_reports"
+          >
+            Annual Reports
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-secondary bg-lightgrey data-[state=active]:text-white py-2 px-4"
+            value="newsletters"
+          >
+            Newsletters
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-secondary bg-lightgrey data-[state=active]:text-white py-2 px-4"
+            value="manuals"
+          >
+            Training Manuals
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-secondary bg-lightgrey data-[state=active]:text-white py-2 px-4"
+            value="project_reports"
+          >
+            Project Reports
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="annual_reports">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
+            {AnnualReports.map((report) => (
+              <ReportCard
+                key={report.title}
+                title={report.title}
+                text={report.text}
+                year={report.year}
+                report_url={report.report_url}
+              />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="newsletters">
+          <NewsLetterList />
+        </TabsContent>
+        <TabsContent value="manuals">
+          <ProfileManualsList />
+        </TabsContent>
+        <TabsContent value="project_reports">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
+            {LivelihoodProjects.map((project) => (
+              <StrategicDirectionProject
+                key={project.title}
+                title={project.title}
+                text={project.text}
+                project_url={project.link_url}
+                status={project.status}
+              />
+            ))}
+            {HealthProjects.map((project) => (
+              <StrategicDirectionProject
+                key={project.title}
+                title={project.title}
+                text={project.text}
+                project_url={project.link_url}
+                status={project.status}
+              />
+            ))}
+            {GovtProjects.map((project) => (
+              <StrategicDirectionProject
+                key={project.title}
+                title={project.title}
+                text={project.text}
+                project_url={project.link_url}
+                status={project.status}
+              />
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
+
+      {/* <div className="w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
         <button className="bg-secondary text-white py-2 px-4">
           Annual Reports
         </button>
@@ -41,19 +129,7 @@ const ReportsOnProject = () => {
         <button className="bg-lightgrey text-darkgrey py-2 px-4">
           Project Reports
         </button>
-      </div>
-
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
-        {AnnualReports.map((report) => (
-          <ReportCard
-            key={report.title}
-            title={report.title}
-            text={report.text}
-            year={report.year}
-            report_url={report.report_url}
-          />
-        ))}
-      </div>
+      </div> */}
     </section>
   );
 };
