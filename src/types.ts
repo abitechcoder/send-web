@@ -50,3 +50,26 @@ export interface Newsletter {
   image: string;
   url: string;
 }
+
+export interface ProfileManual {
+  id?: number;
+  image: string;
+  link_url: string;
+}
+
+export interface StrategicProjectType {
+  id?: number;
+  title: string;
+  text: string;
+  link_url: string;
+  status: string;
+  description: string;
+  donor: string;
+  partner: string;
+  location: string;
+  duration: string;
+  budget: string;
+  areas: string;
+  problem_image: string;
+  problem: any
+}

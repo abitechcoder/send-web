@@ -27,15 +27,28 @@ const EventGallery = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[80px] md:gap-x-10 mt-8 pb-12">
         <GalleryCard
           title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image.png"
+          image="gallery-image-1.jpg"
+          link_url=""
         />
         <GalleryCard
           title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image.png"
+          image="gallery-image-1.jpg"
+          link_url=""
         />
         <GalleryCard
           title="SEND Sierra Leon 2023 Annual Report Exhibiton"
-          image="gallery-image.png"
+          image="gallery-image-1.jpg"
+          link_url=""
+        />
+        <GalleryCard
+          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
+          image="gallery-image-1.jpg"
+          link_url=""
+        />
+        <GalleryCard
+          title="SEND Sierra Leon 2023 Annual Report Exhibiton"
+          image="gallery-image-1.jpg"
+          link_url=""
         />
       </div>
     </section>

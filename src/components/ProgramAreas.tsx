@@ -12,7 +12,7 @@ const ProgramAreas = () => {
         The ethos and commitment of SEND sierra Leone is to improve the quality
         of lives throughout the country.
       </p>
-      <div className="max-w-[1100px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 place-items-center">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-4 place-items-center">
         {ProgramCards.map((program) => (
           <ProgramCard
             key={program.id}

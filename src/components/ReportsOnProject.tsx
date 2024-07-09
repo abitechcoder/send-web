@@ -4,10 +4,14 @@ import ReportCard from "./ReportCard";
 
 const ReportsOnProject = () => {
   return (
-    <section className={`${layout.section} bg-white bg-center`}>
+    <section
+      className={`${layout.section} bg-[url("/src/assets/report-on-projects-art.png")] bg-no-repeat bg-white bg-top`}
+    >
       <div className="grid gap-4">
         <div>
-          <h2 className={`${styles.heading3} text-secondary text-center`}>
+          <h2
+            className={`${styles.heading3} text-secondary text-center uppercase`}
+          >
             Publication
           </h2>
           <h2
@@ -17,7 +21,7 @@ const ReportsOnProject = () => {
           </h2>
         </div>
         <p
-          className={`w-full text-center mx-auto text-black ${styles.paragraph2}`}
+          className={`w-full md:w-3/4 lg:w-2/4 text-center mx-auto text-black ${styles.paragraph2}`}
         >
           The ethos and commitment of SEND sierra Leone is to improve the
           quality of lives throughout the country.
