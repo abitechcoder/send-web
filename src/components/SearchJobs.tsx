@@ -1,13 +1,43 @@
 import styles, { layout } from "../styles";
-import {SelectInput, JobCard} from ".";
+import { SelectInput, JobCard } from ".";
+import { GeneralList, Job } from "../types";
+import { useState } from "react";
 
-const SearchJobs = () => {
+type Props = {
+  jobClassifications: GeneralList[];
+  regions: GeneralList[];
+  jobs: Job[];
+};
+
+const SearchJobs = ({ jobClassifications, jobs, regions }: Props) => {
+  const [selectedClassification, setSelectedClassification] =
+    useState<string>("");
+  const [selectedRegion, setSelectedRegion] = useState<string>("");
+  const [filter, setFilter] = useState<string>("");
+
+  const filteredJobs = jobs.filter((item: Job) => {
+    const matchesClassification = selectedClassification
+      ? item.classification.includes(selectedClassification)
+      : true;
+    const matchesRegion = selectedRegion
+      ? item.region.includes(selectedRegion)
+      : true;
+    const matchesFilter = filter
+      ? item.title.toLowerCase().includes(filter.toLowerCase())
+      : true;
+
+    return matchesClassification && matchesRegion && matchesFilter;
+  });
+
   return (
     <section className={`bg-white ${layout.section}`}>
       <section className="grid grid-cols-1 lg:grid-cols-[1fr_150px] gap-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="relative">
             <input
+              onChange={(e: any) => {
+                setFilter(e.target.value);
+              }}
               id="search"
               type="text"
               placeholder="Search here..."
@@ -32,10 +62,18 @@ const SearchJobs = () => {
             </label>
           </div>
           <div className="h-[50px]">
-            <SelectInput title="Select Job Classification" />
+            <SelectInput
+              setSelectedValue={setSelectedClassification}
+              data={jobClassifications}
+              title="Select Job Classification"
+            />
           </div>
           <div className="h-[50px]">
-            <SelectInput title="Select city or region" />
+            <SelectInput
+              setSelectedValue={setSelectedRegion}
+              data={regions}
+              title="Select city or region"
+            />
           </div>
         </div>
         <div className="h-[50px]">
@@ -48,14 +86,9 @@ const SearchJobs = () => {
       <section className="pt-8">
         <h2 className={`font-barlow ${styles.heading2Barlow} `}>All Jobs</h2>
         <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
-            <JobCard/>
+          {filteredJobs.map((item: Job) => (
+            <JobCard job={item} key={item.id} {...item} />
+          ))}
         </div>
       </section>
     </section>

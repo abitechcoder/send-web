@@ -8,6 +8,8 @@ import RootLayout from "./layouts/Root";
 import DashboardRoot from "./layouts/DashboardRoot";
 import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
 import { loader as DirectorLoader } from "./pages/DirectorDetails";
+import { loader as ClassificationLoader } from "./pages/WorkWithUs";
+
 
 //pages
 import {
@@ -66,7 +68,10 @@ function App() {
           <Route path="strategic-direction">
             <Route index element={<GovtAndWomenEmpowerment />} />
           </Route>
-          <Route path="work-with-us" element={<WorkWithUs />} />
+          <Route path="work-with-us" 
+                loader={ClassificationLoader}
+        
+          element={<WorkWithUs />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="donate">

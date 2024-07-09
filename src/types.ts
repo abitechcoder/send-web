@@ -37,6 +37,20 @@ export interface StrategicPlan {
   document_url: string;
 }
 
+export interface GeneralList {
+  id: number;
+  title: string;
+  // value: string;
+}
+
+export interface Job {
+  id: number;
+  title: string;
+  description: string;
+  classification: string;
+  region: string;
+  deadline: string;
+}
 export interface AnnualReport {
   title: string;
   text: string;

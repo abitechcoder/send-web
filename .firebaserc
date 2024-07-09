@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "websites-fd1cd"
+  },
+  "hosting": {
+    "site": "sendsl",
+    "public": "public"
+  }
+}
