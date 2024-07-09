@@ -20,7 +20,11 @@ const JobCard = ({ job }: Props) => {
         <p className={styles.paragraph3}>
           Application Deadline: {job.deadline}
         </p>
-        <button className="bg-secondary py-2 px-4 text-white flex items-center gap-2">
+        <a
+          href={job.link_url}
+          target="_blank"
+          className="bg-secondary py-2 px-4 text-white flex items-center gap-2"
+        >
           <p className={styles.paragraph3}>Read More</p>
           <svg
             width="8"
@@ -37,7 +41,7 @@ const JobCard = ({ job }: Props) => {
               stroke-linejoin="round"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );

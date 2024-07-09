@@ -292,7 +292,6 @@ export const jobClassification: GeneralList[] = [
     id: 12,
     title: "Driver",
   },
-
 ];
 
 export const regions: GeneralList[] = [
@@ -315,6 +314,8 @@ export const jobs: Job[] = [
     deadline: " 10 May 2024",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
   },
 
   {
@@ -325,6 +326,8 @@ export const jobs: Job[] = [
     deadline: "10 June 2024",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 3,
@@ -334,6 +337,8 @@ export const jobs: Job[] = [
     deadline: "22 April 2024",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Invitation%20for%20Bids%20ADVERT.pdf",
   },
   {
     id: 4,
@@ -343,6 +348,7 @@ export const jobs: Job[] = [
     deadline: ":30 April 2024",
     classification: "2",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/mtawtor.pdf",
   },
 
   {
@@ -353,6 +359,7 @@ export const jobs: Job[] = [
     deadline: "30 March 2024",
     classification: "1",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/mtawtor.pdf",
   },
   {
     id: 6,
@@ -362,6 +369,8 @@ export const jobs: Job[] = [
     deadline: "14 December 2023",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Field%20Officer_SLiSL%20Final%20.pdff",
   },
   {
     id: 7,
@@ -371,6 +380,8 @@ export const jobs: Job[] = [
     deadline: "14 December 2023",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Field%20Officer_SLiSL%20Final%20.pdff",
   },
   {
     id: 8,
@@ -378,8 +389,9 @@ export const jobs: Job[] = [
     description:
       "SEND is looking for a qualified national from any of the Universities. The Intern will support the Accounts Officer in undertaking administrative, financial and accounting tasks of the organization. The right candidate will track, evaluate and process day to day activities. Responsibilities include accounts payable, accounts receivable, internal and external duties, such as vendors, clients including banks, NRA and NASSIT. The Intern may handle daily bookkeeping, preparing financial report, taxes, budgets, and assisting in ensuring proper financial policies, procedures and structures are maintained.",
     deadline: "25 October 2023",
-    classification: "1",
+    classification: "5",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/TOR%20-%20Programs%20Intern.pdf",
   },
   {
     id: 9,
@@ -387,26 +399,33 @@ export const jobs: Job[] = [
     description:
       "SEND is looking for a qualified national from any of the Universities. The Intern will support the Accounts Officer in undertaking administrative, financial and accounting tasks of the organization. The right candidate will track, evaluate and process day to day activities. Responsibilities include accounts payable, accounts receivable, internal and external duties, such as vendors, clients including banks, NRA and NASSIT. The Intern may handle daily bookkeeping, preparing financial report, taxes, budgets, and assisting in ensuring proper financial policies, procedures and structures are maintained.",
     deadline: "25 October 2023",
-    classification: "2",
+    classification: "5",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/TOR%20-%20Programs%20Intern.pdf",
   },
   {
     id: 10,
-    title: "Feasibility Study Consultancy for The Women’s Access to Renewable Energy for Economic Development (WAREED)",
+    title:
+      "Feasibility Study Consultancy for The Women’s Access to Renewable Energy for Economic Development (WAREED)",
     description:
       "SEND Sierra Leone seeks the services of an experienced Consultant or Consultancy firm to conduct a feasibility study on the WAREED project which aims to provide SEND-SL and all stakeholders with a sound basis for developing the full project proposal by clarifying prerequisites, assumptions, opportunities, and risks. The study findings should provide an overview of key areas in consideration of relevance, effectiveness, efficiency, impact and sustainability (DAC OECD) scopes of the proposed intervention. The study will also be submitted to the TERRA TECH/BMZ for assessment of the overall feasibility of the project. The feasibility study will also outline the changes possible for the next three years with project support. It will critically examine the situation of the Kailahun district and the project outcomes and outputs formulated to reach the desired result. It will also help analyze target stakeholders identified as MDAs, mini-grid suppliers and operators, local authorities, etc.",
     deadline: "10 November 2023",
-    classification: "1",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/ToR%20for%20WAREED%20Project%20Feasibility%20Study.pdf",
   },
   {
     id: 11,
-    title: "Feasibility Study Consultancy for The FEED: Empowering Communities through Sustainable School Feeding in Kenema, Kailahun and Bo",
+    title:
+      "Feasibility Study Consultancy for The FEED: Empowering Communities through Sustainable School Feeding in Kenema, Kailahun and Bo",
     description:
       "SEND Sierra Leone seeks the services of an experienced Consultant or Consultancy firm to conduct a feasibility study on the FEED project which aims to provide SEND-SL and all stakeholders with a sound basis for developing the full project proposal by clarifying prerequisites, assumptions, opportunities, and risks. The study findings should provide an overview of key areas in consideration of relevance, effectiveness, efficiency, impact and sustainability (DAC OECD) scopes of the proposed intervention. The study will also be submitted to the TERRA TECH/BMZ for assessment of the overall feasibility of the project. The feasibility study will also outline the changes possible for the next three years with project support. It will critically examine the situation of the Kailahun district and the project outcomes and outputs formulated to reach the desired result. It will also help analyze target stakeholders identified as MDAs, mini-grid suppliers and operators, local authorities, etc.",
     deadline: "10 November 2023",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/ToR%20for%20WAREED%20Project%20Feasibility%20Study.pdf",
   },
   {
     id: 12,
@@ -414,8 +433,9 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone informs the public of an proposed auction of a number of its assets to the general public.",
     deadline: "25 September 2023",
-    classification: "1",
+    classification: "9",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/assetsauction.pdf",
   },
   {
     id: 13,
@@ -425,6 +445,8 @@ export const jobs: Job[] = [
     deadline: "1 September 2023",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Strategic%20Plan%20Development%202024.pdf",
   },
   {
     id: 14,
@@ -434,6 +456,8 @@ export const jobs: Job[] = [
     deadline: " 16 June 2023",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/TOR-Data%20Protection%20Policy.pdf",
   },
   {
     id: 15,
@@ -443,6 +467,7 @@ export const jobs: Job[] = [
     deadline: " 16 June 2023",
     classification: "1",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/TOR-GenderPolicyFinal.pdf",
   },
   {
     id: 16,
@@ -452,6 +477,8 @@ export const jobs: Job[] = [
     deadline: "5 June 2023",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 17,
@@ -459,8 +486,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of a Communications Consultant to support the country program office in delivering communication deliverables aligned with the organisations digital and communications strategy",
     deadline: "5 June 2023",
-    classification: "1",
+    classification: "4",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/TOR-Communications%20Consultant.pdf",
   },
   {
     id: 18,
@@ -468,8 +497,9 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an Office Assistant to support the Freetown program office in ensuring the office is a conducive working environment for all staff",
     deadline: "20 May 2023",
-    classification: "2",
+    classification: "3",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/Office%20AssistantFreetown.pdf",
   },
   {
     id: 19,
@@ -477,8 +507,9 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Solar Technician who will work with the organisation to design and install photo voltaic systems based on site conditions.",
     deadline: "20 May 2023",
-    classification: "1",
+    classification: "3",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/Solar%20Technician.pdf",
   },
   {
     id: 20,
@@ -486,8 +517,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Data Protection Policy Consultant to develop a comprehensive data protection policy document for the organisation.",
     deadline: "12 May 2023",
-    classification: "1",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/TOR-Data%20Protection%20Policy.pdf",
   },
   {
     id: 21,
@@ -495,8 +528,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Gender Policy Consultant to develop a comprehensive gender policy document for the organisation.",
     deadline: "12 May 2023",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/pewlesseducationgenderaudit.docx",
   },
   {
     id: 22,
@@ -504,8 +539,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Gender Audit Consultant to conduct a gender audit of female education workers in Sierra Leone",
     deadline: "15 March 2023",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/pewlesseducationgenderaudit.docx",
   },
   {
     id: 23,
@@ -513,8 +550,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Evaluation Consultant to conduct a mid-term evaluation for the Citizen Driven Climate Sensitive WASH Management project in the Kenema district.",
     deadline: "27 February 2023",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/TOR%20Mid-Term%20Evaluation%20P-150.pdf",
   },
   {
     id: 24,
@@ -524,6 +563,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 25,
@@ -533,6 +574,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/projectmanagerjd.pdf",
   },
   {
     id: 26,
@@ -542,6 +584,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/projectofficerjd.pdf",
   },
   {
     id: 27,
@@ -549,8 +592,9 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of experienced ICT Tutors to work under the PEWLESS project aimed at increasing the ICT literacy of teachers especially female teachers in the Kailahun, Kenema and Kono districts.",
     deadline: "25 January 2023",
-    classification: "1",
+    classification: "3",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/ITTutorPewless.pdf",
   },
   {
     id: 28,
@@ -558,17 +602,19 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of an experienced Consultant to conduct a feasibility study fo the proposed Citizen-Driven Climate Change project to guide the development of the project proposal and submission.",
     deadline: "30 January 2023",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/cdccfeasibility.pdf",
   },
- {
+  {
     id: 29,
     title: "End-Line Evaluation Consultant",
     description:
       "SEND Sierra Leone seeks the services of an experienced individual to serve in the capacity of Account Officer working under the ‘Supporting Gender Equality & Social Accountability through a Strengthened Civil Society project which aims to strengthen local Civil Society Organisations (CSOs) engagement as actors of good governance and development in Sierra Leone.",
     deadline: " 28 December 2022",
-    classification: "1",
+    classification: "4",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/kependline.pdf",
   },
   {
     id: 30,
@@ -578,6 +624,7 @@ export const jobs: Job[] = [
     deadline: " 25 December 2022",
     classification: "1",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/financedirectorad.pdf",
   },
   {
     id: 31,
@@ -585,8 +632,9 @@ export const jobs: Job[] = [
     description:
       "A consortium of local CSOs and International Development Partners request the services of a Consultant or a team of Consultants to aid in the development of the 2023 Sierra Leone Women's Manisfesto which wil address the needs of all Sierra Leone women.",
     deadline: "18 July 2022",
-    classification: "2",
+    classification: "4",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/womenmanifestotor.pdf",
   },
   {
     id: 32,
@@ -596,6 +644,7 @@ export const jobs: Job[] = [
     deadline: "21 July 2022",
     classification: "2",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/nssseadvert.pdf",
   },
   {
     id: 33,
@@ -605,6 +654,7 @@ export const jobs: Job[] = [
     deadline: "25 April 2022",
     classification: "1",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/nssseadvert.pdf",
   },
   {
     id: 34,
@@ -614,15 +664,19 @@ export const jobs: Job[] = [
     deadline: "14 February 2022",
     classification: "1",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/Assets/documents/itlproject.pdf",
   },
   {
     id: 35,
-    title: "Construction Firm needed for the construction of the Baoma Community Health Post",
+    title:
+      "Construction Firm needed for the construction of the Baoma Community Health Post",
     description:
       "SEND Sierra Leone seeks the services of a construction firm to construct and deliver a community health post facility in Baoma community located in Kenema district to improve the access and quality of health services acquired by the residents of Baoma and surrounding villages",
     deadline: "21 January 2022",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Gender%20Audit%20of%20Political%20Parties%20SEND%20TOR%20.pdf",
   },
   {
     id: 36,
@@ -632,6 +686,8 @@ export const jobs: Job[] = [
     deadline: "19 January 2022",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/WASHAdvisorjob.pdf",
   },
   {
     id: 37,
@@ -639,8 +695,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of a Consultant to conduct a feasibility study of the proposed PEWLESS project.",
     deadline: "17 January 2022",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Endline%20Evaluation%20TOR%20for%20Women%20Empowerment%20project.pdf",
   },
   {
     id: 38,
@@ -648,8 +706,10 @@ export const jobs: Job[] = [
     description:
       "SEND Sierra Leone seeks the services of a Consultant to conduct a Gender Audit on Political Parties in Sierra Leone.",
     deadline: "29 September 2021",
-    classification: "2",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Endline%20Evaluation%20TOR%20for%20Women%20Empowerment%20project.pdf",
   },
   {
     id: 40,
@@ -659,6 +719,7 @@ export const jobs: Job[] = [
     deadline: "10 August 2021",
     classification: "1",
     region: "2",
+    link_url: "https://www.sendsierraleone.com/Assets/documents/Nyapui%20.pdf",
   },
   {
     id: 41,
@@ -668,6 +729,7 @@ export const jobs: Job[] = [
     deadline: "26 July, 2021",
     classification: "2",
     region: "1",
+    link_url: "https://www.sendsierraleone.com/Assets/documents/Nyapui%20.pdf",
   },
   {
     id: 42,
@@ -677,6 +739,8 @@ export const jobs: Job[] = [
     deadline: "26 July, 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 43,
@@ -686,15 +750,18 @@ export const jobs: Job[] = [
     deadline: "26 July, 2021",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 44,
     title: "Terms of Reference",
-    description:
-      `SEND is implementing the "More than a Woman: Strengthening Women's Participation in Politics and Governance" project with funds from the Government of Ireland.`,
+    description: `SEND is implementing the "More than a Woman: Strengthening Women's Participation in Politics and Governance" project with funds from the Government of Ireland.`,
     deadline: "23:59 (GMT) on 30 July 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 45,
@@ -704,144 +771,175 @@ export const jobs: Job[] = [
     deadline: "23:59 (GMT) on 30 June 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 46,
-    title: "Terms of Reference for the Development of a Training Manual for Female Aspirants and Candidates",
+    title:
+      "Terms of Reference for the Development of a Training Manual for Female Aspirants and Candidates",
     description:
-     "This ToR outlines the process to gather information and create a training manual for women aspirants and candidates to contest in local and national elections and participate in leadership successfully. It defines how the consultancy will be implemented in Sierra Leone within the objectives and scope of the Training Manual for Female Aspirants and Candidates.",
+      "This ToR outlines the process to gather information and create a training manual for women aspirants and candidates to contest in local and national elections and participate in leadership successfully. It defines how the consultancy will be implemented in Sierra Leone within the objectives and scope of the Training Manual for Female Aspirants and Candidates.",
     deadline: "23:59 (GMT) on 11 July, 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 47,
     title: "Request for Tender for SEND Sierra Leone 2020 External Audit",
     description:
-     "Tenders are invited to provide external audit services for SEND Sierra Leone for the 2020 financial year. SEND’s financial year runs from 1st January to 31st December.",
+      "Tenders are invited to provide external audit services for SEND Sierra Leone for the 2020 financial year. SEND’s financial year runs from 1st January to 31st December.",
     deadline: "23:59 (GMT) on 30 June 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 48,
     title: "Auction Notice! Auction Notice! Auction Notice!",
     description:
-     "Management of SEND Sierra Leone wishes to bring to the notice of all staff and the general Public that Vehicle AIJ-366 is available for Auction sale to the General Public.",
+      "Management of SEND Sierra Leone wishes to bring to the notice of all staff and the general Public that Vehicle AIJ-366 is available for Auction sale to the General Public.",
     deadline: "19 April, 2021",
     classification: "2",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 49,
-    title: "Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone",
+    title:
+      "Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone",
     description:
-     "SEND Sierra Leone, funded by German Federal Ministry for Economic Cooperation (BMZ AND TERRA TECH), are implementing the project ‘Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone’ to contribute to achieving the Sustainable Development Goals.",
+      "SEND Sierra Leone, funded by German Federal Ministry for Economic Cooperation (BMZ AND TERRA TECH), are implementing the project ‘Integrated Project for Education and Empowerment of Women and Civil Society Groups in Sierra Leone’ to contribute to achieving the Sustainable Development Goals.",
     deadline: " 1 March, 2021",
     classification: "1",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 50,
     title: "Consultant for the Evaluation of the More Than A Woman Project",
-    description:
-     `The "More than a Woman: Strengthening Women's Participation in Politics and Governance" project be evaluated and works to empower women in the Eastern Region of Sierra Leone to increase their participation in politics and governance.`,
+    description: `The "More than a Woman: Strengthening Women's Participation in Politics and Governance" project be evaluated and works to empower women in the Eastern Region of Sierra Leone to increase their participation in politics and governance.`,
     deadline: "25 February, 2021",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 51,
     title: "Credit Union Manager",
     description:
-    "The Credit Union Manager is responsible for the day to day running of the Credit Union. He/she is responsible for the proper technical performance of all the Credit Union's accounting and financial activities in consultation with the Board of Directors.",
+      "The Credit Union Manager is responsible for the day to day running of the Credit Union. He/she is responsible for the proper technical performance of all the Credit Union's accounting and financial activities in consultation with the Board of Directors.",
     deadline: "15 January, 2021",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 52,
     title: "Account Officer",
     description:
-    "The Accounts Officer is responsible for loan disbursement, opening the account, and maintaining high proficient and comprehensive credit union knowledge.",
+      "The Accounts Officer is responsible for loan disbursement, opening the account, and maintaining high proficient and comprehensive credit union knowledge.",
     deadline: "15 January, 2021",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 53,
     title: "Security Officer",
     description:
-    "The Security Officer is responsible for the safety and security of all assets and property of the Credit Union. He/she ensures that the office premises are well tidy and the generator is in good order.",
+      "The Security Officer is responsible for the safety and security of all assets and property of the Credit Union. He/she ensures that the office premises are well tidy and the generator is in good order.",
     deadline: "15 January, 2021",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 54,
     title: "PURCHASE OF OFFICE EQUIPMENT",
     description:
-    "SEND Sierra Leone is non-governmental organization registered with the Ministry of Finance and Economic Development of the Republic of Sierra Leone with a vision to contribute to a Sierra Leone where people’s rights and well-being are guaranteed.",
+      "SEND Sierra Leone is non-governmental organization registered with the Ministry of Finance and Economic Development of the Republic of Sierra Leone with a vision to contribute to a Sierra Leone where people’s rights and well-being are guaranteed.",
     deadline: "10 December, 2020",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 55,
     title: "Invitation for Bids",
     description:
-    "The Social Enterprise Development (SEND) Sierra Leone has received funds from the BMZ through Terra Tech Germany for the procurement of works and now invites sealed bids from eligible bidders for the construction of Kenema Model Senior Secondary School for Girls.",
+      "The Social Enterprise Development (SEND) Sierra Leone has received funds from the BMZ through Terra Tech Germany for the procurement of works and now invites sealed bids from eligible bidders for the construction of Kenema Model Senior Secondary School for Girls.",
     deadline: "20 November, 2020",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 56,
     title: "Computer/IT Tutors(2)",
     description:
-    "SEND Sierra Leone is looking for a Computer/IT Tutors who will assume the responsibility of training teachers in the Kenema District to ensure quality teaching service.",
+      "SEND Sierra Leone is looking for a Computer/IT Tutors who will assume the responsibility of training teachers in the Kenema District to ensure quality teaching service.",
     deadline: "18th November, 2020",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 57,
     title: "Engineers Without Borders(Terms of Reference)",
     description:
-    "Applications must be sent to: ayamga@sendsierraleone.com and jattu@sendsierraleone.com",
+      "Applications must be sent to: ayamga@sendsierraleone.com and jattu@sendsierraleone.com",
     deadline: "25 November, 2020",
     classification: "2",
     region: "1",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 58,
     title: "FINANCE DIRECTOR ALERT",
     description:
-    "SEND Sierra Leone is looking for Finance Director to Oversee the performance of accurate reporting procedures and timely submission of reports to relevant donors, the SEND National Executive Council and other stakeholders.",
+      "SEND Sierra Leone is looking for Finance Director to Oversee the performance of accurate reporting procedures and timely submission of reports to relevant donors, the SEND National Executive Council and other stakeholders.",
     deadline: "30 June, 2020",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 59,
     title: "FINANCE OFFICER ALERT",
     description:
-    "SEND Sierra Leone is looking for Finance Officer for Country Office in Kenema who will be reporting to the Finance Director.The Officer will be responsible for fixed assets transactions managements and preparing letters for cash transfers , new bank openings ,program area payroll payments etc among others.",
+      "SEND Sierra Leone is looking for Finance Officer for Country Office in Kenema who will be reporting to the Finance Director.The Officer will be responsible for fixed assets transactions managements and preparing letters for cash transfers , new bank openings ,program area payroll payments etc among others.",
     deadline: "10 March, 2020",
     classification: "1",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 60,
     title: "CONSULTANCY ALERT",
     description:
-    "SEND Sierra Leone seeks the services of a consultant to handle all its digital communications across several digital platforms . The Consultant will have to develop a digital strategy as well as execute said strategy in line with all current and future SEND project.",
+      "SEND Sierra Leone seeks the services of a consultant to handle all its digital communications across several digital platforms . The Consultant will have to develop a digital strategy as well as execute said strategy in line with all current and future SEND project.",
     deadline: "20 December, 2019",
-    classification: "1",
+    classification: "4",
     region: "2",
+    link_url:
+      "https://www.sendsierraleone.com/Assets/documents/Expression%20of%20Interest%20for%20social%20media%20content%20development%20(1)-2.pdf",
   },
-
-
 ];
 export const AnnualReports: AnnualReport[] = [
   {

@@ -50,6 +50,7 @@ export interface Job {
   classification: string;
   region: string;
   deadline: string;
+  link_url?: string;
 }
 export interface AnnualReport {
   title: string;
