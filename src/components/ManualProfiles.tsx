@@ -1,4 +1,5 @@
 import { ManualProfileCard } from ".";
+import { ProfileManuals } from "../constants";
 import { styles, layout } from "../styles";
 
 const ManualProfiles = () => {
@@ -28,9 +29,13 @@ const ManualProfiles = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        <ManualProfileCard image="manual-image-1.png" />
-        <ManualProfileCard image="manual-image-2.png" />
-        <ManualProfileCard image="manual-image-3.png" />
+        {ProfileManuals.map((manual) => (
+          <ManualProfileCard
+            key={manual.id}
+            image={manual.image}
+            link_url={manual.link_url}
+          />
+        ))}
       </div>
     </section>
   );

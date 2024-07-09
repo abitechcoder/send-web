@@ -1,11 +1,10 @@
+import { AnnualReports } from "../constants";
 import { styles, layout } from "../styles";
 import ReportCard from "./ReportCard";
 
 const ReportsOnProject = () => {
   return (
-    <section
-      className={`${layout.section} bg-white bg-center`}
-    >
+    <section className={`${layout.section} bg-white bg-center`}>
       <div className="grid gap-4">
         <div>
           <h2 className={`${styles.heading3} text-secondary text-center`}>
@@ -41,46 +40,15 @@ const ReportsOnProject = () => {
       </div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
-        <ReportCard
-          title="Report 01"
-          text="SEND SL Annual"
-          year="Report 2017"
-        />
-        <ReportCard
-          title="Report 02"
-          text="SEND SL Annual"
-          year="Report 2018"
-        />
-        <ReportCard
-          title="Report 03"
-          text="SEND SL Annual"
-          year="Report 2019"
-        />
-        <ReportCard
-          title="Report 04"
-          text="SEND SL Annual"
-          year="Report 2020"
-        />
-        <ReportCard
-          title="Report 05"
-          text="SEND SL Annual"
-          year="Report 2021"
-        />
-        <ReportCard
-          title="Report 06"
-          text="SEND SL Annual"
-          year="Report 2022"
-        />
-        <ReportCard
-          title="Report 07"
-          text="SEND SL Annual"
-          year="Report 2023"
-        />
-        <ReportCard
-          title="Report 08"
-          text="SEND SL Annual"
-          year="Report 2024"
-        />
+        {AnnualReports.map((report) => (
+          <ReportCard
+            key={report.title}
+            title={report.title}
+            text={report.text}
+            year={report.year}
+            report_url={report.report_url}
+          />
+        ))}
       </div>
     </section>
   );
