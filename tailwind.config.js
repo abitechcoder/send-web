@@ -30,6 +30,8 @@ module.exports = {
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
         barlow: ["Barlow Condensed", "sans-serif"],
+        nunito:["Nunito", "sans-serif"]
+
       },
       keyframes: {
         "accordion-down": {

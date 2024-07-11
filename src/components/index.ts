@@ -68,3 +68,6 @@ export { default as MarionInfo } from "./MarionInfo";
 export { default as JeaneInfo } from "./JeaneInfo";
 export { default as JamesInfo } from "./JamesInfo";
 export { default as FatmataInfo } from "./FatmataInfo";
+export { default as Overviews } from "./Overview";
+export { default as RecentDonation } from "./RecentDonation"
+export { default as Donation } from "./Donation"

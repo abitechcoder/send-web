@@ -38,3 +38,10 @@ export { default as CorporateImage } from "./corporate-identity-image.png";
 export { default as AManDrawing } from "./a-man-draw.png";
 export { default as Organogram } from "./organogram.png";
 export { default as CustomerSupportIcon } from "./customer-support.png";
+export { default as ellipse } from "./ellipse.png";
+export { default as notif } from "./notif.png";
+export { default as arrowrise } from "./arrowrise.png";
+export { default as arrowfall } from "./arrowfall.png";
+export { default as dollar } from "./dollar.png";
+export { default as chart } from "./chart.png";
+

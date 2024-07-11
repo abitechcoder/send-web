@@ -70,3 +70,12 @@ export interface ProfileManual {
   image: string;
   link_url: string;
 }
+
+export interface Overview {
+  name: string;
+  value: string;
+  imgURL: string;
+  number: string;
+  color : string;
+
+}

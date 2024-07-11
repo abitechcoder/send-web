@@ -341,6 +341,7 @@ export const links: Link[] = [
     ),
     url: "/dashboard",
   },
+  
 ];
 
 const SideNavLinks = () => {
