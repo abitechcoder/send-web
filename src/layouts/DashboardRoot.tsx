@@ -3,8 +3,8 @@ import { SideNav, NavBar } from "../components";
 
 const DashboardRoot = () => {
   return (
-    <main className="bg-lightgrey h-screen grid grid-cols-[250px_1fr]">
-      <aside>
+    <main className="bg-lightgrey h-screen grid md:grid-cols-[250px_1fr]">
+      <aside className="hidden md:block">
         <SideNav />
       </aside>
       <section className="h-full">
