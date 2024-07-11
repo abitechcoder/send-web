@@ -1,6 +1,7 @@
 export { default as Logo } from "./logo.png";
 export { default as HeroImage } from "./hero-image.png";
 export { default as hero2 } from "./hero2.png";
+export { default as hero3 } from "./hero3.png";
 export { default as HeroArtLeft } from "./hero-art-left.png";
 export { default as HeroArtRight } from "./hero-art-right.png";
 export { default as HeroArtBottomRight } from "./hero-art-bottom-right.png";

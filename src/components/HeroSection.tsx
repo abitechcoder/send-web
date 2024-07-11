@@ -6,6 +6,7 @@ import {
   CardImage2,
   LatestNewsCard1,
   hero2,
+  hero3,
 } from "../assets";
 import styles from "../styles";
 import Button from "./Button";
@@ -60,25 +61,31 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="hidden md:block md:[clip-path:polygon(0%_0%,_100%_0%,_100%_100%,_10%_100%)] ">
-      <Carousel
-            showThumbs={false}
-            autoPlay={true}
-            infiniteLoop
-            interval={3000}
-            showArrows={true}
-            showStatus={false}
-          >
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-[500px]"
-          src={HeroImage}
-          alt="Good Governance and Equality"
-        />
+        <Carousel
+          showThumbs={false}
+          autoPlay={true}
+          infiniteLoop
+          interval={3000}
+          showArrows={true}
+          showStatus={false}
+        >
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-[500px]"
+            src={HeroImage}
+            alt="Good Governance and Equality"
+          />
 
-<img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-[500px]"
-          src={hero2}
-          alt="Good Governance and Equality"
-        />
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-[500px]"
+            src={hero2}
+            alt="Good Governance and Equality"
+          />
+
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-[500px]"
+            src={hero3}
+            alt="Good Governance and Equality"
+          />
         </Carousel>
       </div>
     </section>
