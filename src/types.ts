@@ -88,3 +88,10 @@ export interface StrategicProjectType {
   problem_image: string;
   problem: any;
 }
+export interface Overview {
+  name: string;
+  value: string;
+  imgURL: string;
+  number: string;
+  color: string;
+}
