@@ -46,7 +46,15 @@ import {
 } from "./pages";
 
 //Admin Dashboard Pages
-import { Dashboard, GalleryAdmin, Home, Identity, Partner, Program, Team } from "./pages/dashboard";
+import {
+  Dashboard,
+  GalleryAdmin,
+  Home,
+  Identity,
+  Partner,
+  Program,
+  Team,
+} from "./pages/admin";
 
 function App() {
   const router = createBrowserRouter(
