@@ -13,13 +13,15 @@ import GovernanceDetails, {
   GovernanceProjectsLoader,
 } from "./pages/GovernanceDetails";
 import { loader as ClassificationLoader } from "./pages/WorkWithUs";
+import LivelihoodDetails, {
+  LivelihoodProjectsLoader,
+} from "./pages/LivelihoodDetails";
 
 //pages
 import {
   LandingPage,
   Login,
   SignUp,
-  Dashboard,
   ErrorPage,
   CorporateIdentity,
   EvolutionOfSend,
@@ -42,9 +44,9 @@ import {
   Livelihood,
   HealthDetails,
 } from "./pages";
-import LivelihoodDetails, {
-  LivelihoodProjectsLoader,
-} from "./pages/LivelihoodDetails";
+
+//Admin Dashboard Pages
+import { Dashboard, GalleryAdmin, Home, Identity, Partner, Program, Team } from "./pages/dashboard";
 
 function App() {
   const router = createBrowserRouter(
@@ -123,6 +125,12 @@ function App() {
         </Route>
         <Route path="dashboard" element={<DashboardRoot />}>
           <Route index element={<Dashboard />} />
+          <Route path="home" element={<Home />} />
+          <Route path="partner" element={<Partner />} />
+          <Route path="identity" element={<Identity />} />
+          <Route path="gallery" element={<GalleryAdmin />} />
+          <Route path="team" element={<Team />} />
+          <Route path="program" element={<Program />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Route>

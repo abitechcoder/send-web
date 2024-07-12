@@ -5,6 +5,14 @@ export interface Link {
   child?: null | Link[];
 }
 
+export interface SideNavLink {
+  id: number;
+  text: string;
+  icon?: string;
+  icon_active?: string;
+  url: string;
+}
+
 export interface ProgramCardProps {
   id?: number;
   image: string;

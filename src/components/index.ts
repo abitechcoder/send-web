@@ -76,4 +76,4 @@ export { default as StrategicDirectionProject } from "./StrategicDirectionProjec
 export { default as NewsLetterList } from "./NewsLetterList";
 export { default as Overviews } from "./Overview";
 export { default as RecentDonation } from "./RecentDonation";
-export { default as Donation } from "./Donation";
+export { default as DonationChart } from "./Donation";

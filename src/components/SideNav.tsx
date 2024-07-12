@@ -1,7 +1,6 @@
-import { Logo } from "../assets";
+import { Logo, ProfilePic } from "../assets";
 import styles from "../styles";
 import { SideNavLinks } from "./";
-// import { links } from '../constants'
 
 const SideNav = () => {
   return (
@@ -23,7 +22,20 @@ const SideNav = () => {
           <rect x="10" y="30" width="14" height="3" rx="1.5" fill="#9490AE" />
         </svg>
       </div>
-      <SideNavLinks />
+      <div className="overflow-y-scroll">
+        <div className="grid place-items-center py-8 gap-1">
+          <img
+            src={ProfilePic}
+            alt="user profile picture"
+            className="w-[50px] h-[50px] rounded-full"
+          />
+          <h2 className="font-nunito">
+            Hello <span className="font-bold">Yuke</span>
+          </h2>
+          <p className="text-darkgrey font-nunito text-sm">yuke123@mail.com</p>
+        </div>
+        <SideNavLinks />
+      </div>
     </div>
   );
 };
