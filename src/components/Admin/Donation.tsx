@@ -1,4 +1,4 @@
-import { chart } from "../assets";
+import { chart } from "../../assets";
 const Donation = () => {
   return (
     <div>

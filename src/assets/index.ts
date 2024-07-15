@@ -45,4 +45,9 @@ export { default as arrowrise } from "./arrowrise.png";
 export { default as arrowfall } from "./arrowfall.png";
 export { default as dollar } from "./dollar.png";
 export { default as chart } from "./chart.png";
+export { default as plus } from "../assets/icons/plus.png";
+export { default as search } from "../assets/icons/search.png";
+export { default as sort } from "../assets/icons/sort.png";
+export { default as gallery } from "../assets/icons/gallery.png";
+export { default as home } from "./homepage.png";
 

@@ -1,5 +1,5 @@
-import { arrowfall, arrowrise } from "../assets";
-import OverviewCard from "./OverviewCard";
+import { arrowfall, arrowrise } from "../../assets";
+import OverviewCard from ".././OverviewCard";
 
 const Overview = () => {
   return (

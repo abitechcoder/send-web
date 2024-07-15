@@ -103,3 +103,24 @@ export interface Overview {
   number: string;
   color: string;
 }
+export interface Admin {
+  page: string;
+  button: string;
+  filter?: boolean;
+  searchBar?: boolean;
+  sortBy?: string;
+  placeholder?: string
+}
+export interface partner {
+  partnerLogo: string
+}
+export interface Photo {
+  title: string
+  subtitle: string
+}
+export interface Button3 {
+white?: boolean
+name: string
+py: number
+px: number
+}

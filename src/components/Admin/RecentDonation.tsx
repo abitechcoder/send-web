@@ -1,4 +1,4 @@
-import RecentDonationCard from "./RecentDonationCard";
+import RecentDonationCard from "../RecentDonationCard";
 
 const RecentDonation = () => {
   return (
