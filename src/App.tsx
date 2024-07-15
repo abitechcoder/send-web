@@ -47,13 +47,19 @@ import {
 
 //Admin Dashboard Pages
 import {
+  Blog,
   Dashboard,
+  DonateAdmin,
+  Event,
   GalleryAdmin,
   Home,
   Identity,
   Partner,
   Program,
+  Recruitment,
+  Report,
   Team,
+  Testimonial,
 } from "./pages/admin";
 
 function App() {
@@ -139,6 +145,12 @@ function App() {
           <Route path="gallery" element={<GalleryAdmin />} />
           <Route path="team" element={<Team />} />
           <Route path="program" element={<Program />} />
+          <Route path="report" element={<Report />} />
+          <Route path="event" element={<Event />} />
+          <Route path="recruitment" element={<Recruitment />} />
+          <Route path="testimonial" element={<Testimonial />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="donate" element={<DonateAdmin />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Route>
