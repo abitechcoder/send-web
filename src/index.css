@@ -29,6 +29,7 @@
 .custom-tab-list {
   display: flex;
   
+  
 }
 
 .custom-tab {
@@ -36,6 +37,8 @@
   cursor: pointer;
   color: rgb(143, 154, 154);
   border-bottom: 2px solid transparent; 
+  text-align: center;
+  font-size: 14px;
 }
 
 .custom-tab.active {
