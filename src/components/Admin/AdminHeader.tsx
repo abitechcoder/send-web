@@ -1,6 +1,7 @@
-import { notif, plus, ProfilePic, search, sort } from "../../assets";
+import { notif, ProfilePic, search, sort } from "../../assets";
 import styles from "../../styles";
 import { Admin } from "../../types";
+import AddGallery from "./AddGallery";
 
 const AdminHeader = ({
   page,
@@ -59,12 +60,7 @@ const AdminHeader = ({
             filter ? "grid-cols-2" : "ml-auto"
           } gap-3 mt-5 lg:mt-0`}
         >
-          <button className="flex items-center bg-[#1B43C6] py-3 px-7 gap-5 rounded-md">
-            <img src={plus} className="w-6 h-6" />
-            <p className="text-xs font-semibold font-nunito text-white">
-              {button}
-            </p>
-          </button>
+          <AddGallery title={button} />
           {filter ? (
             <button className="flex items-center gap-2 py-3 px-7 border-[1px] rounded-xl border-[#D8DDE4]">
               <img src={sort} className="w-6 h-6" />
