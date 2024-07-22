@@ -1,4 +1,4 @@
-import { Logo } from "../assets";
+import { Logo, LogoWhite } from "../assets";
 import NavBarLinks from "./NavBarLinks";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -10,13 +10,13 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
     <nav
       className={`${
         fill ? "bg-white" : "bg-transparent"
-      } flex justify-between lg:grid lg:grid-cols-[100px_1fr_150px] items-center gap-10 py-4`}
+      } flex justify-between lg:grid lg:grid-cols-[200px_1fr_150px] items-center gap-10 py-4`}
     >
       <NavLink to={"/"} className="hover:cursor-pointer">
         <img
-          src={Logo}
+          src={fill ? Logo : LogoWhite}
           alt="Logo Image"
-          className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
+          className="h-[50px] lg:h-[60px] object-contain"
         />
       </NavLink>
       <NavBarLinks fill={fill} isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -28,7 +28,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
         >
           Donate
         </button>
-        {/* <svg
+        <svg
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-        </svg> */}
+        </svg>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"

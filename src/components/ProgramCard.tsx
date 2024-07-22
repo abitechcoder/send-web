@@ -13,7 +13,7 @@ const ProgramCard = ({ image, title, link_url }: ProgramCardProps) => {
         <div className="h-[100px] bg-white p-4 relative">
           <div className="flex flex-col gap-1">
             <h3 className={`${styles.paragraph3} text-secondary`}>Program</h3>
-            <p className={`${styles.paragraph2} font-bold`}>{title}</p>
+            <p className={`${styles.paragraph2} font-bold w-[70%]`}>{title}</p>
             <img
               src={ProgramCardArt}
               alt=""
@@ -25,24 +25,19 @@ const ProgramCard = ({ image, title, link_url }: ProgramCardProps) => {
           className={`absolute w-[50px] h-[50px] bg-secondary ${styles.flexCenter} top-[275px] lg:top-[275px] right-[30px] z-10`}
         >
           <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M4.1735 12H20.8691" stroke="white" strokeWidth="2" />
-            <path
-              d="M20.8691 12C16.2588 12 12.5213 15.9073 12.5213 20.7273"
-              stroke="white"
-              strokeWidth="2"
-            />
-            <path
-              d="M20.8691 11.9997C16.2588 11.9997 12.5213 8.0924 12.5213 3.27246"
-              stroke="white"
-              strokeWidth="2"
-            />
-          </svg>
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6 text-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+              />
+            </svg>
         </div>
       </div>
     </Link>

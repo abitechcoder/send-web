@@ -11,7 +11,6 @@ import {
   Newsletter,
   ProfileManual,
   StrategicProjectType,
-  Form,
 } from "../types";
 
 export const links: Link[] = [
@@ -44,23 +43,33 @@ export const links: Link[] = [
   },
   {
     id: 3,
-    text: "Strategic Direction",
+    text: "Program Areas",
     url: "/dashboard",
     child: [
       {
         id: 1,
-        text: "Health and Education",
-        url: "/strategic-direction/edu-health",
+        text: "Sustainable Growth",
+        url: "/program-areas/livelihood",
       },
       {
         id: 2,
-        text: "Governance & Women Empowerment",
-        url: "/strategic-direction/governance",
+        text: "Health, Nutrition & WaSH",
+        url: "/program-areas/edu-health",
       },
       {
         id: 3,
-        text: "Livelihood, Food and Nutrition Security",
-        url: "/strategic-direction/livelihood",
+        text: "Education",
+        url: "/program-areas/edu-health",
+      },
+      {
+        id: 4,
+        text: "Gender Equality",
+        url: "/program-areas/governance",
+      },
+      {
+        id: 5,
+        text: "Climate & Disaster Resilience",
+        url: "/program-areas/livelihood",
       },
     ],
   },
@@ -116,25 +125,25 @@ export const ProgramCards: ProgramCardProps[] = [
     id: 1,
     title: "Education",
     image: CardImage1,
-    link_url: "/strategic-direction/edu-health",
+    link_url: "/program-areas/edu-health",
   },
   {
     id: 2,
     title: "Health and Wash",
     image: CardImage1,
-    link_url: "/strategic-direction/edu-health",
+    link_url: "/program-areas/edu-health",
   },
   {
     id: 3,
     title: "Governance and Women Empowerment",
     image: CardImage2,
-    link_url: "/strategic-direction/governance",
+    link_url: "/program-areas/governance",
   },
   {
     id: 4,
     title: "Climate Change and Livelihood",
     image: CardImage3,
-    link_url: "/strategic-direction/livelihood",
+    link_url: "/program-areas/livelihood",
   },
 ];
 
@@ -1517,4 +1526,3 @@ export const ProfileManuals: ProfileManual[] = [
       "https://www.sendsierraleone.com/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
   },
 ];
-

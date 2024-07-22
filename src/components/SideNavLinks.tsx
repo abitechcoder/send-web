@@ -52,48 +52,6 @@ export const links: SideNavLink[] = [
     icon_active: "program-active-icon.png",
     url: "/dashboard/program",
   },
-  {
-    id: 8,
-    text: "Report",
-    icon: "report-icon.png",
-    icon_active: "report-active-icon.png",
-    url: "/dashboard/report",
-  },
-  {
-    id: 9,
-    text: "Event",
-    icon: "event-icon.png",
-    icon_active: "event-active-icon.png",
-    url: "/dashboard/event",
-  },
-  {
-    id: 10,
-    text: "Recruitment",
-    icon: "recruitment-icon.png",
-    icon_active: "recruitment-active-icon.png",
-    url: "/dashboard/recruitment",
-  },
-  {
-    id: 11,
-    text: "Testimonial",
-    icon: "testimonial-icon.png",
-    icon_active: "testimonial-active-icon.png",
-    url: "/dashboard/testimonial",
-  },
-  {
-    id: 12,
-    text: "Blog",
-    icon: "blog-icon.png",
-    icon_active: "blog-active-icon.png",
-    url: "/dashboard/blog",
-  },
-  {
-    id: 13,
-    text: "Donate",
-    icon: "donate-icon.png",
-    icon_active: "donate-active-icon.png",
-    url: "/dashboard/donate",
-  },
 ];
 
 const SideNavLinks = () => {
@@ -102,10 +60,7 @@ const SideNavLinks = () => {
     <div className="flex flex-col gap-4">
       {links?.map((link) => (
         <RouterLink key={link?.id} to={link?.url}>
-          <div
-            className="w-full px-4"
-            onMouseEnter={() => setHoveredLink(link)}
-          >
+          <div className="w-full px-4" onMouseEnter={() => setHoveredLink(link)}>
             <div className="flex items-center gap-4 group hover:bg-[#1B43C61A] py-3 px-4 rounded-full">
               {hoveredLink?.id === link.id ? (
                 <img

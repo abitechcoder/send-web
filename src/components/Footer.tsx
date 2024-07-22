@@ -1,4 +1,4 @@
-import { FooterArt, Logo } from "../assets";
+import { FooterArt, LogoWhite } from "../assets";
 
 const Footer = () => {
   return (
@@ -11,11 +11,7 @@ const Footer = () => {
         />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-8">
           <div className="w-full grid place-items-center md:place-items-start gap-4">
-            <img
-              src={Logo}
-              className="w-[50px] lg:w-[70px] h-[50px] lg:h-[70px]"
-              alt=""
-            />
+            <img src={LogoWhite} className="h-[50px] lg:h-[70px]" alt="" />
             <p
               className={`text-lightgrey text-center md:text-left text-xs lg:text-sm font-manrope `}
             >
@@ -117,15 +113,20 @@ const Footer = () => {
                   Sierra Leone
                 </p>
               </div>
-              <div className="grid gap-3 place-content-start md:justify-center  md:hidden lg:block">
-                <h3 className="font-bold">Strategic Direction</h3>
-                <p className="text-lightgrey lg:text-sm text-xs">Health</p>
-                <p className="text-lightgrey lg:text-sm text-xs">Education</p>
+              <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:grid">
+                <h3 className="font-bold">Program Areas</h3>
                 <p className="text-lightgrey lg:text-sm text-xs">
-                  Governance & Woman Empowerment
+                  Sustainable Growth
                 </p>
                 <p className="text-lightgrey lg:text-sm text-xs">
-                  Livelihood, Food & Nutrition Security
+                  Health, Nutrition & WaSH
+                </p>
+                <p className="text-lightgrey lg:text-sm text-xs">Education</p>
+                <p className="text-lightgrey lg:text-sm text-xs">
+                  Gender Equality
+                </p>
+                <p className="text-lightgrey lg:text-sm text-xs">
+                  Climate & Disaster Resilience
                 </p>
               </div>
               <div className="hidden md:flex md:flex-col gap-4 lg:hidden">

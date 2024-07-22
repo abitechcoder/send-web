@@ -1,6 +1,5 @@
-import ProgramCard from "./ProgramCard";
 import styles from "../styles";
-import { ProgramCards } from "../constants";
+import ProgramAreasCards from "./ProgramAreasCards";
 
 const ProgramAreas = () => {
   return (
@@ -12,16 +11,7 @@ const ProgramAreas = () => {
         The ethos and commitment of SEND sierra Leone is to improve the quality
         of lives throughout the country.
       </p>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-0 gap-4 place-items-center">
-        {ProgramCards.map((program) => (
-          <ProgramCard
-            key={program.id}
-            title={program.title}
-            image={program.image}
-            link_url={program.link_url}
-          />
-        ))}
-      </div>
+      <ProgramAreasCards/>
     </section>
   );
 };

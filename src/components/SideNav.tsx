@@ -23,18 +23,12 @@ const SideNav = () => {
         </svg>
       </div>
       <div className="overflow-y-scroll">
-        <div className="grid place-items-center py-8 gap-1">
-          <img
-            src={ProfilePic}
-            alt="user profile picture"
-            className="w-[50px] h-[50px] rounded-full"
-          />
-          <h2 className="font-nunito">
-            Hello <span className="font-bold">Yuke</span>
-          </h2>
-          <p className="text-darkgrey font-nunito text-sm">yuke123@mail.com</p>
+        <div className="grid place-items-center py-8">
+        <img src={ProfilePic} alt="user profile picture" className="w-[50px] h-[50px] rounded-full" />
+        <h2 className="font-nunito">Hello <span className="font-bold">Yuke</span></h2>
+        <p className="text-darkgrey font-nunito text-sm">yuke123@mail.com</p>
         </div>
-        <SideNavLinks />
+      <SideNavLinks />
       </div>
     </div>
   );

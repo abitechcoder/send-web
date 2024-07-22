@@ -12,7 +12,7 @@ const StrategicPlan = () => {
             <h2
               className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-center lg:text-left text-black uppercase`}
             >
-              Strategic Plan
+              Strategic Documents
             </h2>
           </div>
           <p

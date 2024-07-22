@@ -46,21 +46,7 @@ import {
 } from "./pages";
 
 //Admin Dashboard Pages
-import {
-  Blog,
-  Dashboard,
-  DonateAdmin,
-  Event,
-  GalleryAdmin,
-  Home,
-  Identity,
-  Partner,
-  Program,
-  Recruitment,
-  Report,
-  Team,
-  Testimonial,
-} from "./pages/admin";
+import { Dashboard, GalleryAdmin, Home, Identity, Partner, Program, Team } from "./pages/dashboard";
 
 function App() {
   const router = createBrowserRouter(
@@ -90,7 +76,7 @@ function App() {
               />
             </Route>
           </Route>
-          <Route path="strategic-direction">
+          <Route path="program-areas">
             <Route index element={<HealthAndEducation />} />
             <Route path="edu-health">
               <Route index element={<HealthAndEducation />} />
@@ -145,12 +131,6 @@ function App() {
           <Route path="gallery" element={<GalleryAdmin />} />
           <Route path="team" element={<Team />} />
           <Route path="program" element={<Program />} />
-          <Route path="report" element={<Report />} />
-          <Route path="event" element={<Event />} />
-          <Route path="recruitment" element={<Recruitment />} />
-          <Route path="testimonial" element={<Testimonial />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="donate" element={<DonateAdmin />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Route>

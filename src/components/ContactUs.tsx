@@ -4,7 +4,7 @@ import ContactUsForm from "./ContactUsform";
 
 const ContactUs = () => {
   return (
-    <section className="bg-secondary pb-[40px] px-4 lg:px-[80px] lg:pb-[80px] relative">
+    <section className="bg-secondary pb-[40px] px-4 lg:px-[80px] relative">
       <img src={ContactUsArt} className="absolute top-0 left-0 z-0 h-full" alt="" />
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid place-items-center py-[50px] md:py-0">

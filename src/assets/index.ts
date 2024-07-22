@@ -1,4 +1,5 @@
 export { default as Logo } from "./logo.png";
+export { default as LogoWhite } from "./logo-white.png";
 export { default as HeroImage } from "./hero-image.png";
 export { default as hero2 } from "./hero2.png";
 export { default as hero3 } from "./hero3.png";
@@ -45,17 +46,4 @@ export { default as arrowrise } from "./arrowrise.png";
 export { default as arrowfall } from "./arrowfall.png";
 export { default as dollar } from "./dollar.png";
 export { default as chart } from "./chart.png";
-export { default as plus } from "./icons/plus.png";
-export { default as search } from "./icons/search.png";
-export { default as sort } from "./icons/sort.png";
-export { default as gallery } from "./icons/gallery.png";
-export { default as home } from "./homepage.png";
-export { default as event1 } from "./event1.png";
-export { default as event2 } from "./event2.png";
-export { default as event3 } from "./event3.png";
-export { default as event4 } from "./event4.png";
-export { default as file } from "./icons/file.png";
-export { default as left } from "./icons/left.png";
-export { default as testimonial } from "./Testimonial-img.png";
-
 

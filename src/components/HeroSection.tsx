@@ -3,8 +3,6 @@ import {
   HeroArtLeft,
   HeroArtBottomRight,
   HeroArtRight,
-  CardImage2,
-  LatestNewsCard1,
   hero2,
   hero3,
 } from "../assets";
