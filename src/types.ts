@@ -124,3 +124,8 @@ name: string
 py: number
 px: number
 }
+export interface PhotoCard {
+  ImgURL?: boolean
+  description?: string
+  Video?: boolean
+}

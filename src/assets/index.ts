@@ -57,5 +57,10 @@ export { default as event4 } from "./event4.png";
 export { default as file } from "./icons/file.png";
 export { default as left } from "./icons/left.png";
 export { default as testimonial } from "./Testimonial-img.png";
-
+export { default as image } from "./icons/image.png";
+export { default as video } from "./icons/video.png";
+export { default as fbLogo } from "./icons/fblogo.png";
+export { default as igLogo } from "./icons/instagram-logo.png";
+export { default as add_file} from "./icons/add-file.png";
+export { default as star} from "./icons/star.png";
 

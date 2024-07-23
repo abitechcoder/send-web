@@ -1,7 +1,16 @@
 import { notif, ProfilePic, search, sort } from "../../assets";
 import styles from "../../styles";
 import { Admin } from "../../types";
+import AddBlog from "./AddBlog";
+import AddDonation from "./AddDonation";
+import AddEvent from "./AddEvent";
 import AddGallery from "./AddGallery";
+import AddJobs from "./AddJobs";
+import AddPartner from "./AddPartner";
+import AddProject from "./AddProject";
+import AddReport from "./AddReport";
+import AddTeam from "./AddTeam";
+import AddTestimonial from "./AddTestimonial";
 
 const AdminHeader = ({
   page,
@@ -60,7 +69,17 @@ const AdminHeader = ({
             filter ? "grid-cols-2" : "ml-auto"
           } gap-3 mt-5 lg:mt-0`}
         >
-          <AddGallery title={button} />
+          {/* <AddGallery title={button} />
+          <AddPartner title={button} />
+          <AddTeam title={button} />
+          <AddProject title={button} />
+          <AddReport title={button} />
+          <AddEvent title={button} />
+          <AddJobs title={button} />
+          <AddTestimonial title={button} />
+          <AddBlog title={button} />
+          <AddDonation title={button} /> */}
+
           {filter ? (
             <button className="flex items-center gap-2 py-3 px-7 border-[1px] rounded-xl border-[#D8DDE4]">
               <img src={sort} className="w-6 h-6" />
