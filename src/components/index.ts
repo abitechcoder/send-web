@@ -77,7 +77,6 @@ export { default as NewsLetterList } from "./NewsLetterList";
 export { default as Overviews } from "./Admin/Overview";
 export { default as RecentDonation } from "./Admin/RecentDonation";
 export { default as DonationChart } from "./Admin/Donation";
-export { default as AdminHeader } from "./Admin/AdminHeader"
 export {default as PartnerCard} from "./Admin/OurPartnerCard"
 export {default as PhotoCard} from "./Admin/PhotoCard"
 export {default as ProgramTab} from "./Admin/ProgramTab"
@@ -85,3 +84,16 @@ export {default as ReportTab} from "./Admin/ReportTab"
 export {default as RecruitmentCard} from "./Admin/RecruitmentCard"
 export {default as TestimonialCard} from "./Admin/TestimonialCard"
 export {default as SelectGallery} from "./Admin/GalleryCard"
+export {default as SelectPhoto} from "./Admin/SelectPhotoCard"
+export { default as AddBlog } from "./Admin/AddBlog"
+export { default as AddDonation } from "./Admin/AddDonation"
+export { default as AddEvent } from "./Admin/AddEvent"
+export { default as AddGallery } from "./Admin/AddGallery"
+export { default as AddJobs } from "./Admin/AddJobs"
+export { default as AddPartner } from "./Admin/AddPartner"
+export { default as AddProject } from "./Admin/AddProject"
+export { default as AddReport } from "./Admin/AddReport"
+export { default as AddTeam } from "./Admin/AddTeam"
+export { default as AddTestimonial } from "./Admin/AddTestimonial"
+export { default as TabLists } from "./Admin/TabLists"
+

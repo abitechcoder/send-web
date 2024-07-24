@@ -13,22 +13,20 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import styles from "@/src/styles";
-import { SelectPhoto } from "..";
-
-const AddGallery = () => {
+const AddEvent = () => {
   return (
     <Dialog>
       <DialogTrigger className="flex items-center bg-[#1B43C6] py-3 px-7 gap-5 rounded-md">
         <img src={plus} className="w-6 h-6" />
         <p className="text-xs font-semibold font-nunito text-white">
-          Add Photo
+          Add Event
         </p>
       </DialogTrigger>
 
       <DialogContent className="overflow-y-auto w-full h-full">
         <DialogHeader>
           <DialogTitle className="text-center font-nunito text-lg font-semibold">
-            Add Gallery
+            Add Event
           </DialogTitle>
           <DialogDescription className="text-center">
             All fields are required unless otherwise indicated.
@@ -37,42 +35,17 @@ const AddGallery = () => {
 
         <div className="grid gap-4 my-2">
           <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="title">Title</Label>
-            <Input type="text" id="title" placeholder="Enter title photo" />
+            <Label htmlFor="event">Event Name</Label>
+            <Input type="text" id="title" placeholder="enter event name" />
           </div>
           <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="cover">Cover Gallery</Label>
+            <Label htmlFor="cover">Photo</Label>
+
             <div className="w-full h-40 rounded-md border-[1px] bg-[#F4F7FC] border-[#D8DDE4] flex items-center justify-center flex-col">
               <img src={image} className="w-6 h-6" />
               <p className={`${styles.paragraph4} text-[#849299] mt-1`}>
-                Drag Cover Gallery Here
+                Drag Photo Here
               </p>
-            </div>
-            <p className={`${styles.paragraph4} text-xs text-[#1B43C6]`}>
-              Max File Size: 5 MB (jpg, pdf, png)
-            </p>
-          </div>
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="photo">Photo</Label>
-            <div className="grid grid-cols-5 gap-3">
-              <SelectPhoto ImgURL description="Select Photo" />
-              <SelectPhoto />
-              <SelectPhoto />
-              <SelectPhoto />
-              <SelectPhoto />
-            </div>
-            <p className={`${styles.paragraph4} text-xs text-[#1B43C6]`}>
-              Max File Size: 5 MB (jpg, pdf, png)
-            </p>
-          </div>
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="video">Video</Label>
-            <div className="grid grid-cols-5 gap-3">
-              <SelectPhoto Video description="Select Video" />
-              <SelectPhoto />
-              <SelectPhoto />
-              <SelectPhoto />
-              <SelectPhoto />
             </div>
             <p className={`${styles.paragraph4} text-xs text-[#1B43C6]`}>
               Max File Size: 5 MB (jpg, pdf, png)
@@ -102,4 +75,4 @@ const AddGallery = () => {
   );
 };
 
-export default AddGallery;
+export default AddEvent;
