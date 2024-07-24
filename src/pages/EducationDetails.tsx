@@ -19,8 +19,8 @@ const HealthDetails = () => {
     <main className="h-full relative">
      <Header
         parent_link="Program Areas"
-        child_link="Health, Nutrition & WaSH"
-        title="Health, Nutrition & WaSH"
+        child_link="Education"
+        title="Education"
       />
       <GWEContent project={project}/>
       <ContactUs />

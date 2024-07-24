@@ -74,6 +74,14 @@ export { default as StrategicHealthProjects } from "./StrategicHealthProjects";
 export { default as ProjectOverview } from "./ProjectOverview";
 export { default as StrategicDirectionProject } from "./StrategicDirectionProject";
 export { default as NewsLetterList } from "./NewsLetterList";
-export { default as Overviews } from "./Overview";
-export { default as RecentDonation } from "./RecentDonation";
-export { default as DonationChart } from "./Donation";
+export { default as Overviews } from "./Admin/Overview";
+export { default as RecentDonation } from "./Admin/RecentDonation";
+export { default as DonationChart } from "./Admin/Donation";
+export { default as AdminHeader } from "./Admin/AdminHeader"
+export {default as PartnerCard} from "./Admin/OurPartnerCard"
+export {default as PhotoCard} from "./Admin/PhotoCard"
+export {default as ProgramTab} from "./Admin/ProgramTab"
+export {default as ReportTab} from "./Admin/ReportTab"
+export {default as RecruitmentCard} from "./Admin/RecruitmentCard"
+export {default as TestimonialCard} from "./Admin/TestimonialCard"
+export {default as SelectGallery} from "./Admin/GalleryCard"

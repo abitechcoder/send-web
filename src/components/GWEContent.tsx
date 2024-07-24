@@ -34,7 +34,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
               </svg>
 
               <div className="w-[100px] h-[50px] bg-black grid place-items-center">
-                <p className="font-barlow text-xl text-primary font-bold uppercase">
+                <p className="font-barlow text-md text-primary font-bold uppercase">
                   {project.status}
                 </p>
               </div>

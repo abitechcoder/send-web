@@ -29,7 +29,7 @@ const NavBarLinks = ({
         <img
           src={Logo}
           alt="Logo Image"
-          className="w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
+          className="h-[50px] lg:h-[70px]"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const NavBarLinks = ({
                         : fill
                         ? "text-darkgrey"
                         : "text-white"
-                    } group-hover:text-primary`}
+                    } group-hover:text-primary text-sm`}
                   >
                     {link?.text}
                   </span>
@@ -85,7 +85,7 @@ const NavBarLinks = ({
                           <span
                             className={`${
                               isActive ? "text-primary" : "text-darkgrey"
-                            } hover:text-primary`}
+                            } hover:text-primary text-sm`}
                           >
                             {children?.text}
                           </span>
@@ -101,15 +101,17 @@ const NavBarLinks = ({
               {({ isActive }) => (
                 <div className={"lg:flex lg:items-center lg:justify-center"}>
                   <span
-                    className={
-                      isActive
-                        ? "text-primary"
-                        : isOpen
-                        ? "text-darkgrey"
-                        : fill
-                        ? "text-darkgrey"
-                        : "text-white"
-                    }
+                    className={` text-sm
+                      ${
+                        isActive
+                          ? "text-primary"
+                          : isOpen
+                          ? "text-darkgrey"
+                          : fill
+                          ? "text-darkgrey"
+                          : "text-white"
+                      }
+                    `}
                   >
                     {link?.text}
                   </span>

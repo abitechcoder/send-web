@@ -10,7 +10,7 @@ const Footer = () => {
           alt=""
         />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-8">
-          <div className="w-full grid place-items-center md:place-items-start gap-4">
+          <div className="w-full grid place-items-center place-content-start md:place-items-start gap-4 lg:gap-8">
             <img src={LogoWhite} className="h-[50px] lg:h-[70px]" alt="" />
             <p
               className={`text-lightgrey text-center md:text-left text-xs lg:text-sm font-manrope `}
@@ -162,13 +162,53 @@ const Footer = () => {
                 <p className="text-lightgrey lg:text-sm text-xs">Gallery</p>
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:block">
-                <h3 className="font-bold">Contact</h3>
+                <h3 className="font-bold lg:mb-3">Contact</h3>
                 <p className="text-lightgrey lg:text-sm text-xs">
                   +232 (0) 78 20 68 53
                 </p>
                 <p className="text-lightgrey lg:text-sm text-xs">
                   info@sendsierraleone.com
                 </p>
+                <div className="mt-3">
+                  <div>
+                    <h5 className="font-bold text-sm">Head Office:</h5>
+                    <p className="text-xs text-lightgrey">
+                      3 Amie-Jay Drive, Reservation Road, Kenema
+                    </p>
+                  </div>
+                  <div className="grid gap-3 mt-3">
+                    <div>
+                      <h5 className="font-bold text-xs">Bonthe District Program Office:</h5>
+                      <p className="text-xs text-lightgrey">
+                        Main Prison Road, Mattru Jong, Bonthe District
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-xs">Freetown, Western Area Districts Program Office:</h5>
+                      <p className="text-xs text-lightgrey">
+                        38A Spur Road, Blue Bell Junction, Freetown
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-xs">Kailahun District Program Office:</h5>
+                      <p className="text-xs text-lightgrey">
+                        71 A Buedu Road, Kissi Town Section, Kailahun District
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-xs">Kono District Program Office:</h5>
+                      <p className="text-xs text-lightgrey">
+                        64 Bona Street, Koidu City, Kono District
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-xs">Port-Loko District Program Office:</h5>
+                      <p className="text-xs text-lightgrey">
+                        4 Barracks Road, Port Loko City, Port Loko District
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -176,7 +216,7 @@ const Footer = () => {
       </div>
       <footer className="py-4 flex justify-center bg-[#1B213F]">
         <p className="text-white text-sm md:text-base font-manrope">
-          All rights reserved. Copyright © 2020
+          All rights reserved. Copyright © 2024
         </p>
       </footer>
     </section>

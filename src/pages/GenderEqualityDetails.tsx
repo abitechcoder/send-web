@@ -5,24 +5,24 @@ import {
   GWEContent,
   CustomerSupport,
 } from "../components";
-import { getLivelihoodProject } from "../data";
+import { getGovernanceProject } from "../data";
 import { useLoaderData } from "react-router-dom";
 
-export async function LivelihoodProjectsLoader({ params }: any) {
-  const project = await getLivelihoodProject(Number(params.projectId));
+export async function GovernanceProjectsLoader({ params }: any) {
+  const project = await getGovernanceProject(Number(params.projectId));
   return { project };
 }
 
-const LivelihoodDetails = () => {
+const GenderEqualityDetails = () => {
   let { project }: any = useLoaderData();
   return (
     <main className="h-full relative">
       <Header
         parent_link="Program Areas"
-        child_link="Climate & Disaster Resilience"
-        title="Climate & Disaster Resilience"
+        child_link="Gender Equality"
+        title="Gender Equality"
       />
-      <GWEContent project={project} />
+      <GWEContent project={project}/>
       <ContactUs />
       <Footer />
       <CustomerSupport />
@@ -30,4 +30,4 @@ const LivelihoodDetails = () => {
   );
 };
 
-export default LivelihoodDetails;
+export default GenderEqualityDetails;

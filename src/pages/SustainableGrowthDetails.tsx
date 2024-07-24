@@ -13,14 +13,14 @@ export async function HealthProjectsLoader({ params }: any) {
   return { project };
 }
 
-const HealthDetails = () => {
+const SustainableGrowthDetails = () => {
   let { project }: any = useLoaderData();
   return (
     <main className="h-full relative">
-     <Header
-        parent_link="Program Areas"
-        child_link="Health, Nutrition & WaSH"
-        title="Health, Nutrition & WaSH"
+      <Header
+        parent_link="Program Ares"
+        child_link="Sustainable Growth"
+        title="Sustainable Growth"
       />
       <GWEContent project={project}/>
       <ContactUs />
@@ -30,4 +30,4 @@ const HealthDetails = () => {
   );
 };
 
-export default HealthDetails;
+export default SustainableGrowthDetails;

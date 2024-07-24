@@ -18,3 +18,37 @@
     transform: rotate(180deg);
   }
 }
+
+#text-area {
+  outline: none;
+ 
+}
+#text-area div {
+  display: list-item;
+}
+.custom-tab-list {
+  display: flex;
+  
+  
+}
+
+.custom-tab {
+  padding: 15px 20px;
+  cursor: pointer;
+  color: rgb(143, 154, 154);
+  border-bottom: 2px solid transparent; 
+  text-align: center;
+  font-size: 14px;
+}
+
+.custom-tab.active {
+  outline: none;
+  border-bottom-color: blue; /* Blue bottom border for active tab */
+  color: black;
+}
+
+#custom-tab-panel {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}

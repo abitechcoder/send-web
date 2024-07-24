@@ -1,9 +1,10 @@
 import styles from "../styles";
 import ProgramAreasCards from "./ProgramAreasCards";
+import { layout } from "../styles";
 
 const ProgramAreas = () => {
   return (
-    <section className="bg-[#F9FAFC] py-[40px] px-4 lg:px-0 lg:py-[80px]">
+    <section className={`bg-[#F9FAFC] ${layout.section}`}>
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
         YOUR PROGRAM AREAS
       </h2>

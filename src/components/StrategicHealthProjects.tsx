@@ -9,11 +9,11 @@ const StrategicHealthProjects = () => {
     >
       <div className="grid gap-4">
         <div>
-          <h2
+          {/* <h2
             className={`${styles.heading3} text-secondary text-center uppercase`}
           >
             Strategic Direction
-          </h2>
+          </h2> */}
           <h2
             className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-center text-black uppercase`}
           >

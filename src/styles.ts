@@ -14,12 +14,14 @@ export const styles = {
   heading3Manrope: "font-manrope text-lg lg:text-xl font-bold",
 
   heading4: "font-barlow text-lg font-bold",
+  heading5: "leading-normal font-semibold tracking-wide font-nunito",
 
   paragraph: "font-manrope text-lg",
 
   paragraph2: "font-manrope text-base",
 
   paragraph3: "font-manrope text-sm",
+  paragraph4: "font-nunito font-normal text-sm",
 
   paragraph3Barlow: "font-barlow text-sm",
 
@@ -33,8 +35,10 @@ export const styles = {
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
   textSize: "text-[14px] sm:text-md lg:text-lg font-manrope",
-  clipPathSquare: "[clip-path:polygon(20%_0%,_100%_0,_100%_80%,_80%_100%,_0_100%,_0%_20%)]",
-  clipPathRect: "[clip-path:polygon(15%_0%,_100%_0,_100%_75%,_85%_100%,_0_100%,_0%_25%)]" 
+  clipPathSquare:
+    "[clip-path:polygon(20%_0%,_100%_0,_100%_80%,_80%_100%,_0_100%,_0%_20%)]",
+  clipPathRect:
+    "[clip-path:polygon(15%_0%,_100%_0,_100%_75%,_85%_100%,_0_100%,_0%_25%)]",
 };
 
 export const layout = {

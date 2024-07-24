@@ -72,7 +72,7 @@ const SearchJobs = ({ jobClassifications, jobs, regions }: Props) => {
             <SelectInput
               setSelectedValue={setSelectedRegion}
               data={regions}
-              title="Select city or region"
+              title="Select distict"
             />
           </div>
         </div>

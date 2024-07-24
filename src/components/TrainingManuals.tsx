@@ -7,22 +7,21 @@ const TrainingManuals = () => {
   return (
     <section className="bg-white py-[40px] px-4 lg:px-[80px] lg:py-[80px]">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:justify-center gap-4">
           <img
             src={TrainingManualsImg1}
-            className="w-full h-[280px] bg-cover"
+            className="w-full h-[350px] md:h-[280px] bg-cover bg-center"
             alt=""
           />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+          <p className="text-sm">
+          The ethos and commitment of SEND sierra Leone is to improve the quality of lives throughout the country.
           </p>
           <div className="w-[70%] md:w-full lg:w-[70%]">
-            <Button2 text="Annual Reports" url="/" />
+            <Button2 text="Annual Reports" url="/publications/project-reports" />
           </div>
         </div>
         <div>
-          <img src={TrainingManualsImg2} className="w-full bg-cover" alt="" />
+          <img src={TrainingManualsImg2} className="w-full bg-cover bg-center h-full" alt="" />
         </div>
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">

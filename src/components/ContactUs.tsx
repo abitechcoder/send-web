@@ -5,7 +5,11 @@ import ContactUsForm from "./ContactUsform";
 const ContactUs = () => {
   return (
     <section className="bg-secondary pb-[40px] px-4 lg:px-[80px] relative">
-      <img src={ContactUsArt} className="absolute top-0 left-0 z-0 h-full" alt="" />
+      <img
+        src={ContactUsArt}
+        className="absolute top-0 left-0 z-0 h-full"
+        alt=""
+      />
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid place-items-center py-[50px] md:py-0">
           <div className="w-full md:w-[80%] lg:w-[60%] grid gap-8">
@@ -19,7 +23,7 @@ const ContactUs = () => {
               We provide a complete service for the sale, purchase.
             </p>
 
-            <div className="grid gap-4">
+            <div className="grid gap-4 z-50">
               <div className="grid grid-cols-[56px_1fr] gap-4">
                 <svg
                   width="56"
@@ -92,9 +96,12 @@ const ContactUs = () => {
 
                 <div className="text-white">
                   <h3 className="text-sm font-manrope">SEND EMAIL</h3>
-                  <p className="font-bold text-base font-manrope">
+                  <a
+                    href="mailto:info@sendsierraleone.com"
+                    className="font-bold text-base font-manrope"
+                  >
                     info@sendsierraleone.com
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="grid grid-cols-[56px_1fr] gap-4">
@@ -117,9 +124,9 @@ const ContactUs = () => {
 
                 <div className="text-white">
                   <h3 className="text-sm font-manrope">HAVE A QUESTION ?</h3>
-                  <p className="font-bold text-base font-manrope">
+                  <a href="tel:+23272806853" className="font-bold text-base font-manrope">
                     +232 7280 6853
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -129,7 +136,6 @@ const ContactUs = () => {
           <ContactUsForm />
         </div>
       </div>
-      
     </section>
   );
 };

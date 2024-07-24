@@ -38,38 +38,38 @@ export const links: Link[] = [
         text: "Board of Directors",
         url: "/whoweare/board-of-directors",
       },
-      { id: 6, text: "Sierra Leone", url: "/whoweare/sierra-leone" },
+      { id: 6, text: "About Sierra Leone", url: "/whoweare/sierra-leone" },
     ],
   },
   {
     id: 3,
     text: "Program Areas",
-    url: "/dashboard",
+    url: "/program-areas",
     child: [
       {
         id: 1,
         text: "Sustainable Growth",
-        url: "/program-areas/livelihood",
+        url: "/program-areas/sustainable-growth",
       },
       {
         id: 2,
         text: "Health, Nutrition & WaSH",
-        url: "/program-areas/edu-health",
+        url: "/program-areas/health",
       },
       {
         id: 3,
         text: "Education",
-        url: "/program-areas/edu-health",
+        url: "/program-areas/education",
       },
       {
         id: 4,
         text: "Gender Equality",
-        url: "/program-areas/governance",
+        url: "/program-areas/gender-equality",
       },
       {
         id: 5,
         text: "Climate & Disaster Resilience",
-        url: "/program-areas/livelihood",
+        url: "/program-areas/climate",
       },
     ],
   },
@@ -123,27 +123,33 @@ export const links: Link[] = [
 export const ProgramCards: ProgramCardProps[] = [
   {
     id: 1,
-    title: "Education",
-    image: CardImage1,
-    link_url: "/program-areas/edu-health",
+    title: "Sustainable Growth",
+    image: CardImage3,
+    link_url: "/program-areas/sustainable-growth",
   },
   {
     id: 2,
-    title: "Health and Wash",
+    title: "Health, Nutrition & WaSH",
     image: CardImage1,
-    link_url: "/program-areas/edu-health",
+    link_url: "/program-areas/health",
   },
   {
     id: 3,
-    title: "Governance and Women Empowerment",
-    image: CardImage2,
-    link_url: "/program-areas/governance",
+    title: "Education",
+    image: CardImage1,
+    link_url: "/program-areas/education",
   },
   {
     id: 4,
-    title: "Climate Change and Livelihood",
+    title: "Gender Equality",
+    image: CardImage2,
+    link_url: "/program-areas/gender-equality",
+  },
+  {
+    id: 5,
+    title: "Climate & Disaster Resilience",
     image: CardImage3,
-    link_url: "/program-areas/livelihood",
+    link_url: "/program-areas/climate",
   },
 ];
 
@@ -1073,7 +1079,7 @@ export const HealthProjects: StrategicProjectType[] = [
     id: 1,
     title: "Project 01",
     text: "Implementation Of The New Educational Initiative Project (Nyapui School and Computer Training Center in Kenema)",
-    link_url: "/strategic-direction/edu-health/1",
+    link_url: "/program-areas/education/1",
     status: "on going",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The publication has been produced with financial support from the GERMAN FEDERAL MINISTRY FOR ECONOMIC COOPERATION AND DEVELOPMENT (BMZ) AND TERRA TECH FOERDERPROJEKTE E.V.",
@@ -1100,7 +1106,7 @@ export const HealthProjects: StrategicProjectType[] = [
     id: 2,
     title: "Project 02",
     text: "Promotion of Nutrition Sensitive Wash Self-Supply In the Sherbro Island in Bonthe District",
-    link_url: "/strategic-direction/edu-health/2",
+    link_url: "/program-areas/education/2",
     status: "on going",
     description:
       "The Sherbro Island in the Bonthe district in Sierra Leone is one of the areas with the worst food insecurity and poorest access to Wash facilities. This has led to alarming level of sanitation related illness as well as malnutrition. SEND Sierra Leone in partnership with development partners seeks to educate, empower and sensitize the inhabitants of this island to develop self-solutions in dealing with these issues. SEND Sierra Leone will facilitate and support the process of education and execution of development of solutions.",
@@ -1127,7 +1133,7 @@ export const HealthProjects: StrategicProjectType[] = [
     id: 3,
     title: "Project 03",
     text: "Community Empowerment To Participate In Health Service Deliver Appreciate, Learn And Transfer(SALT) Approach",
-    link_url: "/strategic-direction/edu-health/3",
+    link_url: "/program-areas/education/3",
     status: "on going",
     description:
       "Due to decades of war and the Ebola epidemic, Sierra Leone’s health and education infrastructure are limited to urban areas. Inhabitants in rural areas do not without access to quality health and education infrastructure and as such do not receive healthcare services and are mostly illiterate. Healthcare providers are also without the requisite training to engage patients effectively and are unable to handle complex health situations leading to worsening of health issues in the communities. Also due to lack of education and societal stereotypes, rural communities are unable and receive in some cases healthcare services.",
@@ -1161,7 +1167,7 @@ export const HealthProjects: StrategicProjectType[] = [
     id: 4,
     title: "Project 04",
     text: "Enhanced Community Health Resilience Project",
-    link_url: "/strategic-direction/edu-health/4",
+    link_url: "/program-areas/education/4",
     status: "on going",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK and Civil Soceity in Development",
@@ -1199,7 +1205,7 @@ export const GovtProjects: StrategicProjectType[] = [
     id: 1,
     title: "Project 01",
     text: "Strengthening Community Led Accountability to Improve Service Delivery(SABI)",
-    link_url: "/strategic-direction/governance/1",
+    link_url: "/program-areas/gender-equality/1",
     status: "on going",
     description:
       "The Western Area Rural District in Sierra Leone is a prime example of the discrimination and unfair low representation of women in governance despite representing over 50% of the population. Out of the 27 district councillors, only three are women. Of the 8 MPs, only 2 are women, and only 5 women are among the 121 tribal heads who constitute the traditional governance structure in the District. Poor road networks coupled with unstable and inexistent electricity supply in some areas makes it difficult or impossible in some areas for women to diversify from subsistence farming as that is the only way to provide for their families.",
@@ -1234,7 +1240,7 @@ export const GovtProjects: StrategicProjectType[] = [
     id: 2,
     title: "Project 02",
     text: "Strengthening Women’s Participation in Politics and Governance",
-    link_url: "/strategic-direction/governance/2",
+    link_url: "/program-areas/gender-equality/2",
     status: "on going",
     description:
       "In Sierra Leone, women and youth make up for over 70% of the population but women are the least represented in governance on the community, district and national level. Out the 132 ordinary members of parliament, only 16 are women leading to less than 15% representation. Women and the youth are the most affected by decisions made through the legislature and executive but do not have an active say in those decisions. SEND Sierra Leone together with its development partners is keen to strengthen the collective voice of women, increase their knowledge and capacity on gender and accountability at the community, district and national level. We are also committed to increasing the national advocacy and networking on women participation in decision -making, governance and politics.",
@@ -1265,7 +1271,7 @@ export const GovtProjects: StrategicProjectType[] = [
     id: 3,
     title: "Project 03",
     text: "KAILAHUN WOMEN IN GOVERNANCE",
-    link_url: "/strategic-direction/governance/3",
+    link_url: "/program-areas/gender-equality/3",
     status: "on going",
     description:
       "Kailahun is a district in Sierra Leone bordered by both Liberia and Guinea and has been the first point of entry of two calamities to befall Sierra Leone-The Civil War and Ebola. This district therefore bears the resembles of a rural community cut of from development. This is as a result of the absence of quality health and education infrastructure. In the Kailahun district, women are faced with heightened rural stereotypes and discrimination. Women in Kailahun are not able to participate in governance and are not part of the decision-making process. SEND Sierra Leone and its developmental partners are keen on educating and empowering women not only to be able to actively contribute to governance and decision-making process but also to be elected to key governance positions.",
@@ -1295,7 +1301,7 @@ export const GovtProjects: StrategicProjectType[] = [
     id: 4,
     title: "Project 04",
     text: "WOMEN IGNITING THE SPIRIT OF ENTERPRENEURSHIP",
-    link_url: "/strategic-direction/governance/4",
+    link_url: "/program-areas/gender-equality/4",
     status: "on going",
     description:
       "The Western Area Rural District in Sierra Leone is a prime example of the discrimination and unfair low representation of women in governance despite representing over 50% of the population. Out of the 27 district councillors, only three are women. Of the 8 MPs, only 2 are women, and only 5 women are among the 121 tribal heads who constitute the traditional governance structure in the District. Poor road networks coupled with unstable and inexistent electricity supply in some areas makes it difficult or impossible in some areas for women to diversify from subsistence farming as that is the only way to provide for their families. The lack of social awareness and high levels of rural society stereotypes has increased the incidence of gender based violence in schools and homes against women which leads to injuries, sexual related diseases(STDs) and even death. SEND Sierra Leone and its development partner TROCAIRE together with beneficiaries developed this project to focus on capacity building ranging from skills training, business trainings and development, agricultural support, financial support, and support for women to access vocational, adult and tertiary education to empower and prepare them to seek opportunities in the job market. Other proposed interventions include provision of storage facilities to support the expansion of businesses on fish, construction of market centres with adequate sanitary facilities and encouraging women participation in decision making process in the community.",
@@ -1329,7 +1335,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     id: 1,
     title: "Project 01",
     text: "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
-    link_url: "/strategic-direction/livelihood/1",
+    link_url: "/program-areas/climate/1",
     status: "on going",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK",
@@ -1367,7 +1373,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     id: 2,
     title: "Project 02",
     text: "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
-    link_url: "/strategic-direction/livelihood/2",
+    link_url: "/program-areas/climate/2",
     status: "on going",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK and Civil Soceity in Development",
@@ -1393,7 +1399,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     id: 3,
     title: "Project 03",
     text: "STRENGTHENING WOMEN AND YOUTH-LED BUSINESS FOR LOCAL ECONOMIC DEVELOPMENT PROJECT",
-    link_url: "/strategic-direction/livelihood/3",
+    link_url: "/program-areas/climate/3",
     status: "on going",
     description:
       "This project aims to promote and improve access to finance and fishing equipment. This will enable those affected to generate more income in the long term and thus transform their livelihoods. This will be achieved through access to improved fishing equipment, appropriate fishing and processing machinery, access to finance and gender education; capacity building of women's groups and training for fishermen and fisherwomen in improved techniques, especially in the use of sustainable fishing and adaptation techniques and technologies, business and marketing practices and skills.",
@@ -1428,7 +1434,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     id: 4,
     title: "Project 04",
     text: "IMPROVED ACCESS TO SUSTAINABLY MANAGED MICRO-FINANCE AND WaSH SYSTEMS – WaSH SELF SUPPLY PROJECT",
-    link_url: "/strategic-direction/livelihood/4",
+    link_url: "/program-areas/climate/4",
     status: "on going",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The publication has been produced with financial support from the European Union.",

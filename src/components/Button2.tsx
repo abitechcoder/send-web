@@ -6,7 +6,7 @@ const Button2 = ({ text, url }: { text: string; url: string }) => {
       to={url}
       className={`w-full grid grid-cols-[1fr_8px] items-center gap-2 bg-secondary py-3 px-6`}
     >
-      <span className="text-white">{text}</span>
+      <span className="text-white text-sm">{text}</span>
       <svg
         viewBox="0 0 8 12"
         fill="none"

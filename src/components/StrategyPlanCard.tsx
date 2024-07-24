@@ -11,10 +11,8 @@ const StrategyPlanCard = ({
     <a href={document_url} target="_blank">
       <div className="relative bg-[#F9FAFC] bg-[url(/src/assets/strategy-plan-card-art.png)] px-8 py-8 mb-7 flex flex-col w-[250px] md:w-[200px] gap-4">
         <img src={Ledger} className="h-[80px] w-[80px]" alt="" />
-        <h3 className="uppercase font-barlow font-bold text-xl">
-          Strategic Plan
-        </h3>
-        <p className={`text-sm font-barlow`}>{title}</p>
+        <h3 className="uppercase font-barlow font-bold text-xl">{title}</h3>
+        {/* <p className={`text-sm font-barlow`}></p> */}
         <div className="bg-white w-[50px] h-[50px] absolute -bottom-[25px] left-8 grid place-items-center">
           <svg
             width="24"

@@ -14,7 +14,7 @@ const StrategicDirectionProject = ({
   project_url: string;
 }) => {
   return (
-    <div className="bg-white p-6 lg:p-8 flex flex-col gap-8 items-start shadow-lg">
+    <div className="bg-white p-4 lg:p-6 flex flex-col gap-4 items-start shadow-lg">
       <div className="flex justify-end w-full">
         <div className="bg-lightgrey px-4 py-2">
           <p className={`uppercase ${styles.paragraph3} font-bold`}>{status}</p>
@@ -23,7 +23,7 @@ const StrategicDirectionProject = ({
       <img src={Ledger} className="h-[50px] w-[50px]" alt="" />
       <div>
         <h2 className={`uppercase ${styles.heading3} mb-1`}>{title}</h2>
-        <p>
+        <p className="w-full h-[100px]">
           {text.substring(0, 50)} {text.length > 50 ? "..." : ""}
         </p>
       </div>
