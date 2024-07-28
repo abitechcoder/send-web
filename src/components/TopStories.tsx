@@ -12,15 +12,16 @@ const OurIdentity = () => {
           Top stories from our empowered beneficiaries and stakeholders
         </h2>
         <div className="flex flex-col items-center md:items-start md:justify-center gap-4">
-          <p className={`lg:w-[500px] w-full text-center md:text-left mx-auto text-white ${styles.paragraph3}`}>
+          <p
+            className={`lg:w-[500px] w-full text-center md:text-left mx-auto text-white ${styles.paragraph3}`}
+          >
             The ethos and commitment of SEND sierra Leone is to improve the
             quality of lives throughout the country.
           </p>
-          <Button text="See More" url="/" />
+          <Button text="See More" url="/publications/case-stories" />
         </div>
       </div>
-      <TopStoriesSlider/>
-      
+      <TopStoriesSlider />
     </section>
   );
 };

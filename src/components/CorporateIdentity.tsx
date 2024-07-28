@@ -4,9 +4,9 @@ const CorporateIdentity = () => {
   return (
     <section className={`${layout.section} bg-[#F9FAFC]`}>
       <div className="grid grid-cols-5 gap-8 mb-8">
-        <div className="col-span-5 md:col-span-2 bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>
-        <div className="hidden md:block bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>
-        <div className="hidden md:block col-span-2 bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>
+        <div className="col-span-5 md:col-span-2 bg-[url('/src/assets/corporate-identity.jpg')] bg-center bg-cover w-full h-[350px]"></div>
+        <div className="hidden md:block bg-[url('/src/assets/corporate-identity4.jpg')] bg-center bg-cover w-full h-[350px]"></div>
+        <div className="hidden md:block col-span-2 bg-[url('/src/assets/corporate-identity3.jpg')] bg-center bg-cover w-full h-[350px]"></div>
       </div>
       <div className="flex flex-col gap-4">
         <div>

@@ -6,7 +6,7 @@ const LatestNews = () => {
   return (
     <section className="bg-[#F9FAFC] py-[40px] px-[40px] lg:px-[80px] lg:py-[80px]">
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
-        LATEST NEWS
+        Newsletters
       </h2>
       <p className="lg:w-[500px] w-full text-center mx-auto pb-[40px]">
         Explore all our amazing project images & Videos

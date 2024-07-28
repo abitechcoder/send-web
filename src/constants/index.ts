@@ -307,11 +307,28 @@ export const jobClassification: GeneralList[] = [
 export const regions: GeneralList[] = [
   {
     id: 1,
+    title: "Bonthe",
+  },
+  
+  {
+    id: 2,
+    title: "Kailahum",
+  },
+  {
+    id: 3,
     title: "Kenema",
   },
   {
-    id: 2,
+    id: 4,
     title: "Kono",
+  },
+  {
+    id: 5,
+    title: "Port Loko",
+  },
+  {
+    id: 6,
+    title: "Freetown, Western Area",
   },
 ];
 

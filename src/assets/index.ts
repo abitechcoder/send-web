@@ -68,3 +68,9 @@ export { default as fbLogo } from "./icons/fblogo.png";
 export { default as igLogo } from "./icons/instagram-logo.png";
 export { default as add_file } from "./icons/add-file.png";
 export { default as star } from "./icons/star.png";
+export { default as corporate_identity} from "./corporate-identity.jpg";
+export { default as corporate_identity2 } from "./corporate-identity2.jpg";
+export { default as corporate_identity3 } from "./corporate-identity3.jpg";
+export { default as corporate_identity4 } from "./corporate-identity4.jpg";
+export { default as corporate_identity_image2 } from "./corporate-identity-image2.jpg";
+
