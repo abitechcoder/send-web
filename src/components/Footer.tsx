@@ -162,13 +162,14 @@ const Footer = () => {
                 <p className="text-lightgrey lg:text-sm text-xs">Gallery</p>
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:block">
-                <h3 className="font-bold lg:mb-3">Contact</h3>
+                {/* <h3 className="font-bold lg:mb-3">Contact</h3>
                 <p className="text-lightgrey lg:text-sm text-xs">
                   +232 (0) 78 20 68 53
                 </p>
                 <p className="text-lightgrey lg:text-sm text-xs">
                   info@sendsierraleone.com
-                </p>
+                </p> */}
+                <h3 className="font-bold lg:mb-3">District Offices</h3>
                 <div className="mt-3">
                   <div>
                     <h5 className="font-bold text-sm">Head Office:</h5>
@@ -178,31 +179,41 @@ const Footer = () => {
                   </div>
                   <div className="grid gap-3 mt-3">
                     <div>
-                      <h5 className="font-bold text-xs">Bonthe District Program Office:</h5>
+                      <h5 className="font-bold text-xs">
+                        Bonthe District Program Office:
+                      </h5>
                       <p className="text-xs text-lightgrey">
                         Main Prison Road, Mattru Jong, Bonthe District
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-bold text-xs">Freetown, Western Area Districts Program Office:</h5>
+                      <h5 className="font-bold text-xs">
+                        Freetown, Western Area Districts Program Office:
+                      </h5>
                       <p className="text-xs text-lightgrey">
                         38A Spur Road, Blue Bell Junction, Freetown
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-bold text-xs">Kailahun District Program Office:</h5>
+                      <h5 className="font-bold text-xs">
+                        Kailahun District Program Office:
+                      </h5>
                       <p className="text-xs text-lightgrey">
                         71 A Buedu Road, Kissi Town Section, Kailahun District
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-bold text-xs">Kono District Program Office:</h5>
+                      <h5 className="font-bold text-xs">
+                        Kono District Program Office:
+                      </h5>
                       <p className="text-xs text-lightgrey">
                         64 Bona Street, Koidu City, Kono District
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-bold text-xs">Port-Loko District Program Office:</h5>
+                      <h5 className="font-bold text-xs">
+                        Port-Loko District Program Office:
+                      </h5>
                       <p className="text-xs text-lightgrey">
                         4 Barracks Road, Port Loko City, Port Loko District
                       </p>

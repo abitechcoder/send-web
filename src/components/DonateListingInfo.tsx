@@ -4,14 +4,100 @@ import { styles, layout } from "../styles";
 import FormInput from "./FormInput";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 
 const DonateListingInfo = () => {
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = React.useState<number>(0);
+  const [selectedDonation, setSelectedDonation] = React.useState<string>("");
+  const [selectedDonationIndex, setSelectedDonationIndex] = React.useState<
+    null | number
+  >(null);
+  const donations = ["20", "40", "60", "80", "100"];
+  const [customAmount, setCustomAmount] = React.useState<string>("");
+  const [firstName, setFirstName] = React.useState<string>("");
+  const [lastName, setLastName] = React.useState<string>("");
+  const [email, setEmail] = React.useState<string>("");
+  const [phoneNumber, setPhoneNumber] = React.useState<string>("");
+
+  const handleDonationSelection = (
+    donation: string,
+    position: null | number
+  ) => {
+    setSelectedDonation(donation);
+    setSelectedDonationIndex(position);
+  };
 
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(80), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  const makeDonation = () => {
+    let amount = 0;
+    if (customAmount == "") {
+      if (selectedDonation == "") {
+        alert("Select your donation amount");
+        return;
+      } else {
+        amount = Number(selectedDonation);
+      }
+    } else {
+      if (customAmount == "") {
+        alert("Enter your donation amount");
+        return;
+      } else {
+        amount = Number(customAmount);
+      }
+    }
+
+    if(!firstName || !lastName || !email || !phoneNumber) {
+      alert("Enter your personal information");
+      return;
+    }
+
+    const config = {
+      public_key: "FLWPUBK_TEST-edb96e87c83963dd56001427a970f30b-X",
+      tx_ref: Date.now(),
+      amount: amount,
+      currency: "USD",
+      payment_options: "card,mobilemoney,ussd",
+      customer: {
+        email: email,
+        phone_number: phoneNumber,
+        name: `${firstName} ${lastName}`,
+      },
+      customizations: {
+        title: "my Payment Title",
+        description: "Payment for items in cart",
+        logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+      },
+    };
+
+    const handleFlutterPayment = useFlutterwave(config);
+
+    handleFlutterPayment({
+      callback: (response) => {
+        closePaymentModal(); // this will close the modal programmatically
+        setCustomAmount("");
+        setEmail("");
+        setSelectedDonation("");
+        setFirstName("");
+        setLastName("");
+        setPhoneNumber("");
+        setSelectedDonationIndex(null);
+      },
+      onClose: () => {
+        setCustomAmount("");
+        setEmail("");
+        setSelectedDonation("");
+        setFirstName("");
+        setLastName("");
+        setPhoneNumber("");
+        setSelectedDonationIndex(null);
+      },
+    });
+  };
+
   return (
     <section>
       <div className={`${layout.section} bg-graybg grid gap-4 md:gap-8`}>
@@ -103,28 +189,46 @@ const DonateListingInfo = () => {
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Your Donate</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              <FormInput placeholder="$20" />
-              <FormInput placeholder="$40" />
-              <FormInput placeholder="$60" />
-              <FormInput placeholder="$80" />
-              <FormInput placeholder="$100" />
+              {donations.map((donation, index) => (
+                <div
+                  onClick={() => handleDonationSelection(donation, index)}
+                  className={`cursor-pointer px-4 py-3 w-full hover:border-secondary hover:text-secondary bg-[#F9FBFC] border font-bold ${
+                    selectedDonationIndex === index
+                      ? "border-secondary text-secondary"
+                      : "border-[#E3E3E3] text-darkgrey"
+                  }`}
+                >
+                  ${donation}
+                </div>
+              ))}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 md:gap-8">
               <div className="lg:col-span-2">
-                <FormInput placeholder="Custom Amount" />
+                <FormInput
+                  placeholder="Select Donation Amount"
+                  value={`${selectedDonation === "" ? "Select donation amount" : "$"+selectedDonation}`}
+                  disabled={true}
+                />
               </div>
               <div className="lg:col-span-5">
-                <FormInput placeholder="Enter Custom Amount" />
+                <FormInput
+                  placeholder="Enter Custom Amount"
+                  type="number"
+                  value={customAmount}
+                  onChange={(e: {
+                    target: { value: React.SetStateAction<string> };
+                  }) => setCustomAmount(e.target.value)}
+                />
               </div>
             </div>
           </div>
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Details</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormInput placeholder="First Name" />
-              <FormInput placeholder="Last Name" />
-              <FormInput placeholder="Your Email" />
-              <FormInput placeholder="Phone Number" />
+              <FormInput value={firstName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setFirstName(e.target.value)} placeholder="First Name"  required={true}/>
+              <FormInput value={lastName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setLastName(e.target.value)} placeholder="Last Name" required={true} />
+              <FormInput type="email" value={email} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setEmail(e.target.value)} placeholder="Your Email" required={true} />
+              <FormInput type="tel" value={phoneNumber} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPhoneNumber(e.target.value)} placeholder="Phone Number" required={true} />
             </div>
           </div>
           <div className="grid gap-6">
@@ -141,6 +245,9 @@ const DonateListingInfo = () => {
             </RadioGroup>
           </div>
           <button
+            onClick={() => {
+              makeDonation();
+            }}
             className={`${styles.flexCenter} gap-2 bg-black py-3 px-6 justify-self-start`}
           >
             <span className="text-white">Donate</span>

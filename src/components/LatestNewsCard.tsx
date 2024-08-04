@@ -2,15 +2,11 @@ import styles from "../styles";
 import { SmallTriangle } from "../assets";
 import Button2 from "./Button2";
 
-const LatestNewsCard = ({image}: {image: string}) => {
+const LatestNewsCard = ({ image }: { image: string }) => {
   return (
     <div className="md:w-[300px] w-full relative">
       <div className="w-full h-[300px] lg:h-[250px]">
-        <img
-          src={image}
-          alt=""
-          className="h-full w-full object-cover"
-        />
+        <img src={image} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="h-[200px] bg-white p-4 grid gap-3 relative">
         <div className="flex flex-col gap-1">
@@ -23,7 +19,7 @@ const LatestNewsCard = ({image}: {image: string}) => {
           </p>
         </div>
         <div className="w-[70%]">
-          <Button2 text="Read More" url="/" />
+          <Button2 text="Read More" url="/publications/newsletter" />
         </div>
         <div className="h-[100px] w-[5px] bg-black absolute top-[50px] -left-[5px]"></div>
       </div>
