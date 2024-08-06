@@ -14,8 +14,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Step, Stepper } from "react-form-stepper";
 import styles from "@/src/styles";
+import { useState } from "react";
 
 const AddProject = () => {
+  const [steps, setSteps] = useState(0);
   return (
     <Dialog>
       <DialogTrigger className="flex items-center bg-[#1B43C6] py-3 px-7 gap-5 rounded-md">
@@ -35,7 +37,7 @@ const AddProject = () => {
           </DialogDescription>
         </DialogHeader>
 
-        <Stepper activeStep={0}>
+        <Stepper activeStep={steps}>
           <Step label="Step 1" />
           <Step label="Step 2" />
           <Step label="Step 3" />

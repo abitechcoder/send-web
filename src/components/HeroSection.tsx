@@ -55,7 +55,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="w-full md:w-[200px] mx-auto md:mx-0">
-          <Button text="Donate Now" url="/" />
+          <Button text="Donate Now" url="/donate" />
         </div>
       </div>
       <div className="hidden md:block md:[clip-path:polygon(0%_0%,_100%_0%,_100%_100%,_10%_100%)] ">
