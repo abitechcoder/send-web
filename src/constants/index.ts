@@ -309,7 +309,7 @@ export const regions: GeneralList[] = [
     id: 1,
     title: "Bonthe",
   },
-  
+
   {
     id: 2,
     title: "Kailahum",

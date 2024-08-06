@@ -27,3 +27,4 @@ export { default as GenderEquality } from "./GenderEquality";
 export { default as Climate } from "./Climate";
 export { default as GenderEqualityDetails } from "./GenderEqualityDetails";
 export { default as SustainableGrowth } from "./SustainableGrowth";
+export { default as SearchPage } from "./SearchPage";
