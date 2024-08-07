@@ -1,10 +1,19 @@
+import { useLoaderData } from "react-router-dom";
 import { Header, ContactUs, Footer, DonateListing, CustomerSupport, DonateListingInfo} from "../components";
+import { getDonationDetails } from "../data";
 
-const Donate = () => {
+export async function DonationDetailsLoader({ params }: any) {
+  const donation = await getDonationDetails(Number(params.donationId));
+  return { donation };
+}
+
+const DonationDetails = () => {
+  let { donation }: any = useLoaderData();
+  console.log("Donation Info:", donation);
   return (
     <main className="h-full relative">
-      <Header parent_link="Home" child_link="Donate" title="Donate" />
-      <DonateListingInfo/>
+      <Header parent_link="Home" child_link="Donate" title="Donate" image={donation.image} />
+      <DonateListingInfo donation={donation}/>
       <DonateListing/>
       <ContactUs />
       <Footer/>
@@ -13,4 +22,4 @@ const Donate = () => {
   );
 };
 
-export default Donate;
+export default DonationDetails;

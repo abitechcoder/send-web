@@ -9,13 +9,14 @@ import DashboardRoot from "./layouts/DashboardRoot";
 import { loader as DirectorsLoader } from "./pages/BoardOfDirectors";
 import { loader as DirectorLoader } from "./pages/DirectorDetails";
 import { HealthProjectsLoader } from "./pages/HealthDetails";
-import {
-  GovernanceProjectsLoader,
-} from "./pages/GenderEqualityDetails";
+import { GovernanceProjectsLoader } from "./pages/GenderEqualityDetails";
 import { loader as ClassificationLoader } from "./pages/WorkWithUs";
+import { loader as SearchLoader } from "./pages/SearchPage";
 import LivelihoodDetails, {
   LivelihoodProjectsLoader,
 } from "./pages/LivelihoodDetails";
+
+import { DonationDetailsLoader } from "./pages/DonationDetails";
 
 //pages
 import {
@@ -48,6 +49,9 @@ import {
   SustainableGrowthDetails,
   EducationDetails,
   GenderEqualityDetails,
+  SearchPage,
+  PaymentSuccess,
+  PaymentFailure,
 } from "./pages";
 
 //Admin Dashboard Pages
@@ -144,11 +148,16 @@ function App() {
             loader={ClassificationLoader}
             element={<WorkWithUs />}
           />
+          <Route path="payment">
+            <Route path="success" element={<PaymentSuccess />} />
+            <Route path="failure" element={<PaymentFailure />} />
+          </Route>
+          <Route path="search" loader={SearchLoader} element={<SearchPage />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="donate">
             <Route index element={<Donate />} />
-            <Route path=":donationId" element={<DonationDetails />} />
+            <Route path=":donationId" element={<DonationDetails />} loader={DonationDetailsLoader}/>
           </Route>
           <Route path="publications">
             <Route index element={<ProjectReports />} />

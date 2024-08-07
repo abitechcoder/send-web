@@ -2,11 +2,13 @@ import React from "react";
 import { BlueProgress } from "@/components/ui/blue-progress";
 import { styles, layout } from "../styles";
 import FormInput from "./FormInput";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// import { Label } from "@/components/ui/label";
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+import { useNavigate } from "react-router-dom";
+import { DonationListingType } from "../types";
 
-const DonateListingInfo = () => {
+const DonateListingInfo = ({donation}: {donation: DonationListingType}) => {
   const [progress, setProgress] = React.useState<number>(0);
   const [selectedDonation, setSelectedDonation] = React.useState<string>("");
   const [selectedDonationIndex, setSelectedDonationIndex] = React.useState<
@@ -18,6 +20,7 @@ const DonateListingInfo = () => {
   const [lastName, setLastName] = React.useState<string>("");
   const [email, setEmail] = React.useState<string>("");
   const [phoneNumber, setPhoneNumber] = React.useState<string>("");
+  const navigate = useNavigate();
 
   const handleDonationSelection = (
     donation: string,
@@ -50,13 +53,13 @@ const DonateListingInfo = () => {
       }
     }
 
-    if(!firstName || !lastName || !email || !phoneNumber) {
+    if (!firstName || !lastName || !email || !phoneNumber) {
       alert("Enter your personal information");
       return;
     }
 
-    const config = {
-      public_key: "FLWPUBK_TEST-edb96e87c83963dd56001427a970f30b-X",
+    const config: any = {
+      public_key: import.meta.env.VITE_FLW_PUBLIC_KEY,
       tx_ref: Date.now(),
       amount: amount,
       currency: "USD",
@@ -67,9 +70,9 @@ const DonateListingInfo = () => {
         name: `${firstName} ${lastName}`,
       },
       customizations: {
-        title: "my Payment Title",
-        description: "Payment for items in cart",
-        logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+        title: "SEND Donation",
+        description: donation.title,
+        logo: "https://firebasestorage.googleapis.com/v0/b/circleafrica-f7768.appspot.com/o/logo.png?alt=media&token=02ba098e-f23d-4070-a95b-8d37d3da7a21",
       },
     };
 
@@ -77,23 +80,22 @@ const DonateListingInfo = () => {
 
     handleFlutterPayment({
       callback: (response) => {
-        closePaymentModal(); // this will close the modal programmatically
-        setCustomAmount("");
-        setEmail("");
-        setSelectedDonation("");
-        setFirstName("");
-        setLastName("");
-        setPhoneNumber("");
-        setSelectedDonationIndex(null);
+        if (response?.status === "successful") {
+          navigate("/payment/success");
+        } else {
+          navigate("/donate");
+        }
+        closePaymentModal();
       },
       onClose: () => {
-        setCustomAmount("");
-        setEmail("");
-        setSelectedDonation("");
-        setFirstName("");
-        setLastName("");
-        setPhoneNumber("");
-        setSelectedDonationIndex(null);
+        closePaymentModal();
+        // setCustomAmount("");
+        // setEmail("");
+        // setSelectedDonation("");
+        // setFirstName("");
+        // setLastName("");
+        // setPhoneNumber("");
+        // setSelectedDonationIndex(null);
       },
     });
   };
@@ -106,7 +108,7 @@ const DonateListingInfo = () => {
           <h2
             className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-black uppercase`}
           >
-            LITTLE HELP CAN MAKE A BIG DIFFERENCE
+            {donation.title}
           </h2>
         </div>
         <div className="flex justify-between">
@@ -191,6 +193,7 @@ const DonateListingInfo = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {donations.map((donation, index) => (
                 <div
+                  key={index}
                   onClick={() => handleDonationSelection(donation, index)}
                   className={`cursor-pointer px-4 py-3 w-full hover:border-secondary hover:text-secondary bg-[#F9FBFC] border font-bold ${
                     selectedDonationIndex === index
@@ -206,7 +209,11 @@ const DonateListingInfo = () => {
               <div className="lg:col-span-2">
                 <FormInput
                   placeholder="Select Donation Amount"
-                  value={`${selectedDonation === "" ? "Select donation amount" : "$"+selectedDonation}`}
+                  value={`${
+                    selectedDonation === ""
+                      ? "Select donation amount"
+                      : "$" + selectedDonation
+                  }`}
                   disabled={true}
                 />
               </div>
@@ -225,13 +232,43 @@ const DonateListingInfo = () => {
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Details</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormInput value={firstName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setFirstName(e.target.value)} placeholder="First Name"  required={true}/>
-              <FormInput value={lastName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setLastName(e.target.value)} placeholder="Last Name" required={true} />
-              <FormInput type="email" value={email} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setEmail(e.target.value)} placeholder="Your Email" required={true} />
-              <FormInput type="tel" value={phoneNumber} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPhoneNumber(e.target.value)} placeholder="Phone Number" required={true} />
+              <FormInput
+                value={firstName}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setFirstName(e.target.value)}
+                placeholder="First Name"
+                required={true}
+              />
+              <FormInput
+                value={lastName}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setLastName(e.target.value)}
+                placeholder="Last Name"
+                required={true}
+              />
+              <FormInput
+                type="email"
+                value={email}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setEmail(e.target.value)}
+                placeholder="Your Email"
+                required={true}
+              />
+              <FormInput
+                type="tel"
+                value={phoneNumber}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setPhoneNumber(e.target.value)}
+                placeholder="Phone Number"
+                required={true}
+              />
             </div>
           </div>
-          <div className="grid gap-6">
+          {/* <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Payment</h3>
             <RadioGroup defaultValue="paypal" className="flex gap-8">
               <div className="flex items-center space-x-2">
@@ -243,7 +280,7 @@ const DonateListingInfo = () => {
                 <Label htmlFor="virtual-account">Virtual Account</Label>
               </div>
             </RadioGroup>
-          </div>
+          </div> */}
           <button
             onClick={() => {
               makeDonation();

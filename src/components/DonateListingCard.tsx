@@ -2,14 +2,13 @@ import React from "react";
 import styles from "../styles";
 import { BlueProgress } from "@/components/ui/blue-progress";
 import { Link } from "react-router-dom";
+import { DonationListingType } from "../types";
 
 const DonateListingCard = ({
+  id,
   title,
   image,
-}: {
-  title: string;
-  image?: string;
-}) => {
+}: DonationListingType) => {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -17,11 +16,11 @@ const DonateListingCard = ({
     return () => clearTimeout(timer);
   }, []);
   return (
-    <Link to={"/donate/1"} className={`h-[520px] md:h-[550px] w-full relative`}>
+    <Link to={`/donate/${id}`} className={`h-[520px] md:h-[550px] w-full relative`}>
       <img
-        src={`/src/assets/${image}`}
+        src={image}
         className="absolute top-0 left-0 object-cover object-center h-[250px] w-full"
-        alt=""
+        alt="image cover"
       />
       <div className="absolute bottom-0 left-0 w-full h-[270px] md:h-[300px] z-10 bg-white">
         <div className="p-4 md:p-8 h-full relative flex flex-col gap-4">

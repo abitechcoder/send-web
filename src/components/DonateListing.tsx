@@ -1,3 +1,4 @@
+import { donationListings } from "../constants";
 import { styles, layout } from "../styles";
 import DonateListingCard from "./DonateListingCard";
 
@@ -25,18 +26,14 @@ const DonateListing = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        <DonateListingCard
-          title="little help can make a big difference"
-          image="donate-listing-image.png"
-        />
-        <DonateListingCard
-          title="little help can make a big difference"
-          image="donate-listing-image.png"
-        />
-        <DonateListingCard
-          title="little help can make a big difference"
-          image="donate-listing-image.png"
-        />
+        {donationListings.map((donation) => (
+          <DonateListingCard
+            key={donation.id}
+            id={donation.id}
+            title={donation.title}
+            image={donation.image}
+          />
+        ))}
       </div>
     </section>
   );

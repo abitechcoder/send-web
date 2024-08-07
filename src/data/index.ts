@@ -6,6 +6,8 @@ import {
   jobs,
   LivelihoodProjects,
   regions,
+  Newsletters,
+  donationListings
 } from "../constants";
 
 export async function getDirectors() {
@@ -42,4 +44,13 @@ export async function getRegions() {
 export async function getLivelihoodProject(id: number) {
   let project = LivelihoodProjects.find((project) => project.id === id);
   return project ?? null;
+}
+
+export async function getNewsLetters() {
+  return Newsletters;
+}
+
+export async function getDonationDetails(id: number) {
+  let donation = donationListings.find((donation) => donation.id === id);
+  return donation ?? null;
 }

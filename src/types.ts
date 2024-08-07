@@ -129,3 +129,9 @@ export interface PhotoCard {
   description?: string
   Video?: boolean
 }
+
+export interface DonationListingType {
+  id: number,
+  title: string,
+  image: string,
+}

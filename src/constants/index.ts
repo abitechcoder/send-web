@@ -11,6 +11,7 @@ import {
   Newsletter,
   ProfileManual,
   StrategicProjectType,
+  DonationListingType
 } from "../types";
 
 export const links: Link[] = [
@@ -309,7 +310,7 @@ export const regions: GeneralList[] = [
     id: 1,
     title: "Bonthe",
   },
-  
+
   {
     id: 2,
     title: "Kailahum",
@@ -1549,3 +1550,21 @@ export const ProfileManuals: ProfileManual[] = [
       "https://www.sendsierraleone.com/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
   },
 ];
+
+export const donationListings: DonationListingType[] = [
+  {
+    id: 1,
+    title: "little help can make a big difference",
+    image: "/src/assets/donate-listing-image.png"
+  },
+  {
+    id: 2,
+    title: "little help can make a big difference",
+    image: "/src/assets/hero3.png"
+  },
+  {
+    id: 3,
+    title: "little help can make a big difference",
+    image: "/src/assets/hero-image.png"
+  }
+]
