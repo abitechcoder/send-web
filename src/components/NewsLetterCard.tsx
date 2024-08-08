@@ -9,7 +9,7 @@ const NewsletterCard = ({
   return (
     <div className={`w-full relative bg-white`}>
       <img
-        src={`/src/assets/${image}`}
+        src={image}
         className="object-contain object-center h-[450px] w-full"
         alt=""
       />

@@ -9,7 +9,7 @@ const CaseStoryCard = ({ title, image }: { title: string; image?: string }) => {
             <p className={`${styles.paragraph2} text-secondary`}>mei</p>
           </div>
       <img
-        src={`/src/assets/${image}`}
+        src={image}
         className="object-cover object-center h-full w-full"
         alt=""
       />

@@ -30,9 +30,9 @@ const SeniorMgtTeam = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
-        <TeamCard name="Joseph Ayamga" title="Country Director" image="country-director.png"/>
-        <TeamCard name="Siapha Kamara" title="CEO of SEND West Africa" image="ceo.png"/>
-        <TeamCard name="Agnes Bockarie" title="Finance Director" image="finance-director.png"/>
+        <TeamCard name="Joseph Ayamga" title="Country Director" image="/src/assets/country-director.png"/>
+        <TeamCard name="Siapha Kamara" title="CEO of SEND West Africa" image="/src/assets/ceo.png"/>
+        <TeamCard name="Agnes Bockarie" title="Finance Director" image="/src/assets/finance-director.png"/>
       </div>
     </section>
   );

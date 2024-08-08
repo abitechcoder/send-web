@@ -18,7 +18,7 @@ const DirectorCard = ({
       className={`h-[450px] w-full relative`}
     >
       <img
-        src={`/src/assets/${image}`}
+        src={image}
         className="absolute top-0 left-0 object-cover object-center h-full w-full hover:opacity-80"
         alt=""
       />

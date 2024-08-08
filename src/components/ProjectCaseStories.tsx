@@ -27,15 +27,15 @@ const ProjectCaseStories = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
         <CaseStoryCard
           title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="case-story-image.png"
+          image="/src/assets/case-story-image.png"
         />
         <CaseStoryCard
           title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="case-story-image.png"
+          image="/src/assets/case-story-image.png"
         />
         <CaseStoryCard
           title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="case-story-image.png"
+          image="/src/assets/case-story-image.png"
         />
       </div>
     </section>

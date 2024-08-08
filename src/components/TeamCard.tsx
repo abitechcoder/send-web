@@ -11,7 +11,7 @@ const TeamCard = ({
 }) => {
   return (
     <div className={`h-[450px] w-full relative`}>
-        <img src={`/src/assets/${image}`} className="absolute top-0 left-0 object-cover object-center h-full w-full" alt="" />
+        <img src={image} className="absolute top-0 left-0 object-cover object-center h-full w-full" alt="" />
       <div className="grid grid-cols-[60px_1fr] absolute bottom-0 left-0 w-full h-[120px] z-10 bg-lightgrey">
         <div className="grid place-content-center gap-4">
           <div className="bg-white w-[30px] h-[30px] rounded-full grid place-items-center">

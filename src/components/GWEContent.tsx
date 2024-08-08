@@ -69,7 +69,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                   Project Problem
                 </h2>
                 <img
-                  src={`/src/assets/${project.problem_image}`}
+                  src={project.problem_image}
                   className="object-cover object-center h-[250px] md:h-[350px] w-full"
                 />
                 <div className="grid gap-2">

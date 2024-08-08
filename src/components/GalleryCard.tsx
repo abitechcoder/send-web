@@ -12,7 +12,7 @@ const GalleryCard = ({
   return (
     <a href={link_url} className={`h-[350px] w-full relative`} target="_blank">
       <img
-        src={`/src/assets/${image}`}
+        src={image}
         className="absolute top-0 left-0 object-cover object-center h-full w-full"
         alt=""
       />
