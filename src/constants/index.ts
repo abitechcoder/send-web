@@ -11,6 +11,7 @@ import {
   Newsletter,
   ProfileManual,
   StrategicProjectType,
+  DonationListingType
 } from "../types";
 
 export const links: Link[] = [
@@ -181,43 +182,43 @@ export const directors: Director[] = [
     id: 1,
     name: "Lucy Cecilia",
     title: "Board Chairperson",
-    image: "lucy-cecelia.png",
+    image: "/src/assets/lucy-cecelia.png",
   },
   {
     id: 2,
     name: "Siapha Kamara",
     title: "Board Member",
-    image: "siapha-kamara.png",
+    image: "/src/assets/siapha-kamara.png",
   },
   {
     id: 3,
     name: "Marion Joy Minah",
     title: "Board Member",
-    image: "marion-joy.png",
+    image: "/src/assets/marion-joy.png",
   },
   {
     id: 4,
     name: "JOSEPH AYAMGA",
     title: "Board Member",
-    image: "country-director.png",
+    image: "/src/assets/country-director.png",
   },
   {
     id: 5,
     name: "JEANNE KAMARA",
     title: "Board Member",
-    image: "jean-kamara.jpg",
+    image: "/src/assets/jean-kamara.jpg",
   },
   {
     id: 6,
     name: "SHEKU JAMES",
     title: "Board Member",
-    image: "sheku-james.jpg",
+    image: "/src/assets/sheku-james.jpg",
   },
   {
     id: 7,
     name: "FATMATA DASSAMA",
     title: "Board Member",
-    image: "fatmata-dassama.jpg",
+    image: "/src/assets/fatmata-dassama.jpg",
   },
 ];
 
@@ -1021,71 +1022,71 @@ export const Newsletters: Newsletter[] = [
   {
     id: 1,
     title: "NEWSLETTER 2022-IMPACTING TODAY FOR A BETTER TOMORROW",
-    image: "news-image-1.png",
+    image: "/src/assets/news-image-1.png",
     url: "https://sendsierraleone.com/2022NEWSLETTER.pdf",
   },
   {
     id: 2,
     title: "Nyapui Senior Secondary School of Excellence Brochure",
-    image: "news-image-2.png",
+    image: "/src/assets/news-image-2.png",
     url: "https://sendsierraleone.com/Nyapuischoolbrochure.pdf",
   },
   {
     id: 3,
     title: "Second Quarter Newsletter 2021. RESILIENCE THROUGH EMPOWERMENT",
-    image: "news-image-3.png",
+    image: "/src/assets/news-image-3.png",
     url: "https://sendsierraleone.com/Assets/documents/Resiliance%20through%20Empowerment%20(Online).pdf",
   },
   {
     id: 4,
     title: "Second Quarter Newsletter 2020. SURVIVING THROUGH COVID-19",
-    image: "news-image-4.jpg",
+    image: "/src/assets/news-image-4.jpg",
     url: "https://sendsierraleone.com/Assets/documents/newsletter%202nd%20qta%20(update).pdf",
   },
   {
     id: 5,
     title: "First Quarter Newsletter 2020, MAKING A CHANGE IN DIFFICULT TIMES.",
-    image: "news-image-5.png",
+    image: "/src/assets/news-image-5.png",
     url: "https://sendsierraleone.com/Assets/documents/SEND%20Sierra%20Leone%201st%20Newsletter%202020.pdf",
   },
   {
     id: 6,
     title:
       "April 2020 Newsletter, Debunking Things Believed to be True about the Corona Virus.",
-    image: "news-image-6.jpg",
+    image: "/src/assets/news-image-6.jpg",
     url: "https://sendsierraleone.com/Assets/documents/myths.pdf",
   },
   {
     id: 7,
     title: "April 2020 Newsletter, Sensitization Manual on COVID-19 Pandemic",
-    image: "news-image-7.jpg",
+    image: "/src/assets/news-image-7.jpg",
     url: "https://sendsierraleone.com/Assets/documents/corona.pdf",
   },
   {
     id: 8,
     title:
       "April 2020 Newsletter, NURTURING CHILDREN DURING THE COVID-19 PANDEMIC",
-    image: "news-image-8.jpg",
+    image: "/src/assets/news-image-8.jpg",
     url: "https://sendsierraleone.com/Nyapuischoolbrochure.pdf",
   },
   {
     id: 9,
     title:
       "March 2020 Newsletter, Statement by HIS EXCELLENCY, DR. JULIUS MAADA BIO",
-    image: "news-image-9.jpg",
+    image: "/src/assets/news-image-9.jpg",
     url: "https://sendsierraleone.com/Assets/documents/Statement%20by%20His%20Excellency,%20Dr%20Julius%20Maada%20Bio,%20President%20of%20the%20Republic%20of%20Sierra%20Leone%20at%20the%20Second%20Press%20Conference%20on%20COVID-19.%20State%20House,%20Freetown%20-%2031%20March%202020.pdf",
   },
   {
     id: 10,
     title:
       "September 2018 Newsletter, Overcoming Social & Cultural Barriers to Political & Economic Empowerment!",
-    image: "news-image-10.jpg",
+    image: "/src/assets/news-image-10.jpg",
     url: "https://sendsierraleone.com/Assets/documents/SEND%20Women%20Empowerment%20Newsletter%202018-2.pdf",
   },
   {
     id: 11,
     title: "2019 Newsletters, Strengthening SEND and safeguarding staff",
-    image: "news-image-11.jpg",
+    image: "/src/assets/news-image-11.jpg",
     url: "https://sendsierraleone.com/Assets/documents/news%20letter%202019.pdf",
   },
 ];
@@ -1107,7 +1108,7 @@ export const HealthProjects: StrategicProjectType[] = [
     duration: "1st AUGUST 2020 TO 31ST OCTOBER 2022",
     budget: "",
     areas: "Education",
-    problem_image: "problem-img-1.png",
+    problem_image: "/src/assets/problem-img-1.png",
     problem: [
       {
         id: 1,
@@ -1134,7 +1135,7 @@ export const HealthProjects: StrategicProjectType[] = [
     duration: "December 2018 - August 2021",
     budget: "€ 666,198",
     areas: "WaSH, Health and Nutrition",
-    problem_image: "problem-img-2.jpg",
+    problem_image: "/src/assets/problem-img-2.jpg",
     problem: [
       {
         id: 1,
@@ -1160,7 +1161,7 @@ export const HealthProjects: StrategicProjectType[] = [
     duration: "9 months",
     budget: "€ 100,000",
     areas: "Community Empowerment to participate in Service Delivery.",
-    problem_image: "problem-img-3.jpg",
+    problem_image: "/src/assets/problem-img-3.jpg",
     problem: [
       {
         id: 1,
@@ -1194,7 +1195,7 @@ export const HealthProjects: StrategicProjectType[] = [
     duration: "October 2021 - May 2022",
     budget: "$89,860",
     areas: "Healthcare",
-    problem_image: "problem-img-4.jpg",
+    problem_image: "/src/assets/problem-img-4.jpg",
     problem: [
       {
         id: 1,
@@ -1233,7 +1234,7 @@ export const GovtProjects: StrategicProjectType[] = [
     duration: "",
     budget: "",
     areas: "Governance",
-    problem_image: "hanging-drip.png",
+    problem_image: "/src/assets/hanging-drip.png",
     problem: [
       {
         id: 1,
@@ -1268,7 +1269,7 @@ export const GovtProjects: StrategicProjectType[] = [
     duration: "1/4/2019 - 30/04/2020 with possibility of extension",
     budget: "€300,000 for the first year.",
     areas: "Women in governance.",
-    problem_image: "women.jpg",
+    problem_image: "/src/assets/women.jpg",
     problem: [
       {
         id: 1,
@@ -1298,7 +1299,7 @@ export const GovtProjects: StrategicProjectType[] = [
     duration: "2017 - 2021",
     budget: "€348 000",
     areas: "Women in Governance.",
-    problem_image: "kailahun-banner.jpg",
+    problem_image: "/src/assets/kailahun-banner.jpg",
     problem: [
       {
         id: 1,
@@ -1328,7 +1329,7 @@ export const GovtProjects: StrategicProjectType[] = [
     duration: "9 months (1st April – 31st December, 2019)",
     budget: "€55,000",
     areas: "Governance",
-    problem_image: "igniting-women-banner.jpg",
+    problem_image: "/src/assets/igniting-women-banner.jpg",
     problem: [
       {
         id: 1,
@@ -1362,7 +1363,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     duration: "December 2021 - May 2024",
     budget: "Le 2,194,153,833,33",
     areas: "GWASH and CLIMATE RESILIENCE",
-    problem_image: "citizen-wash-banner.jpg",
+    problem_image: "/src/assets/citizen-wash-banner.jpg",
     problem: [
       {
         id: 1,
@@ -1400,7 +1401,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     duration: "",
     budget: "$48,406",
     areas: "WASH and CLIMATE ACTION",
-    problem_image: "climate-change-banner.jpg",
+    problem_image: "/src/assets/climate-change-banner.jpg",
     problem: [
       {
         id: 1,
@@ -1427,7 +1428,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     budget: "110,000 Dollars",
     areas:
       "Livelihood Security, Access to Finance and Market Opportunities,Improved Gender Relations, Women Empowerment",
-    problem_image: "promoting-resilience-banner.jpg",
+    problem_image: "/src/assets/promoting-resilience-banner.jpg",
     problem: [
       {
         id: 1,
@@ -1461,7 +1462,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     duration: "34 MONTHS",
     budget: "1,465,268.70 Euros",
     areas: "WASH, ACCESS TO FINANCE, GENDER, HEALTH AND HYGIENE",
-    problem_image: "improved-img.png",
+    problem_image: "/src/assets/improved-img.png",
     problem: [
       {
         id: 1,
@@ -1478,74 +1479,92 @@ export const LivelihoodProjects: StrategicProjectType[] = [
 export const ProfileManuals: ProfileManual[] = [
   {
     id: 1,
-    image: "manual-image-1.png",
+    image: "/src/assets/manual-image-1.png",
     link_url: "https://sendsierraleone.com/Women%20Manifesto%20Final.pdf",
   },
   {
     id: 2,
-    image: "manual-image-2.png",
+    image: "/src/assets/manual-image-2.png",
     link_url: "https://sendsierraleone.com/Advocacy%20Strategy%20Document.pdf",
   },
   {
     id: 3,
-    image: "manual-image-3.png",
+    image: "/src/assets/manual-image-3.png",
     link_url: "https://sendsierraleone.com/womencandidatestrainingmanual.pdf",
   },
   {
     id: 4,
-    image: "manual-image-4.jpg",
+    image: "/src/assets/manual-image-4.jpg",
     link_url: "https://www.sendsierraleone.com/handbook.pdf",
   },
   {
     id: 5,
-    image: "manual-image-5.png",
+    image: "/src/assets/manual-image-5.png",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/GTA%20Final%20Report.pdf",
   },
   {
     id: 6,
-    image: "manual-image-6.png",
+    image: "/src/assets/manual-image-6.png",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/GTA%20Final.pdf",
   },
   {
     id: 7,
-    image: "manual-image-7.jpg",
+    image: "/src/assets/manual-image-7.jpg",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/vsla%20manual.pdf",
   },
   {
     id: 8,
-    image: "manual-image-8.jpg",
+    image: "/src/assets/manual-image-8.jpg",
     link_url: "https://www.sendsierraleone.com/Assets/documents/manual.pdf",
   },
   {
     id: 9,
-    image: "manual-image-9.jpg",
+    image: "/src/assets/manual-image-9.jpg",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/health&hygiene%20manual.pdf",
   },
   {
     id: 10,
-    image: "manual-image-10.jpg",
+    image: "/src/assets/manual-image-10.jpg",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/food%20and%20nutrision%20manual.pdf",
   },
   {
     id: 11,
-    image: "manual-image-11.jpg",
+    image: "/src/assets/manual-image-11.jpg",
     link_url:
       "https://www.sendsierraleone.com/Assets/documents/GMF%20MANUAL%20for%20SEND%20final.pdf",
   },
   {
     id: 12,
-    image: "profile-image-1.jpg",
+    image: "/src/assets/profile-image-1.jpg",
     link_url: "https://www.sendsierraleone.com/Climate%20Profile%20.pdf",
   },
   {
     id: 13,
-    image: "profile-image-2.jpg",
+    image: "/src/assets/profile-image-2.jpg",
     link_url:
       "https://www.sendsierraleone.com/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
   },
 ];
+
+export const donationListings: DonationListingType[] = [
+  {
+    id: 1,
+    title: "little help can make a big difference",
+    image: "/src/assets/donate-listing-image.png"
+  },
+  {
+    id: 2,
+    title: "little help can make a big difference",
+    image: "/src/assets/hero3.png"
+  },
+  {
+    id: 3,
+    title: "little help can make a big difference",
+    image: "/src/assets/hero-image.png"
+  }
+]

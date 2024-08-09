@@ -2,11 +2,13 @@ import React from "react";
 import { BlueProgress } from "@/components/ui/blue-progress";
 import { styles, layout } from "../styles";
 import FormInput from "./FormInput";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// import { Label } from "@/components/ui/label";
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+import { useNavigate } from "react-router-dom";
+import { DonationListingType } from "../types";
 
-const DonateListingInfo = () => {
+const DonateListingInfo = ({ donation }: { donation: DonationListingType }) => {
   const [progress, setProgress] = React.useState<number>(0);
   const [selectedDonation, setSelectedDonation] = React.useState<string>("");
   const [selectedDonationIndex, setSelectedDonationIndex] = React.useState<
@@ -18,6 +20,7 @@ const DonateListingInfo = () => {
   const [lastName, setLastName] = React.useState<string>("");
   const [email, setEmail] = React.useState<string>("");
   const [phoneNumber, setPhoneNumber] = React.useState<string>("");
+  const navigate = useNavigate();
 
   const handleDonationSelection = (
     donation: string,
@@ -56,7 +59,7 @@ const DonateListingInfo = () => {
     }
 
     const config: any = {
-      public_key: "FLWPUBK_TEST-edb96e87c83963dd56001427a970f30b-X",
+      public_key: import.meta.env.VITE_FLW_PUBLIC_KEY,
       tx_ref: Date.now(),
       amount: amount,
       currency: "USD",
@@ -67,9 +70,9 @@ const DonateListingInfo = () => {
         name: `${firstName} ${lastName}`,
       },
       customizations: {
-        title: "Donation payment",
-        description: "Little help can make a difference",
-        logo: "https://drive.google.com/file/d/1hts9HWQ2u2ar68JTLcs6b2l6tQb_E4YJ/view",
+        title: "SEND Donation",
+        description: donation.title,
+        logo: "https://firebasestorage.googleapis.com/v0/b/circleafrica-f7768.appspot.com/o/logo.png?alt=media&token=02ba098e-f23d-4070-a95b-8d37d3da7a21",
       },
     };
 
@@ -77,24 +80,22 @@ const DonateListingInfo = () => {
 
     handleFlutterPayment({
       callback: (response) => {
-        console.log("flutterwave:", response);
-        closePaymentModal(); // this will close the modal programmatically
-        setCustomAmount("");
-        setEmail("");
-        setSelectedDonation("");
-        setFirstName("");
-        setLastName("");
-        setPhoneNumber("");
-        setSelectedDonationIndex(null);
+        if (response?.status === "successful") {
+          navigate("/payment/success");
+        } else {
+          navigate("/donate");
+        }
+        closePaymentModal();
       },
       onClose: () => {
-        setCustomAmount("");
-        setEmail("");
-        setSelectedDonation("");
-        setFirstName("");
-        setLastName("");
-        setPhoneNumber("");
-        setSelectedDonationIndex(null);
+        closePaymentModal();
+        // setCustomAmount("");
+        // setEmail("");
+        // setSelectedDonation("");
+        // setFirstName("");
+        // setLastName("");
+        // setPhoneNumber("");
+        // setSelectedDonationIndex(null);
       },
     });
   };
@@ -107,7 +108,7 @@ const DonateListingInfo = () => {
           <h2
             className={`${styles.heading1} md:leading-relaxed lg:leading-[70px] text-black uppercase`}
           >
-            LITTLE HELP CAN MAKE A BIG DIFFERENCE
+            {donation.title}
           </h2>
         </div>
         <div className="flex justify-between">
@@ -192,6 +193,7 @@ const DonateListingInfo = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {donations.map((donation, index) => (
                 <div
+                  key={index}
                   onClick={() => handleDonationSelection(donation, index)}
                   className={`cursor-pointer px-4 py-3 w-full hover:border-secondary hover:text-secondary bg-[#F9FBFC] border font-bold ${
                     selectedDonationIndex === index

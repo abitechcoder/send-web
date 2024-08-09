@@ -28,4 +28,5 @@ export { default as Climate } from "./Climate";
 export { default as GenderEqualityDetails } from "./GenderEqualityDetails";
 export { default as SustainableGrowth } from "./SustainableGrowth";
 export { default as SearchPage } from "./SearchPage";
-export { default as PaymentStatus } from "./payment_status";
+export { default as PaymentSuccess } from "./payment_success";
+export { default as PaymentFailure } from "./payment_failure";

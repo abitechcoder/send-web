@@ -10,7 +10,7 @@ const ProjectOverview = ({
   return (
     <section className={`bg-white ${layout.section} relative`}>
       <img
-        src={`/src/assets/${banner_image}`}
+        src={banner_image}
         className={`object-cover w-full h-[400px] mb-4 md:mb-12`}
       />
       <div className="grid lg:grid-cols-[230px_1fr] gap-4">

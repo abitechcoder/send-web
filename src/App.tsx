@@ -16,6 +16,8 @@ import LivelihoodDetails, {
   LivelihoodProjectsLoader,
 } from "./pages/LivelihoodDetails";
 
+import { DonationDetailsLoader } from "./pages/DonationDetails";
+
 //pages
 import {
   LandingPage,
@@ -48,7 +50,8 @@ import {
   EducationDetails,
   GenderEqualityDetails,
   SearchPage,
-  PaymentStatus,
+  PaymentSuccess,
+  PaymentFailure,
 } from "./pages";
 
 //Admin Dashboard Pages
@@ -145,13 +148,20 @@ function App() {
             loader={ClassificationLoader}
             element={<WorkWithUs />}
           />
-          <Route path="payment" element={<PaymentStatus />} />
+          <Route path="payment">
+            <Route path="success" element={<PaymentSuccess />} />
+            <Route path="failure" element={<PaymentFailure />} />
+          </Route>
           <Route path="search" loader={SearchLoader} element={<SearchPage />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="donate">
             <Route index element={<Donate />} />
-            <Route path=":donationId" element={<DonationDetails />} />
+            <Route
+              path=":donationId"
+              element={<DonationDetails />}
+              loader={DonationDetailsLoader}
+            />
           </Route>
           <Route path="publications">
             <Route index element={<ProjectReports />} />
