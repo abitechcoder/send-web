@@ -11,7 +11,7 @@ import {
   Newsletter,
   ProfileManual,
   StrategicProjectType,
-  DonationListingType
+  DonationListingType,
 } from "../types";
 
 export const links: Link[] = [
@@ -971,6 +971,7 @@ export const jobs: Job[] = [
 ];
 export const AnnualReports: AnnualReport[] = [
   {
+    id: 1,
     title: "Report 01",
     text: "SEND SL Annual",
     year: "Report 2017",
@@ -978,6 +979,7 @@ export const AnnualReports: AnnualReport[] = [
       "https://sendsierraleone.com/Assets/documents/SEND%20SIERRA%20LEONE%20ANNUAL%20REPORT%20(1)_2.pdf",
   },
   {
+    id: 2,
     title: "Report 02",
     text: "SEND SL Annual",
     year: "Report 2018",
@@ -985,6 +987,7 @@ export const AnnualReports: AnnualReport[] = [
       "https://sendsierraleone.com/Assets/documents/SEND-Annual-Report-WEB%20(2).pdf",
   },
   {
+    id: 3,
     title: "Report 03",
     text: "SEND SL Annual",
     year: "Report 2019",
@@ -992,6 +995,7 @@ export const AnnualReports: AnnualReport[] = [
       "https://sendsierraleone.com/Assets/documents/2019%20annual%20report2.pdf",
   },
   {
+    id: 4,
     title: "Report 04",
     text: "SEND SL Annual",
     year: "Report 2020",
@@ -999,18 +1003,21 @@ export const AnnualReports: AnnualReport[] = [
       "https://sendsierraleone.com/Assets/documents/Anual%20Repport%202020.pdf",
   },
   {
+    id: 5,
     title: "Report 05",
     text: "SEND SL Annual",
     year: "Report 2021",
     report_url: "https://sendsierraleone.com/reports.html",
   },
   {
+    id: 6,
     title: "Report 06",
     text: "SEND SL Annual",
     year: "Report 2022",
     report_url: "https://sendsierraleone.com/Annual%20Report%202022.pdf",
   },
   {
+    id: 7,
     title: "Report 07",
     text: "SEND SL Annual",
     year: "Report 2023",
@@ -1555,16 +1562,16 @@ export const donationListings: DonationListingType[] = [
   {
     id: 1,
     title: "little help can make a big difference",
-    image: "/src/assets/donate-listing-image.png"
+    image: "/src/assets/donate-listing-image.png",
   },
   {
     id: 2,
     title: "little help can make a big difference",
-    image: "/src/assets/hero3.png"
+    image: "/src/assets/hero3.png",
   },
   {
     id: 3,
     title: "little help can make a big difference",
-    image: "/src/assets/hero-image.png"
-  }
-]
+    image: "/src/assets/hero-image.png",
+  },
+];

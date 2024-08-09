@@ -1,13 +1,12 @@
 import { styles } from "../styles";
 import { ManualsIcon } from "../assets";
-import { GeneralList } from "../types";
 
 const SearchItemCard = ({ item }: { item: any }) => {
   return (
     <div className="border border-lightgrey rounded-md">
-      <div className="flex flex-col lg:flex-row gap-4 p-4">
+      <div className="flex flex-col lg:grid lg:grid-cols-[100px_1fr] gap-2 lg:gap-4 p-4">
         <div>
-          <img src={ManualsIcon} alt="" className={"w-[100px] lg:w-[150px]"} />
+          <img src={ManualsIcon} alt="" className={"w-[100px] lg:w-[100px]"} />
         </div>
         <div className="flex flex-col gap-2">
           <h3 className={`${styles.heading3Manrope}`}>{item.title}</h3>
@@ -15,6 +14,8 @@ const SearchItemCard = ({ item }: { item: any }) => {
             <p className={`${styles.paragraph3} text-darkgrey`}>
               {item.description}
             </p>
+          ) : item?.text ? (
+            <p className={`${styles.paragraph3} text-darkgrey`}>{item.text}</p>
           ) : (
             <></>
           )}
@@ -25,7 +26,7 @@ const SearchItemCard = ({ item }: { item: any }) => {
           Application Deadline: {job.deadline}
         </p> */}
         <a
-          href={item?.link_url || item?.url}
+          href={item?.link_url || item?.url || item?.report_url}
           target="_blank"
           className="bg-secondary py-4 px-6 text-white flex items-center gap-4"
         >

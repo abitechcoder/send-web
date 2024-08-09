@@ -7,7 +7,8 @@ import {
   LivelihoodProjects,
   regions,
   Newsletters,
-  donationListings
+  donationListings,
+  AnnualReports,
 } from "../constants";
 
 export async function getDirectors() {
@@ -48,6 +49,10 @@ export async function getLivelihoodProject(id: number) {
 
 export async function getNewsLetters() {
   return Newsletters;
+}
+
+export async function getAnnualReports() {
+  return AnnualReports;
 }
 
 export async function getDonationDetails(id: number) {

@@ -5,15 +5,16 @@ import {
   SearchFiles,
   CustomerSupport,
 } from "../components";
-import { getJobs, getNewsLetters } from "../data";
+import { getAnnualReports, getJobs, getNewsLetters } from "../data";
 import { useLoaderData } from "react-router-dom";
 import { GeneralList } from "../types";
 
 export async function loader() {
   const jobs = await getJobs();
   const newsletters = await getNewsLetters();
+  const reports = await getAnnualReports();
 
-  const files = [...jobs, ...newsletters];
+  const files = [...jobs, ...newsletters, ...reports];
 
   return { files };
 }

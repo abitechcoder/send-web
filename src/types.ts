@@ -61,6 +61,7 @@ export interface Job {
   link_url?: string;
 }
 export interface AnnualReport {
+  id?: number;
   title: string;
   text: string;
   year: string;
@@ -109,29 +110,29 @@ export interface Admin {
   filter?: boolean;
   searchBar?: boolean;
   sortBy?: string;
-  placeholder?: string
+  placeholder?: string;
 }
 export interface partner {
-  partnerLogo: string
+  partnerLogo: string;
 }
 export interface Photo {
-  title: string
-  subtitle: string
+  title: string;
+  subtitle: string;
 }
 export interface Button3 {
-white?: boolean
-name: string
-py: number
-px: number
+  white?: boolean;
+  name: string;
+  py: number;
+  px: number;
 }
 export interface PhotoCard {
-  ImgURL?: boolean
-  description?: string
-  Video?: boolean
+  ImgURL?: boolean;
+  description?: string;
+  Video?: boolean;
 }
 
 export interface DonationListingType {
-  id: number,
-  title: string,
-  image: string,
+  id: number;
+  title: string;
+  image: string;
 }
