@@ -48,6 +48,7 @@ import {
   EducationDetails,
   GenderEqualityDetails,
   SearchPage,
+  PaymentStatus,
 } from "./pages";
 
 //Admin Dashboard Pages
@@ -144,6 +145,7 @@ function App() {
             loader={ClassificationLoader}
             element={<WorkWithUs />}
           />
+          <Route path="payment" element={<PaymentStatus />} />
           <Route path="search" loader={SearchLoader} element={<SearchPage />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact-us" element={<ContactPage />} />

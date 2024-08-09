@@ -50,12 +50,12 @@ const DonateListingInfo = () => {
       }
     }
 
-    if(!firstName || !lastName || !email || !phoneNumber) {
+    if (!firstName || !lastName || !email || !phoneNumber) {
       alert("Enter your personal information");
       return;
     }
 
-    const config = {
+    const config: any = {
       public_key: "FLWPUBK_TEST-edb96e87c83963dd56001427a970f30b-X",
       tx_ref: Date.now(),
       amount: amount,
@@ -67,9 +67,9 @@ const DonateListingInfo = () => {
         name: `${firstName} ${lastName}`,
       },
       customizations: {
-        title: "my Payment Title",
-        description: "Payment for items in cart",
-        logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+        title: "Donation payment",
+        description: "Little help can make a difference",
+        logo: "https://drive.google.com/file/d/1hts9HWQ2u2ar68JTLcs6b2l6tQb_E4YJ/view",
       },
     };
 
@@ -77,6 +77,7 @@ const DonateListingInfo = () => {
 
     handleFlutterPayment({
       callback: (response) => {
+        console.log("flutterwave:", response);
         closePaymentModal(); // this will close the modal programmatically
         setCustomAmount("");
         setEmail("");
@@ -206,7 +207,11 @@ const DonateListingInfo = () => {
               <div className="lg:col-span-2">
                 <FormInput
                   placeholder="Select Donation Amount"
-                  value={`${selectedDonation === "" ? "Select donation amount" : "$"+selectedDonation}`}
+                  value={`${
+                    selectedDonation === ""
+                      ? "Select donation amount"
+                      : "$" + selectedDonation
+                  }`}
                   disabled={true}
                 />
               </div>
@@ -225,13 +230,43 @@ const DonateListingInfo = () => {
           <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Details</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormInput value={firstName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setFirstName(e.target.value)} placeholder="First Name"  required={true}/>
-              <FormInput value={lastName} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setLastName(e.target.value)} placeholder="Last Name" required={true} />
-              <FormInput type="email" value={email} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setEmail(e.target.value)} placeholder="Your Email" required={true} />
-              <FormInput type="tel" value={phoneNumber} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPhoneNumber(e.target.value)} placeholder="Phone Number" required={true} />
+              <FormInput
+                value={firstName}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setFirstName(e.target.value)}
+                placeholder="First Name"
+                required={true}
+              />
+              <FormInput
+                value={lastName}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setLastName(e.target.value)}
+                placeholder="Last Name"
+                required={true}
+              />
+              <FormInput
+                type="email"
+                value={email}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setEmail(e.target.value)}
+                placeholder="Your Email"
+                required={true}
+              />
+              <FormInput
+                type="tel"
+                value={phoneNumber}
+                onChange={(e: {
+                  target: { value: React.SetStateAction<string> };
+                }) => setPhoneNumber(e.target.value)}
+                placeholder="Phone Number"
+                required={true}
+              />
             </div>
           </div>
-          <div className="grid gap-6">
+          {/* <div className="grid gap-6">
             <h3 className={`${styles.heading2Barlow}`}>Payment</h3>
             <RadioGroup defaultValue="paypal" className="flex gap-8">
               <div className="flex items-center space-x-2">
@@ -243,7 +278,7 @@ const DonateListingInfo = () => {
                 <Label htmlFor="virtual-account">Virtual Account</Label>
               </div>
             </RadioGroup>
-          </div>
+          </div> */}
           <button
             onClick={() => {
               makeDonation();
