@@ -1,3 +1,4 @@
+import { HeroBG } from "../assets";
 import {
   Header,
   ContactUs,
@@ -15,6 +16,7 @@ const Governance = () => {
         parent_link="Strategic Direction"
         child_link="Governance & Women Empowerment"
         title="Governance & Women Empowerment"
+        image={HeroBG}
       />
       <ProjectOverview
         banner_image="/src/assets/strategic-direction-2.jpg"

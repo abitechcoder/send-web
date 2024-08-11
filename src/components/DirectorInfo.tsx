@@ -22,21 +22,21 @@ const DirectorInfo = ({ director }: { director: Director | null }) => {
           className={`col-span-5 md:col-span-2 w-full h-[350px] lg:h-[400px]`}
         >
           <img
-            src={`/src/assets/${director?.image}`}
+            src={director?.image}
             className="object-cover object-center w-full h-full"
             alt=""
           />
         </div>
         <div className="hidden md:block w-full h-[350px] lg:h-[400px]">
           <img
-            src={`/src/assets/${director?.image}`}
+            src={director?.image}
             className="object-cover object-center w-full h-full"
             alt=""
           />
         </div>
         <div className="hidden md:block col-span-2 w-full h-[350px] lg:h-[400px]">
           <img
-            src={`/src/assets/${director?.image}`}
+            src={director?.image}
             className="object-cover object-center w-full h-full"
             alt=""
           />

@@ -1,3 +1,4 @@
+import { HeroBG } from "../assets";
 import { Header, ContactUs, Footer, InTheNews, CustomerSupport } from "../components";
 
 
@@ -8,6 +9,7 @@ const Newsletter = () => {
         parent_link="Publications"
         child_link="Newsletter"
         title="Newsletter"
+        image={HeroBG}
       />
       <InTheNews />
       <ContactUs />

@@ -10,7 +10,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
     <nav
       className={`${
         fill ? "bg-white" : "bg-transparent"
-      } flex justify-between lg:grid lg:grid-cols-[200px_1fr_150px] items-center gap-10 py-4 z-10`}
+      } flex justify-between lg:grid lg:grid-cols-[200px_1fr_150px] items-center gap-10 py-4 z-50`}
     >
       <NavLink to={"/"} className="hover:cursor-pointer">
         <img

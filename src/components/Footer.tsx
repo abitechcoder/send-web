@@ -1,17 +1,13 @@
-import { FooterArt, LogoWhite } from "../assets";
+import { LogoWhite } from "../assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <section>
-      <div className="bg-dark py-[40px] px-4 lg:px-[80px] lg:py-[80px] relative">
-        <img
-          src={FooterArt}
-          className="absolute top-0 left-0 z-0 h-full"
-          alt=""
-        />
+      <div className="bg-dark bg-[url('/src/assets/footer-art.png')] bg-no-repeat  py-[40px] px-4 lg:px-[80px] lg:py-[80px] relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-8">
           <div className="w-full grid place-items-center place-content-start md:place-items-start gap-4 lg:gap-8">
-            <img src={LogoWhite} className="h-[50px] lg:h-[70px]" alt="" />
+            <Link to={"/"}><img src={LogoWhite} className="h-[50px] lg:h-[70px]" alt="Logo Image" /></Link>
             <p
               className={`text-lightgrey text-center md:text-left text-xs lg:text-sm font-manrope `}
             >
@@ -94,81 +90,52 @@ const Footer = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8 font-manrope text-white">
               <div className="grid gap-3 place-content-start md:justify-center">
                 <h3 className="font-bold">Who We Are</h3>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                <Link to="/whoweare/corporate-identity" className="text-lightgrey lg:text-sm text-xs">
                   Corporate Identity
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/whoweare/evolution-of-send" className="text-lightgrey lg:text-sm text-xs">
                   Evolution of Send
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/whoweare/org-structure" className="text-lightgrey lg:text-sm text-xs">
                   Organization Structure
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/whoweare/mgt-team" className="text-lightgrey lg:text-sm text-xs">
                   Sen. Management Team
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/whoweare/board-of-directors" className="text-lightgrey lg:text-sm text-xs">
                   Board of Directors
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/whoweare/sierra-leone" className="text-lightgrey lg:text-sm text-xs">
                   Sierra Leone
-                </p>
+                </Link>
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:grid">
                 <h3 className="font-bold">Program Areas</h3>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                <Link to="/program-areas/sustainable-growth" className="text-lightgrey lg:text-sm text-xs">
                   Sustainable Growth
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/program-areas/health" className="text-lightgrey lg:text-sm text-xs">
                   Health, Nutrition & WaSH
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">Education</p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/program-areas/education" className="text-lightgrey lg:text-sm text-xs">Education</Link>
+                <Link to="/program-areas/gender-equality" className="text-lightgrey lg:text-sm text-xs">
                   Gender Equality
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                </Link>
+                <Link to="/program-areas/climate" className="text-lightgrey lg:text-sm text-xs">
                   Climate & Disaster Resilience
-                </p>
+                </Link>
               </div>
-              <div className="hidden md:flex md:flex-col gap-4 lg:hidden">
-                <div className="grid gap-3 place-content-start">
-                  <h3 className="font-bold">Strategic Direction</h3>
-                  <p className="text-lightgrey lg:text-sm text-xs">
-                    Health & Education
-                  </p>
-                  <p className="text-lightgrey lg:text-sm text-xs">
-                    Governance & Woman Empowerment
-                  </p>
-                  <p className="text-lightgrey lg:text-sm text-xs">
-                    Livelihood, Food & Nutrition Security
-                  </p>
-                </div>
-                <div className="grid gap-3 place-content-start">
-                  <h3 className="font-bold">Contact</h3>
-                  <p className="text-lightgrey lg:text-sm text-xs">
-                    +232 (0) 78 20 68 53
-                  </p>
-                  <p className="text-lightgrey lg:text-sm text-xs">
-                    info@sendsierraleone.com
-                  </p>
-                </div>
-              </div>
+              
               <div className="grid gap-3 place-content-start md:justify-center">
                 <h3 className="font-bold">Resources</h3>
-                <p className="text-lightgrey lg:text-sm text-xs">
+                <Link to="/publications/project-reports" className="text-lightgrey lg:text-sm text-xs">
                   Reports on Projects
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">Newsletters</p>
-                <p className="text-lightgrey lg:text-sm text-xs">Manual</p>
-                <p className="text-lightgrey lg:text-sm text-xs">Gallery</p>
+                </Link>
+                <Link to="/publications/newsletter" className="text-lightgrey lg:text-sm text-xs">Newsletters</Link>
+                <Link to="/publications/manual-and-profiles" className="text-lightgrey lg:text-sm text-xs">Manual & Profiles</Link>
+                <Link to="/publications/case-stories" className="text-lightgrey lg:text-sm text-xs">Gallery</Link>
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:block">
-                {/* <h3 className="font-bold lg:mb-3">Contact</h3>
-                <p className="text-lightgrey lg:text-sm text-xs">
-                  +232 (0) 78 20 68 53
-                </p>
-                <p className="text-lightgrey lg:text-sm text-xs">
-                  info@sendsierraleone.com
-                </p> */}
                 <h3 className="font-bold lg:mb-3">District Offices</h3>
                 <div className="mt-3">
                   <div>

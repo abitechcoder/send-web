@@ -34,27 +34,27 @@ const TrainingManuals = () => {
           <div className="w-full md:w-[450px] mx-auto mt-8">
             <TrainingManualsCard
               text="VSLA Manual"
-              pdf_url="https://www.sendsierraleone.com/Assets/documents/vsla%20manual.pdf"
+              pdf_url="https://sendv2.sendsierraleone.com/documents/vsla%20manual.pdf"
             />
             <hr />
             <TrainingManualsCard
               text="Women Leaders Manual"
-              pdf_url="https://www.sendsierraleone.com/Assets/documents/manual.pdf"
+              pdf_url="https://sendv2.sendsierraleone.com/documents/manual.pdf"
             />
             <hr />
             <TrainingManualsCard
               text="Health & Hygiene Manual"
-              pdf_url="https://www.sendsierraleone.com/Assets/documents/Health%20and%20Hygiene%20Manual%20Final%20Design.pdf"
+              pdf_url="https://sendv2.sendsierraleone.com/documents/Health%20and%20Hygiene%20Manual%20Final%20Design.pdf"
             />
             <hr />
             <TrainingManualsCard
               text="Food & Nutrition Manual"
-              pdf_url="https://www.sendsierraleone.com/Assets/documents/food%20and%20nutrision%20manual.pdf"
+              pdf_url="https://sendv2.sendsierraleone.com/documents/food%20and%20nutrision%20manual.pdf"
             />
             <hr />
             <TrainingManualsCard
               text="Gender Model Family Manual"
-              pdf_url="https://www.sendsierraleone.com/Assets/documents/GMF%20MANUAL%20for%20SEND%20final.pdf"
+              pdf_url="https://sendv2.sendsierraleone.com/documents/GMF%20MANUAL%20for%20SEND%20final.pdf"
             />
           </div>
         </div>

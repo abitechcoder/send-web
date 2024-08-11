@@ -3,6 +3,7 @@ import styles from "../styles";
 import { BlueProgress } from "@/components/ui/blue-progress";
 import { Link } from "react-router-dom";
 import { DonationListingType } from "../types";
+import { ProgramCardArt } from "../assets";
 
 const DonateListingCard = ({
   id,
@@ -26,7 +27,7 @@ const DonateListingCard = ({
         <div className="p-4 md:p-8 h-full relative flex flex-col gap-4">
           <div className="absolute top-0 right-0 h-full w-[50%]">
             <img
-              src="/src/assets/program-card-art.png"
+              src={ProgramCardArt}
               className="h-[60%] w-full"
               alt=""
             />

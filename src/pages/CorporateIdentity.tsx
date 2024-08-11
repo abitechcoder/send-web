@@ -1,18 +1,33 @@
-import { Header, StrategicPlan, CorporateSection, VisionAndMission, CoreValue, Principles, ContactUs, Footer, CustomerSupport } from "../components";
-
+import {
+  Header,
+  StrategicPlan,
+  CorporateSection,
+  VisionAndMission,
+  CoreValue,
+  Principles,
+  ContactUs,
+  Footer,
+  CustomerSupport,
+} from "../components";
+import { HeroBG } from "../assets";
 
 const CorporateIdentity = () => {
   return (
     <main className="h-full relative">
-      <Header parent_link="Who We Are" child_link="Corporate Identity" title="Corporate Identity" />
-      <StrategicPlan/>
-      <CorporateSection/>
-      <VisionAndMission/>
-      <CoreValue/>
-      <Principles/>
+      <Header
+        parent_link="Who We Are"
+        child_link="Corporate Identity"
+        title="Corporate Identity"
+        image={HeroBG}
+      />
+      <StrategicPlan />
+      <CorporateSection />
+      <VisionAndMission />
+      <CoreValue />
+      <Principles />
       <ContactUs />
-      <Footer/>
-      <CustomerSupport/>
+      <Footer />
+      <CustomerSupport />
     </main>
   );
 };

@@ -1,3 +1,4 @@
+import { HeroBG } from "../assets";
 import {
   Header,
   ContactUs,
@@ -13,6 +14,7 @@ const SierraLeone = () => {
         parent_link="Who We Are"
         child_link="About Sierra Leone"
         title="About Sierra Leone"
+        image={HeroBG}
       />
       <SierraLeoneHistory />
       <ContactUs />

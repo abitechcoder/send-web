@@ -8,6 +8,7 @@ import {
 import { getDirectors } from "../data";
 import { useLoaderData } from "react-router-dom";
 import { Director } from "../types";
+import { HeroBG } from "../assets";
 
 export async function loader() {
   const directors = await getDirectors();
@@ -22,6 +23,7 @@ const BoardOfDirectors = () => {
         parent_link="Who We Are"
         child_link="Board of Directors"
         title="Board of Directors"
+        image={HeroBG}
       />
       <Directors directors={directors} />
       <ContactUs />

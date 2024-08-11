@@ -8,6 +8,7 @@ import {
 import { getAnnualReports, getJobs, getNewsLetters } from "../data";
 import { useLoaderData } from "react-router-dom";
 import { GeneralList } from "../types";
+import { HeroBG } from "../assets";
 
 export async function loader() {
   const jobs = await getJobs();
@@ -25,7 +26,7 @@ const Search = () => {
   console.log("All Files:", files);
   return (
     <main className="h-full relative">
-      <Header parent_link="Home" child_link="Search" title="Search" />
+      <Header parent_link="Home" child_link="Search" title="Search" image={HeroBG}/>
       <SearchFiles files={files} />
       <ContactUs />
       <Footer />

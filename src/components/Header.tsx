@@ -5,7 +5,7 @@ const Header = ({
   parent_link,
   child_link,
   title,
-  image="/src/assets/hero-bg.png",
+  image,
 }: {
   parent_link: string;
   child_link: string;

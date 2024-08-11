@@ -1,3 +1,4 @@
+import { ProgramCardArt } from "../assets";
 import styles from "../styles";
 
 const GalleryCard = ({
@@ -20,7 +21,7 @@ const GalleryCard = ({
         <div className="grid grid-cols-1 place-content-center px-4 h-full relative">
           <div className="absolute top-0 right-0 h-full w-[50%]">
             <img
-              src="/src/assets/program-card-art.png"
+              src={ProgramCardArt}
               className="h-full w-full"
               alt=""
             />

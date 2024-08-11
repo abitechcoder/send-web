@@ -1,3 +1,4 @@
+import { HeroBG } from "../assets";
 import {
   Header,
   ContactUs,
@@ -21,6 +22,7 @@ const GenderEqualityDetails = () => {
         parent_link="Program Areas"
         child_link="Gender Equality"
         title="Gender Equality"
+        image={HeroBG}
       />
       <GWEContent project={project}/>
       <ContactUs />

@@ -8,6 +8,7 @@ import {
 import { getJobClassification, getJobs, getRegions } from "../data";
 import { useLoaderData } from "react-router-dom";
 import { GeneralList } from "../types";
+import { HeroBG } from "../assets";
 
 export async function loader() {
   const jobClassifications = await getJobClassification();
@@ -26,6 +27,7 @@ const Gallery = () => {
         parent_link="Home"
         child_link="Work With Us"
         title="Work With Us"
+        image={HeroBG}
       />
       <SearchJobs
         regions={regions}

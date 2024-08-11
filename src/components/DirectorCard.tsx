@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../styles";
+import { DirectorCardTriangleArt } from "../assets";
 
 const DirectorCard = ({
   id,
@@ -26,7 +27,7 @@ const DirectorCard = ({
         <div className="grid grid-cols-[1fr_45px] place-content-center px-4 h-full relative">
           <div className="absolute top-0 right-0 h-full w-[80px]">
             <img
-              src="/src/assets/director-card-triangle-art.png"
+              src={DirectorCardTriangleArt}
               className="h-full w-full"
               alt=""
             />

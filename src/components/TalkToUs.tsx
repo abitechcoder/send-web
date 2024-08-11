@@ -1,3 +1,4 @@
+import { CustomerServiceIcon, MapIcon, ProgramCardArt } from "../assets";
 import { styles, layout } from "../styles";
 import ContactFormInput from "./ContactFormInput";
 
@@ -73,7 +74,7 @@ const TalkToUs = () => {
         <div className="p-4 md:p-8 lg:px-[50px] lg:py-[30px] relative">
           <div className="absolute right-0 bottom-0 w-[50%] h-[50%]">
             <img
-              src="/src/assets/program-card-art.png"
+              src={ProgramCardArt}
               className="h-full w-full"
               alt=""
             />
@@ -89,7 +90,7 @@ const TalkToUs = () => {
             </div>
             <div>
               <img
-                src="/src/assets/map-icon.png"
+                src={MapIcon}
                 className="w-[50px] h-[50px] z-30"
                 alt="Map icon"
               />
@@ -104,7 +105,7 @@ const TalkToUs = () => {
         <div className="p-4 md:p-8 lg:px-[50px] lg:py-[30px] relative">
           <div className="absolute right-0 bottom-0 w-[50%] h-[50%]">
             <img
-              src="/src/assets/program-card-art.png"
+              src={ProgramCardArt}
               className="h-full w-full"
               alt=""
             />
@@ -120,9 +121,9 @@ const TalkToUs = () => {
             </div>
             <div>
               <img
-                src="/src/assets/customer-service-icon.png"
+                src={CustomerServiceIcon}
                 className="w-[50px] h-[50px] z-30"
-                alt="Map icon"
+                alt="Customer Support icon"
               />
             </div>
           </div>

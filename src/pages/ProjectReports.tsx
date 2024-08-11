@@ -1,3 +1,4 @@
+import { HeroBG } from "../assets";
 import {
   Header,
   ContactUs,
@@ -14,6 +15,7 @@ const ProjectReports = () => {
         parent_link="Publications"
         child_link="Report On Project"
         title="Report On Project"
+        image={HeroBG}
       />
       <ReportsOnProject />
       <OurPrograms />
