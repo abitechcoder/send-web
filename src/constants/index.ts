@@ -1,4 +1,61 @@
-import { CardImage1, CardImage2, CardImage3, Lucy, Siapha, Marion, CountryDirector, Jean, Sheku, Fatmata, NewsImage1, NewsImage2, NewsImage3, NewsImage4, NewsImage5, NewsImage6, NewsImage7, NewsImage8, NewsImage9, NewsImage10, NewsImage11, ManualImage1, ManualImage2, ManualImage3, ManualImage4, ManualImage5, ManualImage6, ManualImage7, ManualImage8, ManualImage9, ManualImage10, ManualImage11, ProfileManualImage1, ProfileManualImage2, HeroImage, HappyCommunity, DonateListingImage, ProblemImage1, ProblemImage2, ProblemImage3, ProblemImage4, HangingDrip, Women, IgnitingWomen, Kailahun, ImprovedImage, PromotingResilience, CitizenWash, ClimateChange } from "../assets";
+import {
+  CardImage1,
+  CardImage2,
+  CardImage3,
+  Lucy,
+  Siapha,
+  Marion,
+  CountryDirector,
+  Jean,
+  Sheku,
+  Fatmata,
+  NewsImage1,
+  NewsImage2,
+  NewsImage3,
+  NewsImage4,
+  NewsImage5,
+  NewsImage6,
+  NewsImage7,
+  NewsImage8,
+  NewsImage9,
+  NewsImage10,
+  NewsImage11,
+  ManualImage1,
+  ManualImage2,
+  ManualImage3,
+  ManualImage4,
+  ManualImage5,
+  ManualImage6,
+  ManualImage7,
+  ManualImage8,
+  ManualImage9,
+  ManualImage10,
+  ManualImage11,
+  ProfileManualImage1,
+  ProfileManualImage2,
+  HeroImage,
+  HappyCommunity,
+  DonateListingImage,
+  ProblemImage1,
+  ProblemImage2,
+  ProblemImage3,
+  ProblemImage4,
+  HangingDrip,
+  Women,
+  IgnitingWomen,
+  Kailahun,
+  ImprovedImage,
+  PromotingResilience,
+  CitizenWash,
+  ClimateChange,
+  Rebecca,
+  Gbotima,
+  Ramatu,
+  Alice,
+  Assiatu,
+  Christiana,
+  Margaret,
+} from "../assets";
 import {
   Director,
   Link,
@@ -12,6 +69,7 @@ import {
   ProfileManual,
   StrategicProjectType,
   DonationListingType,
+  CaseStoryType,
 } from "../types";
 
 export const links: Link[] = [
@@ -419,7 +477,8 @@ export const jobs: Job[] = [
     deadline: "25 October 2023",
     classification: "5",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/TOR%20-%20Programs%20Intern.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/TOR%20-%20Programs%20Intern.pdf",
   },
   {
     id: 9,
@@ -429,7 +488,8 @@ export const jobs: Job[] = [
     deadline: "25 October 2023",
     classification: "5",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 12,
@@ -460,7 +520,8 @@ export const jobs: Job[] = [
     deadline: " 16 June 2023",
     classification: "1",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
   },
   {
     id: 16,
@@ -470,8 +531,7 @@ export const jobs: Job[] = [
     deadline: "5 June 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/ITTutorPewless.pdf",
+    link_url: "https://sendv2.sendsierraleone.com/documents/ITTutorPewless.pdf",
   },
   {
     id: 17,
@@ -492,7 +552,8 @@ export const jobs: Job[] = [
     deadline: "20 May 2023",
     classification: "3",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/Office%20AssistantFreetown.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Office%20AssistantFreetown.pdf",
   },
   {
     id: 19,
@@ -502,7 +563,8 @@ export const jobs: Job[] = [
     deadline: "20 May 2023",
     classification: "3",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/Solar%20Technician.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Solar%20Technician.pdf",
   },
   {
     id: 20,
@@ -567,7 +629,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 26,
@@ -577,7 +640,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectofficerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectofficerjd.pdf",
   },
   {
     id: 27,
@@ -597,7 +661,8 @@ export const jobs: Job[] = [
     deadline: "30 January 2023",
     classification: "4",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/cdccfeasibility.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/cdccfeasibility.pdf",
   },
   {
     id: 29,
@@ -617,7 +682,8 @@ export const jobs: Job[] = [
     deadline: " 25 December 2022",
     classification: "1",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/financedirectorad.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/financedirectorad.pdf",
   },
   {
     id: 31,
@@ -627,7 +693,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 32,
@@ -657,7 +724,8 @@ export const jobs: Job[] = [
     deadline: "14 February 2022",
     classification: "1",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 35,
@@ -667,7 +735,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 36,
@@ -677,8 +746,7 @@ export const jobs: Job[] = [
     deadline: "19 January 2022",
     classification: "1",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/WASHAdvisorjob.pdf",
+    link_url: "https://sendv2.sendsierraleone.com/documents/WASHAdvisorjob.pdf",
   },
   {
     id: 37,
@@ -688,7 +756,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 38,
@@ -698,7 +767,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 40,
@@ -718,7 +788,8 @@ export const jobs: Job[] = [
     deadline: "26 July, 2021",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 42,
@@ -750,7 +821,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 45,
@@ -771,7 +843,8 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 47,
@@ -966,21 +1039,24 @@ export const AnnualReports: AnnualReport[] = [
     title: "Report 05",
     text: "SEND SL Annual",
     year: "Report 2021",
-    report_url: "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202021.pdf",
+    report_url:
+      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202021.pdf",
   },
   {
     id: 6,
     title: "Report 06",
     text: "SEND SL Annual",
     year: "Report 2022",
-    report_url: "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202022.pdf",
+    report_url:
+      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202022.pdf",
   },
   {
     id: 7,
     title: "Report 07",
     text: "SEND SL Annual",
     year: "Report 2023",
-    report_url: "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202023%20web.pdf",
+    report_url:
+      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202023%20web.pdf",
   },
 ];
 
@@ -1446,17 +1522,20 @@ export const ProfileManuals: ProfileManual[] = [
   {
     id: 1,
     image: ManualImage1,
-    link_url: "https://sendv2.sendsierraleone.com/documents/Women%20Manifesto%20Final.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Women%20Manifesto%20Final.pdf",
   },
   {
     id: 2,
     image: ManualImage2,
-    link_url: "https://sendv2.sendsierraleone.com/documents/Advocacy%20Strategy%20Document.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Advocacy%20Strategy%20Document.pdf",
   },
   {
     id: 3,
     image: ManualImage3,
-    link_url: "https://sendv2.sendsierraleone.com/documents/womencandidatestrainingmanual.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/womencandidatestrainingmanual.pdf",
   },
   {
     id: 4,
@@ -1472,14 +1551,12 @@ export const ProfileManuals: ProfileManual[] = [
   {
     id: 6,
     image: ManualImage6,
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/GTA%20Final.pdf",
+    link_url: "https://sendv2.sendsierraleone.com/documents/GTA%20Final.pdf",
   },
   {
     id: 7,
     image: ManualImage7,
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/vsla%20manual.pdf",
+    link_url: "https://sendv2.sendsierraleone.com/documents/vsla%20manual.pdf",
   },
   {
     id: 8,
@@ -1507,7 +1584,8 @@ export const ProfileManuals: ProfileManual[] = [
   {
     id: 12,
     image: ProfileManualImage1,
-    link_url: "https://sendv2.sendsierraleone.com/documents/Climate%20Profile%20.pdf",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Climate%20Profile%20.pdf",
   },
   {
     id: 13,
@@ -1532,5 +1610,67 @@ export const donationListings: DonationListingType[] = [
     id: 3,
     title: "little help can make a big difference",
     image: HeroImage,
+  },
+];
+
+export const CaseStories: CaseStoryType[] = [
+  {
+    id: 1,
+    name: "Rebecca Jimmy",
+    image: Rebecca,
+    title: "REBECCA JIMMY YAMBASU’S JOURNEY TO LEADERSHIP",
+    text: "Rebecca’s journey has touched many, especially young girls. Her story is not just one of personal triumph but a defining moment showcasing the power of perseverance, courage, and the firm belief in the possibility of a better tomorrow. Jimmy Yambasu has shattered stereotypes and paved the way for a more inclusive and equitable society in Kono District.",
+    date: "2024-05-12",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Rebecca%20Jimmy.pdf",
+  },
+  {
+    id: 2,
+    name: "Gbotima AND Sinava",
+    image: Gbotima,
+    title: "THE INSPIRING JOURNEY OF GBOTIMA AND SINAVA VSLA GROUPS",
+    text: "The story of the Gbotima and Sinava VSLA groups is one of triumph over adversity, unity in diversity, and women empowering themselves and their communities. It is a story that inspires, uplifts, and reaffirms the boundeless potential of collective action in creating a better tomorrow.",
+    date: "2024-05-12",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case%20Story_VSLA%20group.pdf",
+  },
+  {
+    id: 3,
+    name: "Ramatu",
+    image: Ramatu,
+    title: "RISING FROM THE ASHES: RAMATU’S JOURNEY OF EMPOWERMENT",
+    text: "Ramatu’s journey began with a deep sense of purpose rooted in her personal experiences and the challenges she witnessed around her. Despite surviving a difficult first marriage, she refused to be defined by her circumstances. Instead, she channelled her energy into advocating for those who needed a voice the most: girls and women.",
+    date: "2024-05-12",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Ramatu.pdf",
+  },
+  {
+    id: 4,
+    name: "Margaret",
+    image: Margaret,
+    title: "THE YOUNGEST COUNCILOR IN SIERRA LEONE",
+    text: "Margret’s future seemed confined to subsistence farming. Despite these challenges, she completed her West African Senior School Certificate Examination in 2021 at the age of 20. That same year, Margret was recruited by SEND Sierra Leone, an NGO supported by the Irish Embassy in Sierra Leone, to participate in the More Than A Woman project aimed at supporting women’s participation in politics and decision-making processes in Bonthe District.",
+    date: "2024-05-12",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Margret.pdf",
+  },
+  {
+    id: 5,
+    name: "Assiatu Conteh",
+    image: Assiatu,
+    title:
+      "CHAMPIONING WOMEN’S LEADERSHIP AND COMMUNITY DEVELOPMENT BONTHE DISTRICT CHAIRPERSON’S ENDURING LEGACY",
+    text: "Assiatu Conteh’s journey from Bonthe to the United Kingdom and back to her roots is a testament to her resilience and determination. Born and raised in Bonthe, Assiatu pursued education and opportunities abroad, yet remained deeply connected to her homeland. Her return in 2023 was marked by a commitment to transforming her community, particularly by empowering women and addressing the challenges of poverty and inadequate infrastructure is seen as a pinnacle of leadership.",
+    date: "2024-05-12",
+    link_url: "https://sendv2.sendsierraleone.com/documents/",
+  },
+  {
+    id: 6,
+    name: "Christiana Yamba",
+    image: Christiana,
+    title: "RESILIENCE IN ADVERSITY: THE JOURNEY OF CHRISTIANA YAMBA",
+    text: "Christiana Yamba, a 24-year-old member of the Chochendeh VSLA group in Jiama Nimikoro Chiefdom, Kono District, was born into poverty. Growing up with a single mother who struggled to make ends meet, Christiana’s education was cut short in class two because her mother could not afford the school fees and necessar learning materials. Forced to drop out of school, she joined her family members in farming. Despite these hardships, a flicker of hope burned within her youthful heart.",
+    date: "2024-05-12",
+    link_url: "https://sendv2.sendsierraleone.com/documents/",
   },
 ];

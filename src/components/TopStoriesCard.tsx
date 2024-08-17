@@ -1,30 +1,35 @@
 import styles from "../styles";
 import { StarGroup, Avatar } from "../assets";
 
-const TopStoriesCard = () => {
+const TopStoriesCard = ({
+  name,
+  text,
+  image,
+}: {
+  name: string;
+  text: string;
+  image: string;
+}) => {
   return (
-    <div className="relative bg-white w-[320px] lg:w-[350px] rounded-xl py-4 px-6 flex flex-col gap-4">
+    <div className="relative bg-white w-[320px] lg:w-[350px] min-h-[400px] rounded-xl py-4 px-6 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <div className="bg-black h-[60px] w-[60px] rounded-full">
-          <img src={Avatar} className="object-cover w-full h-full" alt="" />
+          <img
+            src={image}
+            className="object-cover w-full h-full rounded-full"
+            alt=""
+          />
         </div>
         <div className="flex flex-col gap-1">
           <h3 className={`${styles.paragraph2} font-bold text-secondary`}>
-            Kiyotaka Ayanakoji
+            {name}
           </h3>
           <p className={`${styles.paragraph3}`}>Project</p>
         </div>
       </div>
       <div>
         <h2 className={`${styles.paragraph2} font-bold mb-2`}>Case Studies</h2>
-        <p className={styles.paragraph3}>
-          The WISE project has instilled pride in all of us. We are a registered
-          group that is recognised legally by the council with the help of SEND
-          Sierra Leone. The creation and ownership of bank accounts to help
-          manage the money we receive from SEND and earn from our businesses has
-          exposed us to banking and this is helping us manage our finances
-          better.
-        </p>
+        <p className={styles.paragraph3}>{text}</p>
       </div>
       <img src={StarGroup} className="absolute h-6 top-4 -right-2" alt="" />
       <svg

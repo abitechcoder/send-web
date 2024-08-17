@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TopStoriesCard from "./TopStoriesCard";
+import { CaseStories } from "../constants";
 
 const TopStoriesSlider = () => {
   var settings = {
@@ -35,11 +36,13 @@ const TopStoriesSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
-      <TopStoriesCard />
+        {CaseStories.map((story) => (
+          <TopStoriesCard
+            name={story.name}
+            text={story.text}
+            image={story.image}
+          />
+        ))}
       </Slider>
     </div>
   );

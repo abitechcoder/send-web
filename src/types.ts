@@ -136,3 +136,13 @@ export interface DonationListingType {
   title: string;
   image: string;
 }
+
+export interface CaseStoryType {
+  id: number;
+  name: string;
+  image: string;
+  title: string;
+  text: string;
+  date: string;
+  link_url: string;
+}

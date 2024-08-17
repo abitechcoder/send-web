@@ -1,3 +1,4 @@
+import { CaseStories } from "../constants";
 import { styles, layout } from "../styles";
 import CaseStoryCard from "./CaseStoryCard";
 
@@ -25,18 +26,15 @@ const ProjectCaseStories = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        <CaseStoryCard
-          title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="/src/assets/case-story-image.png"
-        />
-        <CaseStoryCard
-          title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="/src/assets/case-story-image.png"
-        />
-        <CaseStoryCard
-          title="Defying Stereotypes: The Empowering Spirit of Shadiatu"
-          image="/src/assets/case-story-image.png"
-        />
+        {CaseStories.map((story) => (
+          <CaseStoryCard
+            key={story.id}
+            title={story.title}
+            image={story.image}
+            text={story.text}
+            date={story.date}
+          />
+        ))}
       </div>
     </section>
   );
