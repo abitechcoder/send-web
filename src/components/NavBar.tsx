@@ -21,7 +21,7 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
       <NavBarLinks fill={fill} isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex items-center justify-between gap-8 lg:gap-0">
-        <Link to={"/donate"} target="_blank">
+        <Link to={"/donate"}>
           <div className="py-[10px] px-[20px] bg-secondary text-white hidden lg:block">
             Donate
           </div>

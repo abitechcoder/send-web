@@ -5,7 +5,6 @@ const Button = ({ text, url }: { text: string; url: string }) => {
   return (
     <Link
       to={url}
-      target="_blank"
       className={`${styles.flexCenter} gap-2 bg-secondary py-3 px-6 justify-self-start`}
     >
       <span className="text-white">{text}</span>
