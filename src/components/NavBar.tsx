@@ -1,10 +1,9 @@
 import { Logo, LogoWhite } from "../assets";
 import NavBarLinks from "./NavBarLinks";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const NavBar = ({ fill = true }: { fill?: boolean }) => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav
@@ -22,12 +21,11 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
       <NavBarLinks fill={fill} isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex items-center justify-between gap-8 lg:gap-0">
-        <button
-          className="py-[10px] px-[20px] bg-secondary text-white hidden lg:block"
-          onClick={() => navigate("/donate")}
-        >
-          Donate
-        </button>
+        <Link to={"/donate"} target="_blank">
+          <div className="py-[10px] px-[20px] bg-secondary text-white hidden lg:block">
+            Donate
+          </div>
+        </Link>
 
         <NavLink to="/search">
           <svg

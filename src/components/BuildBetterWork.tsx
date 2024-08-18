@@ -22,11 +22,7 @@ const BuildBetterWork = () => {
               alt=""
             />
           </div>
-          <BetterWorkCard
-            title="100k"
-            subtitle="Beneficiaries 
-supported"
-          />
+          <BetterWorkCard title="100k" subtitle="Beneficiaries supported" />
         </div>
         <div className="md:col-span-2 flex flex-col gap-8">
           <div
@@ -41,11 +37,11 @@ supported"
           <div className="flex flex-col gap-2 md:gap-0 md:flex-row md:justify-between">
             <BetterWorkCard title="2038" subtitle="Communities reached" />
             <div className="flex justify-end">
-            <BetterWorkCard
-              title="15"
-              subtitle="Operational 
+              <BetterWorkCard
+                title="15"
+                subtitle="Operational 
 Districts"
-            />
+              />
             </div>
           </div>
         </div>
@@ -57,7 +53,7 @@ Districts"
           governance ,food and nutrition security as well as equal opportunities
           for men and women to thrive.
         </p>
-        <Button text="Donate Now" url="/" />
+        <Button text="Donate Now" url="/donate" />
       </div>
     </section>
   );
