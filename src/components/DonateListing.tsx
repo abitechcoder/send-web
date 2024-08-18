@@ -21,11 +21,11 @@ const DonateListing = () => {
         <p
           className={`w-full text-center mx-auto text-black ${styles.paragraph2}`}
         >
-          Explore all our amazing project Images & Videos.
+          Explore all our donation listings.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
         {donationListings.map((donation) => (
           <DonateListingCard
             key={donation.id}
@@ -34,7 +34,7 @@ const DonateListing = () => {
             image={donation.image}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };
