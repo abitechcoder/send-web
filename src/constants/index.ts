@@ -55,6 +55,14 @@ import {
   Assiatu,
   Christiana,
   Margaret,
+  CEO,
+  FinanceDirector,
+  Brima,
+  Zainab,
+  Allieu,
+  Lillian,
+  Tity,
+  Seibatu,
 } from "../assets";
 import {
   Director,
@@ -70,6 +78,7 @@ import {
   StrategicProjectType,
   DonationListingType,
   CaseStoryType,
+  SMgtTeamType,
 } from "../types";
 
 export const links: Link[] = [
@@ -1662,7 +1671,8 @@ export const CaseStories: CaseStoryType[] = [
       "CHAMPIONING WOMEN’S LEADERSHIP AND COMMUNITY DEVELOPMENT BONTHE DISTRICT CHAIRPERSON’S ENDURING LEGACY",
     text: "Assiatu Conteh’s journey from Bonthe to the United Kingdom and back to her roots is a testament to her resilience and determination. Born and raised in Bonthe, Assiatu pursued education and opportunities abroad, yet remained deeply connected to her homeland. Her return in 2023 was marked by a commitment to transforming her community, particularly by empowering women and addressing the challenges of poverty and inadequate infrastructure is seen as a pinnacle of leadership.",
     date: "2024-05-12",
-    link_url: "https://sendv2.sendsierraleone.com/documents/",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case_Story_Bonth_District_Chairperson.pdf",
   },
   {
     id: 6,
@@ -1671,6 +1681,64 @@ export const CaseStories: CaseStoryType[] = [
     title: "RESILIENCE IN ADVERSITY: THE JOURNEY OF CHRISTIANA YAMBA",
     text: "Christiana Yamba, a 24-year-old member of the Chochendeh VSLA group in Jiama Nimikoro Chiefdom, Kono District, was born into poverty. Growing up with a single mother who struggled to make ends meet, Christiana’s education was cut short in class two because her mother could not afford the school fees and necessar learning materials. Forced to drop out of school, she joined her family members in farming. Despite these hardships, a flicker of hope burned within her youthful heart.",
     date: "2024-05-12",
-    link_url: "https://sendv2.sendsierraleone.com/documents/",
+    link_url:
+      "https://sendv2.sendsierraleone.com/documents/Case_Story_Christiana.pdf",
+  },
+];
+
+export const SMgtTeam: SMgtTeamType[] = [
+  {
+    id: 1,
+    name: "Joseph Ayamga",
+    title: "Country Director",
+    image: CountryDirector,
+  },
+  {
+    id: 2,
+    name: "Siapha Kamara",
+    title: "CEO of SEND West Africa",
+    image: CEO,
+  },
+  {
+    id: 3,
+    name: "Agnes Bockarie",
+    title: "Finance Director",
+    image: FinanceDirector,
+  },
+  {
+    id: 4,
+    name: "Brima Mansaray",
+    title: "Head of Program-Gender",
+    image: Brima,
+  },
+  {
+    id: 5,
+    name: "Zainab Juma Jusu",
+    title: "Business Development and Compliance Manager",
+    image: Zainab,
+  },
+  {
+    id: 6,
+    name: "Allieu Marrah",
+    title: "Head of Program-Education",
+    image: Allieu,
+  },
+  {
+    id: 7,
+    name: "Lillian Sesay",
+    title: "Human Resource Manager",
+    image: Lillian,
+  },
+  {
+    id: 8,
+    name: "Tity Simbo Kamara",
+    title: "Head of Program-Climate & Disaster Resilience",
+    image: Tity,
+  },
+  {
+    id: 9,
+    name: "Seibatu Kuyateh",
+    title: "Head of Procurement and Logistics",
+    image: Seibatu,
   },
 ];

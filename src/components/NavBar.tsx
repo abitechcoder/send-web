@@ -23,13 +23,13 @@ const NavBar = ({ fill = true }: { fill?: boolean }) => {
 
       <div className="flex items-center justify-between gap-8 lg:gap-0">
         <button
-          className="py-[10px] px-[20px] bg-secondary text-white"
+          className="py-[10px] px-[20px] bg-secondary text-white hidden lg:block"
           onClick={() => navigate("/donate")}
         >
           Donate
         </button>
 
-        <NavLink to="/search" className="hidden lg:block">
+        <NavLink to="/search">
           <svg
             width="24"
             height="24"

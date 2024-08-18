@@ -146,3 +146,10 @@ export interface CaseStoryType {
   date: string;
   link_url: string;
 }
+
+export interface SMgtTeamType {
+  id?: number;
+  name: string;
+  title: string;
+  image: string;
+}

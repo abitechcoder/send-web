@@ -1,15 +1,17 @@
 import { styles, layout } from "../styles";
 import TeamCard from "./TeamCard";
 import { CountryDirector, FinanceDirector, CEO } from "../assets";
+import { SMgtTeam } from "../constants";
+import { SMgtTeamType } from "../types";
 
 const SeniorMgtTeam = () => {
   return (
-    <section className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}>
+    <section
+      className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
+    >
       <div className="grid gap-4">
         <div>
-          <h2
-            className={`${styles.heading3} text-secondary text-center`}
-          >
+          <h2 className={`${styles.heading3} text-secondary text-center`}>
             Who We Are
           </h2>
           <h2
@@ -31,9 +33,14 @@ const SeniorMgtTeam = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
-        <TeamCard name="Joseph Ayamga" title="Country Director" image={CountryDirector}/>
-        <TeamCard name="Siapha Kamara" title="CEO of SEND West Africa" image={CEO} />
-        <TeamCard name="Agnes Bockarie" title="Finance Director" image={FinanceDirector} />
+        {SMgtTeam.map((team: SMgtTeamType) => (
+          <TeamCard
+            key={team.id}
+            name={team.name}
+            title={team.title}
+            image={team.image}
+          />
+        ))}
       </div>
     </section>
   );

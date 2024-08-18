@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "../styles";
 import moment from "moment";
 
@@ -6,11 +7,13 @@ const CaseStoryCard = ({
   image,
   text,
   date,
+  linkUrl,
 }: {
   title: string;
   image?: string;
   text: string;
   date: string;
+  linkUrl: string;
 }) => {
   return (
     <div className={`w-full bg-white`}>
@@ -34,24 +37,26 @@ const CaseStoryCard = ({
           {title}
         </h2>
         <p className={`${styles.paragraph3}`}>{text}</p>
-        <div className="bg-lightgrey px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
-          <p className={`${styles.paragraph3}`}>Read More</p>
-          <svg
-            width="8"
-            height="13"
-            viewBox="0 0 8 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 0.9375L7 6.9375L1 12.9375"
-              stroke="#141414"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
+        <Link target="_blank" to={linkUrl}>
+          <div className="bg-lightgrey px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
+            <p className={`${styles.paragraph3}`}>Read More</p>
+            <svg
+              width="8"
+              height="13"
+              viewBox="0 0 8 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 0.9375L7 6.9375L1 12.9375"
+                stroke="#141414"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </Link>
       </div>
     </div>
   );

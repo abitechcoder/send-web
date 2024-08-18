@@ -26,11 +26,10 @@ const NavBarLinks = ({
       } lg:flex lg:items-center lg:justify-around`}
     >
       <div className="lg:hidden flex items-center justify-between">
-        <img
-          src={Logo}
-          alt="Logo Image"
-          className="h-[50px] lg:h-[70px]"
-        />
+        <NavLink to={"/"}>
+          <img src={Logo} alt="Logo Image" className="h-[50px] lg:h-[70px]" />
+        </NavLink>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"

@@ -33,6 +33,7 @@ const ProjectCaseStories = () => {
             image={story.image}
             text={story.text}
             date={story.date}
+            linkUrl={story.link_url}
           />
         ))}
       </div>
