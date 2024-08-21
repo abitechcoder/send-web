@@ -65,11 +65,11 @@ const ReportsOnProject = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="annual_reports">
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
             {AnnualReports.map((report) => (
               <ReportCard
-                key={report.title}
-                title={report.title}
+                key={report.id}
+                image={report.image}
                 text={report.text}
                 year={report.year}
                 report_url={report.report_url}
@@ -86,30 +86,27 @@ const ReportsOnProject = () => {
         <TabsContent value="project_reports">
           <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
             {LivelihoodProjects.map((project) => (
-              <StrategicDirectionProject
-                key={project.title}
-                title={project.title}
+              <ReportCard
+                key={project.id}
+                image={project.problem_image}
                 text={project.text}
-                project_url={project.link_url}
-                status={project.status}
+                report_url={project.link_url}
               />
             ))}
             {HealthProjects.map((project) => (
-              <StrategicDirectionProject
-                key={project.title}
-                title={project.title}
+              <ReportCard
+                key={project.id}
+                image={project.problem_image}
                 text={project.text}
-                project_url={project.link_url}
-                status={project.status}
+                report_url={project.link_url}
               />
             ))}
             {GovtProjects.map((project) => (
-              <StrategicDirectionProject
-                key={project.title}
-                title={project.title}
+              <ReportCard
+                key={project.id}
+                image={project.problem_image}
                 text={project.text}
-                project_url={project.link_url}
-                status={project.status}
+                report_url={project.link_url}
               />
             ))}
           </div>

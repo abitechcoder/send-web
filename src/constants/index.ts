@@ -63,6 +63,13 @@ import {
   Lillian,
   Tity,
   Seibatu,
+  AnnualReport2017,
+  AnnualReport2018,
+  AnnualReport2019,
+  AnnualReport2020,
+  AnnualReport2021,
+  AnnualReport2022,
+  AnnualReport2023,
 } from "../assets";
 import {
   Director,
@@ -1013,7 +1020,7 @@ export const jobs: Job[] = [
 export const AnnualReports: AnnualReport[] = [
   {
     id: 1,
-    title: "Report 01",
+    image: AnnualReport2017,
     text: "SEND SL Annual",
     year: "Report 2017",
     report_url:
@@ -1021,7 +1028,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 2,
-    title: "Report 02",
+    image: AnnualReport2018,
     text: "SEND SL Annual",
     year: "Report 2018",
     report_url:
@@ -1029,7 +1036,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 3,
-    title: "Report 03",
+    image: AnnualReport2019,
     text: "SEND SL Annual",
     year: "Report 2019",
     report_url:
@@ -1037,7 +1044,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 4,
-    title: "Report 04",
+    image: AnnualReport2020,
     text: "SEND SL Annual",
     year: "Report 2020",
     report_url:
@@ -1045,7 +1052,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 5,
-    title: "Report 05",
+    image: AnnualReport2021,
     text: "SEND SL Annual",
     year: "Report 2021",
     report_url:
@@ -1053,7 +1060,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 6,
-    title: "Report 06",
+    image: AnnualReport2022,
     text: "SEND SL Annual",
     year: "Report 2022",
     report_url:
@@ -1061,7 +1068,7 @@ export const AnnualReports: AnnualReport[] = [
   },
   {
     id: 7,
-    title: "Report 07",
+    image: AnnualReport2023,
     text: "SEND SL Annual",
     year: "Report 2023",
     report_url:

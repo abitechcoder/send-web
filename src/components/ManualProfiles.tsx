@@ -18,14 +18,14 @@ const ManualProfiles = () => {
             MANUALS & PROFILES
           </h2>
         </div>
-        <p
+        {/* <p
           className={`w-full text-center mx-auto text-black ${styles.paragraph2}`}
         >
           Our ethical Board of Directors ensure that SEND Sierra Leone adheres
           strictly to Sierra Leonean legislation and the directives of all
           governmental stakeholders whiles ensuring that the quality of lives in
           Sierra Leone are improved through SEND implemented projects.
-        </p>
+        </p> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">

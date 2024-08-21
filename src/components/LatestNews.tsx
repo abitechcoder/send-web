@@ -12,13 +12,8 @@ const LatestNews = () => {
         Newsletters
       </h2>
       <p className="lg:w-[500px] w-full text-center mx-auto pb-[40px]">
-        Explore all our amazing project images & Videos
+        Read our newsletter for project updates
       </p>
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-        <LatestNewsCard image={LatestNewsCard1} />
-        <LatestNewsCard image={LatestNewsCard2} />
-        <LatestNewsCard image={LatestNewsCard3} />
-      </div> */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
         {Newsletters.slice(0, 3).map((newsletter) => (
           <NewsletterCard
