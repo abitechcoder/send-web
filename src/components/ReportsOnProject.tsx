@@ -70,26 +70,29 @@ const ReportsOnProject = () => {
               <ReportCard
                 key={report.id}
                 image={report.image}
-                text={report.text}
-                year={report.year}
+                title={report.title}
                 report_url={report.report_url}
               />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="newsletters">
-          <NewsLetterList />
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
+            <NewsLetterList />
+          </div>
         </TabsContent>
         <TabsContent value="manuals">
-          <ProfileManualsList />
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
+            <ProfileManualsList />
+          </div>
         </TabsContent>
         <TabsContent value="project_reports">
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 mt-8">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
             {LivelihoodProjects.map((project) => (
               <ReportCard
                 key={project.id}
                 image={project.problem_image}
-                text={project.text}
+                title={project.text}
                 report_url={project.link_url}
               />
             ))}
@@ -97,7 +100,7 @@ const ReportsOnProject = () => {
               <ReportCard
                 key={project.id}
                 image={project.problem_image}
-                text={project.text}
+                title={project.text}
                 report_url={project.link_url}
               />
             ))}
@@ -105,7 +108,7 @@ const ReportsOnProject = () => {
               <ReportCard
                 key={project.id}
                 image={project.problem_image}
-                text={project.text}
+                title={project.text}
                 report_url={project.link_url}
               />
             ))}

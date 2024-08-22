@@ -28,7 +28,7 @@ const LandingPage = () => {
       <LatestNews />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </div>
   );
 };

@@ -28,7 +28,7 @@ const BoardOfDirectors = () => {
       <Directors directors={directors} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

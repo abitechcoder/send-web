@@ -1,6 +1,11 @@
 import { HeroBG } from "../assets";
-import { Header, ContactUs, Footer, InTheNews, CustomerSupport } from "../components";
-
+import {
+  Header,
+  ContactUs,
+  Footer,
+  InTheNews,
+  CustomerSupport,
+} from "../components";
 
 const Newsletter = () => {
   return (
@@ -14,7 +19,7 @@ const Newsletter = () => {
       <InTheNews />
       <ContactUs />
       <Footer />
-      <CustomerSupport/>
+      {/* <CustomerSupport/> */}
     </main>
   );
 };

@@ -27,7 +27,7 @@ const DirectorDetails = () => {
       <DirectorInfo director={director} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

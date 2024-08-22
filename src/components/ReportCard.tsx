@@ -3,13 +3,11 @@ import styles from "../styles";
 
 const ReportCard = ({
   image,
-  text,
-  year,
+  title,
   report_url,
 }: {
+  title: string;
   image: string;
-  text: string;
-  year?: string;
   report_url: string;
 }) => {
   return (
@@ -23,9 +21,7 @@ const ReportCard = ({
         alt=""
       />
       <div>
-        <p className="font-bold">
-          {text} <br /> {year}
-        </p>
+        <p className="font-bold">{title}</p>
       </div>
       <a className="w-full" href={report_url} target="_blank">
         <div className="p-3 bg-secondary text-white flex items-center justify-between w-full rounded-sm">

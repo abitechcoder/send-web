@@ -27,7 +27,7 @@ const CorporateIdentity = () => {
       <Principles />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

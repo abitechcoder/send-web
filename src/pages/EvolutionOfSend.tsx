@@ -19,7 +19,7 @@ const EvolutionOfSend = () => {
       <SendEvolution />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

@@ -38,6 +38,7 @@ const TopStoriesSlider = () => {
       <Slider {...settings}>
         {CaseStories.map((story) => (
           <TopStoriesCard
+            key={story.id}
             name={story.name}
             text={story.text}
             image={story.image}

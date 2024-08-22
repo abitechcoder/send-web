@@ -1,4 +1,10 @@
-const BetterWorkCard = ({title, subtitle}: {title: string, subtitle:string}) => {
+const BetterWorkCard = ({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) => {
   return (
     <div className="flex items-end gap-3">
       <h1 className={`font-bold font-barlow text-3xl lg:text-5xl`}>{title}</h1>
@@ -13,7 +19,7 @@ const BetterWorkCard = ({title, subtitle}: {title: string, subtitle:string}) => 
           opacity="0.4"
           d="M21.3125 17.083L35.375 31.1455"
           stroke="#1B43C6"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
       </svg>
       <p className="font-bold w-[100px] text-sm lg:text-base">{subtitle}</p>

@@ -24,10 +24,10 @@ const GenderEqualityDetails = () => {
         title="Gender Equality"
         image={HeroBG}
       />
-      <GWEContent project={project}/>
+      <GWEContent project={project} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

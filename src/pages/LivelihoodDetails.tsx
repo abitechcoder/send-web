@@ -27,7 +27,7 @@ const LivelihoodDetails = () => {
       <GWEContent project={project} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

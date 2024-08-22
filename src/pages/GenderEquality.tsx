@@ -26,7 +26,7 @@ const Governance = () => {
       <OurPrograms />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

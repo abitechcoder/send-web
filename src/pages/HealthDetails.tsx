@@ -18,16 +18,16 @@ const HealthDetails = () => {
   let { project }: any = useLoaderData();
   return (
     <main className="h-full relative">
-     <Header
+      <Header
         parent_link="Program Areas"
         child_link="Health, Nutrition & WaSH"
         title="Health, Nutrition & WaSH"
         image={HeroBG}
       />
-      <GWEContent project={project}/>
+      <GWEContent project={project} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

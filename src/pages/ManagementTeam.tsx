@@ -19,7 +19,7 @@ const ManagementTeam = () => {
       <SeniorMgtTeam />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

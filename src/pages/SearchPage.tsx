@@ -26,11 +26,16 @@ const Search = () => {
   console.log("All Files:", files);
   return (
     <main className="h-full relative">
-      <Header parent_link="Home" child_link="Search" title="Search" image={HeroBG}/>
+      <Header
+        parent_link="Home"
+        child_link="Search"
+        title="Search"
+        image={HeroBG}
+      />
       <SearchFiles files={files} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

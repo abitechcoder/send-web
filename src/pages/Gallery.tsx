@@ -19,7 +19,7 @@ const Gallery = () => {
       <EventGallery />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

@@ -21,7 +21,7 @@ const ProjectReports = () => {
       <OurPrograms />
       <ContactUs />
       <Footer />
-      <CustomerSupport/>
+      {/* <CustomerSupport/> */}
     </main>
   );
 };

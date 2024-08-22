@@ -19,7 +19,7 @@ const OrganizationStructure = () => {
       <OrganogramChart />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

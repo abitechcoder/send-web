@@ -1,4 +1,10 @@
-import { Header, ContactUs, Footer, ProjectCaseStories, CustomerSupport } from "../components";
+import {
+  Header,
+  ContactUs,
+  Footer,
+  ProjectCaseStories,
+  CustomerSupport,
+} from "../components";
 import { HeroBG } from "../assets";
 
 const CaseStories = () => {
@@ -13,7 +19,7 @@ const CaseStories = () => {
       <ProjectCaseStories />
       <ContactUs />
       <Footer />
-      <CustomerSupport/>
+      {/* <CustomerSupport/> */}
     </main>
   );
 };

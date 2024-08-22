@@ -36,7 +36,7 @@ const Gallery = () => {
       />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

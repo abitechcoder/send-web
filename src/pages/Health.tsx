@@ -26,7 +26,7 @@ const HealthAndEducation = () => {
       <OurPrograms />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

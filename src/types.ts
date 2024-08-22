@@ -62,9 +62,8 @@ export interface Job {
 }
 export interface AnnualReport {
   id?: number;
+  title: string;
   image: string;
-  text: string;
-  year: string;
   report_url: string;
 }
 

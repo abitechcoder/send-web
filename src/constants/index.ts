@@ -301,30 +301,31 @@ export const strategicPlans: StrategicPlan[] = [
     id: 1,
     title: "2019 - 2023 Strategic Plan PDF",
     document_url:
-      "https://www.sendsierraleone.com/Assets/documents/SEND-Strategic-Plan-2019-2023.pdf",
+      "https://sendv2.sendsierraleone.com/documents/SEND-Strategic-Plan-2019-2023.pdf",
   },
   {
     id: 2,
     title: "2024 - 2029 Strategic Plan PDF",
     document_url:
-      "https://www.sendsierraleone.com/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
+      "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
   },
   {
     id: 3,
     title: "Resource Mobilisation Strategy",
     document_url:
-      "https://www.sendsierraleone.com/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
+      "https://sendv2.sendsierraleone.com/documents/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
   },
   {
     id: 4,
     title: "2019 - 2023 Strategy Evaluation Report",
     document_url:
-      "https://www.sendsierraleone.com/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
+      "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
   },
   {
     id: 5,
     title: "Organisation Profile",
-    document_url: "https://www.sendsierraleone.com/sendcompanyprofile.pdf",
+    document_url:
+      "https://sendv2.sendsierraleone.com/documents/sendcompanyprofile.pdf",
   },
 ];
 
@@ -1020,57 +1021,50 @@ export const jobs: Job[] = [
 export const AnnualReports: AnnualReport[] = [
   {
     id: 1,
+    title: "SEND SL Annual Report 2017",
     image: AnnualReport2017,
-    text: "SEND SL Annual",
-    year: "Report 2017",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/SEND%20SIERRA%20LEONE%20ANNUAL%20REPORT%20(1)_2.pdf",
   },
   {
     id: 2,
+    title: "SEND SL Annual Report 2018",
     image: AnnualReport2018,
-    text: "SEND SL Annual",
-    year: "Report 2018",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/SEND-Annual-Report-WEB%20(2).pdf",
   },
   {
     id: 3,
+    title: "SEND SL Annual Report 2019",
     image: AnnualReport2019,
-    text: "SEND SL Annual",
-    year: "Report 2019",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/2019%20annual%20report2.pdf",
   },
   {
     id: 4,
+    title: "SEND SL Annual Report 2020",
     image: AnnualReport2020,
-    text: "SEND SL Annual",
-    year: "Report 2020",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/Anual%20Repport%202020.pdf",
   },
   {
     id: 5,
+    title: "SEND SL Annual Report 2021",
     image: AnnualReport2021,
-    text: "SEND SL Annual",
-    year: "Report 2021",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202021.pdf",
   },
   {
     id: 6,
+    title: "SEND SL Annual Report 2022",
     image: AnnualReport2022,
-    text: "SEND SL Annual",
-    year: "Report 2022",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202022.pdf",
   },
   {
     id: 7,
+    title: "SEND SL Annual Report 2023",
     image: AnnualReport2023,
-    text: "SEND SL Annual",
-    year: "Report 2023",
     report_url:
       "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202023%20web.pdf",
   },

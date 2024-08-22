@@ -26,7 +26,7 @@ const Livelihood = () => {
       <OurPrograms />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

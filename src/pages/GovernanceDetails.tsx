@@ -24,10 +24,10 @@ const GovernanceDetails = () => {
         title="Health & Education"
         image={HeroBG}
       />
-      <GWEContent project={project}/>
+      <GWEContent project={project} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

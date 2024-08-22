@@ -19,7 +19,7 @@ const SierraLeone = () => {
       <SierraLeoneHistory />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

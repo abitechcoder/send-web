@@ -29,7 +29,7 @@ const DonationDetails = () => {
       <DonateListing />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

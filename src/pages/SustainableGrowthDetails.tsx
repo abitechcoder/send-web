@@ -24,10 +24,10 @@ const SustainableGrowthDetails = () => {
         title="Sustainable Growth"
         image={HeroBG}
       />
-      <GWEContent project={project}/>
+      <GWEContent project={project} />
       <ContactUs />
       <Footer />
-      <CustomerSupport />
+      {/* <CustomerSupport /> */}
     </main>
   );
 };

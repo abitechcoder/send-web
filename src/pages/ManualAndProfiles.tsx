@@ -1,5 +1,11 @@
 import { HeroBG } from "../assets";
-import { Header, ContactUs, Footer, ManualProfiles, CustomerSupport } from "../components";
+import {
+  Header,
+  ContactUs,
+  Footer,
+  ManualProfiles,
+  CustomerSupport,
+} from "../components";
 
 const ManualAndProfiles = () => {
   return (
@@ -13,7 +19,7 @@ const ManualAndProfiles = () => {
       <ManualProfiles />
       <ContactUs />
       <Footer />
-      <CustomerSupport/>
+      {/* <CustomerSupport/> */}
     </main>
   );
 };
