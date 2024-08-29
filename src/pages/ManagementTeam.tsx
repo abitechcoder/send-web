@@ -12,8 +12,8 @@ const ManagementTeam = () => {
     <main className="h-full relative">
       <Header
         parent_link="Who We Are"
-        child_link="Management Team"
-        title="Management Team"
+        child_link="Senior Management Team"
+        title="Senior Management Team"
         image={HeroBG}
       />
       <SeniorMgtTeam />

@@ -36,6 +36,7 @@ export interface Director {
 export interface StrategicPlan {
   id: number;
   title: string;
+  image: string;
   document_url: string;
 }
 

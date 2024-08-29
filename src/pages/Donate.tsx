@@ -2,8 +2,8 @@ import {
   Header,
   ContactUs,
   Footer,
-  DonateListing,
   CustomerSupport,
+  DonateListingInfo,
 } from "../components";
 import { HeroBG } from "../assets";
 
@@ -16,7 +16,7 @@ const Donate = () => {
         title="Donate"
         image={HeroBG}
       />
-      <DonateListing />
+      <DonateListingInfo />
       <ContactUs />
       <Footer />
       {/* <CustomerSupport/> */}

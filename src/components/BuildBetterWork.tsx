@@ -22,7 +22,10 @@ const BuildBetterWork = () => {
               alt=""
             />
           </div>
-          <BetterWorkCard title="100k" subtitle="Beneficiaries supported" />
+          <BetterWorkCard
+            title="1,088,433"
+            subtitle="Beneficiaries supported"
+          />
         </div>
         <div className="md:col-span-2 flex flex-col gap-8">
           <div
@@ -35,14 +38,15 @@ const BuildBetterWork = () => {
             />
           </div>
           <div className="flex flex-col gap-2 md:gap-0 md:flex-row md:justify-between">
-            <BetterWorkCard title="2038" subtitle="Communities reached" />
+            <BetterWorkCard title="1,655" subtitle="Communities reached" />
             <div className="flex justify-end">
-              <BetterWorkCard
-                title="15"
-                subtitle="Operational 
-Districts"
-              />
+              <BetterWorkCard title="155,490" subtitle="Households supported" />
             </div>
+            <BetterWorkCard
+              title="15"
+              subtitle="Operational 
+Districts"
+            />
           </div>
         </div>
       </div>

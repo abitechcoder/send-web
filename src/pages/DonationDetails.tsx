@@ -25,7 +25,7 @@ const DonationDetails = () => {
         title="Donate"
         image={donation?.image}
       />
-      <DonateListingInfo donation={donation} />
+      <DonateListingInfo />
       <DonateListing />
       <ContactUs />
       <Footer />

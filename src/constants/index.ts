@@ -70,6 +70,11 @@ import {
   AnnualReport2021,
   AnnualReport2022,
   AnnualReport2023,
+  StrategicPlan2019,
+  StrategicPlan2024,
+  ResourceMobilisationStrategy,
+  StrategyEvaluationReport,
+  SendCompanyProfile,
 } from "../assets";
 import {
   Director,
@@ -105,15 +110,15 @@ export const links: Link[] = [
         text: "Corporate Identity",
         url: "/whoweare/corporate-identity",
       },
-      { id: 2, text: "Evolution Of Send", url: "/whoweare/evolution-of-send" },
+      // { id: 2, text: "Evolution Of Send", url: "/whoweare/evolution-of-send" },
       { id: 3, text: "Organization Structure", url: "/whoweare/org-structure" },
-      { id: 4, text: "Management Team", url: "/whoweare/mgt-team" },
+      { id: 4, text: "Senior Management Team", url: "/whoweare/mgt-team" },
       {
         id: 5,
         text: "Board of Directors",
         url: "/whoweare/board-of-directors",
       },
-      { id: 6, text: "About Sierra Leone", url: "/whoweare/sierra-leone" },
+      // { id: 6, text: "About Sierra Leone", url: "/whoweare/sierra-leone" },
     ],
   },
   {
@@ -300,30 +305,35 @@ export const strategicPlans: StrategicPlan[] = [
   {
     id: 1,
     title: "2019 - 2023 Strategic Plan PDF",
+    image: StrategicPlan2019,
     document_url:
       "https://sendv2.sendsierraleone.com/documents/SEND-Strategic-Plan-2019-2023.pdf",
   },
   {
     id: 2,
     title: "2024 - 2029 Strategic Plan PDF",
+    image: StrategicPlan2024,
     document_url:
       "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
   },
   {
     id: 3,
     title: "Resource Mobilisation Strategy",
+    image: ResourceMobilisationStrategy,
     document_url:
       "https://sendv2.sendsierraleone.com/documents/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
   },
   {
     id: 4,
     title: "2019 - 2023 Strategy Evaluation Report",
+    image: StrategyEvaluationReport,
     document_url:
       "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
   },
   {
     id: 5,
     title: "Organisation Profile",
+    image: SendCompanyProfile,
     document_url:
       "https://sendv2.sendsierraleone.com/documents/sendcompanyprofile.pdf",
   },
@@ -1694,12 +1704,12 @@ export const SMgtTeam: SMgtTeamType[] = [
     title: "Country Director",
     image: CountryDirector,
   },
-  {
-    id: 2,
-    name: "Siapha Kamara",
-    title: "CEO of SEND West Africa",
-    image: CEO,
-  },
+  // {
+  //   id: 2,
+  //   name: "Siapha Kamara",
+  //   title: "CEO of SEND West Africa",
+  //   image: CEO,
+  // },
   {
     id: 3,
     name: "Agnes Bockarie",

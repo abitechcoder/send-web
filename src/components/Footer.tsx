@@ -1,4 +1,4 @@
-import { LogoWhite } from "../assets";
+import { LogoWhite, YoutubeLogo } from "../assets";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -7,7 +7,13 @@ const Footer = () => {
       <div className="bg-dark bg-[url('/src/assets/footer-art.png')] bg-no-repeat  py-[40px] px-4 lg:px-[80px] lg:py-[80px] relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-8">
           <div className="w-full grid place-items-center place-content-start md:place-items-start gap-4 lg:gap-8">
-            <Link to={"/"}><img src={LogoWhite} className="h-[50px] lg:h-[70px]" alt="Logo Image" /></Link>
+            <Link to={"/"}>
+              <img
+                src={LogoWhite}
+                className="h-[50px] lg:h-[70px]"
+                alt="Logo Image"
+              />
+            </Link>
             <p
               className={`text-lightgrey text-center md:text-left text-xs lg:text-sm font-manrope `}
             >
@@ -68,72 +74,121 @@ const Footer = () => {
                 </svg>
               </div>
 
-              <div className="bg-[#FFFFFF1A] h-[30px] w-[30px] flex justify-center items-center rounded-full">
-                <svg
-                  width="20"
-                  height="18"
-                  viewBox="0 0 20 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M9.9999 0.133789C4.85903 0.133789 0.723145 4.18501 0.723145 9.22064C0.723145 13.234 3.39021 16.6416 7.06226 17.8531C7.5261 17.9289 7.68071 17.6638 7.68071 17.3988C7.68071 17.1716 7.68071 16.6037 7.68071 15.8465C5.09095 16.4144 4.54981 14.6349 4.54981 14.6349C4.12462 13.5748 3.50617 13.3097 3.50617 13.3097C2.6558 12.7418 3.58348 12.7418 3.58348 12.7418C4.51116 12.8175 5.01365 13.6883 5.01365 13.6883C5.82536 15.0892 7.17822 14.6728 7.71937 14.4456C7.79667 13.8398 8.02859 13.4612 8.29917 13.234C6.25055 13.0068 4.08597 12.2117 4.08597 8.72844C4.08597 7.74403 4.43385 6.91107 5.0523 6.30528C4.97499 6.0781 4.62711 5.16942 5.12961 3.88212C5.12961 3.88212 5.90267 3.65494 7.68071 4.82866C8.41512 4.63935 9.22684 4.52577 9.9999 4.52577C10.773 4.52577 11.5847 4.63935 12.3191 4.82866C14.0971 3.65494 14.8702 3.88212 14.8702 3.88212C15.3727 5.13156 15.0635 6.04024 14.9475 6.30528C15.5273 6.94893 15.9138 7.74403 15.9138 8.72844C15.9138 12.2117 13.7493 12.969 11.662 13.1961C12.0099 13.4612 12.2804 14.0291 12.2804 14.8621C12.2804 16.0736 12.2804 17.0581 12.2804 17.3609C12.2804 17.5881 12.4351 17.891 12.9375 17.8153C16.6096 16.6416 19.2767 13.234 19.2767 9.22064C19.2767 4.18501 15.1408 0.133789 9.9999 0.133789Z"
-                    fill="white"
+              <a
+                href="http://www.youtube.com/@sendsierraleone9509"
+                target="_blank"
+              >
+                <div className="bg-[#FFFFFF1A] h-[30px] w-[30px] flex justify-center items-center rounded-full">
+                  <img
+                    src={YoutubeLogo}
+                    alt="Youtube Logo"
+                    className="w-[24px]"
                   />
-                </svg>
-              </div>
+                </div>
+              </a>
             </div>
           </div>
           <div className="col-span-3">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8 font-manrope text-white">
               <div className="grid gap-3 place-content-start md:justify-center">
                 <h3 className="font-bold">Who We Are</h3>
-                <Link to="/whoweare/corporate-identity" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/whoweare/corporate-identity"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Corporate Identity
                 </Link>
-                <Link to="/whoweare/evolution-of-send" className="text-lightgrey lg:text-sm text-xs">
+                {/* <Link to="/whoweare/evolution-of-send" className="text-lightgrey lg:text-sm text-xs">
                   Evolution of Send
-                </Link>
-                <Link to="/whoweare/org-structure" className="text-lightgrey lg:text-sm text-xs">
+                </Link> */}
+                <Link
+                  to="/whoweare/org-structure"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Organization Structure
                 </Link>
-                <Link to="/whoweare/mgt-team" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/whoweare/mgt-team"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Sen. Management Team
                 </Link>
-                <Link to="/whoweare/board-of-directors" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/whoweare/board-of-directors"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Board of Directors
                 </Link>
-                <Link to="/whoweare/sierra-leone" className="text-lightgrey lg:text-sm text-xs">
+                {/* <Link to="/whoweare/sierra-leone" className="text-lightgrey lg:text-sm text-xs">
                   Sierra Leone
-                </Link>
+                </Link> */}
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:grid">
                 <h3 className="font-bold">Program Areas</h3>
-                <Link to="/program-areas/sustainable-growth" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/program-areas/sustainable-growth"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Sustainable Growth
                 </Link>
-                <Link to="/program-areas/health" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/program-areas/health"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Health, Nutrition & WaSH
                 </Link>
-                <Link to="/program-areas/education" className="text-lightgrey lg:text-sm text-xs">Education</Link>
-                <Link to="/program-areas/gender-equality" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/program-areas/education"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
+                  Education
+                </Link>
+                <Link
+                  to="/program-areas/gender-equality"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Gender Equality
                 </Link>
-                <Link to="/program-areas/climate" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/program-areas/climate"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Climate & Disaster Resilience
                 </Link>
               </div>
-              
+
               <div className="grid gap-3 place-content-start md:justify-center">
                 <h3 className="font-bold">Resources</h3>
-                <Link to="/publications/project-reports" className="text-lightgrey lg:text-sm text-xs">
+                <Link
+                  to="/publications/project-reports"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
                   Reports on Projects
                 </Link>
-                <Link to="/publications/newsletter" className="text-lightgrey lg:text-sm text-xs">Newsletters</Link>
-                <Link to="/publications/manual-and-profiles" className="text-lightgrey lg:text-sm text-xs">Manual & Profiles</Link>
-                <Link to="/publications/case-stories" className="text-lightgrey lg:text-sm text-xs">Gallery</Link>
+                <Link
+                  to="/publications/newsletter"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
+                  Newsletters
+                </Link>
+                <Link
+                  to="/publications/manual-and-profiles"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
+                  Manual & Profiles
+                </Link>
+                <Link
+                  to="/publications/case-stories"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
+                  Case Stories
+                </Link>
+                <Link
+                  to="/gallery"
+                  className="text-lightgrey lg:text-sm text-xs"
+                >
+                  Gallery
+                </Link>
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:block">
                 <h3 className="font-bold lg:mb-3">District Offices</h3>

@@ -1,6 +1,5 @@
 import { styles, layout } from "../styles";
 import TeamCard from "./TeamCard";
-import { CountryDirector, FinanceDirector, CEO } from "../assets";
 import { SMgtTeam } from "../constants";
 import { SMgtTeamType } from "../types";
 

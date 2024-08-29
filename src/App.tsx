@@ -82,8 +82,8 @@ function App() {
           <Route path="whoweare">
             <Route index element={<CorporateIdentity />} />
             <Route path="corporate-identity" element={<CorporateIdentity />} />
-            <Route path="evolution-of-send" element={<EvolutionOfSend />} />
-            <Route path="sierra-leone" element={<SierraLeone />} />
+            {/* <Route path="evolution-of-send" element={<EvolutionOfSend />} /> */}
+            {/* <Route path="sierra-leone" element={<SierraLeone />} /> */}
             <Route path="org-structure" element={<OrganizationStructure />} />
             <Route path="mgt-team" element={<ManagementTeam />} />
             <Route path="board-of-directors">

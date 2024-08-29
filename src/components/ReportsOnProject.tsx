@@ -77,14 +77,10 @@ const ReportsOnProject = () => {
           </div>
         </TabsContent>
         <TabsContent value="newsletters">
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
-            <NewsLetterList />
-          </div>
+          <NewsLetterList />
         </TabsContent>
         <TabsContent value="manuals">
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
-            <ProfileManualsList />
-          </div>
+          <ProfileManualsList />
         </TabsContent>
         <TabsContent value="project_reports">
           <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">

@@ -13,7 +13,7 @@ const ProjectReports = () => {
     <main className="h-full relative">
       <Header
         parent_link="Publications"
-        child_link="Report On Project"
+        child_link="Reports On Project"
         title="Report On Project"
         image={HeroBG}
       />
