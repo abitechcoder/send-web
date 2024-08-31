@@ -7,7 +7,7 @@ import {
   ProjectOverview,
   StrategicHealthProjects,
 } from "../components";
-import { HeroBG, SD1 } from "../assets";
+import { EducationImage, HeroBG } from "../assets";
 
 const HealthAndEducation = () => {
   return (
@@ -19,7 +19,7 @@ const HealthAndEducation = () => {
         image={HeroBG}
       />
       <ProjectOverview
-        banner_image={SD1}
+        banner_image={EducationImage}
         text="In line with SDG 4 on the provision of quality education, we work to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. We will focus on rural communities with limited access to quality education and will strengthen access in such communities. We will implement targeted interventions that address rural schools and students’ unique challenges, thereby fostering inclusive and equitable learning opportunities for all. By prioritizing quality, we will work collaboratively with stakeholders to transform education in rural areas. "
       />
       <StrategicHealthProjects />

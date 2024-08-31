@@ -1,7 +1,4 @@
 import {
-  CardImage1,
-  CardImage2,
-  CardImage3,
   Lucy,
   Siapha,
   Marion,
@@ -51,11 +48,9 @@ import {
   Rebecca,
   Gbotima,
   Ramatu,
-  Alice,
   Assiatu,
   Christiana,
   Margaret,
-  CEO,
   FinanceDirector,
   Brima,
   Zainab,
@@ -75,6 +70,11 @@ import {
   ResourceMobilisationStrategy,
   StrategyEvaluationReport,
   SendCompanyProfile,
+  ClimateImage,
+  GenderEqualityImage,
+  HealthImage,
+  SustainableGrowthImage,
+  EducationImage,
 } from "../assets";
 import {
   Director,
@@ -204,31 +204,31 @@ export const ProgramCards: ProgramCardProps[] = [
   {
     id: 1,
     title: "Sustainable Growth",
-    image: CardImage3,
+    image: SustainableGrowthImage,
     link_url: "/program-areas/sustainable-growth",
   },
   {
     id: 2,
     title: "Health, Nutrition & WaSH",
-    image: CardImage1,
+    image: HealthImage,
     link_url: "/program-areas/health",
   },
   {
     id: 3,
     title: "Education",
-    image: CardImage1,
+    image: EducationImage,
     link_url: "/program-areas/education",
   },
   {
     id: 4,
     title: "Gender Equality",
-    image: CardImage2,
+    image: GenderEqualityImage,
     link_url: "/program-areas/gender-equality",
   },
   {
     id: 5,
     title: "Climate & Disaster Resilience",
-    image: CardImage3,
+    image: ClimateImage,
     link_url: "/program-areas/climate",
   },
 ];
