@@ -154,3 +154,12 @@ export { default as ResourceMobilisationStrategy } from "./RESOURCE MOBILISATION
 export { default as StrategyEvaluationReport } from "./strategy-evaluation-report.jpg";
 export { default as SendCompanyProfile } from "./sendcompanyprofile.jpg";
 export { default as YoutubeLogo } from "./youtube.png";
+export { default as Wurie } from "./wurie-kargbo.jpeg";
+export { default as Jeneba } from "./jeneba-combey.jpeg";
+export { default as Charles } from "./charles-momoh.jpeg";
+export { default as Andrew } from "./andrew-saffa.jpeg";
+export { default as Bintu } from "./bintu-sia-gborie.jpeg";
+export { default as Musa } from "./musa-kamara.jpeg";
+export { default as Mariama } from "./mariama-jalloh.jpeg";
+export { default as Edward } from "./edward-gborie.jpeg";
+export { default as Ruth } from "./ruth-kumba-yokie.jpeg";

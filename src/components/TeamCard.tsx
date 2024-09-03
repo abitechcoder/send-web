@@ -11,7 +11,11 @@ const TeamCard = ({
 }) => {
   return (
     <div className={`h-[450px] w-full relative`}>
-        <img src={image} className="absolute top-0 left-0 object-cover object-center h-full w-full" alt="" />
+      <img
+        src={image}
+        className="absolute top-0 left-0 object-cover object-top h-full w-full"
+        alt=""
+      />
       <div className="grid grid-cols-[60px_1fr] absolute bottom-0 left-0 w-full h-[120px] z-10 bg-lightgrey">
         <div className="grid place-content-center gap-4">
           <div className="bg-white w-[30px] h-[30px] rounded-full grid place-items-center">
@@ -52,10 +56,10 @@ const TeamCard = ({
           </div>
         </div>
         <div className="bg-white rounded-bl-[40px] px-8 flex flex-col justify-center">
-            <div>
-                <h3 className={`${styles.paragraph3} text-secondary`}>{title}</h3>
-                <h2 className={`${styles.heading2} text-black`}>{name}</h2>
-            </div>
+          <div>
+            <h3 className={`${styles.paragraph3} text-secondary`}>{title}</h3>
+            <h2 className={`${styles.heading2} text-black`}>{name}</h2>
+          </div>
         </div>
       </div>
     </div>
