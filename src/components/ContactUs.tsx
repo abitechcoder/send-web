@@ -19,9 +19,9 @@ const ContactUs = () => {
               Get in touch
               <br /> with us.
             </h2>
-            <p className="text-white text-center md:text-left">
+            {/* <p className="text-white text-center md:text-left">
               We provide a complete service for the sale, purchase.
-            </p>
+            </p> */}
 
             <div className="grid gap-4 z-50">
               <div className="grid grid-cols-[56px_1fr] gap-4">
@@ -124,8 +124,11 @@ const ContactUs = () => {
 
                 <div className="text-white">
                   <h3 className="text-sm font-manrope">HAVE A QUESTION ?</h3>
-                  <a href="tel:+23272806853" className="font-bold text-base font-manrope">
-                    +232 7280 6853
+                  <a
+                    href="tel:+23272806853"
+                    className="font-bold text-base font-manrope"
+                  >
+                    +232 7820 68533
                   </a>
                 </div>
               </div>

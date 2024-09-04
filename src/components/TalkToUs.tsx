@@ -73,11 +73,7 @@ const TalkToUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 mt-8">
         <div className="p-4 md:p-8 lg:px-[50px] lg:py-[30px] relative">
           <div className="absolute right-0 bottom-0 w-[50%] h-[50%]">
-            <img
-              src={ProgramCardArt}
-              className="h-full w-full"
-              alt=""
-            />
+            <img src={ProgramCardArt} className="h-full w-full" alt="" />
           </div>
           <div className="flex items-start justify-between">
             <div>
@@ -104,11 +100,7 @@ const TalkToUs = () => {
 
         <div className="p-4 md:p-8 lg:px-[50px] lg:py-[30px] relative">
           <div className="absolute right-0 bottom-0 w-[50%] h-[50%]">
-            <img
-              src={ProgramCardArt}
-              className="h-full w-full"
-              alt=""
-            />
+            <img src={ProgramCardArt} className="h-full w-full" alt="" />
           </div>
           <div className="flex items-start justify-between">
             <div>
@@ -128,7 +120,7 @@ const TalkToUs = () => {
             </div>
           </div>
           <p className="pt-4">
-            Phone: +232 7280 6853 <br />
+            Phone: +232 7820 68533 <br />
             Email: info@sendsierraleone.com
           </p>
         </div>
