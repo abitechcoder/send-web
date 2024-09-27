@@ -128,7 +128,7 @@ const ContactUs = () => {
                     href="tel:+23272806853"
                     className="font-bold text-base font-manrope"
                   >
-                    +232 7820 68533
+                    +232 7820 6853
                   </a>
                 </div>
               </div>

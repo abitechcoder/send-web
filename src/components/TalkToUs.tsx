@@ -120,7 +120,7 @@ const TalkToUs = () => {
             </div>
           </div>
           <p className="pt-4">
-            Phone: +232 7820 68533 <br />
+            Phone: +232 7820 6853 <br />
             Email: info@sendsierraleone.com
           </p>
         </div>

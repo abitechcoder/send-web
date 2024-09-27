@@ -84,6 +84,9 @@ import {
   Mariama,
   Edward,
   Ruth,
+  NewsImage12,
+  CommunicationStrategy,
+  OrganizationalProfile,
 } from "../assets";
 import {
   Director,
@@ -316,35 +319,49 @@ export const strategicPlans: StrategicPlan[] = [
     title: "2019 - 2023 Strategic Plan PDF",
     image: StrategicPlan2019,
     document_url:
-      "https://sendv2.sendsierraleone.com/documents/SEND-Strategic-Plan-2019-2023.pdf",
+      "https://sendsierraleone.com/documents/SEND-Strategic-Plan-2019-2023.pdf",
   },
   {
     id: 2,
     title: "2024 - 2029 Strategic Plan PDF",
     image: StrategicPlan2024,
     document_url:
-      "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
+      "https://sendsierraleone.com/documents/SEND%20SL%20Strategic%20Plan%202024-2029%20FINAL%202%20(1).pdf",
   },
   {
     id: 3,
     title: "Resource Mobilisation Strategy",
     image: ResourceMobilisationStrategy,
     document_url:
-      "https://sendv2.sendsierraleone.com/documents/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
+      "https://sendsierraleone.com/documents/RESOURCE%20MOBILISATION%20STRATEGY%202.pdf",
   },
   {
     id: 4,
     title: "2019 - 2023 Strategy Evaluation Report",
     image: StrategyEvaluationReport,
     document_url:
-      "https://sendv2.sendsierraleone.com/documents/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
+      "https://sendsierraleone.com/documents/SEND%20SL%20Strategy%20Evaluation%20Report%20FINAL.pdf",
   },
   {
     id: 5,
     title: "Organisation Profile",
     image: SendCompanyProfile,
     document_url:
-      "https://sendv2.sendsierraleone.com/documents/sendcompanyprofile.pdf",
+      "https://sendsierraleone.com/documents/sendcompanyprofile.pdf",
+  },
+  {
+    id: 6,
+    title: "Communication Strategy",
+    image: CommunicationStrategy,
+    document_url:
+      "https://sendsierraleone.com/documents/Communication%20Strategy.pdf",
+  },
+  {
+    id: 7,
+    title: "Organisation Profile",
+    image: OrganizationalProfile,
+    document_url:
+      "https://sendsierraleone.com/documents/Organisational%20Profile.pdf",
   },
 ];
 
@@ -437,7 +454,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
   },
 
   {
@@ -449,7 +466,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
   },
   {
     id: 3,
@@ -460,7 +477,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Invitation%20for%20Bids%20ADVERT.pdf",
+      "https://sendsierraleone.com/documents/Invitation%20for%20Bids%20ADVERT.pdf",
   },
   {
     id: 4,
@@ -470,7 +487,7 @@ export const jobs: Job[] = [
     deadline: ":30 April 2024",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/mtawtor.pdf",
+    link_url: "https://sendsierraleone.com/documents/mtawtor.pdf",
   },
 
   {
@@ -481,7 +498,7 @@ export const jobs: Job[] = [
     deadline: "30 March 2024",
     classification: "1",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/mtawtor.pdf",
+    link_url: "https://sendsierraleone.com/documents/mtawtor.pdf",
   },
   {
     id: 6,
@@ -492,7 +509,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Field%20Officer_SLiSL%20Final%20.pdf",
+      "https://sendsierraleone.com/documents/Field%20Officer_SLiSL%20Final%20.pdf",
   },
   {
     id: 7,
@@ -503,7 +520,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Finance%20Officer%20Advert%20Final.pdf",
+      "https://sendsierraleone.com/documents/Finance%20Officer%20Advert%20Final.pdf",
   },
   {
     id: 8,
@@ -514,7 +531,7 @@ export const jobs: Job[] = [
     classification: "5",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR%20-%20Programs%20Intern.pdf",
+      "https://sendsierraleone.com/documents/TOR%20-%20Programs%20Intern.pdf",
   },
   {
     id: 9,
@@ -525,7 +542,7 @@ export const jobs: Job[] = [
     classification: "5",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+      "https://sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 12,
@@ -535,7 +552,7 @@ export const jobs: Job[] = [
     deadline: "25 September 2023",
     classification: "9",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/assetsauction.pdf",
+    link_url: "https://sendsierraleone.com/documents/assetsauction.pdf",
   },
   {
     id: 14,
@@ -546,7 +563,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR%20-%20Account%20Officer%20Intern.pdf",
+      "https://sendsierraleone.com/documents/TOR%20-%20Account%20Officer%20Intern.pdf",
   },
   {
     id: 15,
@@ -556,8 +573,7 @@ export const jobs: Job[] = [
     deadline: " 16 June 2023",
     classification: "1",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
+    link_url: "https://sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
   },
   {
     id: 16,
@@ -567,7 +583,7 @@ export const jobs: Job[] = [
     deadline: "5 June 2023",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/ITTutorPewless.pdf",
+    link_url: "https://sendsierraleone.com/documents/ITTutorPewless.pdf",
   },
   {
     id: 17,
@@ -578,7 +594,7 @@ export const jobs: Job[] = [
     classification: "4",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR-Communications%20Consultant.pdf",
+      "https://sendsierraleone.com/documents/TOR-Communications%20Consultant.pdf",
   },
   {
     id: 18,
@@ -589,7 +605,7 @@ export const jobs: Job[] = [
     classification: "3",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Office%20AssistantFreetown.pdf",
+      "https://sendsierraleone.com/documents/Office%20AssistantFreetown.pdf",
   },
   {
     id: 19,
@@ -599,8 +615,7 @@ export const jobs: Job[] = [
     deadline: "20 May 2023",
     classification: "3",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/Solar%20Technician.pdf",
+    link_url: "https://sendsierraleone.com/documents/Solar%20Technician.pdf",
   },
   {
     id: 20,
@@ -611,7 +626,7 @@ export const jobs: Job[] = [
     classification: "4",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR-Data%20Protection%20Policy.pdf",
+      "https://sendsierraleone.com/documents/TOR-Data%20Protection%20Policy.pdf",
   },
   {
     id: 21,
@@ -622,7 +637,7 @@ export const jobs: Job[] = [
     classification: "4",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/pewlesseducationgenderaudit.docx",
+      "https://sendsierraleone.com/documents/pewlesseducationgenderaudit.docx",
   },
   {
     id: 22,
@@ -632,8 +647,7 @@ export const jobs: Job[] = [
     deadline: "15 March 2023",
     classification: "4",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
+    link_url: "https://sendsierraleone.com/documents/TOR-GenderPolicyFinal.pdf",
   },
   {
     id: 23,
@@ -644,7 +658,7 @@ export const jobs: Job[] = [
     classification: "4",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/TOR%20Mid-Term%20Evaluation%20P-150.pdf",
+      "https://sendsierraleone.com/documents/TOR%20Mid-Term%20Evaluation%20P-150.pdf",
   },
   {
     id: 24,
@@ -654,8 +668,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 25,
@@ -665,8 +678,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 26,
@@ -676,8 +688,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectofficerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectofficerjd.pdf",
   },
   {
     id: 27,
@@ -687,7 +698,7 @@ export const jobs: Job[] = [
     deadline: "25 January 2023",
     classification: "3",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/ITTutorPewless.pdf",
+    link_url: "https://sendsierraleone.com/documents/ITTutorPewless.pdf",
   },
   {
     id: 28,
@@ -697,8 +708,7 @@ export const jobs: Job[] = [
     deadline: "30 January 2023",
     classification: "4",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/cdccfeasibility.pdf",
+    link_url: "https://sendsierraleone.com/documents/cdccfeasibility.pdf",
   },
   {
     id: 29,
@@ -708,7 +718,7 @@ export const jobs: Job[] = [
     deadline: " 28 December 2022",
     classification: "4",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/kependline.pdf",
+    link_url: "https://sendsierraleone.com/documents/kependline.pdf",
   },
   {
     id: 30,
@@ -718,8 +728,7 @@ export const jobs: Job[] = [
     deadline: " 25 December 2022",
     classification: "1",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/financedirectorad.pdf",
+    link_url: "https://sendsierraleone.com/documents/financedirectorad.pdf",
   },
   {
     id: 31,
@@ -729,8 +738,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 32,
@@ -740,7 +748,7 @@ export const jobs: Job[] = [
     deadline: "21 July 2022",
     classification: "2",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/nssseadvert.pdf",
+    link_url: "https://sendsierraleone.com/documents/nssseadvert.pdf",
   },
   {
     id: 33,
@@ -750,7 +758,7 @@ export const jobs: Job[] = [
     deadline: "25 April 2022",
     classification: "1",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/nssseadvert.pdf",
+    link_url: "https://sendsierraleone.com/documents/nssseadvert.pdf",
   },
   {
     id: 34,
@@ -760,8 +768,7 @@ export const jobs: Job[] = [
     deadline: "14 February 2022",
     classification: "1",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 35,
@@ -771,8 +778,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 36,
@@ -782,7 +788,7 @@ export const jobs: Job[] = [
     deadline: "19 January 2022",
     classification: "1",
     region: "1",
-    link_url: "https://sendv2.sendsierraleone.com/documents/WASHAdvisorjob.pdf",
+    link_url: "https://sendsierraleone.com/documents/WASHAdvisorjob.pdf",
   },
   {
     id: 37,
@@ -792,8 +798,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 38,
@@ -803,8 +808,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 40,
@@ -814,7 +818,7 @@ export const jobs: Job[] = [
     deadline: "10 August 2021",
     classification: "1",
     region: "2",
-    link_url: "https://sendv2.sendsierraleone.com/documents/Nyapui%20.pdf",
+    link_url: "https://sendsierraleone.com/documents/Nyapui%20.pdf",
   },
   {
     id: 41,
@@ -825,7 +829,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+      "https://sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 42,
@@ -836,7 +840,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 43,
@@ -847,7 +851,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+      "https://sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 44,
@@ -857,8 +861,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 45,
@@ -869,7 +872,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 46,
@@ -879,8 +882,7 @@ export const jobs: Job[] = [
     deadline: "10 February 2023",
     classification: "2",
     region: "1",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/projectmanagerjd.pdf",
+    link_url: "https://sendsierraleone.com/documents/projectmanagerjd.pdf",
   },
   {
     id: 47,
@@ -891,7 +893,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 48,
@@ -902,7 +904,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 49,
@@ -914,7 +916,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 50,
@@ -924,7 +926,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 51,
@@ -935,7 +937,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 52,
@@ -946,7 +948,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+      "https://sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
   },
   {
     id: 53,
@@ -957,7 +959,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Security.pdf",
   },
   {
     id: 54,
@@ -968,7 +970,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 55,
@@ -979,7 +981,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Invitation%20for%20Bids%20ADVERT.pdf",
+      "https://sendsierraleone.com/documents/Invitation%20for%20Bids%20ADVERT.pdf",
   },
   {
     id: 56,
@@ -990,7 +992,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 57,
@@ -1001,7 +1003,7 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
+      "https://sendsierraleone.com/documents/Job%20Advert%20for%20the%20Position%20of%20a%20Driver%20Kono.pdf",
   },
   {
     id: 58,
@@ -1011,8 +1013,7 @@ export const jobs: Job[] = [
     deadline: "30 June, 2020",
     classification: "1",
     region: "2",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/financedirectorad.pdf",
+    link_url: "https://sendsierraleone.com/documents/financedirectorad.pdf",
   },
   {
     id: 59,
@@ -1023,7 +1024,7 @@ export const jobs: Job[] = [
     classification: "1",
     region: "2",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Finance%20Officer%20Advert%20Final.pdf",
+      "https://sendsierraleone.com/documents/Finance%20Officer%20Advert%20Final.pdf",
   },
   {
     id: 60,
@@ -1034,7 +1035,29 @@ export const jobs: Job[] = [
     classification: "2",
     region: "1",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+      "https://sendsierraleone.com/documents/Account%20Officer%20Advert.pdf",
+  },
+  {
+    id: 61,
+    title: "Terms of Reference for Needs Assessment in Falaba District",
+    description:
+      "As part of our efforts to expand and deepen the impact of our work in rural and underserved areas, SEND Sierra Leone is conducting a comprehensive needs assessment in Falaba District.",
+    deadline: "24 September, 2024",
+    classification: "10",
+    region: "1",
+    link_url:
+      "https://sendsierraleone.com/documents/Terms%20of%20Reference%20for%20the%20Falaba%20Need%20Assessment.-converted.pdf",
+  },
+  {
+    id: 62,
+    title: "Advert for Young Women in STEM",
+    description:
+      "This initiative aims to address the gender gap in the renewable energy sector by equipping young women who have completed STEM (Science, Technology, Engineering, and Mathematics) studies with practical skills in solar energy.",
+    deadline: "20 September, 2024",
+    classification: "10",
+    region: "1",
+    link_url:
+      "https://sendsierraleone.com/documents/ADVERT%20FOR%20YOUNG%20WOMEN%20IN%20STEM%20FINAL%20FOR%20DISSEMMINATION.pdf",
   },
 ];
 export const AnnualReports: AnnualReport[] = [
@@ -1043,49 +1066,49 @@ export const AnnualReports: AnnualReport[] = [
     title: "SEND SL Annual Report 2017",
     image: AnnualReport2017,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/SEND%20SIERRA%20LEONE%20ANNUAL%20REPORT%20(1)_2.pdf",
+      "https://sendsierraleone.com/documents/SEND%20SIERRA%20LEONE%20ANNUAL%20REPORT%20(1)_2.pdf",
   },
   {
     id: 2,
     title: "SEND SL Annual Report 2018",
     image: AnnualReport2018,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/SEND-Annual-Report-WEB%20(2).pdf",
+      "https://sendsierraleone.com/documents/SEND-Annual-Report-WEB%20(2).pdf",
   },
   {
     id: 3,
     title: "SEND SL Annual Report 2019",
     image: AnnualReport2019,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/2019%20annual%20report2.pdf",
+      "https://sendsierraleone.com/documents/2019%20annual%20report2.pdf",
   },
   {
     id: 4,
     title: "SEND SL Annual Report 2020",
     image: AnnualReport2020,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/Anual%20Repport%202020.pdf",
+      "https://sendsierraleone.com/documents/Anual%20Repport%202020.pdf",
   },
   {
     id: 5,
     title: "SEND SL Annual Report 2021",
     image: AnnualReport2021,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202021.pdf",
+      "https://sendsierraleone.com/documents/Annual%20Report%202021.pdf",
   },
   {
     id: 6,
     title: "SEND SL Annual Report 2022",
     image: AnnualReport2022,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202022.pdf",
+      "https://sendsierraleone.com/documents/Annual%20Report%202022.pdf",
   },
   {
     id: 7,
     title: "SEND SL Annual Report 2023",
     image: AnnualReport2023,
     report_url:
-      "https://sendv2.sendsierraleone.com/documents/Annual%20Report%202023%20web.pdf",
+      "https://sendsierraleone.com/documents/Annual%20Report%202023%20web.pdf",
   },
 ];
 
@@ -1094,71 +1117,77 @@ export const Newsletters: Newsletter[] = [
     id: 1,
     title: "NEWSLETTER 2022-IMPACTING TODAY FOR A BETTER TOMORROW",
     image: NewsImage1,
-    url: "https://sendv2.sendsierraleone.com/documents/2022NEWSLETTER.pdf",
+    url: "https://sendsierraleone.com/documents/2022NEWSLETTER.pdf",
   },
   {
     id: 2,
     title: "Nyapui Senior Secondary School of Excellence Brochure",
     image: NewsImage2,
-    url: "https://sendv2.sendsierraleone.com/documents/Nyapuischoolbrochure.pdf",
+    url: "https://sendsierraleone.com/documents/Nyapuischoolbrochure.pdf",
   },
   {
     id: 3,
     title: "Second Quarter Newsletter 2021. RESILIENCE THROUGH EMPOWERMENT",
     image: NewsImage3,
-    url: "https://sendv2.sendsierraleone.com/documents/Resiliance%20through%20Empowerment%20(Online).pdf",
+    url: "https://sendsierraleone.com/documents/Resiliance%20through%20Empowerment%20(Online).pdf",
   },
   {
     id: 4,
     title: "Second Quarter Newsletter 2020. SURVIVING THROUGH COVID-19",
     image: NewsImage4,
-    url: "https://sendv2.sendsierraleone.com/documents/newsletter%202nd%20qta%20(update).pdf",
+    url: "https://sendsierraleone.com/documents/newsletter%202nd%20qta%20(update).pdf",
   },
   {
     id: 5,
     title: "First Quarter Newsletter 2020, MAKING A CHANGE IN DIFFICULT TIMES.",
     image: NewsImage5,
-    url: "https://sendv2.sendsierraleone.com/documents/SEND%20Sierra%20Leone%201st%20Newsletter%202020.pdf",
+    url: "https://sendsierraleone.com/documents/SEND%20Sierra%20Leone%201st%20Newsletter%202020.pdf",
   },
   {
     id: 6,
     title:
       "April 2020 Newsletter, Debunking Things Believed to be True about the Corona Virus.",
     image: NewsImage6,
-    url: "https://sendv2.sendsierraleone.com/documents/myths.pdf",
+    url: "https://sendsierraleone.com/documents/myths.pdf",
   },
   {
     id: 7,
     title: "April 2020 Newsletter, Sensitization Manual on COVID-19 Pandemic",
     image: NewsImage7,
-    url: "https://sendv2.sendsierraleone.com/documents/corona.pdf",
+    url: "https://sendsierraleone.com/documents/corona.pdf",
   },
   {
     id: 8,
     title:
       "April 2020 Newsletter, NURTURING CHILDREN DURING THE COVID-19 PANDEMIC",
     image: NewsImage8,
-    url: "https://sendv2.sendsierraleone.com/documents/Nyapuischoolbrochure.pdf",
+    url: "https://sendsierraleone.com/documents/Nyapuischoolbrochure.pdf",
   },
   {
     id: 9,
     title:
       "March 2020 Newsletter, Statement by HIS EXCELLENCY, DR. JULIUS MAADA BIO",
     image: NewsImage9,
-    url: "https://sendv2.sendsierraleone.com/documents/Statement%20by%20His%20Excellency,%20Dr%20Julius%20Maada%20Bio,%20President%20of%20the%20Republic%20of%20Sierra%20Leone%20at%20the%20Second%20Press%20Conference%20on%20COVID-19.%20State%20House,%20Freetown%20-%2031%20March%202020.pdf",
+    url: "https://sendsierraleone.com/documents/Statement%20by%20His%20Excellency,%20Dr%20Julius%20Maada%20Bio,%20President%20of%20the%20Republic%20of%20Sierra%20Leone%20at%20the%20Second%20Press%20Conference%20on%20COVID-19.%20State%20House,%20Freetown%20-%2031%20March%202020.pdf",
   },
   {
     id: 10,
     title:
       "September 2018 Newsletter, Overcoming Social & Cultural Barriers to Political & Economic Empowerment!",
     image: NewsImage10,
-    url: "https://sendv2.sendsierraleone.com/documents/SEND%20Women%20Empowerment%20Newsletter%202018-2.pdf",
+    url: "https://sendsierraleone.com/documents/SEND%20Women%20Empowerment%20Newsletter%202018-2.pdf",
   },
   {
     id: 11,
     title: "2019 Newsletters, Strengthening SEND and safeguarding staff",
     image: NewsImage11,
-    url: "https://sendv2.sendsierraleone.com/documents/news%20letter%202019.pdf",
+    url: "https://sendsierraleone.com/documents/news%20letter%202019.pdf",
+  },
+  {
+    id: 12,
+    title: "Mid-year Newsletter 2024",
+    image: NewsImage12,
+    url: "https://sendsierraleone.com/documents/Mid-Year%20Newsletter%2024.pdf",
   },
 ];
 
@@ -1169,7 +1198,7 @@ export const HealthProjects: StrategicProjectType[] = [
     title: "Project 01",
     text: "Implementation Of The New Educational Initiative Project (Nyapui School and Computer Training Center in Kenema)",
     link_url: "/program-areas/education/1",
-    status: "on going",
+    status: "completed",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The publication has been produced with financial support from the GERMAN FEDERAL MINISTRY FOR ECONOMIC COOPERATION AND DEVELOPMENT (BMZ) AND TERRA TECH FOERDERPROJEKTE E.V.",
     donor:
@@ -1196,7 +1225,7 @@ export const HealthProjects: StrategicProjectType[] = [
     title: "Project 02",
     text: "Promotion of Nutrition Sensitive Wash Self-Supply In the Sherbro Island in Bonthe District",
     link_url: "/program-areas/education/2",
-    status: "on going",
+    status: "completed",
     description:
       "The Sherbro Island in the Bonthe district in Sierra Leone is one of the areas with the worst food insecurity and poorest access to Wash facilities. This has led to alarming level of sanitation related illness as well as malnutrition. SEND Sierra Leone in partnership with development partners seeks to educate, empower and sensitize the inhabitants of this island to develop self-solutions in dealing with these issues. SEND Sierra Leone will facilitate and support the process of education and execution of development of solutions.",
     donor:
@@ -1223,7 +1252,7 @@ export const HealthProjects: StrategicProjectType[] = [
     title: "Project 03",
     text: "Community Empowerment To Participate In Health Service Deliver Appreciate, Learn And Transfer(SALT) Approach",
     link_url: "/program-areas/education/3",
-    status: "on going",
+    status: "completed",
     description:
       "Due to decades of war and the Ebola epidemic, Sierra Leone’s health and education infrastructure are limited to urban areas. Inhabitants in rural areas do not without access to quality health and education infrastructure and as such do not receive healthcare services and are mostly illiterate. Healthcare providers are also without the requisite training to engage patients effectively and are unable to handle complex health situations leading to worsening of health issues in the communities. Also due to lack of education and societal stereotypes, rural communities are unable and receive in some cases healthcare services.",
     donor: "GIZ",
@@ -1257,7 +1286,7 @@ export const HealthProjects: StrategicProjectType[] = [
     title: "Project 04",
     text: "Enhanced Community Health Resilience Project",
     link_url: "/program-areas/education/4",
-    status: "on going",
+    status: "completed",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK and Civil Soceity in Development",
     donor: "Engineers without Borders-Denmark and Civil Society in Development",
@@ -1295,7 +1324,7 @@ export const GovtProjects: StrategicProjectType[] = [
     title: "Project 01",
     text: "Strengthening Community Led Accountability to Improve Service Delivery(SABI)",
     link_url: "/program-areas/gender-equality/1",
-    status: "on going",
+    status: "completed",
     description:
       "The Western Area Rural District in Sierra Leone is a prime example of the discrimination and unfair low representation of women in governance despite representing over 50% of the population. Out of the 27 district councillors, only three are women. Of the 8 MPs, only 2 are women, and only 5 women are among the 121 tribal heads who constitute the traditional governance structure in the District. Poor road networks coupled with unstable and inexistent electricity supply in some areas makes it difficult or impossible in some areas for women to diversify from subsistence farming as that is the only way to provide for their families.",
     donor: "Christian Aid",
@@ -1330,7 +1359,7 @@ export const GovtProjects: StrategicProjectType[] = [
     title: "Project 02",
     text: "Strengthening Women’s Participation in Politics and Governance",
     link_url: "/program-areas/gender-equality/2",
-    status: "on going",
+    status: "completed",
     description:
       "In Sierra Leone, women and youth make up for over 70% of the population but women are the least represented in governance on the community, district and national level. Out the 132 ordinary members of parliament, only 16 are women leading to less than 15% representation. Women and the youth are the most affected by decisions made through the legislature and executive but do not have an active say in those decisions. SEND Sierra Leone together with its development partners is keen to strengthen the collective voice of women, increase their knowledge and capacity on gender and accountability at the community, district and national level. We are also committed to increasing the national advocacy and networking on women participation in decision -making, governance and politics.",
     donor: "The Government of Ireland",
@@ -1361,7 +1390,7 @@ export const GovtProjects: StrategicProjectType[] = [
     title: "Project 03",
     text: "KAILAHUN WOMEN IN GOVERNANCE",
     link_url: "/program-areas/gender-equality/3",
-    status: "on going",
+    status: "completed",
     description:
       "Kailahun is a district in Sierra Leone bordered by both Liberia and Guinea and has been the first point of entry of two calamities to befall Sierra Leone-The Civil War and Ebola. This district therefore bears the resembles of a rural community cut of from development. This is as a result of the absence of quality health and education infrastructure. In the Kailahun district, women are faced with heightened rural stereotypes and discrimination. Women in Kailahun are not able to participate in governance and are not part of the decision-making process. SEND Sierra Leone and its developmental partners are keen on educating and empowering women not only to be able to actively contribute to governance and decision-making process but also to be elected to key governance positions.",
     donor: "Irish Aid",
@@ -1391,7 +1420,7 @@ export const GovtProjects: StrategicProjectType[] = [
     title: "Project 04",
     text: "WOMEN IGNITING THE SPIRIT OF ENTERPRENEURSHIP",
     link_url: "/program-areas/gender-equality/4",
-    status: "on going",
+    status: "completed",
     description:
       "The Western Area Rural District in Sierra Leone is a prime example of the discrimination and unfair low representation of women in governance despite representing over 50% of the population. Out of the 27 district councillors, only three are women. Of the 8 MPs, only 2 are women, and only 5 women are among the 121 tribal heads who constitute the traditional governance structure in the District. Poor road networks coupled with unstable and inexistent electricity supply in some areas makes it difficult or impossible in some areas for women to diversify from subsistence farming as that is the only way to provide for their families. The lack of social awareness and high levels of rural society stereotypes has increased the incidence of gender based violence in schools and homes against women which leads to injuries, sexual related diseases(STDs) and even death. SEND Sierra Leone and its development partner TROCAIRE together with beneficiaries developed this project to focus on capacity building ranging from skills training, business trainings and development, agricultural support, financial support, and support for women to access vocational, adult and tertiary education to empower and prepare them to seek opportunities in the job market. Other proposed interventions include provision of storage facilities to support the expansion of businesses on fish, construction of market centres with adequate sanitary facilities and encouraging women participation in decision making process in the community.",
     donor: "Irish Aid through TROCAIRE",
@@ -1425,7 +1454,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     title: "Project 01",
     text: "CITIZEN DRIVEN CLIMATE SENSITIVE WASH MANAGEMENT PROJECT",
     link_url: "/program-areas/climate/1",
-    status: "on going",
+    status: "completed",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK",
     donor: "Engineers without Borders-Denmark",
@@ -1463,7 +1492,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     title: "Project 02",
     text: "ENHANCING CLIMATE RESILIENCE IN RURAL SIERRA LEONE PROJECT",
     link_url: "/program-areas/climate/2",
-    status: "on going",
+    status: "completed",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The project is funded and supported by Engineers without Borders-DK and Civil Soceity in Development",
     donor: "Engineers without Borders-Denmark and Civil Society in Development",
@@ -1489,7 +1518,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     title: "Project 03",
     text: "STRENGTHENING WOMEN AND YOUTH-LED BUSINESS FOR LOCAL ECONOMIC DEVELOPMENT PROJECT",
     link_url: "/program-areas/climate/3",
-    status: "on going",
+    status: "completed",
     description:
       "This project aims to promote and improve access to finance and fishing equipment. This will enable those affected to generate more income in the long term and thus transform their livelihoods. This will be achieved through access to improved fishing equipment, appropriate fishing and processing machinery, access to finance and gender education; capacity building of women's groups and training for fishermen and fisherwomen in improved techniques, especially in the use of sustainable fishing and adaptation techniques and technologies, business and marketing practices and skills.",
     donor: "UNDP",
@@ -1524,7 +1553,7 @@ export const LivelihoodProjects: StrategicProjectType[] = [
     title: "Project 04",
     text: "IMPROVED ACCESS TO SUSTAINABLY MANAGED MICRO-FINANCE AND WaSH SYSTEMS – WaSH SELF SUPPLY PROJECT",
     link_url: "/program-areas/climate/4",
-    status: "on going",
+    status: "completed",
     description:
       "Reproduction of all or parts of this publication for educational or other non-commercial purposes is authorized without prior written permission from the copyright holders provided the source is fully acknowledged and any alterations to its integrity are indicated. Reproduction of this publication for sale or other commercial purposes without the prior written consent of the copyright holder is prohibited. The publication has been produced with financial support from the European Union.",
     donor: "EUROPEAN UNION",
@@ -1552,75 +1581,73 @@ export const ProfileManuals: ProfileManual[] = [
     id: 1,
     image: ManualImage1,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Women%20Manifesto%20Final.pdf",
+      "https://sendsierraleone.com/documents/Women%20Manifesto%20Final.pdf",
   },
   {
     id: 2,
     image: ManualImage2,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Advocacy%20Strategy%20Document.pdf",
+      "https://sendsierraleone.com/documents/Advocacy%20Strategy%20Document.pdf",
   },
   {
     id: 3,
     image: ManualImage3,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/womencandidatestrainingmanual.pdf",
+      "https://sendsierraleone.com/documents/womencandidatestrainingmanual.pdf",
   },
   {
     id: 4,
     image: ManualImage4,
-    link_url: "https://sendv2.sendsierraleone.com/documents/handbook.pdf",
+    link_url: "https://sendsierraleone.com/documents/handbook.pdf",
   },
   {
     id: 5,
     image: ManualImage5,
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/GTA%20Final%20Report.pdf",
+    link_url: "https://sendsierraleone.com/documents/GTA%20Final%20Report.pdf",
   },
   {
     id: 6,
     image: ManualImage6,
-    link_url: "https://sendv2.sendsierraleone.com/documents/GTA%20Final.pdf",
+    link_url: "https://sendsierraleone.com/documents/GTA%20Final.pdf",
   },
   {
     id: 7,
     image: ManualImage7,
-    link_url: "https://sendv2.sendsierraleone.com/documents/vsla%20manual.pdf",
+    link_url: "https://sendsierraleone.com/documents/vsla%20manual.pdf",
   },
   {
     id: 8,
     image: ManualImage8,
-    link_url: "https://sendv2.sendsierraleone.com/documents/manual.pdf",
+    link_url: "https://sendsierraleone.com/documents/manual.pdf",
   },
   {
     id: 9,
     image: ManualImage9,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/health&hygiene%20manual.pdf",
+      "https://sendsierraleone.com/documents/health&hygiene%20manual.pdf",
   },
   {
     id: 10,
     image: ManualImage10,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/food%20and%20nutrision%20manual.pdf",
+      "https://sendsierraleone.com/documents/food%20and%20nutrision%20manual.pdf",
   },
   {
     id: 11,
     image: ManualImage11,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/GMF%20MANUAL%20for%20SEND%20final.pdf",
+      "https://sendsierraleone.com/documents/GMF%20MANUAL%20for%20SEND%20final.pdf",
   },
   {
     id: 12,
     image: ProfileManualImage1,
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/Climate%20Profile%20.pdf",
+    link_url: "https://sendsierraleone.com/documents/Climate%20Profile%20.pdf",
   },
   {
     id: 13,
     image: ProfileManualImage2,
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
+      "https://sendsierraleone.com/documents/Health,%20Hygiene,%20Sanitation%20&%20Water%20Profile-1.pdf",
   },
 ];
 
@@ -1651,7 +1678,7 @@ export const CaseStories: CaseStoryType[] = [
     text: "Rebecca’s journey has touched many, especially young girls. Her story is not just one of personal triumph but a defining moment showcasing the power of perseverance, courage, and the firm belief in the possibility of a better tomorrow. Jimmy Yambasu has shattered stereotypes and paved the way for a more inclusive and equitable society in Kono District.",
     date: "2024-05-12",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Rebecca%20Jimmy.pdf",
+      "https://sendsierraleone.com/documents/Case%20Story_Rebecca%20Jimmy.pdf",
   },
   {
     id: 2,
@@ -1661,7 +1688,7 @@ export const CaseStories: CaseStoryType[] = [
     text: "The story of the Gbotima and Sinava VSLA groups is one of triumph over adversity, unity in diversity, and women empowering themselves and their communities. It is a story that inspires, uplifts, and reaffirms the boundeless potential of collective action in creating a better tomorrow.",
     date: "2024-05-12",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case%20Story_VSLA%20group.pdf",
+      "https://sendsierraleone.com/documents/Case%20Story_VSLA%20group.pdf",
   },
   {
     id: 3,
@@ -1670,8 +1697,7 @@ export const CaseStories: CaseStoryType[] = [
     title: "RISING FROM THE ASHES: RAMATU’S JOURNEY OF EMPOWERMENT",
     text: "Ramatu’s journey began with a deep sense of purpose rooted in her personal experiences and the challenges she witnessed around her. Despite surviving a difficult first marriage, she refused to be defined by her circumstances. Instead, she channelled her energy into advocating for those who needed a voice the most: girls and women.",
     date: "2024-05-12",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Ramatu.pdf",
+    link_url: "https://sendsierraleone.com/documents/Case%20Story_Ramatu.pdf",
   },
   {
     id: 4,
@@ -1680,8 +1706,7 @@ export const CaseStories: CaseStoryType[] = [
     title: "THE YOUNGEST COUNCILOR IN SIERRA LEONE",
     text: "Margret’s future seemed confined to subsistence farming. Despite these challenges, she completed her West African Senior School Certificate Examination in 2021 at the age of 20. That same year, Margret was recruited by SEND Sierra Leone, an NGO supported by the Irish Embassy in Sierra Leone, to participate in the More Than A Woman project aimed at supporting women’s participation in politics and decision-making processes in Bonthe District.",
     date: "2024-05-12",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case%20Story_Margret.pdf",
+    link_url: "https://sendsierraleone.com/documents/Case%20Story_Margret.pdf",
   },
   {
     id: 5,
@@ -1692,7 +1717,7 @@ export const CaseStories: CaseStoryType[] = [
     text: "Assiatu Conteh’s journey from Bonthe to the United Kingdom and back to her roots is a testament to her resilience and determination. Born and raised in Bonthe, Assiatu pursued education and opportunities abroad, yet remained deeply connected to her homeland. Her return in 2023 was marked by a commitment to transforming her community, particularly by empowering women and addressing the challenges of poverty and inadequate infrastructure is seen as a pinnacle of leadership.",
     date: "2024-05-12",
     link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case_Story_Bonth_District_Chairperson.pdf",
+      "https://sendsierraleone.com/documents/Case_Story_Bonth_District_Chairperson.pdf",
   },
   {
     id: 6,
@@ -1701,8 +1726,7 @@ export const CaseStories: CaseStoryType[] = [
     title: "RESILIENCE IN ADVERSITY: THE JOURNEY OF CHRISTIANA YAMBA",
     text: "Christiana Yamba, a 24-year-old member of the Chochendeh VSLA group in Jiama Nimikoro Chiefdom, Kono District, was born into poverty. Growing up with a single mother who struggled to make ends meet, Christiana’s education was cut short in class two because her mother could not afford the school fees and necessar learning materials. Forced to drop out of school, she joined her family members in farming. Despite these hardships, a flicker of hope burned within her youthful heart.",
     date: "2024-05-12",
-    link_url:
-      "https://sendv2.sendsierraleone.com/documents/Case_Story_Christiana.pdf",
+    link_url: "https://sendsierraleone.com/documents/Case_Story_Christiana.pdf",
   },
 ];
 

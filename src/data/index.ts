@@ -10,6 +10,7 @@ import {
   donationListings,
   AnnualReports,
 } from "../constants";
+import axios from "../axios/index";
 
 export async function getDirectors() {
   return directors;
@@ -35,7 +36,9 @@ export async function getJobClassification() {
 }
 
 export async function getJobs() {
-  return jobs;
+  const reversedJobs = jobs.sort((a, b) => b.id - a.id);
+  console.log(reversedJobs);
+  return reversedJobs;
 }
 
 export async function getRegions() {
@@ -48,6 +51,9 @@ export async function getLivelihoodProject(id: number) {
 }
 
 export async function getNewsLetters() {
+  // const newsletters = await axios.get("/newsletters");
+  // console.log("Newsletters:", newsletters);
+  Newsletters.sort((a, b) => b.id - a.id);
   return Newsletters;
 }
 

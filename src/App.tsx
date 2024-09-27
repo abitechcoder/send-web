@@ -25,8 +25,6 @@ import {
   SignUp,
   ErrorPage,
   CorporateIdentity,
-  EvolutionOfSend,
-  SierraLeone,
   OrganizationStructure,
   ManagementTeam,
   BoardOfDirectors,

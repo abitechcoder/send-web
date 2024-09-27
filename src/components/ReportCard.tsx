@@ -17,7 +17,7 @@ const ReportCard = ({
       </div> */}
       <img
         src={image}
-        className="object-contain object-center h-full w-full"
+        className="object-cover object-center h-[250px] w-full"
         alt=""
       />
       <div>

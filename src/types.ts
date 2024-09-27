@@ -69,7 +69,7 @@ export interface AnnualReport {
 }
 
 export interface Newsletter {
-  id?: number;
+  id: number;
   title: string;
   image: string;
   url: string;
