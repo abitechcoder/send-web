@@ -5,17 +5,24 @@ import {
   CustomerSupport,
   DirectorInfo,
 } from "../components";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { getDirector } from "../data";
 import { HeroBG } from "../assets";
-
-export async function loader({ params }: any) {
-  const director = await getDirector(Number(params.directorId));
-  return { director };
-}
+import { useQuery } from "@tanstack/react-query";
+import { fetchTeamMembers } from "../api";
+import { TeamMemberProps } from "../types";
 
 const DirectorDetails = () => {
-  let { director }: any = useLoaderData();
+  const { directorId } = useParams();
+  const initialData: any = useLoaderData();
+  const { data: team } = useQuery(["team"], fetchTeamMembers, {
+    initialData: initialData.team,
+  });
+
+  const director = team.find(
+    (member: TeamMemberProps) => member.id === Number(directorId)
+  );
+
   return (
     <main className="h-full relative">
       <Header
@@ -24,7 +31,7 @@ const DirectorDetails = () => {
         title="Board of Directors"
         image={HeroBG}
       />
-      <DirectorInfo director={director} />
+      <DirectorInfo director={director} team={team} />
       <ContactUs />
       <Footer />
       {/* <CustomerSupport /> */}

@@ -1,5 +1,4 @@
-import { Logo, ProfilePic } from "../assets";
-import styles from "../styles";
+import { Logo } from "../assets";
 import { SideNavLinks } from "./";
 
 const SideNav = () => {
@@ -7,10 +6,10 @@ const SideNav = () => {
     <div className={`bg-white h-full grid grid-rows-[70px_1fr]`}>
       <div className={`flex items-center justify-between pl-8 pr-3`}>
         <div className={`flex items-center gap-2`}>
-          <img src={Logo} className="w-[40px]" alt="Logo Image" />
-          <h1 className={`${styles.heading2}`}>SEND</h1>
+          <img src={Logo} className="h-[40px]" alt="Logo Image" />
+          {/* <h1 className={`${styles.heading2}`}>SEND</h1> */}
         </div>
-        <svg
+        {/* <svg
           width="40"
           height="40"
           viewBox="0 0 40 40"
@@ -20,10 +19,10 @@ const SideNav = () => {
           <rect x="10" y="14" width="26" height="3" rx="1.5" fill="#9490AE" />
           <rect x="10" y="22" width="26" height="3" rx="1.5" fill="#9490AE" />
           <rect x="10" y="30" width="14" height="3" rx="1.5" fill="#9490AE" />
-        </svg>
+        </svg> */}
       </div>
-      <div className="overflow-y-scroll">
-        <div className="grid place-items-center py-8 gap-1">
+      <div className="overflow-y-scroll py-8">
+        {/* <div className="grid place-items-center py-8 gap-1">
           <img
             src={ProfilePic}
             alt="user profile picture"
@@ -33,7 +32,7 @@ const SideNav = () => {
             Hello <span className="font-bold">Yuke</span>
           </h2>
           <p className="text-darkgrey font-nunito text-sm">yuke123@mail.com</p>
-        </div>
+        </div> */}
         <SideNavLinks />
       </div>
     </div>

@@ -1,11 +1,14 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import StrategyPlanCard from "./StrategyPlanCard";
-import { strategicPlans } from "../constants";
 import ReportCard from "./ReportCard";
+import { ReportType } from "../types";
 
-const StrategyPlanCardSlider = () => {
+const StrategyPlanCardSlider = ({
+  strategicPlans,
+}: {
+  strategicPlans: ReportType[];
+}) => {
   var settings = {
     dots: true,
     infinite: true,
@@ -37,12 +40,12 @@ const StrategyPlanCardSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {strategicPlans.map((plan) => (
+        {strategicPlans?.map((plan) => (
           <ReportCard
             key={plan.id}
-            image={plan.image}
+            image={plan.image_url}
             title={plan.title}
-            report_url={plan.document_url}
+            report_url={plan.report_url}
           />
         ))}
       </Slider>

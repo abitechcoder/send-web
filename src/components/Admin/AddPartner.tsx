@@ -16,42 +16,84 @@ import styles from "@/src/styles";
 import { FormEvent, useRef, useState, ChangeEvent } from "react";
 import { AxiosResponse, AxiosError } from "axios";
 import axios from "../../axios/index";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { auth } from "@/firebase";
 
 interface FormData {
   name: string;
-  logo: File | null;
+  image: File | null;
 }
 
 const AddPartner = () => {
   const [open, setIsOpen] = useState(false);
   const [saving, setIsSaving] = useState(false);
+  const [imagePreview, setImagePreview] = useState<any>(null);
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
+  const imageInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState<FormData>({
     name: "",
-    logo: null,
+    image: null,
   });
 
+  const navigate = useNavigate();
+
+  const handleFormClose = () => {
+    if (saving) {
+      toast.warning("Please wait, data saving to the database.");
+      return;
+    }
+    setIsOpen(!open);
+    setImagePreview(null);
+    setFormData({ name: "", image: null });
+  };
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const { name, value, files } = event.target;
+    const { name, value } = event.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: name === "logo" ? files?.[0] || null : value,
+      [name]: value,
     }));
   };
 
+  const handleImageInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { files } = event.target;
+    const file = files?.[0];
+    const maxSize = 5 * 1024 * 1024;
+
+    if (file && file.size > maxSize) {
+      toast.warning("File size exceeds 5mb");
+      return;
+    } else {
+      setImagePreview(file);
+      setFormData((prevState) => ({ ...prevState, image: file || null }));
+    }
+  };
+
   const handleFileSelector = () => {
-    fileInputRef.current?.click();
+    imageInputRef.current?.click();
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    // console.log("Form Data:", formData);
+    // Get the authentication token
+    const user = auth.currentUser;
+    const idToken = await user?.getIdToken();
+
+    if (!user || !idToken) {
+      toast.error("You must be logged in to perform this action");
+      return;
+    }
+
     const submitData = new FormData();
     submitData.append("name", formData.name);
-    if (formData.logo) {
-      submitData.append("logo", formData.logo);
+    if (formData.image) {
+      submitData.append("logo", formData.image);
+    } else {
+      toast.warning("Please upload logo image");
+      return;
     }
 
     // Submit Data to the Server
@@ -63,20 +105,25 @@ const AddPartner = () => {
         {
           headers: {
             "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${idToken}`,
           },
         }
       );
       if (response.data) {
+        toast.success("Partner created successfully!!!");
         setIsSaving(false);
         setIsOpen(false);
+        navigate("/admin/partner");
       }
     } catch (error) {
+      toast.error("Error occured while creating partner");
+      setIsSaving(false);
       console.error("Error:", error as AxiosError);
     }
   };
 
   return (
-    <Dialog open={open} onOpenChange={setIsOpen}>
+    <Dialog open={open} onOpenChange={handleFormClose}>
       <DialogTrigger className="flex items-center bg-[#1B43C6] py-3 px-7 gap-5 rounded-md">
         <img src={plus} className="w-6 h-6" />
         <p className="text-xs font-semibold font-nunito text-white">
@@ -104,28 +151,48 @@ const AddPartner = () => {
                 id="title"
                 placeholder="Partner name"
                 name="name"
+                required
               />
             </div>
-            <input
-              type="file"
-              name="logo"
-              ref={fileInputRef}
-              onChange={handleInputChange}
-              className="hidden"
-            />
+
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="cover">Logo</Label>
-              <div
-                onClick={handleFileSelector}
-                className="cursor-pointer w-full h-40 rounded-md border-[1px] bg-[#F4F7FC] border-[#D8DDE4] flex items-center justify-center flex-col"
-              >
-                <img src={image} className="w-6 h-6" />
-                <p className={`${styles.paragraph4} text-[#849299] mt-1`}>
-                  Upload partner logo
-                </p>
-              </div>
+              <Label htmlFor="image">image</Label>
+              <input
+                type="file"
+                name="image"
+                id="image"
+                accept="image/jpeg, image/png"
+                ref={imageInputRef}
+                onChange={handleImageInputChange}
+                className="hidden"
+              />
+              {imagePreview ? (
+                <div className="flex items-center gap-4">
+                  <img
+                    src={URL.createObjectURL(imagePreview)}
+                    className="h-40 w-40 object-cover object-center"
+                  />
+                  <button
+                    type="button"
+                    className="bg-secondary text-white py-2 px-4 text-sm rounded-lg"
+                    onClick={handleFileSelector}
+                  >
+                    Change Image
+                  </button>
+                </div>
+              ) : (
+                <div
+                  onClick={handleFileSelector}
+                  className="cursor-pointer w-full h-40 rounded-md border-[1px] bg-[#F4F7FC] border-[#D8DDE4] flex items-center justify-center flex-col"
+                >
+                  <img src={image} className="w-6 h-6" />
+                  <p className={`${styles.paragraph4} text-[#849299] mt-1`}>
+                    Click to upload image
+                  </p>
+                </div>
+              )}
               <p className={`${styles.paragraph4} text-xs text-[#1B43C6]`}>
-                Max File Size: 5 MB (jpg, pdf, png)
+                Max File Size: 5 MB (jpg, png)
               </p>
             </div>
           </div>

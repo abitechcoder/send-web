@@ -50,9 +50,9 @@ const CaseStoryCard = ({
               <path
                 d="M1 0.9375L7 6.9375L1 12.9375"
                 stroke="#141414"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

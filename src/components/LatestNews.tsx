@@ -1,11 +1,12 @@
 import styles from "../styles";
-// import { LatestNewsCard } from ".";
-// import { LatestNewsCard1, LatestNewsCard2, LatestNewsCard3 } from "../assets";
-import { Newsletters } from "../constants";
 import NewsletterCard from "./NewsLetterCard";
 import { Link } from "react-router-dom";
+import { ReportType } from "../types";
 
-const LatestNews = () => {
+const LatestNews = ({ reports }: { reports: ReportType[] }) => {
+  const newsletters = reports.filter(
+    (report) => report.report_type === "newsletter"
+  );
   return (
     <section className="bg-[#F9FAFC] py-[40px] px-[40px] lg:px-[80px] lg:py-[80px]">
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
@@ -15,12 +16,13 @@ const LatestNews = () => {
         Read our newsletter for project updates
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        {Newsletters.slice(0, 3).map((newsletter) => (
+        {newsletters?.slice(0, 3).map((newsletter) => (
           <NewsletterCard
             key={newsletter.id}
+            id={newsletter.id}
             title={newsletter.title}
-            image={newsletter.image}
-            url={newsletter.url}
+            image={newsletter.image_url}
+            url={newsletter.report_url}
           />
         ))}
       </div>

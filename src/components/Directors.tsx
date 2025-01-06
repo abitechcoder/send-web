@@ -1,8 +1,8 @@
 import { styles, layout } from "../styles";
-import { Director } from "../types";
+import { TeamMemberProps } from "../types";
 import DirectorCard from "./DirectorCard";
 
-const Directors = ({ directors }: any) => {
+const Directors = ({ directors }: { directors: TeamMemberProps[] }) => {
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -29,12 +29,12 @@ const Directors = ({ directors }: any) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-10 mt-8 pb-8">
-        {directors.map((director: Director) => (
+        {directors?.map((director) => (
           <DirectorCard
             key={director.id}
             id={director.id}
             name={director?.name}
-            title={director.title}
+            title={director.role}
             image={director.image}
           />
         ))}

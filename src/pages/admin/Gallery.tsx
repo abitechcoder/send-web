@@ -1,90 +1,100 @@
-import { notif, ProfilePic, search, sort } from "@/src/assets";
-import { PhotoCard, SelectGallery, AddGallery } from "@/src/components";
+import { search } from "@/src/assets";
+import {
+  PhotoCard,
+  AddGallery,
+  SelectedGalleryView,
+  NavHeader,
+} from "@/src/components";
+import { getAllGallery } from "@/src/data";
 import styles from "@/src/styles";
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import { GalleryPropsType } from "@/src/types";
+
+export async function loader() {
+  const gallery = await getAllGallery();
+  return { gallery };
+}
 
 const Gallery = () => {
+  const { gallery }: any = useLoaderData();
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [searchText, setSearchText] = useState("");
+  const [filteredGallery, setFilteredGallery] = useState([]);
+
+  useEffect(() => {
+    const filtered = gallery.filter((gallery: GalleryPropsType) =>
+      gallery.title.toLowerCase().includes(searchText.toLocaleLowerCase())
+    );
+    setFilteredGallery(filtered);
+  }, [searchText]);
+
   return (
     <div className="w-full bg-[#FAFAFA] h-full grid grid-rows-[240px_1fr] lg:grid-rows-[180px_1fr]">
       <div className="p-3 lg:px-8 lg:py-4 bg-white mb-5">
-        <div className=" flex items-center justify-between ">
-          <div>
-            <h1
-              className={`${styles.heading3} leading-normal font-semibold tracking-wide font-nunito`}
-            >
-              Gallery
-            </h1>
-          </div>
-          <div className="flex items-center gap-2 lg:gap-3">
-            <div className="border-[1px] rounded-full -left-10 flex items-center p-1">
-              <img
-                src={notif}
-                alt="notification icon"
-                className="w-[15px] h-[15px] rounded-full"
-              />
-            </div>
-            <div>
-              <img
-                src={ProfilePic}
-                alt="user profile picture"
-                className="w-[35px] h-[35px] rounded-full"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 mt-10">
-          <div className="flex items-center border-[1px] py-3 px-5 bg-[#D8DDE4] justify-between rounded-xl">
+        <NavHeader title="Gallery" />
+        <div className="flex gap-8 py-4">
+          <div className="flex items-center border-[1px] py-3 px-5 bg-[#D8DDE4] justify-between rounded-xl w-1/2">
             <input
               type="text"
-              placeholder="Search Gallery"
+              placeholder="Search gallery item"
+              onChange={(e) => setSearchText(e.target.value)}
               className={`${styles.paragraph4} text-[#849299] bg-transparent outline-0 flex-1`}
             />
             <img src={search} className="w-5 h-5" />
           </div>
-
-          <div className="grid grid-cols-2  gap-3 mt-5 lg:mt-0">
-            <AddGallery />
-            <button className="flex items-center gap-2 py-3 px-7 border-[1px] rounded-xl border-[#D8DDE4]">
-              <img src={sort} className="w-6 h-6" />
-              <p className="text-sm font-semibold text-[#849299]">
-                Sort By: descending
-              </p>
-            </button>
-          </div>
+          <AddGallery />
         </div>
       </div>
 
-      <div className="p-3 lg:px-8 lg:py-4 overflow-y-scroll">
-        <div className="grid  lg:grid-cols-4 gap-3 ">
-          <div className="  lg:col-span-3 ">
-            <div className=" grid grid-cols-2 p-5 lg:grid-cols-3 gap-5 bg-white ">
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
-              <PhotoCard
-                title="Gallery"
-                subtitle="SEND Sierra Leon 2023 Annual Report Exhibito"
-              />
+      <div className="p-3 lg:px-8 lg:py-4 overflow-y-auto grid grid-cols-[1fr_300px] gap-8">
+        <div className="bg-white p-4">
+          {gallery.length > 0 ? (
+            <div className="grid grid-cols-3 gap-5">
+              {searchText
+                ? filteredGallery?.map((item: GalleryPropsType) => (
+                    <div
+                      key={gallery.id}
+                      onClick={() => setSelectedItem(item)}
+                      className="cursor-pointer"
+                    >
+                      <PhotoCard
+                        title="Gallery"
+                        subtitle={item.title}
+                        image={item.image}
+                      />
+                    </div>
+                  ))
+                : gallery?.map((item: GalleryPropsType) => (
+                    <div
+                      key={item.id}
+                      onClick={() => setSelectedItem(item)}
+                      className="cursor-pointer"
+                    >
+                      <PhotoCard
+                        title="Gallery"
+                        subtitle={item.title}
+                        image={item.image}
+                      />
+                    </div>
+                  ))}
             </div>
-          </div>
+          ) : (
+            <div className="bg-gray-200 grid place-items-center p-8">
+              <p className="font-bold mb-3">No gallery item found</p>
+              <p>
+                Click on <strong>add gallery button</strong> above to create a
+                gallery item
+              </p>
+            </div>
+          )}
+        </div>
 
-          <SelectGallery />
+        <div className="w-full">
+          <SelectedGalleryView
+            item={selectedItem}
+            setSelectedItem={setSelectedItem}
+          />
         </div>
       </div>
     </div>

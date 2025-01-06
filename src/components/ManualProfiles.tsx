@@ -1,8 +1,21 @@
+import { useQuery } from "@tanstack/react-query";
 import { ManualProfileCard } from ".";
-import { ProfileManuals } from "../constants";
 import { styles, layout } from "../styles";
+import { fetchReports } from "../api";
+import { useEffect, useState } from "react";
+import { ReportType } from "../types";
 
 const ManualProfiles = () => {
+  const { data: reports } = useQuery(["reports"], fetchReports);
+  const [manuals, setManuals] = useState<ReportType[] | null>(null);
+
+  useEffect(() => {
+    const filteredManuals = reports?.filter(
+      (report: ReportType) => report.report_type === "manual"
+    );
+    setManuals(filteredManuals);
+  }, [reports]);
+
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -18,22 +31,14 @@ const ManualProfiles = () => {
             MANUALS & PROFILES
           </h2>
         </div>
-        {/* <p
-          className={`w-full text-center mx-auto text-black ${styles.paragraph2}`}
-        >
-          Our ethical Board of Directors ensure that SEND Sierra Leone adheres
-          strictly to Sierra Leonean legislation and the directives of all
-          governmental stakeholders whiles ensuring that the quality of lives in
-          Sierra Leone are improved through SEND implemented projects.
-        </p> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        {ProfileManuals.map((manual) => (
+        {manuals?.map((manual) => (
           <ManualProfileCard
             key={manual.id}
-            image={manual.image}
-            link_url={manual.link_url}
+            image={manual.image_url}
+            link_url={manual.report_url}
           />
         ))}
       </div>

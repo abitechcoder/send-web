@@ -1,17 +1,35 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  AnnualReports,
-  GovtProjects,
-  HealthProjects,
-  LivelihoodProjects,
-} from "../constants";
 import { styles, layout } from "../styles";
 import ReportCard from "./ReportCard";
-import NewsLetterList from "./NewsLetterList";
-import ProfileManualsList from "./ProfileManualsList";
-import StrategicDirectionProject from "./StrategicDirectionProject";
+import { ProjectType, ReportType } from "../types";
+import { useEffect, useState } from "react";
+import NewsletterCard from "./NewsLetterCard";
+import ManualProfileCard from "./ManualProfileCard";
+import { useQuery } from "@tanstack/react-query";
+import { fetchProjects } from "../api";
 
-const ReportsOnProject = () => {
+const ReportsOnProject = ({ reports }: { reports: ReportType[] }) => {
+  const [annualReports, setAnnualReports] = useState<ReportType[]>([]);
+  const [newsletters, setNewletters] = useState<ReportType[]>([]);
+  const [manuals, setManuals] = useState<ReportType[]>([]);
+  const {data: projects} = useQuery(["projects"], fetchProjects)
+
+  useEffect(() => {
+    const filteredAnnualReports = reports.filter(
+      (report: ReportType) => report.report_type === "annual"
+    );
+    setAnnualReports(filteredAnnualReports);
+
+    const filteredNewsletters = reports.filter(
+      (report: ReportType) => report.report_type === "newsletter"
+    );
+    setNewletters(filteredNewsletters);
+
+    const filteredManuals = reports.filter(
+      (report: ReportType) => report.report_type === "manual"
+    );
+    setManuals(filteredManuals);
+  }, [reports]);
   return (
     <section
       className={`${layout.section} bg-[url("/src/assets/report-on-projects-art.png")] bg-no-repeat bg-white bg-top`}
@@ -66,10 +84,10 @@ const ReportsOnProject = () => {
         </TabsList>
         <TabsContent value="annual_reports">
           <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
-            {AnnualReports.map((report) => (
+            {annualReports.map((report) => (
               <ReportCard
                 key={report.id}
-                image={report.image}
+                image={report.image_url}
                 title={report.title}
                 report_url={report.report_url}
               />
@@ -77,55 +95,41 @@ const ReportsOnProject = () => {
           </div>
         </TabsContent>
         <TabsContent value="newsletters">
-          <NewsLetterList />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
+            {newsletters?.map((newsletter) => (
+              <NewsletterCard
+                key={newsletter.id}
+                title={newsletter.title}
+                image={newsletter.image_url}
+                url={newsletter.report_url}
+              />
+            ))}
+          </div>
         </TabsContent>
         <TabsContent value="manuals">
-          <ProfileManualsList />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
+            {manuals.map((manual) => (
+              <ManualProfileCard
+                key={manual.id}
+                image={manual.image_url}
+                link_url={manual.report_url}
+              />
+            ))}
+          </div>
         </TabsContent>
         <TabsContent value="project_reports">
           <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10 lg:mt-8 mt-16">
-            {LivelihoodProjects.map((project) => (
+            {projects?.map((project: ProjectType) => (
               <ReportCard
-                key={project.id}
-                image={project.problem_image}
-                title={project.text}
-                report_url={project.link_url}
-              />
-            ))}
-            {HealthProjects.map((project) => (
-              <ReportCard
-                key={project.id}
-                image={project.problem_image}
-                title={project.text}
-                report_url={project.link_url}
-              />
-            ))}
-            {GovtProjects.map((project) => (
-              <ReportCard
-                key={project.id}
-                image={project.problem_image}
-                title={project.text}
-                report_url={project.link_url}
+                key={project?.id}
+                image={project?.problem_image}
+                title={project?.name}
+                report_url={project?.report ? project.report : ""}
               />
             ))}
           </div>
         </TabsContent>
       </Tabs>
-
-      {/* <div className="w-full lg:w-[70%] lg:mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 mt-8">
-        <button className="bg-secondary text-white py-2 px-4">
-          Annual Reports
-        </button>
-        <button className="bg-lightgrey text-darkgrey py-2 px-4">
-          Newsletters
-        </button>
-        <button className="bg-lightgrey text-darkgrey py-2 px-4">
-          Training Manuals
-        </button>
-        <button className="bg-lightgrey text-darkgrey py-2 px-4">
-          Project Reports
-        </button>
-      </div> */}
     </section>
   );
 };

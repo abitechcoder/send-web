@@ -1,67 +1,74 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../../index.css";
 import Button from "./Button";
-import { PhotoCard } from "@/src/components";
-import styles from "@/src/styles";
+import {
+  AddProgramAreas,
+  AddProject,
+  PhotoCard,
+  ProgramAreaCard,
+} from "@/src/components";
+import { SustainableGrowthImage } from "@/src/assets";
+import { ProgramType, ProjectType } from "@/src/types";
+import { useState } from "react";
 
-const TabLists = () => {
+const TabLists = ({ programs, projects, setSelectedItem, setIsProgram }: any) => {
+  
+
+  const handleProgramClick = (item: ProgramType) => {
+    setIsProgram(true);
+    setSelectedItem(item);
+  };
+
+  const handleProjectClick = (item: ProjectType) => {
+    setIsProgram(false);
+    setSelectedItem(item);
+  };
+
   return (
     <div>
       <Tabs className="bg-white">
         <TabList className="custom-tab-list">
           <Tab className="custom-tab" selectedClassName="active">
-            Overview
+            Program Areas
           </Tab>
           <Tab className="custom-tab" selectedClassName="active">
-            Project
+            Projects
           </Tab>
         </TabList>
-        <TabPanel className="mt-10 px-5" id="custom-tab-panel">
-          <form action="">
-            <label>Program Overview</label>
-            <div
-              id="text-area"
-              className={`${styles.paragraph4} p-5 border-[1px] mt-5 rounded-xl outline-none `}
-              contentEditable="true"
-            >
-              <p>
-                In Sierra Leone, women and the girl child suffer from high
-                levels of discrimination and marginalization based on societal
-                stereotypes. SEND Sierra Leone is committed to ensuring that the
-                girl child is able to have access to quality education without
-                limitations. With education programs and projects tailored to
-                empower the girl child, SEND Sierra Leone aims to help many
-                girls achieve their dream of having an education and giving back
-                to their community. With several models and projects running by
-                SEND Sierra Leone, we continue to empower hundreds of women to
-                be self-sufficient and independent of their husbands. This leads
-                to increase livelihood security for their families as the women
-                contribute to the household. We are not only committed to
-                empowering women to be financially independent but also to take
-                positions in governance on the national and local level to
-                promote gender equity.
-              </p>
-            </div>
-            <Button name="Save Changes" py={2} px={3} />
-          </form>
-        </TabPanel>
-        <TabPanel>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 p-3 bg-white">
-            <PhotoCard
-              title="Project"
-              subtitle="Strengthening Community Led Accountability to ..."
-            />
-            <PhotoCard
-              title="Project"
-              subtitle="Strengthening Community Led Accountability to ..."
-            />
-            <PhotoCard
-              title="Project"
-              subtitle="Strengthening Community Led Accountability to ..."
-            />
+        <TabPanel className="mt-4 px-8" id="custom-tab-panel">
+          <div className="flex justify-end">
+            <AddProgramAreas />
+          </div>
+          <div className="grid grid-cols-2 gap-8 mt-4">
+            {programs.map((program: ProgramType) => (
+              <div
+                key={program.id}
+                onClick={() => handleProgramClick(program)}
+                className="cursor-pointer"
+              >
+                <ProgramAreaCard title={program.title} image={program.image} />
+              </div>
+            ))}
           </div>
         </TabPanel>
-          
+        <TabPanel className="mt-4 px-8">
+          <div className="flex justify-end">
+            <AddProject programs={programs} />
+          </div>
+          <div className="grid grid-cols-2 gap-8 mt-4">
+            {projects.map((project: ProjectType) => (
+              <div key={project.id} onClick={() => handleProjectClick(project)}
+              className="cursor-pointer">
+                <PhotoCard
+                  title="Project"
+                  subtitle={`${project.name.substring(0,50)}...`}
+                  image={project.problem_image}
+                />
+              </div>
+            ))}
+          </div>
+        </TabPanel>
+
       </Tabs>
     </div>
   );

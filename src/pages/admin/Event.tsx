@@ -73,7 +73,7 @@ const Event = () => {
             </div>
           </div>
 
-          <SelectGallery />
+          {/* <SelectGallery /> */}
         </div>
       </div>
     </div>

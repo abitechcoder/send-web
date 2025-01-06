@@ -7,11 +7,18 @@ import {
   Principles,
   ContactUs,
   Footer,
-  CustomerSupport,
+  // CustomerSupport,
 } from "../components";
 import { HeroBG } from "../assets";
+import { useLoaderData } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { fetchIdentity } from "../api";
 
 const CorporateIdentity = () => {
+  const initialData: any = useLoaderData();
+  const { data: identity } = useQuery(["identity"], fetchIdentity, {
+    initialData: initialData.identity,
+  });
   return (
     <main className="h-full relative">
       <Header
@@ -21,10 +28,10 @@ const CorporateIdentity = () => {
         image={HeroBG}
       />
       <StrategicPlan />
-      <CorporateSection />
-      <VisionAndMission />
-      <CoreValue />
-      <Principles />
+      <CorporateSection identity={identity} />
+      <VisionAndMission identity={identity} />
+      <CoreValue identity={identity} />
+      <Principles identity={identity} />
       <ContactUs />
       <Footer />
       {/* <CustomerSupport /> */}

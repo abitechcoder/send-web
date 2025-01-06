@@ -8,8 +8,9 @@ import {
   IdentityRect1,
   IdentityRect2,
 } from "../assets";
+import { IdentityPropsType } from "../types";
 
-const OurIdentity = () => {
+const OurIdentity = ({ identity }: { identity: IdentityPropsType }) => {
   return (
     <section className={`bg-white ${layout.section}`}>
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
@@ -50,14 +51,18 @@ const OurIdentity = () => {
           </div>
         </div>
         <div className="grid gap-4">
-          {IdentityCards?.map((card) => (
-            <IdentityCard
-              key={card.id}
-              id={card.id}
-              title={card.title}
-              text={card.text}
-            />
-          ))}
+          <IdentityCard id={1} title={"Our Vision"} text={identity.vision} />
+          <IdentityCard id={2} title={"Our Mission"} text={identity.mission} />
+          <IdentityCard
+            id={3}
+            title={"Core Values"}
+            text={`${identity.value.replace("-", " ").replace(/- /g, ", ")}.`}
+          />
+          <IdentityCard
+            id={4}
+            title={"Our Principle"}
+            text={`${identity.principle.replace("-", "").split(".")[0]}.`}
+          />
         </div>
       </div>
     </section>

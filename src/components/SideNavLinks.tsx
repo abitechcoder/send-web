@@ -1,132 +1,154 @@
-import { Link as RouterLink } from "react-router-dom";
-import { SideNavLink } from "../types";
 import { useState } from "react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
-export const links: SideNavLink[] = [
-  {
-    id: 1,
-    text: "Dashboard",
-    icon: "dashboard-icon.png",
-    icon_active: "dashboard-active-icon.png",
-    url: "/dashboard",
-  },
+// Import PNG icons
+import {
+  HomeIcon,
+  ActiveHomeIcon,
+  PartnerIcon,
+  ActivePartnerIcon,
+  IdentityIcon,
+  ActiveIdentityIcon,
+  GalleryIcon,
+  ActiveGalleryIcon,
+  TeamIcon,
+  ActiveTeamIcon,
+  ProgramIcon,
+  ActiveProgramIcon,
+  ReportIcon,
+  ActiveReportIcon,
+  RecruitmentIcon,
+  ActiveRecruitmentIcon,
+  TestimonialIcon,
+  ActiveTestimonialIcon,
+} from "../assets/icons";
+
+// Define the type for a single navigation link
+type SideNavLink = {
+  id: number;
+  text: string;
+  icon: string;
+  icon_active: string;
+  url: string;
+};
+
+// Define the navigation links
+const links: SideNavLink[] = [
   {
     id: 2,
     text: "Homepage",
-    icon: "home-icon.png",
-    icon_active: "home-active-icon.png",
-    url: "/dashboard/home",
+    icon: HomeIcon,
+    icon_active: ActiveHomeIcon,
+    url: "/admin",
   },
   {
     id: 3,
     text: "Partner",
-    icon: "partner-icon.png",
-    icon_active: "partner-active-icon.png",
-    url: "/dashboard/partner",
+    icon: PartnerIcon,
+    icon_active: ActivePartnerIcon,
+    url: "/admin/partner",
   },
   {
     id: 4,
     text: "Identity",
-    icon: "identity-icon.png",
-    icon_active: "identity-active-icon.png",
-    url: "/dashboard/identity",
+    icon: IdentityIcon,
+    icon_active: ActiveIdentityIcon,
+    url: "/admin/identity",
   },
   {
     id: 5,
     text: "Gallery",
-    icon: "gallery-icon.png",
-    icon_active: "gallery-active-icon.png",
-    url: "/dashboard/gallery",
+    icon: GalleryIcon,
+    icon_active: ActiveGalleryIcon,
+    url: "/admin/gallery",
   },
   {
     id: 6,
     text: "Team",
-    icon: "team-icon.png",
-    icon_active: "team-active-icon.png",
-    url: "/dashboard/team",
+    icon: TeamIcon,
+    icon_active: ActiveTeamIcon,
+    url: "/admin/team",
   },
   {
     id: 7,
     text: "Program",
-    icon: "program-icon.png",
-    icon_active: "program-active-icon.png",
-    url: "/dashboard/program",
+    icon: ProgramIcon,
+    icon_active: ActiveProgramIcon,
+    url: "/admin/program",
   },
   {
     id: 8,
     text: "Report",
-    icon: "report-icon.png",
-    icon_active: "report-active-icon.png",
-    url: "/dashboard/report",
-  },
-  {
-    id: 9,
-    text: "Event",
-    icon: "event-icon.png",
-    icon_active: "event-active-icon.png",
-    url: "/dashboard/event",
+    icon: ReportIcon,
+    icon_active: ActiveReportIcon,
+    url: "/admin/report",
   },
   {
     id: 10,
     text: "Recruitment",
-    icon: "recruitment-icon.png",
-    icon_active: "recruitment-active-icon.png",
-    url: "/dashboard/recruitment",
+    icon: RecruitmentIcon,
+    icon_active: ActiveRecruitmentIcon,
+    url: "/admin/recruitment",
   },
   {
     id: 11,
     text: "Testimonial",
-    icon: "testimonial-icon.png",
-    icon_active: "testimonial-active-icon.png",
-    url: "/dashboard/testimonial",
-  },
-  {
-    id: 12,
-    text: "Blog",
-    icon: "blog-icon.png",
-    icon_active: "blog-active-icon.png",
-    url: "/dashboard/blog",
-  },
-  {
-    id: 13,
-    text: "Donate",
-    icon: "donate-icon.png",
-    icon_active: "donate-active-icon.png",
-    url: "/dashboard/donate",
+    icon: TestimonialIcon,
+    icon_active: ActiveTestimonialIcon,
+    url: "/admin/testimonial",
   },
 ];
 
 const SideNavLinks = () => {
   const [hoveredLink, setHoveredLink] = useState<SideNavLink | null>(null);
+  const location = useLocation();
+
+  const isExactMatch = (url: string) => {
+    // Remove trailing slash from both URLs for comparison
+    const currentPath = location.pathname.replace(/\/$/, "");
+    const linkUrl = url.replace(/\/$/, "");
+    return currentPath === linkUrl;
+  };
+
   return (
     <div className="flex flex-col gap-4">
-      {links?.map((link) => (
-        <RouterLink key={link?.id} to={link?.url}>
-          <div
-            className="w-full px-4"
-            onMouseEnter={() => setHoveredLink(link)}
-          >
-            <div className="flex items-center gap-4 group hover:bg-[#1B43C61A] py-3 px-4 rounded-full">
-              {hoveredLink?.id === link.id ? (
+      {links.map((link) => {
+        const active = isExactMatch(link.url);
+        return (
+          <RouterLink key={link.id} to={link.url}>
+            <div
+              className="w-full px-4"
+              onMouseEnter={() => setHoveredLink(link)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
+              <div
+                className={`flex items-center gap-4 group py-3 px-4 rounded-full ${
+                  active ? "bg-[#1B43C61A]" : "hover:bg-[#1B43C61A]"
+                }`}
+              >
                 <img
-                  src={`/src/assets/icons/${link.icon_active}`}
-                  className="w-6"
+                  src={
+                    active || hoveredLink?.id === link.id
+                      ? link.icon_active
+                      : link.icon
+                  }
                   alt={`${link.text} icon`}
+                  className="w-6 h-6"
                 />
-              ) : (
-                <img
-                  src={`/src/assets/icons/${link.icon}`}
-                  className="w-6"
-                  alt={`${link.text} icon`}
-                />
-              )}
-              <p className="group-hover:text-secondary text-darkgrey group-hover:font-semibold text-md font-nunito">
-                {link?.text}
-              </p>
+                <p
+                  className={`${
+                    active
+                      ? "text-secondary font-semibold"
+                      : "text-darkgrey group-hover:text-secondary group-hover:font-semibold"
+                  } text-md font-nunito`}
+                >
+                  {link.text}
+                </p>
+              </div>
             </div>
-          </div>
-        </RouterLink>
-      ))}
+          </RouterLink>
+        );
+      })}
     </div>
   );
 };

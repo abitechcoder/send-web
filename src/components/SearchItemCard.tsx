@@ -41,9 +41,9 @@ const SearchItemCard = ({ item }: { item: any }) => {
             <path
               d="M1 0.5L7 6.5L1 12.5"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </a>

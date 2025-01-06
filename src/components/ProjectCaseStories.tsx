@@ -1,8 +1,12 @@
-import { CaseStories } from "../constants";
+import { useQuery } from "@tanstack/react-query";
 import { styles, layout } from "../styles";
 import CaseStoryCard from "./CaseStoryCard";
+import { fetchCaseStories } from "../api";
+import { CaseStoryType } from "../types";
 
 const ProjectCaseStories = () => {
+  const { data: stories } = useQuery(["stories"], fetchCaseStories);
+
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -26,7 +30,7 @@ const ProjectCaseStories = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-        {CaseStories.map((story) => (
+        {stories?.map((story: CaseStoryType) => (
           <CaseStoryCard
             key={story.id}
             title={story.title}

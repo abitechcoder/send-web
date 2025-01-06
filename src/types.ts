@@ -2,7 +2,7 @@ export interface Link {
   id: number;
   text: string;
   url: string;
-  child?: null | Link[];
+  child?: null | Link[] | any;
 }
 
 export interface SideNavLink {
@@ -17,7 +17,7 @@ export interface ProgramCardProps {
   id?: number;
   image: string;
   title: string;
-  link_url: string;
+  link_url?: string;
 }
 
 export interface IdentityCardProps {
@@ -68,8 +68,16 @@ export interface AnnualReport {
   report_url: string;
 }
 
-export interface Newsletter {
+export interface ReportType {
   id: number;
+  title: string;
+  image_url: string;
+  report_url: string;
+  report_type: string;
+}
+
+export interface Newsletter {
+  id?: number;
   title: string;
   image: string;
   url: string;
@@ -116,8 +124,9 @@ export interface partner {
   partnerLogo: string;
 }
 export interface Photo {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
+  image?: string;
 }
 export interface Button3 {
   white?: boolean;
@@ -152,4 +161,89 @@ export interface SMgtTeamType {
   name: string;
   title: string;
   image: string;
+}
+
+export interface PartnerProps {
+  id: number;
+  logo: string;
+  name: string;
+}
+
+export interface TeamMemberProps {
+  id: number;
+  role: string;
+  name: string;
+  image: string;
+  board_member: string;
+  facebook_profile: string;
+  instagram_profile: string;
+}
+
+export interface GalleryPropsType {
+  id: number;
+  image: string;
+  title: string;
+  linkUrl: string;
+  type: string;
+  photos: string;
+}
+
+export interface JobPropsType {
+  id: number;
+  link_url: string;
+  title: string;
+  description: string;
+  deadline: string;
+  classification: string;
+  region: string;
+}
+
+export interface IdentityPropsType {
+  id: number;
+  text: string;
+  mission: string;
+  vision: string;
+  value: string;
+  principle: string;
+}
+
+export interface HomePageProps {
+  id: number;
+  title: string;
+  subtitle: string;
+  text: string;
+}
+
+export interface TestimonialProps {
+  id: number;
+  name: string;
+  image: string;
+  title: string;
+  text: string;
+  link_url: string;
+}
+
+export interface ProjectType {
+  id: number;
+  name: string;
+  description: string;
+  donor: string;
+  status: string;
+  partner: string;
+  location: string;
+  duration: string;
+  budget: string;
+  program_area: string;
+  report: string;
+  problem_image: string;
+  problem_desc: string;
+  solution_desc: string;
+  beneficiaries_desc: string;
+}
+
+export interface ProgramType {
+  id: number;
+  image: string;
+  title: string;
+  overview: string;
 }

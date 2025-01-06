@@ -1,28 +1,29 @@
 import NewsletterCard from "./NewsLetterCard";
-import { Newsletter } from "../types";
+import { ReportType } from "../types";
 import { useEffect, useState } from "react";
-import { getNewsLetters } from "../data";
+import { useQuery } from "@tanstack/react-query";
+import { fetchReports } from "../api";
+
 const NewsLetterList = () => {
-  const [newsletters, setNewsletters] = useState<Newsletter[] | null>(null);
+  const { data: reports } = useQuery(["reports"], fetchReports);
+  const [newsletters, setNewsletters] = useState<ReportType[] | null>(null);
 
   useEffect(() => {
-    fetchNewsletters();
-  }, []);
-
-  const fetchNewsletters = async () => {
-    const data = await getNewsLetters();
-    setNewsletters(data);
-  };
+    const filteredNewsletters = reports?.filter(
+      (report: ReportType) => report.report_type === "newsletter"
+    );
+    setNewsletters(filteredNewsletters);
+  }, [reports]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10 mt-8">
-      {newsletters?.map((newsletter: Newsletter) => (
+      {newsletters?.map((newsletter) => (
         <NewsletterCard
           key={newsletter.id}
           id={newsletter.id}
           title={newsletter.title}
-          image={newsletter.image}
-          url={newsletter.url}
+          image={newsletter.image_url}
+          url={newsletter.report_url}
         />
       ))}
     </div>

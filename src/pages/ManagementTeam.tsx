@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import { HeroBG } from "../assets";
 import {
   Header,
@@ -6,8 +7,20 @@ import {
   SeniorMgtTeam,
   CustomerSupport,
 } from "../components";
+import { fetchTeamMembers } from "../api";
+import { useLoaderData } from "react-router-dom";
+import { TeamMemberProps } from "../types";
 
 const ManagementTeam = () => {
+  const initialData: any = useLoaderData();
+  const { data: team } = useQuery(["team"], fetchTeamMembers, {
+    initialData: initialData.team,
+  });
+
+  const SMgtTeam = team.filter(
+    (member: TeamMemberProps) => member.board_member === "no"
+  );
+
   return (
     <main className="h-full relative">
       <Header
@@ -16,7 +29,7 @@ const ManagementTeam = () => {
         title="Senior Management Team"
         image={HeroBG}
       />
-      <SeniorMgtTeam />
+      <SeniorMgtTeam team={SMgtTeam} />
       <ContactUs />
       <Footer />
       {/* <CustomerSupport /> */}

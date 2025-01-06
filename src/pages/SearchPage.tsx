@@ -3,27 +3,49 @@ import {
   ContactUs,
   Footer,
   SearchFiles,
-  CustomerSupport,
+  // CustomerSupport,
 } from "../components";
-import { getAnnualReports, getJobs, getNewsLetters } from "../data";
+
 import { useLoaderData } from "react-router-dom";
-import { GeneralList } from "../types";
-import { HeroBG } from "../assets";
-
-export async function loader() {
-  const jobs = await getJobs();
-  const newsletters = await getNewsLetters();
-  const reports = await getAnnualReports();
-
-  const files = [...jobs, ...newsletters, ...reports];
-
-  return { files };
-}
+import { HeroBG, Spinnner } from "../assets";
+import { useQueries } from "@tanstack/react-query";
+import { fetchRecruitments, fetchReports } from "../api";
 
 const Search = () => {
-  const { files }: GeneralList[] | null | any = useLoaderData();
+  const initialData: any = useLoaderData();
 
-  console.log("All Files:", files);
+  const queries = useQueries({
+    queries: [
+      {
+        queryKey: ["recruitments"],
+        queryFn: fetchRecruitments,
+        initialData: initialData?.jobs,
+      },
+      {
+        queryKey: ["reports"],
+        queryFn: fetchReports,
+        initialData: initialData?.reports,
+      },
+    ],
+  });
+
+  const [jobs, reports] = queries;
+
+  const files = [...jobs.data, ...reports.data];
+
+  if (queries.some((query) => query.isLoading)) {
+    return (
+      <div className="flex flex-col justify-center items-center h-full bg-white">
+        <img src={Spinnner} className="h-8 w-8" alt="" />
+        <p>Loading data...</p>
+      </div>
+    );
+  }
+
+  if (queries.some((query) => query.isError)) {
+    return <div>Error loading data</div>;
+  }
+
   return (
     <main className="h-full relative">
       <Header

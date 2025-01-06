@@ -70,7 +70,7 @@ const Blog = () => {
               />
             </div>
           </div>
-          <SelectGallery />
+          {/* <SelectGallery /> */}
         </div>
       </div>
     </div>

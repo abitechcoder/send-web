@@ -4,8 +4,9 @@ import {
   corporate_identity2,
   corporate_identity_image2,
 } from "../assets";
+import { IdentityPropsType } from "../types";
 
-const CoreValue = () => {
+const CoreValue = ({ identity }: { identity: IdentityPropsType }) => {
   return (
     <section className={`${layout.section} bg-[#F9FAFC]`}>
       {/* <div className="hidden md:block col-span-2 bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>     */}
@@ -39,58 +40,22 @@ const CoreValue = () => {
           <p
             className={`w-full text-left mx-auto text-black ${styles.paragraph2}`}
           >
-            We believe in the potential of PEOPLE to champion their own
-            development, characterized by:
+            {identity.value.split(":")[0]}:
           </p>
           <div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Participatory decision-making and development
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Equality of women and men
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Openness and accountability
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Partnership for human development
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Learning, innovation and sharing of knowledge
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Enabling action based on information and evidence
-              </p>
-            </div>
+            {identity.value
+              ?.split(":")[1]
+              ?.split("- ")
+              .map((text, index) => (
+                <div className="flex items-center gap-2" key={index}>
+                  <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
+                  <p
+                    className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
+                  >
+                    {text}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

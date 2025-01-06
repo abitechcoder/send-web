@@ -1,6 +1,6 @@
 import styles, { layout } from "../styles";
-import { SelectInput, JobCard, SearchItemCard } from ".";
-import { GeneralList, Job } from "../types";
+import { SearchItemCard } from ".";
+import { GeneralList } from "../types";
 import { useState } from "react";
 
 type Props = {
@@ -80,8 +80,8 @@ const SearchFiles = ({ files }: Props) => {
           </div>
         ) : (
           <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredFiles.map((item: any) => (
-              <SearchItemCard item={item} />
+            {filteredFiles.map((item: any, index: number) => (
+              <SearchItemCard key={index} item={item} />
             ))}
           </div>
         )}

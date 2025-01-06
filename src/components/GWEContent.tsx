@@ -1,9 +1,10 @@
-import { VisionIcon } from "../assets";
+// import { VisionIcon } from "../assets";
 import { styles, layout } from "../styles";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { StrategicProjectType } from "../types";
+import { ProjectType } from "../types";
+import { Link } from "react-router-dom";
 
-const GWEContent = ({ project }: { project: StrategicProjectType }) => {
+const GWEContent = ({ project }: { project: ProjectType }) => {
   return (
     <section
       className={`${layout.section} bg-white grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2 lg:gap-8 relative`}
@@ -17,7 +18,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
           </p>
         </div>
         <h2 className={`font-barlow lg:text-3xl text-xl font-bold mb-8`}>
-          {project.text}
+          {project?.name}
         </h2>
         <div className="relative mb-8">
           <div className="bg-[url('/src/assets/happy-community.png')] w-full h-[250px] md:h-[300px] lg:h-[350px] bg-cover bg-center"></div>
@@ -35,7 +36,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
 
               <div className="w-[100px] h-[50px] bg-black grid place-items-center">
                 <p className="font-barlow text-md text-primary font-bold uppercase">
-                  {project.status}
+                  {project?.status}
                 </p>
               </div>
             </div>
@@ -73,14 +74,9 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                   className="object-cover object-center h-[250px] md:h-[350px] w-full"
                 />
                 <div className="grid gap-2">
-                  {project.problem.map((data: { id: number; text: string }) => (
-                    <p
-                      key={data.id}
-                      className={`text-darkgrey ${styles.paragraph3}`}
-                    >
-                      {data.text}
-                    </p>
-                  ))}
+                  <p className={`text-darkgrey ${styles.paragraph3}`}>
+                    {project?.problem_desc}
+                  </p>
                 </div>
               </div>
             </TabsContent>
@@ -90,61 +86,10 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                   Project Solution
                 </h2>
                 <div className="grid gap-8">
-                  <div className="flex gap-4 md:gap-6">
-                    <img
-                      src={VisionIcon}
-                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
-                      alt="Vision Icon"
-                    />
-                    <div>
-                      <h3 className={`${styles.heading3Manrope}`}>
-                        Creating & Facilitating Citizen Feedback
-                      </h3>
-                      <p className={`text-darkgrey ${styles.paragraph3}`}>
-                        Strengthening the citizens’ voice and interaction by
-                        creating and facilitating citizen feedback forums and
-                        platforms with service providers to discuss and share
-                        ideas.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 md:gap-6">
-                    <img
-                      src={VisionIcon}
-                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
-                      alt="Vision Icon"
-                    />
-                    <div>
-                      <h3 className={`${styles.heading3Manrope}`}>
-                        Healthcare Services
-                      </h3>
-                      <p className={`text-darkgrey ${styles.paragraph3}`}>
-                        Educating citizens on the healthcare services available
-                        and their right to access healthcare services.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 md:gap-6">
-                    <img
-                      src={VisionIcon}
-                      className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
-                      alt="Vision Icon"
-                    />
-                    <div>
-                      <h3 className={`${styles.heading3Manrope}`}>
-                        Improvement Of Healthcare Services
-                      </h3>
-                      <p className={`text-darkgrey ${styles.paragraph3}`}>
-                        Encourage the formulation of indigenous solutions to
-                        improve accountability in the provision of healthcare
-                        services
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 md:gap-6">
+                  <p className={`text-darkgrey ${styles.paragraph3}`}>
+                    {project?.solution_desc}
+                  </p>
+                  {/* <div className="flex gap-4 md:gap-6">
                     <img
                       src={VisionIcon}
                       className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]"
@@ -159,7 +104,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                         their access to healthcare services.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </TabsContent>
@@ -171,9 +116,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 <div className="bg-[url('/src/assets/bunch-of-women.png')] bg-cover bg-center h-[250px] md:h-[350px] w-full"></div>
                 <div>
                   <p className={`text-darkgrey ${styles.paragraph3}`}>
-                    - Citizens in the western area and eastern provinces of
-                    Sierra Leone <br />- Women, children and other minority
-                    groups such as PWDs
+                    - {project?.beneficiaries_desc}
                   </p>
                 </div>
               </div>
@@ -183,7 +126,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
       </section>
       <section className="z-20">
         <p className={`${styles.paragraph3} leading-relaxed`}>
-          {project.description}
+          {project?.description}
         </p>
 
         <div className="bg-dark bg-[url('/src/assets/project-fact-sheet-art.png')] bg-no-repeat bg-contain bg-right-top p-8 border-t-2 border-t-primary mt-8">
@@ -194,7 +137,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
             <div>
               <h5 className={`${styles.paragraph3} text-lightgrey`}>DONOR</h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.donor}
+                {project?.donor}
               </p>
             </div>
 
@@ -203,7 +146,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 PROJECT IMPLEMENTING PARTNER
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.partner}
+                {project?.partner}
               </p>
             </div>
 
@@ -212,7 +155,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 PROJECT LOCATION
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.location}
+                {project?.location}
               </p>
             </div>
 
@@ -221,7 +164,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 DURATION
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.duration === "" ? "-" : project.duration}
+                {project?.duration === "" ? "-" : project.duration}
               </p>
             </div>
 
@@ -230,7 +173,7 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 PROJECT BUDGET
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.budget === "" ? "-" : project.budget}
+                {project?.budget === "" ? "-" : project.budget}
               </p>
             </div>
 
@@ -239,18 +182,22 @@ const GWEContent = ({ project }: { project: StrategicProjectType }) => {
                 PROJECT THEMATIC AREAS
               </h5>
               <p className={`${styles.paragraph3} font-bold text-white`}>
-                {project.areas === "" ? "-" : project.areas}
+                {project?.program_area === "" ? "-" : project?.program_area}
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <button className="bg-secondary text-white py-4 w-full">
-              View Project Report
-            </button>
-            <button className="bg-primary text-white py-4 w-full">
+          {project?.report && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link to={project?.report} target="_blank">
+              <div className="bg-secondary text-center text-white py-4 w-full">
+                View Project Report
+              </div>
+            </Link>
+            {/* <button className="bg-primary text-white py-4 w-full">
               View Gallery Project
-            </button>
+            </button> */}
           </div>
+          )}
         </div>
       </section>
     </section>

@@ -10,9 +10,18 @@ import {
 } from ".";
 import { layout, styles } from "../styles";
 import { directors } from "../constants";
-import { Director } from "../types";
+import { TeamMemberProps } from "../types";
 
-const DirectorInfo = ({ director }: { director: Director | null }) => {
+const DirectorInfo = ({
+  director,
+  team,
+}: {
+  director: TeamMemberProps | null;
+  team: TeamMemberProps[];
+}) => {
+  const directors = team.filter(
+    (member: TeamMemberProps) => member.board_member === "yes"
+  );
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -86,7 +95,7 @@ const DirectorInfo = ({ director }: { director: Director | null }) => {
               key={director.id}
               id={director.id}
               name={director?.name}
-              title={director.title}
+              title={director.role}
               image={director.image}
             />
           ))}

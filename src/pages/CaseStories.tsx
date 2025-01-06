@@ -3,7 +3,7 @@ import {
   ContactUs,
   Footer,
   ProjectCaseStories,
-  CustomerSupport,
+  // CustomerSupport,
 } from "../components";
 import { HeroBG } from "../assets";
 

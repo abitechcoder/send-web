@@ -4,8 +4,9 @@ import {
   corporate_identity2,
   corporate_identity_image2,
 } from "../assets";
+import { IdentityPropsType } from "../types";
 
-const Principles = () => {
+const Principles = ({ identity }: { identity: IdentityPropsType }) => {
   return (
     <section className={`${layout.section} bg-white`}>
       {/* <div className="hidden md:block col-span-2 bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>     */}
@@ -25,49 +26,16 @@ const Principles = () => {
           </div>
 
           <div className="grid gap-4">
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Development is a human right that provides men and women with
-                equal opportunity to actively participate in and contribute to
-                the political, economic and social transformation of their
-                communities.
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Development is multi-dimensional, involving economic, political
-                and social issues requiring integrated programming approaches to
-                promote community- driven development initiatives, economic
-                literacy and policy advocacy.
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Forging strong partnerships with state and non-state actors that
-                are characterized by mutual accountability, openness and
-                effective communication, provide an enabling environment for
-                innovative development programming.
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
-              <p
-                className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
-              >
-                Self-managed, community-based organizations are catalysts for
-                promoting sustainability of development processes and
-                initiatives.
-              </p>
-            </div>
+            {identity.principle?.split("- ").map((text, index) => (
+              <div className="flex items-center gap-2" key={index}>
+                <img src={ChevronLeft} className="w-[60px] h-[60px]" alt="" />
+                <p
+                  className={`w-full text-left mx-auto text-black ${styles.paragraph3}`}
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="h-[420px] md:h-[510px] relative">

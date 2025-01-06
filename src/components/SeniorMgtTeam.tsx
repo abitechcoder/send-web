@@ -1,9 +1,8 @@
 import { styles, layout } from "../styles";
 import TeamCard from "./TeamCard";
-import { SMgtTeam } from "../constants";
-import { SMgtTeamType } from "../types";
+import { TeamMemberProps } from "../types";
 
-const SeniorMgtTeam = () => {
+const SeniorMgtTeam = ({ team }: any) => {
   return (
     <section
       className={`${layout.section} bg-graybg bg-[url(/src/assets/team-bg.png)] bg-center`}
@@ -32,12 +31,12 @@ const SeniorMgtTeam = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
-        {SMgtTeam.map((team: SMgtTeamType) => (
+        {team?.map((member: TeamMemberProps) => (
           <TeamCard
-            key={team.id}
-            name={team.name}
-            title={team.title}
-            image={team.image}
+            key={member.id}
+            name={member.name}
+            title={member.role}
+            image={member.image}
           />
         ))}
       </div>

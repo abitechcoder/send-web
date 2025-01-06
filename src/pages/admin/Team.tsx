@@ -1,68 +1,100 @@
-import { notif, ProfilePic, search, sort } from "@/src/assets";
-import { AddTeam, PhotoCard, SelectGallery } from "@/src/components";
+import { search } from "@/src/assets";
+import {
+  AddTeam,
+  NavHeader,
+  PhotoCard,
+  SelectedTeamMemberView,
+} from "@/src/components";
+import { getTeamMembers } from "@/src/data";
 import styles from "@/src/styles";
+import { TeamMemberProps } from "@/src/types";
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+
+export async function loader() {
+  const team_members = await getTeamMembers();
+  return { team_members };
+}
 
 const Team = () => {
+  const { team_members }: any = useLoaderData();
+  const [selectedTeamMember, setSelectedTeamMember] = useState<any>(null);
+  const [searchText, setSearchText] = useState("");
+  const [filteredMembers, setFilteredMembers] = useState([]);
+
+  useEffect(() => {
+    const filtered = team_members.filter((member: TeamMemberProps) =>
+      member.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredMembers(filtered);
+  }, [searchText]);
+
   return (
     <div className="w-full bg-[#FAFAFA] h-full grid grid-rows-[240px_1fr] lg:grid-rows-[180px_1fr]">
       <div className="p-3 lg:px-8 lg:py-4 bg-white mb-5">
-        <div className=" flex items-center justify-between ">
-          <div>
-            <h1
-              className={`${styles.heading3} leading-normal font-semibold tracking-wide font-nunito`}
-            >
-              Team / Board of Directors
-            </h1>
-          </div>
-          <div className="flex items-center gap-2 lg:gap-3">
-            <div className="border-[1px] rounded-full -left-10 flex items-center p-1">
-              <img
-                src={notif}
-                alt="notification icon"
-                className="w-[15px] h-[15px] rounded-full"
-              />
-            </div>
-            <div>
-              <img
-                src={ProfilePic}
-                alt="user profile picture"
-                className="w-[35px] h-[35px] rounded-full"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 mt-10">
-          <div className="flex items-center border-[1px] py-3 px-5 bg-[#D8DDE4] justify-between rounded-xl">
+        <NavHeader title="Team" />
+        <div className="flex gap-8 py-4">
+          <div className="flex items-center border-[1px] py-3 px-5 bg-[#D8DDE4] justify-between rounded-xl w-1/2">
             <input
               type="text"
-              placeholder="Search Team"
+              placeholder="Search team member"
+              onChange={(e) => setSearchText(e.target.value)}
               className={`${styles.paragraph4} text-[#849299] bg-transparent outline-0 flex-1`}
             />
             <img src={search} className="w-5 h-5" />
           </div>
-
-          <div className="grid grid-cols-2  gap-3 mt-5 lg:mt-0">
-            <AddTeam />
-            <button className="flex items-center gap-2 py-3 px-7 border-[1px] rounded-xl border-[#D8DDE4]">
-              <img src={sort} className="w-6 h-6" />
-              <p className="text-sm font-semibold text-[#849299]">
-                Sort By: descending
-              </p>
-            </button>
-          </div>
+          <AddTeam />
         </div>
       </div>
 
-      <div className="p-3 lg:px-8 lg:py-4 overflow-y-scroll">
-        <div className="grid  lg:grid-cols-4 gap-3 ">
-          <div className="lg:col-span-3 ">
-            <div className=" grid grid-cols-2 p-5 lg:grid-cols-3 gap-5 bg-white ">
-              <PhotoCard title="Board Chairperson" subtitle="Lucy Cecilia" />
-              <PhotoCard title="Board Member" subtitle="Siapha Kamara" />
-              <PhotoCard title="Board Member" subtitle="Marion Joy Minah" />
+      <div className="p-3 lg:px-8 lg:py-4 overflow-y-scroll grid grid-cols-[1fr_300px] gap-8">
+        <div className="bg-white p-4">
+          {team_members.length > 0 ? (
+            <div className="grid grid-cols-3 gap-5">
+              {searchText
+                ? filteredMembers?.map((member: TeamMemberProps) => (
+                    <div
+                      key={member.id}
+                      onClick={() => setSelectedTeamMember(member)}
+                      className="cursor-pointer"
+                    >
+                      <PhotoCard
+                        title={member.role}
+                        subtitle={member.name}
+                        image={member.image}
+                      />
+                    </div>
+                  ))
+                : team_members?.map((member: TeamMemberProps) => (
+                    <div
+                      key={member.id}
+                      className="cursor-pointer"
+                      onClick={() => setSelectedTeamMember(member)}
+                    >
+                      <PhotoCard
+                        title={member.role}
+                        subtitle={member.name}
+                        image={member.image}
+                      />
+                    </div>
+                  ))}
             </div>
-          </div>
-          <SelectGallery />
+          ) : (
+            <div className="bg-gray-200 grid place-items-center p-8">
+              <p className="font-bold mb-3">No team members found</p>
+              <p>
+                Click on <strong>add member button</strong> above to create a
+                member
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="w-full">
+          <SelectedTeamMemberView
+            member={selectedTeamMember}
+            setSelectedMember={setSelectedTeamMember}
+          />
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
 import { styles, layout } from "../styles";
 import { VisionIcon } from "../assets";
+import { IdentityPropsType } from "../types";
 
-const VisionAndMission = () => {
+const VisionAndMission = ({ identity }: { identity: IdentityPropsType }) => {
   return (
     <section className={`${layout.section} bg-white`}>
       {/* <div className="hidden md:block col-span-2 bg-[url('/src/assets/corporate-identity-image.png')] bg-center bg-cover w-full h-[350px]"></div>     */}
@@ -54,11 +55,10 @@ const VisionAndMission = () => {
             <p
               className={`w-full text-left mx-auto text-black ${styles.paragraph2}`}
             >
-              A Sierra Leone where people’s rights and well-being are
-              guaranteed.
+              {identity.vision}
             </p>
           </div>
-            <hr />
+          <hr />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-6">
             <div className="flex items-center gap-4">
               <img src={VisionIcon} className="h-[50px] w-[50px]" alt="" />
@@ -94,8 +94,7 @@ const VisionAndMission = () => {
             <p
               className={`w-full text-left mx-auto text-black ${styles.paragraph2}`}
             >
-              Promotion of good governance, voice, accountably basic services
-              and equality for women and men in Sierra Leone.
+              {identity.mission}
             </p>
           </div>
           <hr />

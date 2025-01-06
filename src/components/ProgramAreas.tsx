@@ -2,7 +2,7 @@ import styles from "../styles";
 import ProgramAreasCards from "./ProgramAreasCards";
 import { layout } from "../styles";
 
-const ProgramAreas = () => {
+const ProgramAreas = ({ programs }: any) => {
   return (
     <section className={`bg-[#F9FAFC] ${layout.section}`}>
       <h2 className={`${styles.heading1} text-center pb-3 md:pb-4`}>
@@ -12,7 +12,7 @@ const ProgramAreas = () => {
         Through different development programs we aim to improve the lives of
         every life in Sierra Leone
       </p>
-      <ProgramAreasCards />
+      <ProgramAreasCards programs={programs} />
     </section>
   );
 };

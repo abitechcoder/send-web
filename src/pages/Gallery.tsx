@@ -6,8 +6,15 @@ import {
   EventGallery,
   CustomerSupport,
 } from "../components";
+import { useLoaderData } from "react-router-dom";
+import { fetchGalleries } from "../api";
+import { useQuery } from "@tanstack/react-query";
 
 const Gallery = () => {
+  const initialData: any = useLoaderData();
+  const { data: gallery } = useQuery(["gallery"], fetchGalleries, {
+    initialData: initialData.gallery,
+  });
   return (
     <main className="h-full relative">
       <Header
@@ -16,7 +23,7 @@ const Gallery = () => {
         title="Gallery"
         image={HeroBG}
       />
-      <EventGallery />
+      <EventGallery gallery={gallery} />
       <ContactUs />
       <Footer />
       {/* <CustomerSupport /> */}

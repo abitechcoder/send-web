@@ -3,20 +3,23 @@ import {
   ContactUs,
   Footer,
   Directors,
-  CustomerSupport,
+  // CustomerSupport,
 } from "../components";
-import { getDirectors } from "../data";
 import { useLoaderData } from "react-router-dom";
-import { Director } from "../types";
+import { TeamMemberProps } from "../types";
 import { HeroBG } from "../assets";
-
-export async function loader() {
-  const directors = await getDirectors();
-  return { directors };
-}
+import { useQuery } from "@tanstack/react-query";
+import { fetchTeamMembers } from "../api";
 
 const BoardOfDirectors = () => {
-  const { directors }: Director[] | null | any = useLoaderData();
+  const initialData: any = useLoaderData();
+  const { data: team } = useQuery(["team"], fetchTeamMembers, {
+    initialData: initialData.team,
+  });
+
+  const directors = team.filter(
+    (member: TeamMemberProps) => member.board_member === "yes"
+  );
   return (
     <main className="h-full relative">
       <Header

@@ -7,6 +7,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Logo } from "../assets";
+import { useQuery } from "@tanstack/react-query";
+import { fetchProgramAreas } from "../api";
+import { Link, ProgramType } from "../types";
+import { useEffect, useState } from "react";
 
 const NavBarLinks = ({
   fill,
@@ -17,6 +21,27 @@ const NavBarLinks = ({
   isOpen: boolean;
   setIsOpen: any;
 }) => {
+  const { data: programs } = useQuery(["programAreas"], fetchProgramAreas);
+  const [navLinks, setNavLinks] = useState<Link[]>([]);
+
+  useEffect(() => {
+    const programAreaLinks = programs?.map((program: ProgramType) => {
+      return {
+        id: program.id,
+        text: program.title,
+        url: `/program-areas/${program.id}`,
+      };
+    });
+
+    const newLinks = links.map((link) => {
+      if (link.id === 3) {
+        link.child = programAreaLinks;
+      }
+      return link;
+    });
+    setNavLinks(newLinks);
+  }, []);
+
   return (
     <ul
       className={`${
@@ -39,7 +64,7 @@ const NavBarLinks = ({
           <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
         </svg>
       </div>
-      {links?.map((link) => (
+      {navLinks?.map((link) => (
         <div key={link?.id}>
           {link.child ? (
             <DropdownMenu>
@@ -76,7 +101,7 @@ const NavBarLinks = ({
                 </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                {link.child.map((children) => (
+                {link.child.map((children: any) => (
                   <DropdownMenuItem key={children.id}>
                     <NavLink to={children?.url}>
                       {({ isActive }) => (

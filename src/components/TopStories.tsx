@@ -2,7 +2,7 @@ import { styles, layout } from "../styles";
 import Button from "./Button";
 // import TopStoriesCard from "./TopStoriesCard";
 import TopStoriesSlider from "./TopStoriesSlider";
-const OurIdentity = () => {
+const OurIdentity = ({ stories }: any) => {
   return (
     <section className={`bg-black ${layout.section} flex flex-col gap-8`}>
       <div className="flex flex-col md:flex-row gap-4">
@@ -21,7 +21,7 @@ const OurIdentity = () => {
           <Button text="See More" url="/publications/case-stories" />
         </div>
       </div>
-      <TopStoriesSlider />
+      <TopStoriesSlider stories={stories} />
     </section>
   );
 };

@@ -3,8 +3,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TopStoriesCard from "./TopStoriesCard";
 import { CaseStories } from "../constants";
+import { TestimonialProps } from "../types";
 
-const TopStoriesSlider = () => {
+const TopStoriesSlider = ({ stories }: { stories: TestimonialProps[] }) => {
   var settings = {
     dots: true,
     infinite: true,
@@ -36,7 +37,7 @@ const TopStoriesSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {CaseStories.map((story) => (
+        {stories.map((story) => (
           <TopStoriesCard
             key={story.id}
             name={story.name}

@@ -10,11 +10,10 @@ import { GeneralList } from "../types";
 type Props = {
   title: string;
   data: GeneralList[];
-  setSelectedValue: (val:string) => void;
+  setSelectedValue: (val: string) => void;
 };
 
-const SelectInput = ({ title, data, setSelectedValue }:Props) => {
-
+const SelectInput = ({ title, data, setSelectedValue }: Props) => {
   const handleValueChange = (value: string) => {
     console.log(value); // Console the value of the selected item
     setSelectedValue(value);
@@ -25,10 +24,12 @@ const SelectInput = ({ title, data, setSelectedValue }:Props) => {
       <SelectTrigger className="w-full h-full focus:ring-none">
         <SelectValue placeholder={title} className="text-lightgrey" />
       </SelectTrigger>
-      <SelectContent> 
-      {data.map((item: GeneralList) => (
-          <SelectItem value={item.id.toString()}>{item.title}</SelectItem>
-        ))}  
+      <SelectContent>
+        {data.map((item: GeneralList) => (
+          <SelectItem key={item.id} value={item.id.toString()}>
+            {item.title}
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   );

@@ -1,7 +1,11 @@
+import { useQuery } from "@tanstack/react-query";
 import { LogoWhite, YoutubeLogo } from "../assets";
 import { Link } from "react-router-dom";
+import { fetchProgramAreas } from "../api";
+import { ProgramType } from "../types";
 
 const Footer = () => {
+  const { data: programs }: any = useQuery(["programAreas"], fetchProgramAreas);
   return (
     <section>
       <div className="bg-dark bg-[url('/src/assets/footer-art.png')] bg-no-repeat  py-[40px] px-4 lg:px-[80px] lg:py-[80px] relative">
@@ -125,36 +129,15 @@ const Footer = () => {
               </div>
               <div className="grid gap-3 place-content-start md:justify-center md:hidden lg:grid">
                 <h3 className="font-bold">Program Areas</h3>
-                <Link
-                  to="/program-areas/sustainable-growth"
-                  className="text-lightgrey lg:text-sm text-xs"
-                >
-                  Sustainable Growth
-                </Link>
-                <Link
-                  to="/program-areas/health"
-                  className="text-lightgrey lg:text-sm text-xs"
-                >
-                  Health, Nutrition & WaSH
-                </Link>
-                <Link
-                  to="/program-areas/education"
-                  className="text-lightgrey lg:text-sm text-xs"
-                >
-                  Education
-                </Link>
-                <Link
-                  to="/program-areas/gender-equality"
-                  className="text-lightgrey lg:text-sm text-xs"
-                >
-                  Gender Equality
-                </Link>
-                <Link
-                  to="/program-areas/climate"
-                  className="text-lightgrey lg:text-sm text-xs"
-                >
-                  Climate & Disaster Resilience
-                </Link>
+                {programs?.map((program: ProgramType) => (
+                  <Link
+                  key={program?.id}
+                    to={`/program-areas/${program?.id}`}
+                    className="text-lightgrey lg:text-sm text-xs"
+                  >
+                    {program.title}
+                  </Link>
+                ))}
               </div>
 
               <div className="grid gap-3 place-content-start md:justify-center">

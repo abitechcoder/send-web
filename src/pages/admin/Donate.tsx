@@ -71,7 +71,7 @@ const Donate = () => {
               />
             </div>
           </div>
-          <SelectGallery />
+          {/* <SelectGallery /> */}
         </div>
       </div>
     </div>

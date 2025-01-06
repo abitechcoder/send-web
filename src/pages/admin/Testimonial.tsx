@@ -1,72 +1,66 @@
-import { notif, ProfilePic, search, sort } from "@/src/assets";
 import {
   AddTestimonial,
-  SelectGallery,
-  TestimonialCard,
+  NavHeader,
+  SelectedTestimonialView,
+  TopStoriesCard,
 } from "@/src/components";
-import styles from "@/src/styles";
+import { getTestimonials } from "@/src/data";
+
+import { TestimonialProps } from "@/src/types";
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+
+export async function loader() {
+  const testimonials = await getTestimonials();
+  return { testimonials };
+}
 
 const Testimonial = () => {
-  return (
-    <div className="w-full bg-[#FAFAFA] h-full grid grid-rows-[240px_1fr] lg:grid-rows-[180px_1fr]">
-      <div className="p-3 lg:px-8 lg:py-4 bg-white mb-5">
-        <div className=" flex items-center justify-between ">
-          <div>
-            <h1
-              className={`${styles.heading3} leading-normal font-semibold tracking-wide font-nunito`}
-            >
-              Testimonial
-            </h1>
-          </div>
-          <div className="flex items-center gap-2 lg:gap-3">
-            <div className="border-[1px] rounded-full -left-10 flex items-center p-1">
-              <img
-                src={notif}
-                alt="notification icon"
-                className="w-[15px] h-[15px] rounded-full"
-              />
-            </div>
-            <div>
-              <img
-                src={ProfilePic}
-                alt="user profile picture"
-                className="w-[35px] h-[35px] rounded-full"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 mt-10">
-          <div className="flex items-center border-[1px] py-3 px-5 bg-[#D8DDE4] justify-between rounded-xl">
-            <input
-              type="text"
-              placeholder="Search Testimonial"
-              className={`${styles.paragraph4} text-[#849299] bg-transparent outline-0 flex-1`}
-            />
-            <img src={search} className="w-5 h-5" />
-          </div>
+  const { testimonials }: any = useLoaderData();
+  const [selectedTestimonial, setSelectedTestimonial] = useState<any>(null);
 
-          <div className="grid grid-cols-2  gap-3 mt-5 lg:mt-0">
-            <AddTestimonial />
-            <button className="flex items-center gap-2 py-3 px-7 border-[1px] rounded-xl border-[#D8DDE4]">
-              <img src={sort} className="w-6 h-6" />
-              <p className="text-sm font-semibold text-[#849299]">
-                Sort By: descending
-              </p>
-            </button>
-          </div>
+  return (
+    <div className="w-full bg-[#FAFAFA] h-full grid grid-rows-[240px_1fr] lg:grid-rows-[160px_1fr]">
+      <div className="p-3 lg:px-8 lg:py-4 bg-white mb-5">
+        <NavHeader title="Testimonial" />
+        <div className="flex py-4">
+          <AddTestimonial />
         </div>
       </div>
 
       <div className="p-3 lg:px-8 lg:py-4 overflow-y-scroll ">
         <div className="grid lg:grid-cols-4 gap-3 ">
           <div className="lg:col-span-3 ">
-            <div className=" grid md:grid-cols-2 p-5 lg:grid-cols-3 gap-5 bg-white ">
-              <TestimonialCard />
-              <TestimonialCard />
-              <TestimonialCard />
-            </div>
+            {testimonials.length > 0 ? (
+              <div className="grid grid-cols-2 p-5 gap-4 bg-white ">
+                {testimonials.map((testimonial: TestimonialProps) => (
+                  <div
+                    key={testimonial.id}
+                    onClick={() => setSelectedTestimonial(testimonial)}
+                    className="cursor-pointer"
+                  >
+                    <TopStoriesCard
+                      name={testimonial.name}
+                      text={testimonial.text}
+                      image={testimonial.image}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-gray-200 grid place-items-center p-8">
+                <p className="font-bold mb-3">No annual testimonials found</p>
+                <p>
+                  Click on <strong>add testimonial</strong> above to create a
+                  testimonial
+                </p>
+              </div>
+            )}
           </div>
-          <SelectGallery />
+          <SelectedTestimonialView
+            testimonial={selectedTestimonial}
+            setSelectedTestimonial={setSelectedTestimonial}
+          />
         </div>
       </div>
     </div>

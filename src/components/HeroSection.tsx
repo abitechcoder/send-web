@@ -10,8 +10,9 @@ import styles from "../styles";
 import Button from "./Button";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { HomePageProps } from "../types";
 
-const HeroSection = () => {
+const HeroSection = ({ hero }: { hero: HomePageProps }) => {
   return (
     <section className="bg-white h-[calc(100% - 70px)] md:h-96 lg:h-[500px] grid grid-cols-1 md:grid-cols-2 relative">
       <img
@@ -39,19 +40,17 @@ const HeroSection = () => {
           <h3
             className={`${styles.paragraph2} text-secondary text-center md:text-left font-bold`}
           >
-            WELCOME TO SEND SIERRA LEONE
+            {hero.title}
           </h3>
           <h1
             className={
               "text-center md:text-left font-manrope text-2xl md:text-4xl lg:text-6xl leading-tight font-bold"
             }
           >
-            Good Governance <br /> And Equality Of <br /> Men and Women
+            {hero.subtitle}
           </h1>
           <p className={`${styles.paragraph2} text-center md:text-left`}>
-            Promoting good governance, empowering voices, ensuring
-            accountability, delivering essential services, and striving for
-            gender equality in Sierra Leone.
+            {hero.text}
           </p>
         </div>
         <div className="w-full md:w-[200px] mx-auto md:mx-0">
