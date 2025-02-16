@@ -1,25 +1,17 @@
-// in config.js
-import { createChatBotMessage } from 'react-chatbot-kit';
+import { createChatBotMessage } from "react-chatbot-kit";
 
-
-const botName = 'Send Bot';
+const botName = "Neogym Assistant";
 
 const config = {
-  initialMessages: [createChatBotMessage(`Hi! How can I help?`)],
+  initialMessages: [createChatBotMessage(`Hi! How can I assist you today?`)],
   botName: botName,
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#376B7E',
+      backgroundColor: "#376B7E",
     },
     chatButton: {
-      backgroundColor: '#5ccc9d',
+      backgroundColor: "#5ccc9d",
     },
-    widgets: [
-      {
-        widgetName: 'dogPicture',
-        // Widget: (props) => <ActionProvider {...props} />
-      },
-    ],
   },
 };
 

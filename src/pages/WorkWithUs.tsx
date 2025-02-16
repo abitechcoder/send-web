@@ -10,7 +10,7 @@ import { HeroBG } from "../assets";
 
 const WorkWithUs = () => {
   const { jobs, jobClassifications, regions }: any = useLoaderData();
-  console.log("All Jobs:", jobs);
+  
   return (
     <main className="h-full relative">
       <Header

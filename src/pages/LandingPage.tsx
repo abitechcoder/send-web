@@ -24,6 +24,10 @@ import {
 import { useQueries } from "@tanstack/react-query";
 import { Spinnner } from "../assets";
 
+import  ChatBotPage  from "../../bot/ChatBotPage";
+
+
+
 const LandingPage = () => {
   const initialData = useLoaderData() as any;
 
@@ -99,7 +103,7 @@ const LandingPage = () => {
       <LatestNews reports={reports.data} />
       <ContactUs />
       <Footer />
-      {/* <CustomerSupport /> */}
+      <CustomerSupport/>
     </div>
   );
 };

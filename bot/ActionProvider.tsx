@@ -1,81 +1,85 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+const API_BASE_URL = "http://localhost:3000"; // Update if needed
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const createAndSetBotMessage = (text) => {
-    const botMessage = createChatBotMessage(text);
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, botMessage],
-    }));
+  const [threadId, setThreadId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Create a new conversation thread in Flask
+
+    if (threadId === null) {
+      startConversation();
+    }
+  }, []);
+
+  // Function to create a conversation thread
+  const startConversation = async () => {
+    try {
+      const response = await axios.post(`${API_BASE_URL}/thread`);
+      setThreadId(response.data.thread_id);
+      console.log("✅ Thread Created:", response.data.thread_id);
+    } catch (error) {
+      console.error("❌ Error creating thread:", error);
+    }
   };
 
-  const handleHello = () => {
-    createAndSetBotMessage('Hello. Nice to meet you.');
-  };
+  // Function to send user messages
+  const handleUserMessage = async (message: string) => {
+    if (!threadId) {
+      await startConversation();
+    }
 
-  const sendHistory = () => {
-    createAndSetBotMessage('SEND-Sierra Leone is a non-governmental organization officially registered with the Ministry of Finance and Economic Development of the Republic of Sierra Leone. Our mission is to help create a Sierra Leone where the rights and well-being of its people are assured. We are a local NGO firmly rooted in Sierra Leone, focusing on a diverse range of initiatives including community development, WaSH (Water, Sanitation, and Hygiene), healthcare, nutrition and agriculture, climate change adaptation, gender-transformative practices, and the empowerment of women. Our interventions span across various regions in Sierra Leone.');
-  };
+    try {
+      // Send user message
+      await axios.post(`${API_BASE_URL}/message`, {
+        threadId,
+        messageContent: message,
+      });
 
-  const handleMission = () => {
-    createAndSetBotMessage('Our mission is to help create a Sierra Leone where the rights and well-being of its people are assured.');
-  };
+      // Run assistant
+      const runResponse = await axios.post(`${API_BASE_URL}/run`, {
+        threadId,
+      });
 
-  const handlePrograms = () => {
-    createAndSetBotMessage('We focus on a diverse range of initiatives including community development, WaSH (Water, Sanitation, and Hygiene), healthcare, nutrition and agriculture, climate change adaptation, gender-transformative practices, and the empowerment of women.');
-  };
+      console.log("🤖 Assistant running:", runResponse.data.run_id);
 
-  const handleRegions = () => {
-    createAndSetBotMessage('Our interventions span across various regions in Sierra Leone.');
-  };
+      // Poll for response (max 10 times)
+      let botResponse = "Thinking...";
+      for (let i = 0; i < 10; i++) {
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait 2s
+        const messagesResponse = await axios.get(
+          `${API_BASE_URL}/messages/${threadId}`
+        );
+        const messages = messagesResponse.data;
 
-  const handleNGOInfo = () => {
-    createAndSetBotMessage('SEND Sierra Leone is a non-governmental organization officially registered with the Ministry of Finance and Economic Development of the Republic of Sierra Leone.');
-  };
+        console.log(messages, "from response");
 
-  const handleContact = () => {
-    createAndSetBotMessage('You can contact SEND Sierra Leone at their office or through their official website for more information.');
-  };
-
-  const handleDefault = () => {
-    const botMessage = createChatBotMessage(
-      "I'm sorry, I didn't understand that. Here are some things you can ask me about SEND Sierra Leone:",
-      {
-        widget: "possibleQuestions",
+        if (messages?.content) {
+          botResponse = messages.content;
+          break;
+        }
       }
-    );
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, botMessage],
-    }));
-  };
 
-  const possibleQuestions = [
-    "Tell me about SEND Sierra Leone",
-    "What is SEND Sierra Leone's mission?",
-    "What programs does SEND Sierra Leone have?",
-    "Which regions does SEND Sierra Leone operate in?",
-    "Can you give me information about SEND Sierra Leone as an NGO?",
-    "How can I contact SEND Sierra Leone?"
-  ];
+      console.log(botResponse, "gotten from bke");
+
+      // Create chatbot message and update state
+      const chatbotMessage = createChatBotMessage(botResponse);
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, chatbotMessage],
+      }));
+    } catch (error) {
+      console.error("❌ Error handling message:", error);
+    }
+  };
 
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
-          actions: {
-            handleHello,
-            sendHistory,
-            handleMission,
-            handlePrograms,
-            handleRegions,
-            handleNGOInfo,
-            handleContact,
-            handleDefault
-          },
-          widgets: {
-            possibleQuestions,
-          }
+          actions: { handleUserMessage },
         });
       })}
     </div>
