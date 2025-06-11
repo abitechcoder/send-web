@@ -2,12 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TopStoriesCard from "./TopStoriesCard";
-import { CaseStories } from "../constants";
+// import { CaseStories } from "../constants";
 import { TestimonialProps } from "../types";
 
 const TopStoriesSlider = ({ stories }: { stories: TestimonialProps[] }) => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,

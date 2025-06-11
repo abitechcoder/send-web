@@ -6,6 +6,7 @@ import { CaseStoryType } from "../types";
 
 const ProjectCaseStories = () => {
   const { data: stories } = useQuery(["stories"], fetchCaseStories);
+  console.log("Stories:", stories);
 
   return (
     <section
@@ -36,7 +37,7 @@ const ProjectCaseStories = () => {
             title={story.title}
             image={story.image}
             text={story.text}
-            date={story.date}
+            date={story.createdAt}
             linkUrl={story.link_url}
           />
         ))}

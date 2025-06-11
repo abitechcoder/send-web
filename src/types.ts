@@ -152,7 +152,7 @@ export interface CaseStoryType {
   image: string;
   title: string;
   text: string;
-  date: string;
+  createdAt: string;
   link_url: string;
 }
 

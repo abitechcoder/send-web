@@ -1,5 +1,5 @@
 import styles from "../styles";
-import { StarGroup, Avatar } from "../assets";
+import { StarGroup } from "../assets";
 
 const TopStoriesCard = ({
   name,
@@ -11,7 +11,7 @@ const TopStoriesCard = ({
   image: string;
 }) => {
   return (
-    <div className="relative bg-white w-[320px] lg:w-[350px] min-h-[400px] rounded-xl py-4 px-6 flex flex-col gap-4">
+    <div className="relative bg-white w-[320px] lg:w-[350px] min-h-[300px] rounded-xl py-4 px-6 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <div className="bg-black h-[60px] w-[60px] rounded-full">
           <img
@@ -21,20 +21,24 @@ const TopStoriesCard = ({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <h3 className={`${styles.paragraph2} font-bold text-secondary`}>
-            {name}
+          <h3
+            className={`${styles.paragraph2} w-[150px] capitalize font-bold text-secondary`}
+          >
+            {`${name.slice(0, 30)} ${name.length > 30 ? "..." : ""}`}
           </h3>
-          <p className={`${styles.paragraph3}`}>Project</p>
+          {/* <p className={`${styles.paragraph3}`}>Project</p> */}
         </div>
       </div>
       <div>
-        <h2 className={`${styles.paragraph2} font-bold mb-2`}>Case Studies</h2>
-        <p className={styles.paragraph3}>{text}</p>
+        {/* <h2 className={`${styles.paragraph2} font-bold mb-2`}>Case Studies</h2> */}
+        <p className={`styles.paragraph3`}>{`${text.slice(0, 250)}${
+          text.length > 250 ? "..." : ""
+        }`}</p>
       </div>
       <img src={StarGroup} className="absolute h-6 top-4 -right-2" alt="" />
       <svg
-        width="48"
-        height="48"
+        width="30"
+        height="30"
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

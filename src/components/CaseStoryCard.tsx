@@ -32,24 +32,32 @@ const CaseStoryCard = ({
           alt=""
         />
       </div>
-      <div className="p-4 md:p-8 grid gap-3">
-        <h2 className={`${styles.paragraph} text-black font-bold uppercase`}>
-          {title}
-        </h2>
-        <p className={`${styles.paragraph3}`}>{text}</p>
+      <div className="p-4 md:p-8 flex flex-col gap-3">
+        <div>
+          <h2
+            className={`font-manrope text-base text-black font-bold uppercase mb-3`}
+          >
+            {title}
+          </h2>
+          <p className={`${styles.paragraph3}`}>{`${text.slice(0, 300)} ${
+            text.length > 300 ? "..." : ""
+          }`}</p>
+        </div>
         <Link target="_blank" to={linkUrl}>
-          <div className="bg-lightgrey px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
-            <p className={`${styles.paragraph3}`}>Read More</p>
+          <div className="group bg-lightgrey hover:bg-secondary px-4 md:px-8 py-2 md:py-4 flex items-center justify-between">
+            <p className={`${styles.paragraph3} group-hover:text-white`}>
+              Read More
+            </p>
             <svg
               width="8"
               height="13"
               viewBox="0 0 8 13"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="group-hover:stroke-white stroke-black"
             >
               <path
                 d="M1 0.9375L7 6.9375L1 12.9375"
-                stroke="#141414"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
